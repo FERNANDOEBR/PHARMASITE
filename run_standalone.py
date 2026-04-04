@@ -643,8 +643,9 @@ def calculate_scores(df: pd.DataFrame) -> pd.DataFrame:
     df["score_saude"]        = pilar_score(df, SAUDE_SUB)
 
     # Competitividade Opportunity Score: Menos farmácias por 10k = Maior Oportunidade
-    densidade = df["farmacias_por_10k"].fillna(df["farmacias_por_10k"].median()).clip(0, 10)
-    df["score_competitividade"] = ((1 - (densidade / 10)) * 100).round(2)
+    # Usando o rank em percentil invertido garante que não haja concentração arbitrária em 0 ou 100
+    densidade = df["farmacias_por_10k"].fillna(df["farmacias_por_10k"].median())
+    df["score_competitividade"] = ((1.0 - densidade.rank(pct=True, method='average')) * 100).round(2)
 
     # Score total ponderado
     df["score"] = (

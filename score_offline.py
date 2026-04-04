@@ -26,7 +26,7 @@ CAMPINAS_LAT = -22.9056
 CAMPINAS_LON = -47.0608
 MAX_VIABLE_KM = 300.0
 
-PILAR_WEIGHTS_RAW = {"demo": 100, "logistica": 100, "economia": 90, "saude": 80}
+PILAR_WEIGHTS_RAW = {"demo": 100, "logistica": 100, "economia": 90, "saude": 80, "competitividade": 80}
 _TOTAL_W = sum(PILAR_WEIGHTS_RAW.values())
 PILAR_WEIGHTS = {k: v / _TOTAL_W for k, v in PILAR_WEIGHTS_RAW.items()}
 
@@ -586,7 +586,7 @@ DEMO_DATA = {
     3552502: (10000, 78.0, 1650, 0.41, 78),
     3552601: (40000, 88.5, 2050, 0.42, 88),
     3552700: (38000, 88.0, 2000, 0.42, 88),
-    3552809: (12396372, 99.1, 3800, 0.44, 115),
+
     3552908: (34000, 88.0, 2000, 0.42, 88),
     3553005: (7500, 74.0, 1450, 0.40, 75),
     3553104: (88000, 93.5, 2400, 0.43, 98),
@@ -831,11 +831,15 @@ df["score_logistica"]    = pilar_score(df, LOGISTICA_SUB)
 df["score_economico"]    = pilar_score(df, ECONOMIA_SUB)
 df["score_saude"]        = pilar_score(df, SAUDE_SUB)
 
+densidade = df["farmacias_por_10k"].fillna(df["farmacias_por_10k"].median())
+df["score_competitividade"] = ((1.0 - densidade.rank(pct=True, method='average')) * 100).round(2)
+
 df["score"] = (
     df["score_demografico"] * PILAR_WEIGHTS["demo"]      +
     df["score_logistica"]   * PILAR_WEIGHTS["logistica"] +
     df["score_economico"]   * PILAR_WEIGHTS["economia"]  +
-    df["score_saude"]       * PILAR_WEIGHTS["saude"]
+    df["score_saude"]       * PILAR_WEIGHTS["saude"]     +
+    df["score_competitividade"] * PILAR_WEIGHTS["competitividade"]
 ).round(1)
 
 p75 = df["score"].quantile(0.75)
@@ -854,7 +858,7 @@ df["ranking"] = df["score"].rank(ascending=False, method="min").astype(int)
 print(f"  Scores: min={df['score'].min():.1f} | median={df['score'].median():.1f} | max={df['score'].max():.1f}")
 print(f"  Tiers: A={( df['tier']=='A').sum()} B={(df['tier']=='B').sum()} "
       f"C={(df['tier']=='C').sum()} D={(df['tier']=='D').sum()}")
-print(f"  Tier cuts: A≥{p75:.1f} | B≥{p50:.1f} | C≥{p25:.1f}")
+print(f"  Tier cuts: A>={p75:.1f} | B>={p50:.1f} | C>={p25:.1f}")
 
 # ── Empirical validation ──────────────────────────────────────────────────────
 print("\nEmpirical validation:")
@@ -883,7 +887,7 @@ for code, name in EMPIRICAL_BOTTOM.items():
 COLS_OUTPUT = [
     "codigo_ibge","nome","mesorregiao","microrregiao",
     "score","tier","ranking",
-    "score_demografico","score_logistica","score_economico","score_saude",
+    "score_demografico","score_logistica","score_economico","score_saude", "score_competitividade",
     "farmacias","consultorios_odonto","laboratorios","clinicas","hospitais",
     "farmacias_por_10k",
     "populacao_total","populacao_alvo",
