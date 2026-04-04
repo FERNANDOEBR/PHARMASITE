@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+pandas
+numpy
+pydantic
+anthropic
+python-dotenv
+duckduckgo-search

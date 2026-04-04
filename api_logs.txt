@@ -1,0 +1,22 @@
+INFO:     Started server process [564]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8002 (Press CTRL+C to quit)
+
+=======================================================
+  PHARMASITE INTELLIGENCE API v2.0
+=======================================================
+  CSV: /sessions/lucid-beautiful-hamilton/mnt/pharmasite2/municipios_sp_scored.csv
+  Claude: ✗ ANTHROPIC_API_KEY não configurado
+  Endpoints:
+    GET  http://localhost:8002/municipios
+    GET  http://localhost:8002/busca?q=Campinas
+    GET  http://localhost:8002/ranking?tier=A
+    POST http://localhost:8002/analise/3509502
+    GET  http://localhost:8002/stats
+=======================================================
+
+INFO:     127.0.0.1:34052 - "GET /municipios HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34064 - "GET /municipios HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41944 - "GET /municipios?tier=A&limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41952 - "GET /stats HTTP/1.1" 200 OK

@@ -1,0 +1,30 @@
+﻿    self._bootstrap_inner()
+    Γöé    Γöö <function Thread._bootstrap_inner at 0x76a88e8fc860>
+    Γöö <WorkerThread(AnyIO worker thread, started 130466218768064)>
+  File "/usr/local/lib/python3.11/threading.py", line 1045, in _bootstrap_inner
+    self.run()
+    Γöé    Γöö <function WorkerThread.run at 0x76a88a57ca40>
+    Γöö <WorkerThread(AnyIO worker thread, started 130466218768064)>
+  File "/usr/local/lib/python3.11/site-packages/anyio/_backends/_asyncio.py", line 986, in run
+    result = context.run(func, *args)
+             Γöé       Γöé   Γöé      Γöö ()
+             Γöé       Γöé   Γöö functools.partial(<function get_insights at 0x76a88c55cfe0>, db=<sqlalchemy.engine.base.Connection object at 0x76a88a539f10>,...
+             Γöé       Γöö <method 'run' of '_contextvars.Context' objects>
+             Γöö <_contextvars.Context object at 0x76a88a53a340>
+
+> File "/app/routers/insights.py", line 142, in get_insights
+    client = anthropic.Anthropic(api_key=api_key)
+             Γöé         Γöé                 Γöö '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'
+             Γöé         Γöö <class 'anthropic.Anthropic'>
+             Γöö <module 'anthropic' from '/usr/local/lib/python3.11/site-packages/anthropic/__init__.py'>
+
+  File "/usr/local/lib/python3.11/site-packages/anthropic/_client.py", line 119, in __init__
+    super().__init__(
+  File "/usr/local/lib/python3.11/site-packages/anthropic/_base_client.py", line 801, in __init__
+    self._client = http_client or SyncHttpxClientWrapper(
+    Γöé              Γöé              Γöö <class 'anthropic._base_client.SyncHttpxClientWrapper'>
+    Γöé              Γöö None
+    Γöö <anthropic.Anthropic object at 0x76a88b0cc890>
+
+TypeError: Client.__init__() got an unexpected keyword argument 'proxies'
+INFO:     172.18.0.1:34928 - "POST /insights/3550308 HTTP/1.1" 500 Internal Server Error

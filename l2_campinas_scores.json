@@ -1,0 +1,1482 @@
+{
+  "municipio": "Campinas",
+  "n_pharmacies_osm": 104,
+  "bairros": [
+    {
+      "bairro": "Jardim Flamboyant",
+      "is_estimated": false,
+      "fallback_evidence": "",
+      "lat": -22.9085,
+      "lon": -47.1042,
+      "tier_socio": "A",
+      "renda_proxy": 8500,
+      "pop_density": 3,
+      "area_km2": 2.1,
+      "n_pdv": 2,
+      "n_brands": 2,
+      "density_pdv_km2": 0.95,
+      "big_chain_count": 0,
+      "popular_chain_count": 0,
+      "independent_count": 2,
+      "chain_ratio_pct": 0.0,
+      "indep_ratio_pct": 100.0,
+      "market_hhi": 5000.0,
+      "saturation_score": 14.3,
+      "demand_score": 60.0,
+      "opportunity_score": 51.4,
+      "chain_entry_gap": 100.0,
+      "opp_tier": "🟡 Média",
+      "top_brands": "Farmaxima, Medfarma",
+      "pdv_list": [
+        {
+          "name": "Farmaxima",
+          "brand": "Farmaxima",
+          "type": "independent",
+          "lat": -22.9156069,
+          "lon": -47.1036967
+        },
+        {
+          "name": "Medfarma",
+          "brand": "Medfarma",
+          "type": "independent",
+          "lat": -22.9196498,
+          "lon": -47.1040642
+        }
+      ],
+      "rank": 1
+    },
+    {
+      "bairro": "Cambuí",
+      "is_estimated": false,
+      "fallback_evidence": "",
+      "lat": -22.9022,
+      "lon": -47.0509,
+      "tier_socio": "A",
+      "renda_proxy": 8500,
+      "pop_density": 4,
+      "area_km2": 1.8,
+      "n_pdv": 10,
+      "n_brands": 6,
+      "density_pdv_km2": 5.56,
+      "big_chain_count": 8,
+      "popular_chain_count": 0,
+      "independent_count": 2,
+      "chain_ratio_pct": 80.0,
+      "indep_ratio_pct": 20.0,
+      "market_hhi": 2000.0,
+      "saturation_score": 92.0,
+      "demand_score": 80.0,
+      "opportunity_score": 24.8,
+      "chain_entry_gap": 20.0,
+      "opp_tier": "🟢 Baixa",
+      "top_brands": "Droga Raia, Drogasil, Drogaria São Paulo, Pague Menos",
+      "pdv_list": [
+        {
+          "name": "Drogasil",
+          "brand": "Drogasil",
+          "type": "big_chain",
+          "lat": -22.8984422,
+          "lon": -47.0525338
+        },
+        {
+          "name": "Drogaria São Paulo",
+          "brand": "Drogaria São Paulo",
+          "type": "big_chain",
+          "lat": -22.9031406,
+          "lon": -47.0535656
+        },
+        {
+          "name": "Drogasil",
+          "brand": "Drogasil",
+          "type": "big_chain",
+          "lat": -22.90306,
+          "lon": -47.0533917
+        },
+        {
+          "name": "Droga Raia",
+          "brand": "Droga Raia",
+          "type": "big_chain",
+          "lat": -22.905955,
+          "lon": -47.0553712
+        },
+        {
+          "name": "Drogaria São Paulo",
+          "brand": "Drogaria São Paulo",
+          "type": "big_chain",
+          "lat": -22.8987027,
+          "lon": -47.0556658
+        },
+        {
+          "name": "Pague Menos",
+          "brand": "Pague Menos",
+          "type": "big_chain",
+          "lat": -22.899109,
+          "lon": -47.055379
+        },
+        {
+          "name": "Droga Raia",
+          "brand": "Droga Raia",
+          "type": "big_chain",
+          "lat": -22.9006621,
+          "lon": -47.0521446
+        },
+        {
+          "name": "Drogaria SP",
+          "brand": "Drogaria Sp",
+          "type": "independent",
+          "lat": -22.90588,
+          "lon": -47.0381092
+        },
+        {
+          "name": "Droga Raia",
+          "brand": "Droga Raia",
+          "type": "big_chain",
+          "lat": -22.8971237,
+          "lon": -47.0519146
+        },
+        {
+          "name": "A Homeopática",
+          "brand": "A Homeopática",
+          "type": "independent",
+          "lat": -22.8974183,
+          "lon": -47.0530009
+        }
+      ],
+      "rank": 2
+    },
+    {
+      "bairro": "Jardim Chapadão",
+      "is_estimated": false,
+      "fallback_evidence": "",
+      "lat": -22.8765,
+      "lon": -47.0393,
+      "tier_socio": "C",
+      "renda_proxy": 2800,
+      "pop_density": 4,
+      "area_km2": 1.9,
+      "n_pdv": 1,
+      "n_brands": 1,
+      "density_pdv_km2": 0.53,
+      "big_chain_count": 0,
+      "popular_chain_count": 0,
+      "independent_count": 1,
+      "chain_ratio_pct": 0.0,
+      "indep_ratio_pct": 100.0,
+      "market_hhi": 10000.0,
+      "saturation_score": 7.9,
+      "demand_score": 26.4,
+      "opportunity_score": 21.7,
+      "chain_entry_gap": 100.0,
+      "opp_tier": "🟢 Baixa",
+      "top_brands": "Multidrogas",
+      "pdv_list": [
+        {
+          "name": "Multidrogas",
+          "brand": "Multidrogas",
+          "type": "independent",
+          "lat": -22.8789329,
+          "lon": -47.0363191
+        }
+      ],
+      "rank": 3
+    },
+    {
+      "bairro": "Nova Campinas",
+      "is_estimated": true,
+      "fallback_evidence": "Fallback error: Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-3-5-sonnet-20241022'}, 'request_id': 'req_011CZc8XFagStfNzuLayWJNw'}",
+      "lat": -22.896,
+      "lon": -47.107,
+      "tier_socio": "B",
+      "renda_proxy": 5200,
+      "pop_density": 2,
+      "area_km2": 2.8,
+      "n_pdv": 1,
+      "n_brands": 1,
+      "density_pdv_km2": 0.36,
+      "big_chain_count": 0,
+      "popular_chain_count": 0,
+      "independent_count": 1,
+      "chain_ratio_pct": 0.0,
+      "indep_ratio_pct": 100.0,
+      "market_hhi": 2500,
+      "saturation_score": 5.4,
+      "demand_score": 24.5,
+      "opportunity_score": 21.3,
+      "chain_entry_gap": 100.0,
+      "opp_tier": "🟢 Baixa",
+      "top_brands": "—",
+      "pdv_list": [],
+      "rank": 4
+    },
+    {
+      "bairro": "Barão Geraldo",
+      "is_estimated": false,
+      "fallback_evidence": "",
+      "lat": -22.8177,
+      "lon": -47.0715,
+      "tier_socio": "B",
+      "renda_proxy": 5200,
+      "pop_density": 3,
+      "area_km2": 5.2,
+      "n_pdv": 7,
+      "n_brands": 7,
+      "density_pdv_km2": 1.35,
+      "big_chain_count": 0,
+      "popular_chain_count": 1,
+      "independent_count": 6,
+      "chain_ratio_pct": 14.3,
+      "indep_ratio_pct": 85.7,
+      "market_hhi": 1429.0,
+      "saturation_score": 25.9,
+      "demand_score": 36.7,
+      "opportunity_score": 21.2,
+      "chain_entry_gap": 85.7,
+      "opp_tier": "🟢 Baixa",
+      "top_brands": "Companhia Das Ervas, Vitoria, Drogarias Farmáxima, Unknown",
+      "pdv_list": [
+        {
+          "name": "Companhia das Ervas",
+          "brand": "Companhia Das Ervas",
+          "type": "independent",
+          "lat": -22.8104486,
+          "lon": -47.0769043
+        },
+        {
+          "name": "Vitoria",
+          "brand": "Vitoria",
+          "type": "independent",
+          "lat": -22.8227354,
+          "lon": -47.0700358
+        },
+        {
+          "name": "Drogarias Farmáxima",
+          "brand": "Drogarias Farmáxima",
+          "type": "popular_chain",
+          "lat": -22.8240391,
+          "lon": -47.0349651
+        },
+        {
+          "name": "unknown",
+          "brand": "Unknown",
+          "type": "independent",
+          "lat": -22.8245485,
+          "lon": -47.0355204
+        },
+        {
+          "name": "Drogaria do Campus",
+          "brand": "Drogaria Do Campus",
+          "type": "independent",
+          "lat": -22.8252358,
+          "lon": -47.0671584
+        },
+        {
+          "name": "Farma Barão",
+          "brand": "Farma Barão",
+          "type": "independent",
+          "lat": -22.8090109,
+          "lon": -47.0784564
+        },
+        {
+          "name": "MagisPharma Farmácia de Manipulação e Homeopatia",
+          "brand": "Magispharma Farmácia De Manipulação E Homeopatia",
+          "type": "independent",
+          "lat": -22.8258328,
+          "lon": -47.0812518
+        }
+      ],
+      "rank": 5
+    },
+    {
+      "bairro": "Bonfim",
+      "is_estimated": true,
+      "fallback_evidence": "Fallback error: Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-3-5-sonnet-20241022'}, 'request_id': 'req_011CZc8XxNMnv6YuiwkKNXhi'}",
+      "lat": -22.9012,
+      "lon": -47.0751,
+      "tier_socio": "C",
+      "renda_proxy": 2800,
+      "pop_density": 4,
+      "area_km2": 1.6,
+      "n_pdv": 1,
+      "n_brands": 1,
+      "density_pdv_km2": 0.62,
+      "big_chain_count": 0,
+      "popular_chain_count": 0,
+      "independent_count": 1,
+      "chain_ratio_pct": 0.0,
+      "indep_ratio_pct": 100.0,
+      "market_hhi": 2500,
+      "saturation_score": 9.4,
+      "demand_score": 26.4,
+      "opportunity_score": 20.8,
+      "chain_entry_gap": 100.0,
+      "opp_tier": "🟢 Baixa",
+      "top_brands": "—",
+      "pdv_list": [],
+      "rank": 6
+    },
+    {
+      "bairro": "Mansões Santo Antônio",
+      "is_estimated": false,
+      "fallback_evidence": "",
+      "lat": -22.9316,
+      "lon": -47.1038,
+      "tier_socio": "A",
+      "renda_proxy": 8500,
+      "pop_density": 2,
+      "area_km2": 3.5,
+      "n_pdv": 6,
+      "n_brands": 4,
+      "density_pdv_km2": 1.71,
+      "big_chain_count": 1,
+      "popular_chain_count": 0,
+      "independent_count": 5,
+      "chain_ratio_pct": 16.7,
+      "indep_ratio_pct": 83.3,
+      "market_hhi": 3333.0,
+      "saturation_score": 32.4,
+      "demand_score": 40.0,
+      "opportunity_score": 20.6,
+      "chain_entry_gap": 83.3,
+      "opp_tier": "🟢 Baixa",
+      "top_brands": "Unknown, Drogasil, Farmahorro, Farmadic",
+      "pdv_list": [
+        {
+          "name": "unknown",
+          "brand": "Unknown",
+          "type": "independent",
+          "lat": -22.9657708,
+          "lon": -47.132296
+        },
+        {
+          "name": "unknown",
+          "brand": "Unknown",
+          "type": "independent",
+          "lat": -22.9299695,
+          "lon": -47.0870839
+        },
+        {
+          "name": "unknown",
+          "brand": "Unknown",
+          "type": "independent",
+          "lat": -22.9305156,
+          "lon": -47.1091689
+        },
+        {
+          "name": "Drogasil",
+          "brand": "Drogasil",
+          "type": "big_chain",
+          "lat": -22.9306399,
+          "lon": -47.0871922
+        },
+        {
+          "name": "Farmahorro",
+          "brand": "Farmahorro",
+          "type": "independent",
+          "lat": -22.9825852,
+          "lon": -47.1206931
+        },
+        {
+          "name": "Farmadic",
+          "brand": "Farmadic",
+          "type": "independent",
+          "lat": -22.9778008,
+          "lon": -47.1279492
+        }
+      ],
+      "rank": 7
+    },
+    {
+      "bairro": "Novo Mundo",
+      "is_estimated": true,
+      "fallback_evidence": "Fallback error: Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-3-5-sonnet-20241022'}, 'request_id': 'req_011CZc8YfdKNiSrVNpfGGT1G'}",
+      "lat": -22.9154,
+      "lon": -47.08,
+      "tier_socio": "D",
+      "renda_proxy": 1800,
+      "pop_density": 4,
+      "area_km2": 1.7,
+      "n_pdv": 1,
+      "n_brands": 1,
+      "density_pdv_km2": 0.59,
+      "big_chain_count": 0,
+      "popular_chain_count": 0,
+      "independent_count": 1,
+      "chain_ratio_pct": 0.0,
+      "indep_ratio_pct": 100.0,
+      "market_hhi": 2500,
+      "saturation_score": 8.8,
+      "demand_score": 16.9,
+      "opportunity_score": 11.6,
+      "chain_entry_gap": 100.0,
+      "opp_tier": "🟢 Baixa",
+      "top_brands": "—",
+      "pdv_list": [],
+      "rank": 8
+    },
+    {
+      "bairro": "DIC I / II / III",
+      "is_estimated": true,
+      "fallback_evidence": "Fallback error: Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-3-5-sonnet-20241022'}, 'request_id': 'req_011CZc8ZN1C6aCLVzuS5HcXY'}",
+      "lat": -22.87,
+      "lon": -47.11,
+      "tier_socio": "E",
+      "renda_proxy": 1100,
+      "pop_density": 4,
+      "area_km2": 3.2,
+      "n_pdv": 1,
+      "n_brands": 1,
+      "density_pdv_km2": 0.31,
+      "big_chain_count": 0,
+      "popular_chain_count": 0,
+      "independent_count": 1,
+      "chain_ratio_pct": 0.0,
+      "indep_ratio_pct": 100.0,
+      "market_hhi": 2500,
+      "saturation_score": 4.7,
+      "demand_score": 10.4,
+      "opportunity_score": 7.6,
+      "chain_entry_gap": 100.0,
+      "opp_tier": "🟢 Baixa",
+      "top_brands": "—",
+      "pdv_list": [],
+      "rank": 9
+    },
+    {
+      "bairro": "Ouro Verde",
+      "is_estimated": true,
+      "fallback_evidence": "Fallback error: Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-3-5-sonnet-20241022'}, 'request_id': 'req_011CZc8a41VjqvJ5vjDNRatX'}",
+      "lat": -22.855,
+      "lon": -47.12,
+      "tier_socio": "E",
+      "renda_proxy": 1100,
+      "pop_density": 3,
+      "area_km2": 3.5,
+      "n_pdv": 1,
+      "n_brands": 1,
+      "density_pdv_km2": 0.29,
+      "big_chain_count": 0,
+      "popular_chain_count": 0,
+      "independent_count": 1,
+      "chain_ratio_pct": 0.0,
+      "indep_ratio_pct": 100.0,
+      "market_hhi": 2500,
+      "saturation_score": 4.3,
+      "demand_score": 7.8,
+      "opportunity_score": 5.2,
+      "chain_entry_gap": 100.0,
+      "opp_tier": "🟢 Baixa",
+      "top_brands": "—",
+      "pdv_list": [],
+      "rank": 10
+    },
+    {
+      "bairro": "Taquaral / Bosque",
+      "is_estimated": false,
+      "fallback_evidence": "",
+      "lat": -22.8924,
+      "lon": -47.0559,
+      "tier_socio": "B",
+      "renda_proxy": 5200,
+      "pop_density": 3,
+      "area_km2": 2.4,
+      "n_pdv": 10,
+      "n_brands": 9,
+      "density_pdv_km2": 4.17,
+      "big_chain_count": 4,
+      "popular_chain_count": 0,
+      "independent_count": 6,
+      "chain_ratio_pct": 40.0,
+      "indep_ratio_pct": 60.0,
+      "market_hhi": 1200.0,
+      "saturation_score": 76.0,
+      "demand_score": 36.7,
+      "opportunity_score": 5.0,
+      "chain_entry_gap": 60.0,
+      "opp_tier": "🟢 Baixa",
+      "top_brands": "Drogaria São Paulo, Ao Pharmaceutico, Droga Raia, Lab Brasil",
+      "pdv_list": [
+        {
+          "name": "Drogaria São Paulo",
+          "brand": "Drogaria São Paulo",
+          "type": "big_chain",
+          "lat": -22.8940686,
+          "lon": -47.061126
+        },
+        {
+          "name": "Ao Pharmaceutico",
+          "brand": "Ao Pharmaceutico",
+          "type": "independent",
+          "lat": -22.8943503,
+          "lon": -47.0540225
+        },
+        {
+          "name": "Droga Raia",
+          "brand": "Droga Raia",
+          "type": "big_chain",
+          "lat": -22.8981552,
+          "lon": -47.0560044
+        },
+        {
+          "name": "Lab Brasil",
+          "brand": "Lab Brasil",
+          "type": "independent",
+          "lat": -22.8929529,
+          "lon": -47.056135
+        },
+        {
+          "name": "Fórmula e Cia",
+          "brand": "Fórmula E Cia",
+          "type": "independent",
+          "lat": -22.8945747,
+          "lon": -47.0544988
+        },
+        {
+          "name": "Droga Brasil",
+          "brand": "Droga Brasil",
+          "type": "independent",
+          "lat": -22.895436,
+          "lon": -47.0562985
+        },
+        {
+          "name": "Drogasil",
+          "brand": "Drogasil",
+          "type": "big_chain",
+          "lat": -22.8931306,
+          "lon": -47.0565206
+        },
+        {
+          "name": "Drogaria São Paulo",
+          "brand": "Drogaria São Paulo",
+          "type": "big_chain",
+          "lat": -22.895211,
+          "lon": -47.0523146
+        },
+        {
+          "name": "Specialista Farmácia de Manipulação",
+          "brand": "Specialista Farmácia De Manipulação",
+          "type": "independent",
+          "lat": -22.8943063,
+          "lon": -47.0645865
+        },
+        {
+          "name": "Neofórmula Manipulação & Homeopatia",
+          "brand": "Neofórmula Manipulação & Homeopatia",
+          "type": "independent",
+          "lat": -22.8976628,
+          "lon": -47.0625305
+        }
+      ],
+      "rank": 11
+    },
+    {
+      "bairro": "Jardim Guanabara",
+      "is_estimated": false,
+      "fallback_evidence": "",
+      "lat": -22.8869,
+      "lon": -47.0308,
+      "tier_socio": "C",
+      "renda_proxy": 2800,
+      "pop_density": 4,
+      "area_km2": 1.7,
+      "n_pdv": 4,
+      "n_brands": 3,
+      "density_pdv_km2": 2.35,
+      "big_chain_count": 4,
+      "popular_chain_count": 0,
+      "independent_count": 0,
+      "chain_ratio_pct": 100.0,
+      "indep_ratio_pct": 0.0,
+      "market_hhi": 3750.0,
+      "saturation_score": 75.3,
+      "demand_score": 26.4,
+      "opportunity_score": 5.0,
+      "chain_entry_gap": 0.0,
+      "opp_tier": "🟢 Baixa",
+      "top_brands": "Drogaria São Paulo, Droga Raia, Drogasil",
+      "pdv_list": [
+        {
+          "name": "Drogaria São Paulo",
+          "brand": "Drogaria São Paulo",
+          "type": "big_chain",
+          "lat": -22.8781594,
+          "lon": -46.9673223
+        },
+        {
+          "name": "Drogaria São Paulo",
+          "brand": "Drogaria São Paulo",
+          "type": "big_chain",
+          "lat": -22.8890279,
+          "lon": -47.0329825
+        },
+        {
+          "name": "Droga Raia",
+          "brand": "Droga Raia",
+          "type": "big_chain",
+          "lat": -22.8831088,
+          "lon": -47.0338282
+        },
+        {
+          "name": "Drogasil",
+          "brand": "Drogasil",
+          "type": "big_chain",
+          "lat": -22.8887582,
+          "lon": -47.0327731
+        }
+      ],
+      "rank": 12
+    },
+    {
+      "bairro": "Vila Itapura",
+      "is_estimated": false,
+      "fallback_evidence": "",
+      "lat": -22.8868,
+      "lon": -47.0584,
+      "tier_socio": "C",
+      "renda_proxy": 2800,
+      "pop_density": 4,
+      "area_km2": 1.5,
+      "n_pdv": 11,
+      "n_brands": 9,
+      "density_pdv_km2": 7.33,
+      "big_chain_count": 3,
+      "popular_chain_count": 3,
+      "independent_count": 5,
+      "chain_ratio_pct": 54.5,
+      "indep_ratio_pct": 45.5,
+      "market_hhi": 1240.0,
+      "saturation_score": 81.8,
+      "demand_score": 26.4,
+      "opportunity_score": 5.0,
+      "chain_entry_gap": 45.5,
+      "opp_tier": "🟢 Baixa",
+      "top_brands": "Droga Raia, Drogarias Farmáxima, Drogão Super, Farmácia Carcajon",
+      "pdv_list": [
+        {
+          "name": "Droga Raia",
+          "brand": "Droga Raia",
+          "type": "big_chain",
+          "lat": -22.8891189,
+          "lon": -47.0658473
+        },
+        {
+          "name": "Drogarias Farmáxima",
+          "brand": "Drogarias Farmáxima",
+          "type": "popular_chain",
+          "lat": -22.8849531,
+          "lon": -47.0647116
+        },
+        {
+          "name": "Drogarias Farmáxima",
+          "brand": "Drogarias Farmáxima",
+          "type": "popular_chain",
+          "lat": -22.891983,
+          "lon": -47.0635068
+        },
+        {
+          "name": "Drogão Super",
+          "brand": "Drogão Super",
+          "type": "popular_chain",
+          "lat": -22.8885665,
+          "lon": -47.0609142
+        },
+        {
+          "name": "Droga Raia",
+          "brand": "Droga Raia",
+          "type": "big_chain",
+          "lat": -22.8911037,
+          "lon": -47.0627512
+        },
+        {
+          "name": "Farmácia Carcajon",
+          "brand": "Farmácia Carcajon",
+          "type": "independent",
+          "lat": -22.8846227,
+          "lon": -47.0696979
+        },
+        {
+          "name": "Rede Drogão Popular",
+          "brand": "Rede Drogão Popular",
+          "type": "independent",
+          "lat": -22.8818954,
+          "lon": -47.0639921
+        },
+        {
+          "name": "Drogaria da Lagoa",
+          "brand": "Drogaria Da Lagoa",
+          "type": "independent",
+          "lat": -22.8819942,
+          "lon": -47.0638952
+        },
+        {
+          "name": "Fármaco",
+          "brand": "Fármaco",
+          "type": "independent",
+          "lat": -22.8834563,
+          "lon": -47.0733171
+        },
+        {
+          "name": "Drogasil",
+          "brand": "Drogasil",
+          "type": "big_chain",
+          "lat": -22.8886986,
+          "lon": -47.0613974
+        },
+        {
+          "name": "Substrata",
+          "brand": "Substrata",
+          "type": "independent",
+          "lat": -22.8854464,
+          "lon": -47.058424
+        }
+      ],
+      "rank": 13
+    },
+    {
+      "bairro": "Botafogo",
+      "is_estimated": false,
+      "fallback_evidence": "",
+      "lat": -22.9089,
+      "lon": -47.0665,
+      "tier_socio": "C",
+      "renda_proxy": 2800,
+      "pop_density": 5,
+      "area_km2": 1.2,
+      "n_pdv": 1,
+      "n_brands": 1,
+      "density_pdv_km2": 0.83,
+      "big_chain_count": 1,
+      "popular_chain_count": 0,
+      "independent_count": 0,
+      "chain_ratio_pct": 100.0,
+      "indep_ratio_pct": 0.0,
+      "market_hhi": 10000.0,
+      "saturation_score": 52.5,
+      "demand_score": 32.9,
+      "opportunity_score": 5.0,
+      "chain_entry_gap": 0.0,
+      "opp_tier": "🟢 Baixa",
+      "top_brands": "Drogaria São Paulo",
+      "pdv_list": [
+        {
+          "name": "Drogaria São Paulo",
+          "brand": "Drogaria São Paulo",
+          "type": "big_chain",
+          "lat": -22.9038236,
+          "lon": -47.0692667
+        }
+      ],
+      "rank": 14
+    },
+    {
+      "bairro": "Centro",
+      "is_estimated": false,
+      "fallback_evidence": "",
+      "lat": -22.9064,
+      "lon": -47.0616,
+      "tier_socio": "C",
+      "renda_proxy": 2800,
+      "pop_density": 5,
+      "area_km2": 1.0,
+      "n_pdv": 6,
+      "n_brands": 6,
+      "density_pdv_km2": 6.0,
+      "big_chain_count": 1,
+      "popular_chain_count": 2,
+      "independent_count": 3,
+      "chain_ratio_pct": 50.0,
+      "indep_ratio_pct": 50.0,
+      "market_hhi": 1667.0,
+      "saturation_score": 80.0,
+      "demand_score": 32.9,
+      "opportunity_score": 5.0,
+      "chain_entry_gap": 50.0,
+      "opp_tier": "🟢 Baixa",
+      "top_brands": "Drogão Super, Drogaria Familiar, Drogaria Campeã, Farma Futura",
+      "pdv_list": [
+        {
+          "name": "Drogão Super",
+          "brand": "Drogão Super",
+          "type": "popular_chain",
+          "lat": -22.9061665,
+          "lon": -47.0636001
+        },
+        {
+          "name": "Drogaria Familiar",
+          "brand": "Drogaria Familiar",
+          "type": "popular_chain",
+          "lat": -22.9059348,
+          "lon": -47.0635732
+        },
+        {
+          "name": "Drogaria Campeã",
+          "brand": "Drogaria Campeã",
+          "type": "independent",
+          "lat": -22.9058603,
+          "lon": -47.0634564
+        },
+        {
+          "name": "Farma Futura",
+          "brand": "Farma Futura",
+          "type": "independent",
+          "lat": -22.9004735,
+          "lon": -47.0637489
+        },
+        {
+          "name": "Droga Raia",
+          "brand": "Droga Raia",
+          "type": "big_chain",
+          "lat": -22.9030683,
+          "lon": -47.0607106
+        },
+        {
+          "name": "Super Popular",
+          "brand": "Super Popular",
+          "type": "independent",
+          "lat": -22.906139,
+          "lon": -47.0640144
+        }
+      ],
+      "rank": 15
+    },
+    {
+      "bairro": "Castelo",
+      "is_estimated": false,
+      "fallback_evidence": "",
+      "lat": -22.8978,
+      "lon": -47.0762,
+      "tier_socio": "C",
+      "renda_proxy": 2800,
+      "pop_density": 3,
+      "area_km2": 2.0,
+      "n_pdv": 12,
+      "n_brands": 12,
+      "density_pdv_km2": 6.0,
+      "big_chain_count": 3,
+      "popular_chain_count": 1,
+      "independent_count": 8,
+      "chain_ratio_pct": 33.3,
+      "indep_ratio_pct": 66.7,
+      "market_hhi": 833.0,
+      "saturation_score": 73.3,
+      "demand_score": 19.8,
+      "opportunity_score": 5.0,
+      "chain_entry_gap": 66.7,
+      "opp_tier": "🟢 Baixa",
+      "top_brands": "Botica Artesanal, Farma Plus, Pague Menos, Droga Raia",
+      "pdv_list": [
+        {
+          "name": "Botica Artesanal",
+          "brand": "Botica Artesanal",
+          "type": "independent",
+          "lat": -22.8923445,
+          "lon": -47.0774646
+        },
+        {
+          "name": "Farma Plus",
+          "brand": "Farma Plus",
+          "type": "independent",
+          "lat": -22.8973473,
+          "lon": -47.0806816
+        },
+        {
+          "name": "Pague Menos",
+          "brand": "Pague Menos",
+          "type": "big_chain",
+          "lat": -22.8998033,
+          "lon": -47.0820012
+        },
+        {
+          "name": "Droga Raia",
+          "brand": "Droga Raia",
+          "type": "big_chain",
+          "lat": -22.8908912,
+          "lon": -47.0761152
+        },
+        {
+          "name": "Drogarias Farmáxima",
+          "brand": "Drogarias Farmáxima",
+          "type": "popular_chain",
+          "lat": -22.8894585,
+          "lon": -47.0776848
+        },
+        {
+          "name": "Vet Fórmula - Manipulação Veterinária",
+          "brand": "Vet Fórmula - Manipulação Veterinária",
+          "type": "independent",
+          "lat": -22.8872121,
+          "lon": -47.075537
+        },
+        {
+          "name": "Botica Erva Doce",
+          "brand": "Botica Erva Doce",
+          "type": "independent",
+          "lat": -22.8904137,
+          "lon": -47.0752968
+        },
+        {
+          "name": "Farmalu",
+          "brand": "Farmalu",
+          "type": "independent",
+          "lat": -22.892129,
+          "lon": -47.0718228
+        },
+        {
+          "name": "Animalia Farma",
+          "brand": "Animalia Farma",
+          "type": "independent",
+          "lat": -22.8909361,
+          "lon": -47.0755641
+        },
+        {
+          "name": "Ultrafarma",
+          "brand": "Ultrafarma",
+          "type": "big_chain",
+          "lat": -22.8897303,
+          "lon": -47.0763578
+        },
+        {
+          "name": "Biosíntese",
+          "brand": "Biosíntese",
+          "type": "independent",
+          "lat": -22.8953498,
+          "lon": -47.0661785
+        },
+        {
+          "name": "Drogaria São Carlos",
+          "brand": "Drogaria São Carlos",
+          "type": "independent",
+          "lat": -22.8913857,
+          "lon": -47.0685365
+        }
+      ],
+      "rank": 16
+    },
+    {
+      "bairro": "Ponte Preta",
+      "is_estimated": false,
+      "fallback_evidence": "",
+      "lat": -22.905,
+      "lon": -47.085,
+      "tier_socio": "C",
+      "renda_proxy": 2800,
+      "pop_density": 4,
+      "area_km2": 1.4,
+      "n_pdv": 2,
+      "n_brands": 2,
+      "density_pdv_km2": 1.43,
+      "big_chain_count": 1,
+      "popular_chain_count": 0,
+      "independent_count": 1,
+      "chain_ratio_pct": 50.0,
+      "indep_ratio_pct": 50.0,
+      "market_hhi": 5000.0,
+      "saturation_score": 41.4,
+      "demand_score": 26.4,
+      "opportunity_score": 5.0,
+      "chain_entry_gap": 50.0,
+      "opp_tier": "🟢 Baixa",
+      "top_brands": "Drogaria Leal, Drogasil",
+      "pdv_list": [
+        {
+          "name": "Drogaria Leal",
+          "brand": "Drogaria Leal",
+          "type": "independent",
+          "lat": -22.8992683,
+          "lon": -47.0828677
+        },
+        {
+          "name": "Drogasil",
+          "brand": "Drogasil",
+          "type": "big_chain",
+          "lat": -22.9083335,
+          "lon": -47.0870027
+        }
+      ],
+      "rank": 17
+    },
+    {
+      "bairro": "Jardim Brasil",
+      "is_estimated": false,
+      "fallback_evidence": "",
+      "lat": -22.92,
+      "lon": -47.045,
+      "tier_socio": "D",
+      "renda_proxy": 1800,
+      "pop_density": 4,
+      "area_km2": 2.1,
+      "n_pdv": 1,
+      "n_brands": 1,
+      "density_pdv_km2": 0.48,
+      "big_chain_count": 1,
+      "popular_chain_count": 0,
+      "independent_count": 0,
+      "chain_ratio_pct": 100.0,
+      "indep_ratio_pct": 0.0,
+      "market_hhi": 10000.0,
+      "saturation_score": 47.1,
+      "demand_score": 16.9,
+      "opportunity_score": 5.0,
+      "chain_entry_gap": 0.0,
+      "opp_tier": "🟢 Baixa",
+      "top_brands": "Pague Menos",
+      "pdv_list": [
+        {
+          "name": "Pague Menos",
+          "brand": "Pague Menos",
+          "type": "big_chain",
+          "lat": -22.9287797,
+          "lon": -47.0548923
+        }
+      ],
+      "rank": 18
+    },
+    {
+      "bairro": "Jardim Nossa Sra Auxiliadora",
+      "is_estimated": false,
+      "fallback_evidence": "",
+      "lat": -22.9232,
+      "lon": -47.0673,
+      "tier_socio": "D",
+      "renda_proxy": 1800,
+      "pop_density": 4,
+      "area_km2": 1.8,
+      "n_pdv": 1,
+      "n_brands": 1,
+      "density_pdv_km2": 0.56,
+      "big_chain_count": 1,
+      "popular_chain_count": 0,
+      "independent_count": 0,
+      "chain_ratio_pct": 100.0,
+      "indep_ratio_pct": 0.0,
+      "market_hhi": 10000.0,
+      "saturation_score": 48.3,
+      "demand_score": 16.9,
+      "opportunity_score": 5.0,
+      "chain_entry_gap": 0.0,
+      "opp_tier": "🟢 Baixa",
+      "top_brands": "Drogaria São Paulo",
+      "pdv_list": [
+        {
+          "name": "Drogaria São Paulo",
+          "brand": "Drogaria São Paulo",
+          "type": "big_chain",
+          "lat": -22.9251734,
+          "lon": -47.0566739
+        }
+      ],
+      "rank": 19
+    },
+    {
+      "bairro": "Alto da Barra",
+      "is_estimated": false,
+      "fallback_evidence": "",
+      "lat": -22.928,
+      "lon": -47.0395,
+      "tier_socio": "D",
+      "renda_proxy": 1800,
+      "pop_density": 3,
+      "area_km2": 2.3,
+      "n_pdv": 2,
+      "n_brands": 2,
+      "density_pdv_km2": 0.87,
+      "big_chain_count": 2,
+      "popular_chain_count": 0,
+      "independent_count": 0,
+      "chain_ratio_pct": 100.0,
+      "indep_ratio_pct": 0.0,
+      "market_hhi": 5000.0,
+      "saturation_score": 53.0,
+      "demand_score": 12.7,
+      "opportunity_score": 5.0,
+      "chain_entry_gap": 0.0,
+      "opp_tier": "🟢 Baixa",
+      "top_brands": "Drogasil, Droga Raia",
+      "pdv_list": [
+        {
+          "name": "Drogasil",
+          "brand": "Drogasil",
+          "type": "big_chain",
+          "lat": -22.937258,
+          "lon": -47.0497733
+        },
+        {
+          "name": "Droga Raia",
+          "brand": "Droga Raia",
+          "type": "big_chain",
+          "lat": -22.9355177,
+          "lon": -47.0508769
+        }
+      ],
+      "rank": 20
+    },
+    {
+      "bairro": "Vila União",
+      "is_estimated": false,
+      "fallback_evidence": "",
+      "lat": -22.915,
+      "lon": -47.055,
+      "tier_socio": "D",
+      "renda_proxy": 1800,
+      "pop_density": 4,
+      "area_km2": 1.5,
+      "n_pdv": 2,
+      "n_brands": 2,
+      "density_pdv_km2": 1.33,
+      "big_chain_count": 1,
+      "popular_chain_count": 1,
+      "independent_count": 0,
+      "chain_ratio_pct": 100.0,
+      "indep_ratio_pct": 0.0,
+      "market_hhi": 5000.0,
+      "saturation_score": 60.0,
+      "demand_score": 16.9,
+      "opportunity_score": 5.0,
+      "chain_entry_gap": 0.0,
+      "opp_tier": "🟢 Baixa",
+      "top_brands": "Drogarias Farmáxima, Pague Menos",
+      "pdv_list": [
+        {
+          "name": "Drogarias Farmáxima",
+          "brand": "Drogarias Farmáxima",
+          "type": "popular_chain",
+          "lat": -22.9100655,
+          "lon": -47.0535096
+        },
+        {
+          "name": "Pague Menos",
+          "brand": "Pague Menos",
+          "type": "big_chain",
+          "lat": -22.9172882,
+          "lon": -47.0549766
+        }
+      ],
+      "rank": 21
+    },
+    {
+      "bairro": "São Bernardo",
+      "is_estimated": false,
+      "fallback_evidence": "",
+      "lat": -22.835,
+      "lon": -47.09,
+      "tier_socio": "D",
+      "renda_proxy": 1800,
+      "pop_density": 3,
+      "area_km2": 3.0,
+      "n_pdv": 4,
+      "n_brands": 4,
+      "density_pdv_km2": 1.33,
+      "big_chain_count": 2,
+      "popular_chain_count": 0,
+      "independent_count": 2,
+      "chain_ratio_pct": 50.0,
+      "indep_ratio_pct": 50.0,
+      "market_hhi": 2500.0,
+      "saturation_score": 40.0,
+      "demand_score": 12.7,
+      "opportunity_score": 5.0,
+      "chain_entry_gap": 50.0,
+      "opp_tier": "🟢 Baixa",
+      "top_brands": "Drogasil, Farmais, Botica Da Terra, Drogaria São Paulo",
+      "pdv_list": [
+        {
+          "name": "Drogasil",
+          "brand": "Drogasil",
+          "type": "big_chain",
+          "lat": -22.8347654,
+          "lon": -47.0788463
+        },
+        {
+          "name": "Farmais",
+          "brand": "Farmais",
+          "type": "independent",
+          "lat": -22.8267739,
+          "lon": -47.0810555
+        },
+        {
+          "name": "Botica da Terra",
+          "brand": "Botica Da Terra",
+          "type": "independent",
+          "lat": -22.8276987,
+          "lon": -47.0800173
+        },
+        {
+          "name": "Drogaria São Paulo",
+          "brand": "Drogaria São Paulo",
+          "type": "big_chain",
+          "lat": -22.8305475,
+          "lon": -47.0785499
+        }
+      ],
+      "rank": 22
+    },
+    {
+      "bairro": "Prainha",
+      "is_estimated": false,
+      "fallback_evidence": "",
+      "lat": -22.879,
+      "lon": -47.0466,
+      "tier_socio": "D",
+      "renda_proxy": 1800,
+      "pop_density": 3,
+      "area_km2": 1.6,
+      "n_pdv": 2,
+      "n_brands": 2,
+      "density_pdv_km2": 1.25,
+      "big_chain_count": 2,
+      "popular_chain_count": 0,
+      "independent_count": 0,
+      "chain_ratio_pct": 100.0,
+      "indep_ratio_pct": 0.0,
+      "market_hhi": 5000.0,
+      "saturation_score": 58.8,
+      "demand_score": 12.7,
+      "opportunity_score": 5.0,
+      "chain_entry_gap": 0.0,
+      "opp_tier": "🟢 Baixa",
+      "top_brands": "Drogasil, Drogaria São Paulo",
+      "pdv_list": [
+        {
+          "name": "Drogasil",
+          "brand": "Drogasil",
+          "type": "big_chain",
+          "lat": -22.8783214,
+          "lon": -47.0441444
+        },
+        {
+          "name": "Drogaria São Paulo",
+          "brand": "Drogaria São Paulo",
+          "type": "big_chain",
+          "lat": -22.8782596,
+          "lon": -47.0445548
+        }
+      ],
+      "rank": 23
+    },
+    {
+      "bairro": "Jardim do Trevo",
+      "is_estimated": false,
+      "fallback_evidence": "",
+      "lat": -22.864,
+      "lon": -47.06,
+      "tier_socio": "D",
+      "renda_proxy": 1800,
+      "pop_density": 3,
+      "area_km2": 2.4,
+      "n_pdv": 3,
+      "n_brands": 3,
+      "density_pdv_km2": 1.25,
+      "big_chain_count": 1,
+      "popular_chain_count": 0,
+      "independent_count": 2,
+      "chain_ratio_pct": 33.3,
+      "indep_ratio_pct": 66.7,
+      "market_hhi": 3333.0,
+      "saturation_score": 32.1,
+      "demand_score": 12.7,
+      "opportunity_score": 5.0,
+      "chain_entry_gap": 66.7,
+      "opp_tier": "🟢 Baixa",
+      "top_brands": "Drogaria São Paulo, Farmácia Drogal, Drogaria Tamavy",
+      "pdv_list": [
+        {
+          "name": "Drogaria São Paulo",
+          "brand": "Drogaria São Paulo",
+          "type": "big_chain",
+          "lat": -22.8560985,
+          "lon": -47.0464543
+        },
+        {
+          "name": "Farmácia Drogal",
+          "brand": "Farmácia Drogal",
+          "type": "independent",
+          "lat": -22.8649055,
+          "lon": -47.0540542
+        },
+        {
+          "name": "Drogaria Tamavy",
+          "brand": "Drogaria Tamavy",
+          "type": "independent",
+          "lat": -22.8702243,
+          "lon": -47.0637011
+        }
+      ],
+      "rank": 24
+    },
+    {
+      "bairro": "Campo Grande",
+      "is_estimated": false,
+      "fallback_evidence": "",
+      "lat": -22.925,
+      "lon": -47.115,
+      "tier_socio": "E",
+      "renda_proxy": 1100,
+      "pop_density": 4,
+      "area_km2": 2.8,
+      "n_pdv": 17,
+      "n_brands": 12,
+      "density_pdv_km2": 6.07,
+      "big_chain_count": 4,
+      "popular_chain_count": 4,
+      "independent_count": 9,
+      "chain_ratio_pct": 47.1,
+      "indep_ratio_pct": 52.9,
+      "market_hhi": 1073.0,
+      "saturation_score": 78.8,
+      "demand_score": 10.4,
+      "opportunity_score": 5.0,
+      "chain_entry_gap": 52.9,
+      "opp_tier": "🟢 Baixa",
+      "top_brands": "Drogasil, Unknown, Drogal, Droga Marques",
+      "pdv_list": [
+        {
+          "name": "Drogasil",
+          "brand": "Drogasil",
+          "type": "big_chain",
+          "lat": -22.9186946,
+          "lon": -47.1095418
+        },
+        {
+          "name": "Droga Marques",
+          "brand": "Droga Marques",
+          "type": "independent",
+          "lat": -22.918527,
+          "lon": -47.1089726
+        },
+        {
+          "name": "unknown",
+          "brand": "Unknown",
+          "type": "independent",
+          "lat": -22.9668335,
+          "lon": -47.1389335
+        },
+        {
+          "name": "Drogal",
+          "brand": "Drogal",
+          "type": "popular_chain",
+          "lat": -22.9506506,
+          "lon": -47.1863181
+        },
+        {
+          "name": "Drogarias Farmáxima",
+          "brand": "Drogarias Farmáxima",
+          "type": "popular_chain",
+          "lat": -22.9497748,
+          "lon": -47.1866889
+        },
+        {
+          "name": "unknown",
+          "brand": "Unknown",
+          "type": "independent",
+          "lat": -22.9487477,
+          "lon": -47.1865722
+        },
+        {
+          "name": "Drogasil",
+          "brand": "Drogasil",
+          "type": "big_chain",
+          "lat": -22.9257851,
+          "lon": -47.1267861
+        },
+        {
+          "name": "Dr.Pharma Popular",
+          "brand": "Dr.Pharma Popular",
+          "type": "independent",
+          "lat": -22.9370722,
+          "lon": -47.1590379
+        },
+        {
+          "name": "Drograria Serv Farma",
+          "brand": "Drograria Serv Farma",
+          "type": "independent",
+          "lat": -22.9373358,
+          "lon": -47.158481
+        },
+        {
+          "name": "Rede Farma do Povo",
+          "brand": "Rede Farma Do Povo",
+          "type": "independent",
+          "lat": -22.9481874,
+          "lon": -47.1853808
+        },
+        {
+          "name": "unknown",
+          "brand": "Unknown",
+          "type": "independent",
+          "lat": -22.9269543,
+          "lon": -47.1259939
+        },
+        {
+          "name": "Farma Bento",
+          "brand": "Farma Bento",
+          "type": "independent",
+          "lat": -22.9468609,
+          "lon": -47.1868379
+        },
+        {
+          "name": "Drogasil",
+          "brand": "Drogasil",
+          "type": "big_chain",
+          "lat": -22.9470194,
+          "lon": -47.186902
+        },
+        {
+          "name": "Drogaria São Paulo",
+          "brand": "Drogaria São Paulo",
+          "type": "big_chain",
+          "lat": -22.9201818,
+          "lon": -47.1115535
+        },
+        {
+          "name": "Drogaria Familiar",
+          "brand": "Drogaria Familiar",
+          "type": "popular_chain",
+          "lat": -22.919534,
+          "lon": -47.1098203
+        },
+        {
+          "name": "Drogal",
+          "brand": "Drogal",
+          "type": "popular_chain",
+          "lat": -22.9512606,
+          "lon": -47.1881441
+        },
+        {
+          "name": "Drogão Popular",
+          "brand": "Drogão Popular",
+          "type": "independent",
+          "lat": -22.9510104,
+          "lon": -47.1861564
+        }
+      ],
+      "rank": 25
+    },
+    {
+      "bairro": "Jardim Florence",
+      "is_estimated": true,
+      "fallback_evidence": "Fallback error: Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-3-5-sonnet-20241022'}, 'request_id': 'req_011CZc8akLPjm9pFdet2d3HS'}",
+      "lat": -22.845,
+      "lon": -47.075,
+      "tier_socio": "E",
+      "renda_proxy": 1100,
+      "pop_density": 3,
+      "area_km2": 2.9,
+      "n_pdv": 1,
+      "n_brands": 1,
+      "density_pdv_km2": 0.34,
+      "big_chain_count": 0,
+      "popular_chain_count": 0,
+      "independent_count": 1,
+      "chain_ratio_pct": 0.0,
+      "indep_ratio_pct": 100.0,
+      "market_hhi": 2500,
+      "saturation_score": 5.2,
+      "demand_score": 7.8,
+      "opportunity_score": 5.0,
+      "chain_entry_gap": 100.0,
+      "opp_tier": "🟢 Baixa",
+      "top_brands": "—",
+      "pdv_list": [],
+      "rank": 26
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+version: "3.9"
+
+services:
+  db:
+    image: postgis/postgis:15-3.3
+    container_name: pharmasite2_db
+    environment:
+      POSTGRES_DB: pharmasite
+      POSTGRES_USER: pharma
+      POSTGRES_PASSWORD: pharma123
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./shared/init.sql:/docker-entrypoint-initdb.d/init.sql
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U pharma -d pharmasite" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:7-alpine
+    container_name: pharmasite2_redis
+    ports:
+      - "6379:6379"
+
+  agent1:
+    build:
+      context: ./agent1
+      dockerfile: Dockerfile
+    container_name: pharmasite2_agent1
+    environment:
+      # host.docker.internal reaches the Windows host — uses the shared pharmasite DB
+      DATABASE_URL: postgresql://pharma:pharma123@host.docker.internal:5432/pharmasite
+    env_file:
+      - .env
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    volumes:
+      - ./agent1:/app
+      - agent1_data:/app/data
+    command: python main.py
+
+  api:
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    container_name: pharmasite2_api
+    environment:
+      # host.docker.internal reaches the Windows host — uses the shared pharmasite DB and Redis
+      DATABASE_URL: postgresql://pharma:pharma123@host.docker.internal:5432/pharmasite
+      REDIS_URL: redis://host.docker.internal:6379
+    env_file:
+      - .env
+    ports:
+      - "8002:8000"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    volumes:
+      - ./api:/app
+    command: uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+
+volumes:
+  pgdata:
+  agent1_data:

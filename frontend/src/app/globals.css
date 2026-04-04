@@ -1,0 +1,123 @@
+@import "tailwindcss";
+
+:root {
+  --navy: #0f172a;
+  /* slate-900 (lighter than 050b1e) */
+  --navy-2: #1e293b;
+  /* slate-800 */
+  --navy-3: #334155;
+  /* slate-700 */
+  --glass: rgba(30, 41, 59, 0.75);
+  /* more opaque glass, better readable */
+  --glass-hover: rgba(51, 65, 85, 0.85);
+  --border: rgba(255, 255, 255, 0.15);
+  /* stronger borders */
+  --border-2: rgba(255, 255, 255, 0.25);
+  --primary: #38bdf8;
+  --primary-dim: rgba(56, 189, 248, 0.2);
+  --muted: #94a3b8;
+  /* slate-400 */
+  --text: #f8fafc;
+  /* slate-50 */
+  --text-dim: #cbd5e1;
+  /* slate-300 */
+  --background: var(--navy);
+  --foreground: var(--text);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* ── Base ──────────────────────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  background: var(--navy);
+  color: var(--text);
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Glass card ────────────────────────────────────────────────────────────── */
+.glass {
+  background: var(--glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -2px rgba(0, 0, 0, 0.3);
+}
+
+.glass:hover {
+  background: var(--glass-hover);
+  border-color: var(--border-2);
+}
+
+/* ── Scrollbar ─────────────────────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-2);
+  border-radius: 99px;
+}
+
+/* ── MapLibre attribution (keep small) ─────────────────────────────────────── */
+.maplibregl-ctrl-attrib {
+  font-size: 10px !important;
+  opacity: 0.5;
+}
+
+/* ── Skeleton shimmer ──────────────────────────────────────────────────────── */
+@keyframes shimmer {
+  0% {
+    background-position: -400px 0;
+  }
+
+  100% {
+    background-position: 400px 0;
+  }
+}
+
+.skeleton {
+  background: linear-gradient(90deg, var(--navy-2) 25%, var(--navy-3) 50%, var(--navy-2) 75%);
+  background-size: 800px 100%;
+  animation: shimmer 1.4s infinite;
+  border-radius: 8px;
+}
+
+/* ── Panel slide-in ────────────────────────────────────────────────────────── */
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slide-in-right {
+  animation: slideInRight 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}

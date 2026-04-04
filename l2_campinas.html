@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pharmasite L2 — Campinas Bairros</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+  :root{
+    --bg:#1a1d2e; --surface:#22263a; --surface2:#2c3050; --border:#3a4066;
+    --text:#e8ecf4; --text2:#9aa3c2; --accent:#6c8eff; --accent2:#ff6b8a;
+    --green:#22c55e; --yellow:#f59e0b; --red:#ef4444;
+    --tier-a:#ff6b8a; --tier-b:#f59e0b; --tier-c:#6c8eff; --tier-d:#22c55e; --tier-e:#94a3b8;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,sans-serif;font-size:14px}
+  
+  /* HEADER */
+  header{background:var(--surface);border-bottom:1px solid var(--border);
+    padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .logo{font-size:17px;font-weight:700;color:var(--accent);letter-spacing:-0.5px}
+  .logo span{color:var(--text2);font-weight:400}
+  .badge{background:var(--surface2);border:1px solid var(--border);border-radius:6px;
+    padding:4px 10px;font-size:11px;color:var(--text2)}
+  
+  /* LAYOUT */
+  .layout{display:grid;grid-template-columns:380px 1fr;height:calc(100vh - 53px)}
+  
+  /* LEFT PANEL */
+  .panel{background:var(--surface);border-right:1px solid var(--border);
+    display:flex;flex-direction:column;overflow:hidden}
+  .panel-head{padding:14px 16px;border-bottom:1px solid var(--border);flex-shrink:0}
+  .panel-head h2{font-size:13px;font-weight:600;color:var(--text2);text-transform:uppercase;
+    letter-spacing:0.5px;margin-bottom:8px}
+  
+  /* FILTER CHIPS */
+  .chips{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px}
+  .chip{padding:3px 10px;border-radius:20px;border:1px solid var(--border);cursor:pointer;
+    font-size:11px;color:var(--text2);transition:all .15s}
+  .chip:hover,.chip.active{background:var(--accent);border-color:var(--accent);color:#fff}
+  
+  /* SEARCH */
+  .search-wrap{position:relative}
+  .search-wrap input{width:100%;background:var(--surface2);border:1px solid var(--border);
+    border-radius:6px;padding:7px 10px 7px 32px;color:var(--text);font-size:13px;outline:none}
+  .search-wrap input:focus{border-color:var(--accent)}
+  .search-wrap::before{content:"⌕";position:absolute;left:10px;top:50%;transform:translateY(-50%);
+    color:var(--text2);font-size:16px;pointer-events:none}
+  
+  /* BAIRRO LIST */
+  .list{overflow-y:auto;flex:1}
+  .bairro-item{padding:12px 16px;border-bottom:1px solid var(--border);cursor:pointer;transition:background .1s}
+  .bairro-item:hover{background:var(--surface2)}
+  .bairro-item.active{background:#2a3060;border-left:3px solid var(--accent)}
+  .bi-row1{display:flex;align-items:center;justify-content:space-between;margin-bottom:4px}
+  .bi-name{font-weight:600;font-size:13px}
+  .bi-rank{font-size:11px;color:var(--text2)}
+  .bi-row2{display:flex;align-items:center;gap:8px}
+  .bi-opp{font-size:12px;font-weight:700}
+  .bi-meta{font-size:11px;color:var(--text2)}
+  .opp-bar{height:4px;border-radius:2px;margin-top:5px;transition:width .3s}
+  
+  /* DETAIL */
+  .detail{display:none;flex-direction:column;overflow-y:auto;padding:16px 16px 80px 16px;background:var(--surface2)}
+  .detail.show{display:flex}
+  .detail-back{background:none;border:none;color:var(--accent);cursor:pointer;
+    font-size:13px;margin-bottom:12px;padding:0;display:flex;align-items:center;gap:4px}
+  .detail h3{font-size:16px;font-weight:700;margin-bottom:4px}
+  .detail .tier-badge{display:inline-block;padding:2px 8px;border-radius:4px;font-size:11px;
+    font-weight:600;margin-bottom:12px}
+  .metrics-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:14px}
+  .metric-card{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:10px}
+  .metric-card .mc-label{font-size:10px;color:var(--text2);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:2px}
+  .metric-card .mc-value{font-size:20px;font-weight:700}
+  .section-title{font-size:11px;font-weight:600;color:var(--text2);text-transform:uppercase;
+    letter-spacing:0.5px;margin-bottom:6px;margin-top:10px}
+  .brand-list li{font-size:12px;color:var(--text);margin-bottom:3px;list-style:none;
+    display:flex;align-items:center;gap:6px}
+  .brand-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
+  .progress-row{display:flex;align-items:center;gap:8px;margin-bottom:6px}
+  .progress-label{width:80px;font-size:11px;color:var(--text2)}
+  .progress-bar{flex:1;height:6px;background:var(--border);border-radius:3px;overflow:hidden}
+  .progress-fill{height:100%;border-radius:3px;transition:width .5s}
+  .progress-val{width:36px;font-size:11px;text-align:right}
+  
+  /* CHARTS AREA */
+  .charts-strip{background:var(--surface);border-bottom:1px solid var(--border);
+    padding:10px 14px;display:flex;gap:12px;height:140px;flex-shrink:0}
+  .chart-box{flex:1;min-width:0}
+  .chart-box h4{font-size:10px;color:var(--text2);text-transform:uppercase;
+    letter-spacing:0.5px;margin-bottom:4px}
+  
+  /* MAP */
+  #map{flex:1}
+  .map-wrap{display:flex;flex-direction:column;flex:1;min-width:0}
+  
+  /* LEGEND */
+  .map-legend{background:rgba(26,29,46,.9);border:1px solid var(--border);border-radius:8px;
+    padding:10px 12px;font-size:11px}
+  .map-legend b{display:block;margin-bottom:5px;font-size:12px;color:var(--text)}
+  .leg-row{display:flex;align-items:center;gap:6px;margin-bottom:3px}
+  .leg-circle{width:14px;height:14px;border-radius:50%;border:2px solid rgba(255,255,255,.4);flex-shrink:0}
+  
+  /* TIER COLORS */
+  .tier-A{color:var(--tier-a)} .tier-B{color:var(--tier-b)}
+  .tier-C{color:var(--tier-c)} .tier-D{color:var(--tier-d)} .tier-E{color:var(--tier-e)}
+  .bg-A{background:var(--tier-a)} .bg-B{background:var(--tier-b)}
+  .bg-C{background:var(--tier-c)} .bg-D{background:var(--tier-d)} .bg-E{background:var(--tier-e)}
+  
+  /* SCROLLBAR */
+  ::-webkit-scrollbar{width:5px} ::-webkit-scrollbar-track{background:transparent}
+  ::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
+
+  @media(max-width:860px){.layout{grid-template-columns:1fr;grid-template-rows:50vh 50vh}.charts-strip{display:none}}
+</style>
+</head>
+<body>
+
+<header>
+  <div style="display:flex;align-items:center;gap:14px">
+    <div class="logo">Pharmasite <span>L2 · Campinas</span></div>
+    <div class="badge">26 bairros · 104 PDVs mapeados</div>
+  </div>
+  <div style="display:flex;gap:8px">
+    <div class="badge" id="hdr-date">OSM 2026-03-24</div>
+    <div class="badge" style="color:#6c8eff">Modelo v1 — microeconomia regional</div>
+  </div>
+</header>
+
+<div class="layout">
+  <!-- LEFT: list + detail -->
+  <div class="panel">
+    <div class="panel-head">
+      <h2>Ranking de Oportunidade</h2>
+      <div class="chips">
+        <div class="chip active" data-filter="all">Todos</div>
+        <div class="chip" data-filter="A">Tier A</div>
+        <div class="chip" data-filter="B">Tier B</div>
+        <div class="chip" data-filter="C">Tier C</div>
+        <div class="chip" data-filter="D">Tier D</div>
+        <div class="chip" data-filter="E">Tier E</div>
+      </div>
+      <div class="search-wrap">
+        <input id="search" type="text" placeholder="Buscar bairro…">
+      </div>
+    </div>
+    
+    <div class="list" id="bairro-list"></div>
+    
+    <div class="detail" id="detail-panel">
+      <button class="detail-back" onclick="showList()">← Voltar</button>
+      <div id="detail-content"></div>
+    </div>
+  </div>
+  
+  <!-- RIGHT: map + charts -->
+  <div class="map-wrap">
+    <div class="charts-strip">
+      <div class="chart-box">
+        <h4>Oportunidade vs Saturação</h4>
+        <canvas id="chart-scatter"></canvas>
+      </div>
+      <div class="chart-box">
+        <h4>PDVs por Bairro (top 12)</h4>
+        <canvas id="chart-bar"></canvas>
+      </div>
+      <div class="chart-box">
+        <h4>Mix de Canal por Bairro</h4>
+        <canvas id="chart-mix"></canvas>
+      </div>
+    </div>
+    <div id="map"></div>
+  </div>
+</div>
+
+<script>
+const DATA = {"municipio": "Campinas", "bairros": [{"bairro": "Jardim Flamboyant", "lat": -22.9085, "lon": -47.1042, "tier_socio": "A", "renda_proxy": 8500, "pop_density": 3, "area_km2": 2.1, "n_pdv": 2, "n_brands": 2, "density_pdv_km2": 0.95, "big_chain_count": 0, "popular_chain_count": 0, "independent_count": 2, "chain_ratio_pct": 0.0, "indep_ratio_pct": 100.0, "market_hhi": 5000.0, "saturation_score": 14.3, "demand_score": 60.0, "opportunity_score": 51.4, "chain_entry_gap": 100.0, "opp_tier": "🟡 Média", "top_brands": "Farmaxima, Medfarma", "rank": 1}, {"bairro": "Bonfim", "lat": -22.9012, "lon": -47.0751, "tier_socio": "C", "renda_proxy": 2800, "pop_density": 4, "area_km2": 1.6, "n_pdv": 0, "n_brands": 0, "density_pdv_km2": 0.0, "big_chain_count": 0, "popular_chain_count": 0, "independent_count": 0, "chain_ratio_pct": 0.0, "indep_ratio_pct": 0.0, "market_hhi": 0, "saturation_score": 0.0, "demand_score": 26.4, "opportunity_score": 26.4, "chain_entry_gap": 0.0, "opp_tier": "🟢 Baixa", "top_brands": "—", "rank": 2}, {"bairro": "Cambuí", "lat": -22.9022, "lon": -47.0509, "tier_socio": "A", "renda_proxy": 8500, "pop_density": 4, "area_km2": 1.8, "n_pdv": 10, "n_brands": 6, "density_pdv_km2": 5.56, "big_chain_count": 8, "popular_chain_count": 0, "independent_count": 2, "chain_ratio_pct": 80.0, "indep_ratio_pct": 20.0, "market_hhi": 2000.0, "saturation_score": 92.0, "demand_score": 80.0, "opportunity_score": 24.8, "chain_entry_gap": 20.0, "opp_tier": "🟢 Baixa", "top_brands": "Droga Raia, Drogasil, Drogaria São Paulo, Pague Menos", "rank": 3}, {"bairro": "Nova Campinas", "lat": -22.896, "lon": -47.107, "tier_socio": "B", "renda_proxy": 5200, "pop_density": 2, "area_km2": 2.8, "n_pdv": 0, "n_brands": 0, "density_pdv_km2": 0.0, "big_chain_count": 0, "popular_chain_count": 0, "independent_count": 0, "chain_ratio_pct": 0.0, "indep_ratio_pct": 0.0, "market_hhi": 0, "saturation_score": 0.0, "demand_score": 24.5, "opportunity_score": 24.5, "chain_entry_gap": 0.0, "opp_tier": "🟢 Baixa", "top_brands": "—", "rank": 4}, {"bairro": "Jardim Chapadão", "lat": -22.8765, "lon": -47.0393, "tier_socio": "C", "renda_proxy": 2800, "pop_density": 4, "area_km2": 1.9, "n_pdv": 1, "n_brands": 1, "density_pdv_km2": 0.53, "big_chain_count": 0, "popular_chain_count": 0, "independent_count": 1, "chain_ratio_pct": 0.0, "indep_ratio_pct": 100.0, "market_hhi": 10000.0, "saturation_score": 7.9, "demand_score": 26.4, "opportunity_score": 21.7, "chain_entry_gap": 100.0, "opp_tier": "🟢 Baixa", "top_brands": "Multidrogas", "rank": 5}, {"bairro": "Barão Geraldo", "lat": -22.8177, "lon": -47.0715, "tier_socio": "B", "renda_proxy": 5200, "pop_density": 3, "area_km2": 5.2, "n_pdv": 7, "n_brands": 7, "density_pdv_km2": 1.35, "big_chain_count": 0, "popular_chain_count": 1, "independent_count": 6, "chain_ratio_pct": 14.3, "indep_ratio_pct": 85.7, "market_hhi": 1429.0, "saturation_score": 25.9, "demand_score": 36.7, "opportunity_score": 21.2, "chain_entry_gap": 85.7, "opp_tier": "🟢 Baixa", "top_brands": "Companhia Das Ervas, Vitoria, Drogarias Farmáxima, Unknown", "rank": 6}, {"bairro": "Mansões Santo Antônio", "lat": -22.9316, "lon": -47.1038, "tier_socio": "A", "renda_proxy": 8500, "pop_density": 2, "area_km2": 3.5, "n_pdv": 6, "n_brands": 4, "density_pdv_km2": 1.71, "big_chain_count": 1, "popular_chain_count": 0, "independent_count": 5, "chain_ratio_pct": 16.7, "indep_ratio_pct": 83.3, "market_hhi": 3333.0, "saturation_score": 32.4, "demand_score": 40.0, "opportunity_score": 20.6, "chain_entry_gap": 83.3, "opp_tier": "🟢 Baixa", "top_brands": "Unknown, Drogasil, Farmahorro, Farmadic", "rank": 7}, {"bairro": "Novo Mundo", "lat": -22.9154, "lon": -47.08, "tier_socio": "D", "renda_proxy": 1800, "pop_density": 4, "area_km2": 1.7, "n_pdv": 0, "n_brands": 0, "density_pdv_km2": 0.0, "big_chain_count": 0, "popular_chain_count": 0, "independent_count": 0, "chain_ratio_pct": 0.0, "indep_ratio_pct": 0.0, "market_hhi": 0, "saturation_score": 0.0, "demand_score": 16.9, "opportunity_score": 16.9, "chain_entry_gap": 0.0, "opp_tier": "🟢 Baixa", "top_brands": "—", "rank": 8}, {"bairro": "DIC I / II / III", "lat": -22.87, "lon": -47.11, "tier_socio": "E", "renda_proxy": 1100, "pop_density": 4, "area_km2": 3.2, "n_pdv": 0, "n_brands": 0, "density_pdv_km2": 0.0, "big_chain_count": 0, "popular_chain_count": 0, "independent_count": 0, "chain_ratio_pct": 0.0, "indep_ratio_pct": 0.0, "market_hhi": 0, "saturation_score": 0.0, "demand_score": 10.4, "opportunity_score": 10.4, "chain_entry_gap": 0.0, "opp_tier": "🟢 Baixa", "top_brands": "—", "rank": 9}, {"bairro": "Ouro Verde", "lat": -22.855, "lon": -47.12, "tier_socio": "E", "renda_proxy": 1100, "pop_density": 3, "area_km2": 3.5, "n_pdv": 0, "n_brands": 0, "density_pdv_km2": 0.0, "big_chain_count": 0, "popular_chain_count": 0, "independent_count": 0, "chain_ratio_pct": 0.0, "indep_ratio_pct": 0.0, "market_hhi": 0, "saturation_score": 0.0, "demand_score": 7.8, "opportunity_score": 7.8, "chain_entry_gap": 0.0, "opp_tier": "🟢 Baixa", "top_brands": "—", "rank": 10}, {"bairro": "Jardim Florence", "lat": -22.845, "lon": -47.075, "tier_socio": "E", "renda_proxy": 1100, "pop_density": 3, "area_km2": 2.9, "n_pdv": 0, "n_brands": 0, "density_pdv_km2": 0.0, "big_chain_count": 0, "popular_chain_count": 0, "independent_count": 0, "chain_ratio_pct": 0.0, "indep_ratio_pct": 0.0, "market_hhi": 0, "saturation_score": 0.0, "demand_score": 7.8, "opportunity_score": 7.8, "chain_entry_gap": 0.0, "opp_tier": "🟢 Baixa", "top_brands": "—", "rank": 11}, {"bairro": "Taquaral / Bosque", "lat": -22.8924, "lon": -47.0559, "tier_socio": "B", "renda_proxy": 5200, "pop_density": 3, "area_km2": 2.4, "n_pdv": 10, "n_brands": 9, "density_pdv_km2": 4.17, "big_chain_count": 4, "popular_chain_count": 0, "independent_count": 6, "chain_ratio_pct": 40.0, "indep_ratio_pct": 60.0, "market_hhi": 1200.0, "saturation_score": 76.0, "demand_score": 36.7, "opportunity_score": 5.0, "chain_entry_gap": 60.0, "opp_tier": "🟢 Baixa", "top_brands": "Drogaria São Paulo, Ao Pharmaceutico, Droga Raia, Lab Brasil", "rank": 12}, {"bairro": "Jardim Guanabara", "lat": -22.8869, "lon": -47.0308, "tier_socio": "C", "renda_proxy": 2800, "pop_density": 4, "area_km2": 1.7, "n_pdv": 4, "n_brands": 3, "density_pdv_km2": 2.35, "big_chain_count": 4, "popular_chain_count": 0, "independent_count": 0, "chain_ratio_pct": 100.0, "indep_ratio_pct": 0.0, "market_hhi": 3750.0, "saturation_score": 75.3, "demand_score": 26.4, "opportunity_score": 5.0, "chain_entry_gap": 0.0, "opp_tier": "🟢 Baixa", "top_brands": "Drogaria São Paulo, Droga Raia, Drogasil", "rank": 13}, {"bairro": "Vila Itapura", "lat": -22.8868, "lon": -47.0584, "tier_socio": "C", "renda_proxy": 2800, "pop_density": 4, "area_km2": 1.5, "n_pdv": 11, "n_brands": 9, "density_pdv_km2": 7.33, "big_chain_count": 3, "popular_chain_count": 3, "independent_count": 5, "chain_ratio_pct": 54.5, "indep_ratio_pct": 45.5, "market_hhi": 1240.0, "saturation_score": 81.8, "demand_score": 26.4, "opportunity_score": 5.0, "chain_entry_gap": 45.5, "opp_tier": "🟢 Baixa", "top_brands": "Droga Raia, Drogarias Farmáxima, Drogão Super, Farmácia Carcajon", "rank": 14}, {"bairro": "Botafogo", "lat": -22.9089, "lon": -47.0665, "tier_socio": "C", "renda_proxy": 2800, "pop_density": 5, "area_km2": 1.2, "n_pdv": 1, "n_brands": 1, "density_pdv_km2": 0.83, "big_chain_count": 1, "popular_chain_count": 0, "independent_count": 0, "chain_ratio_pct": 100.0, "indep_ratio_pct": 0.0, "market_hhi": 10000.0, "saturation_score": 52.5, "demand_score": 32.9, "opportunity_score": 5.0, "chain_entry_gap": 0.0, "opp_tier": "🟢 Baixa", "top_brands": "Drogaria São Paulo", "rank": 15}, {"bairro": "Centro", "lat": -22.9064, "lon": -47.0616, "tier_socio": "C", "renda_proxy": 2800, "pop_density": 5, "area_km2": 1.0, "n_pdv": 6, "n_brands": 6, "density_pdv_km2": 6.0, "big_chain_count": 1, "popular_chain_count": 2, "independent_count": 3, "chain_ratio_pct": 50.0, "indep_ratio_pct": 50.0, "market_hhi": 1667.0, "saturation_score": 80.0, "demand_score": 32.9, "opportunity_score": 5.0, "chain_entry_gap": 50.0, "opp_tier": "🟢 Baixa", "top_brands": "Drogão Super, Drogaria Familiar, Drogaria Campeã, Farma Futura", "rank": 16}, {"bairro": "Castelo", "lat": -22.8978, "lon": -47.0762, "tier_socio": "C", "renda_proxy": 2800, "pop_density": 3, "area_km2": 2.0, "n_pdv": 12, "n_brands": 12, "density_pdv_km2": 6.0, "big_chain_count": 3, "popular_chain_count": 1, "independent_count": 8, "chain_ratio_pct": 33.3, "indep_ratio_pct": 66.7, "market_hhi": 833.0, "saturation_score": 73.3, "demand_score": 19.8, "opportunity_score": 5.0, "chain_entry_gap": 66.7, "opp_tier": "🟢 Baixa", "top_brands": "Botica Artesanal, Farma Plus, Pague Menos, Droga Raia", "rank": 17}, {"bairro": "Ponte Preta", "lat": -22.905, "lon": -47.085, "tier_socio": "C", "renda_proxy": 2800, "pop_density": 4, "area_km2": 1.4, "n_pdv": 2, "n_brands": 2, "density_pdv_km2": 1.43, "big_chain_count": 1, "popular_chain_count": 0, "independent_count": 1, "chain_ratio_pct": 50.0, "indep_ratio_pct": 50.0, "market_hhi": 5000.0, "saturation_score": 41.4, "demand_score": 26.4, "opportunity_score": 5.0, "chain_entry_gap": 50.0, "opp_tier": "🟢 Baixa", "top_brands": "Drogaria Leal, Drogasil", "rank": 18}, {"bairro": "Jardim Brasil", "lat": -22.92, "lon": -47.045, "tier_socio": "D", "renda_proxy": 1800, "pop_density": 4, "area_km2": 2.1, "n_pdv": 1, "n_brands": 1, "density_pdv_km2": 0.48, "big_chain_count": 1, "popular_chain_count": 0, "independent_count": 0, "chain_ratio_pct": 100.0, "indep_ratio_pct": 0.0, "market_hhi": 10000.0, "saturation_score": 47.1, "demand_score": 16.9, "opportunity_score": 5.0, "chain_entry_gap": 0.0, "opp_tier": "🟢 Baixa", "top_brands": "Pague Menos", "rank": 19}, {"bairro": "Jardim Nossa Sra Auxiliadora", "lat": -22.9232, "lon": -47.0673, "tier_socio": "D", "renda_proxy": 1800, "pop_density": 4, "area_km2": 1.8, "n_pdv": 1, "n_brands": 1, "density_pdv_km2": 0.56, "big_chain_count": 1, "popular_chain_count": 0, "independent_count": 0, "chain_ratio_pct": 100.0, "indep_ratio_pct": 0.0, "market_hhi": 10000.0, "saturation_score": 48.3, "demand_score": 16.9, "opportunity_score": 5.0, "chain_entry_gap": 0.0, "opp_tier": "🟢 Baixa", "top_brands": "Drogaria São Paulo", "rank": 20}, {"bairro": "Alto da Barra", "lat": -22.928, "lon": -47.0395, "tier_socio": "D", "renda_proxy": 1800, "pop_density": 3, "area_km2": 2.3, "n_pdv": 2, "n_brands": 2, "density_pdv_km2": 0.87, "big_chain_count": 2, "popular_chain_count": 0, "independent_count": 0, "chain_ratio_pct": 100.0, "indep_ratio_pct": 0.0, "market_hhi": 5000.0, "saturation_score": 53.0, "demand_score": 12.7, "opportunity_score": 5.0, "chain_entry_gap": 0.0, "opp_tier": "🟢 Baixa", "top_brands": "Drogasil, Droga Raia", "rank": 21}, {"bairro": "Vila União", "lat": -22.915, "lon": -47.055, "tier_socio": "D", "renda_proxy": 1800, "pop_density": 4, "area_km2": 1.5, "n_pdv": 2, "n_brands": 2, "density_pdv_km2": 1.33, "big_chain_count": 1, "popular_chain_count": 1, "independent_count": 0, "chain_ratio_pct": 100.0, "indep_ratio_pct": 0.0, "market_hhi": 5000.0, "saturation_score": 60.0, "demand_score": 16.9, "opportunity_score": 5.0, "chain_entry_gap": 0.0, "opp_tier": "🟢 Baixa", "top_brands": "Drogarias Farmáxima, Pague Menos", "rank": 22}, {"bairro": "São Bernardo", "lat": -22.835, "lon": -47.09, "tier_socio": "D", "renda_proxy": 1800, "pop_density": 3, "area_km2": 3.0, "n_pdv": 4, "n_brands": 4, "density_pdv_km2": 1.33, "big_chain_count": 2, "popular_chain_count": 0, "independent_count": 2, "chain_ratio_pct": 50.0, "indep_ratio_pct": 50.0, "market_hhi": 2500.0, "saturation_score": 40.0, "demand_score": 12.7, "opportunity_score": 5.0, "chain_entry_gap": 50.0, "opp_tier": "🟢 Baixa", "top_brands": "Drogasil, Farmais, Botica Da Terra, Drogaria São Paulo", "rank": 23}, {"bairro": "Prainha", "lat": -22.879, "lon": -47.0466, "tier_socio": "D", "renda_proxy": 1800, "pop_density": 3, "area_km2": 1.6, "n_pdv": 2, "n_brands": 2, "density_pdv_km2": 1.25, "big_chain_count": 2, "popular_chain_count": 0, "independent_count": 0, "chain_ratio_pct": 100.0, "indep_ratio_pct": 0.0, "market_hhi": 5000.0, "saturation_score": 58.8, "demand_score": 12.7, "opportunity_score": 5.0, "chain_entry_gap": 0.0, "opp_tier": "🟢 Baixa", "top_brands": "Drogasil, Drogaria São Paulo", "rank": 24}, {"bairro": "Jardim do Trevo", "lat": -22.864, "lon": -47.06, "tier_socio": "D", "renda_proxy": 1800, "pop_density": 3, "area_km2": 2.4, "n_pdv": 3, "n_brands": 3, "density_pdv_km2": 1.25, "big_chain_count": 1, "popular_chain_count": 0, "independent_count": 2, "chain_ratio_pct": 33.3, "indep_ratio_pct": 66.7, "market_hhi": 3333.0, "saturation_score": 32.1, "demand_score": 12.7, "opportunity_score": 5.0, "chain_entry_gap": 66.7, "opp_tier": "🟢 Baixa", "top_brands": "Drogaria São Paulo, Farmácia Drogal, Drogaria Tamavy", "rank": 25}, {"bairro": "Campo Grande", "lat": -22.925, "lon": -47.115, "tier_socio": "E", "renda_proxy": 1100, "pop_density": 4, "area_km2": 2.8, "n_pdv": 17, "n_brands": 12, "density_pdv_km2": 6.07, "big_chain_count": 4, "popular_chain_count": 4, "independent_count": 9, "chain_ratio_pct": 47.1, "indep_ratio_pct": 52.9, "market_hhi": 1073.0, "saturation_score": 78.8, "demand_score": 10.4, "opportunity_score": 5.0, "chain_entry_gap": 52.9, "opp_tier": "🟢 Baixa", "top_brands": "Drogasil, Unknown, Drogal, Droga Marques", "rank": 26}], "pharmacies": [{"lat": -22.810449, "lon": -47.076904, "name": "Companhia das Ervas", "brand": "Companhia das Ervas"}, {"lat": -22.822735, "lon": -47.070036, "name": "Vitoria", "brand": "Vitoria"}, {"lat": -22.834765, "lon": -47.078846, "name": "Drogasil", "brand": "Drogasil"}, {"lat": -22.889119, "lon": -47.065847, "name": "Droga Raia", "brand": "Droga Raia"}, {"lat": -22.884953, "lon": -47.064712, "name": "Drogarias Farmáxima", "brand": "Drogarias Farmáxima"}, {"lat": -22.878159, "lon": -46.967322, "name": "Drogaria São Paulo", "brand": "Drogaria São Paulo"}, {"lat": -22.906167, "lon": -47.0636, "name": "Drogão Super", "brand": "Drogão Super"}, {"lat": -22.905935, "lon": -47.063573, "name": "Drogaria Familiar", "brand": "Drogaria Familiar"}, {"lat": -22.90586, "lon": -47.063456, "name": "Drogaria Campeã", "brand": "Drogaria Campeã"}, {"lat": -22.899268, "lon": -47.082868, "name": "Drogaria Leal", "brand": "Drogaria Leal"}, {"lat": -22.918695, "lon": -47.109542, "name": "Drogasil", "brand": "Drogasil"}, {"lat": -22.900474, "lon": -47.063749, "name": "Farma Futura", "brand": "Farma Futura"}, {"lat": -22.892345, "lon": -47.077465, "name": "Botica Artesanal", "brand": "Botica Artesanal"}, {"lat": -22.891983, "lon": -47.063507, "name": "Drogarias Farmáxima", "brand": "Drogarias Farmáxima"}, {"lat": -22.894069, "lon": -47.061126, "name": "Drogaria São Paulo", "brand": "Drogaria São Paulo"}, {"lat": -22.898442, "lon": -47.052534, "name": "Drogasil", "brand": "Drogasil"}, {"lat": -22.903824, "lon": -47.069267, "name": "Drogaria São Paulo", "brand": "Drogaria São Paulo"}, {"lat": -22.903141, "lon": -47.053566, "name": "Drogaria São Paulo", "brand": "Drogaria São Paulo"}, {"lat": -22.90306, "lon": -47.053392, "name": "Drogasil", "brand": "Drogasil"}, {"lat": -22.903068, "lon": -47.060711, "name": "Droga Raia", "brand": "Droga Raia"}, {"lat": -22.888566, "lon": -47.060914, "name": "Drogão Super", "brand": "Drogão Super"}, {"lat": -22.897347, "lon": -47.080682, "name": "Farma Plus", "brand": "Farma Plus"}, {"lat": -22.899803, "lon": -47.082001, "name": "Pague Menos", "brand": "Pague Menos"}, {"lat": -22.908334, "lon": -47.087003, "name": "Drogasil", "brand": "Drogasil"}, {"lat": -22.915607, "lon": -47.103697, "name": "Farmaxima", "brand": "Farmaxima"}, {"lat": -22.918527, "lon": -47.108973, "name": "Droga Marques", "brand": "Droga Marques"}, {"lat": -22.824039, "lon": -47.034965, "name": "Drogarias Farmáxima", "brand": "Drogarias Farmáxima"}, {"lat": -22.91965, "lon": -47.104064, "name": "Medfarma", "brand": "Medfarma"}, {"lat": -22.824548, "lon": -47.03552, "name": "?", "brand": "?"}, {"lat": -22.878321, "lon": -47.044144, "name": "Drogasil", "brand": "Drogasil"}, {"lat": -22.87826, "lon": -47.044555, "name": "Drogaria São Paulo", "brand": "Drogaria São Paulo"}, {"lat": -22.878933, "lon": -47.036319, "name": "Multidrogas", "brand": "Multidrogas"}, {"lat": -22.965771, "lon": -47.132296, "name": "?", "brand": "?"}, {"lat": -22.966833, "lon": -47.138934, "name": "?", "brand": "?"}, {"lat": -22.905955, "lon": -47.055371, "name": "Droga Raia", "brand": "Droga Raia"}, {"lat": -22.889028, "lon": -47.032983, "name": "Drogaria São Paulo", "brand": "Drogaria São Paulo"}, {"lat": -22.891104, "lon": -47.062751, "name": "Droga Raia", "brand": "Droga Raia"}, {"lat": -22.89435, "lon": -47.054023, "name": "Ao Pharmaceutico", "brand": "Ao Pharmaceutico"}, {"lat": -22.898155, "lon": -47.056004, "name": "Droga Raia", "brand": "Droga Raia"}, {"lat": -22.898703, "lon": -47.055666, "name": "Drogaria São Paulo", "brand": "Drogaria São Paulo"}, {"lat": -22.899109, "lon": -47.055379, "name": "Pague Menos", "brand": "Pague Menos"}, {"lat": -22.937258, "lon": -47.049773, "name": "Drogasil", "brand": "Drogasil"}, {"lat": -22.825236, "lon": -47.067158, "name": "Drogaria do Campus", "brand": "Drogaria do Campus"}, {"lat": -22.892953, "lon": -47.056135, "name": "Lab Brasil", "brand": "Lab Brasil"}, {"lat": -22.900662, "lon": -47.052145, "name": "Droga Raia", "brand": "Droga Raia"}, {"lat": -22.894575, "lon": -47.054499, "name": "Fórmula e Cia", "brand": "Fórmula e Cia"}, {"lat": -22.895436, "lon": -47.056298, "name": "Droga Brasil", "brand": "Droga Brasil"}, {"lat": -22.90588, "lon": -47.038109, "name": "Drogaria SP", "brand": "Drogaria SP"}, {"lat": -22.893131, "lon": -47.056521, "name": "Drogasil", "brand": "Drogasil"}, {"lat": -22.950651, "lon": -47.186318, "name": "Drogal", "brand": "Drogal"}, {"lat": -22.949775, "lon": -47.186689, "name": "Drogarias Farmáxima", "brand": "Drogarias Farmáxima"}, {"lat": -22.948748, "lon": -47.186572, "name": "?", "brand": "?"}, {"lat": -22.925785, "lon": -47.126786, "name": "Drogasil", "brand": "Drogasil"}, {"lat": -22.937072, "lon": -47.159038, "name": "Dr.Pharma Popular", "brand": "Dr.Pharma Popular"}, {"lat": -22.937336, "lon": -47.158481, "name": "Drograria Serv Farma", "brand": "Drograria Serv Farma"}, {"lat": -22.929969, "lon": -47.087084, "name": "?", "brand": "?"}, {"lat": -22.948187, "lon": -47.185381, "name": "Rede Farma do Povo", "brand": "Rede Farma do Povo"}, {"lat": -22.926954, "lon": -47.125994, "name": "?", "brand": "?"}, {"lat": -22.826774, "lon": -47.081055, "name": "Farmais", "brand": "Farmais"}, {"lat": -22.883109, "lon": -47.033828, "name": "Droga Raia", "brand": "Droga Raia"}, {"lat": -22.946861, "lon": -47.186838, "name": "Farma Bento", "brand": "Farma Bento"}, {"lat": -22.947019, "lon": -47.186902, "name": "Drogasil", "brand": "Drogasil"}, {"lat": -22.920182, "lon": -47.111553, "name": "Drogaria São Paulo", "brand": "Drogaria São Paulo"}, {"lat": -22.919534, "lon": -47.10982, "name": "Drogaria Familiar", "brand": "Drogaria Familiar"}, {"lat": -22.925173, "lon": -47.056674, "name": "Drogaria São Paulo", "brand": "Drogaria São Paulo"}, {"lat": -22.930516, "lon": -47.109169, "name": "?", "brand": "?"}, {"lat": -22.92878, "lon": -47.054892, "name": "Pague Menos", "brand": "Pague Menos"}, {"lat": -22.93064, "lon": -47.087192, "name": "Drogasil", "brand": "Drogasil"}, {"lat": -22.906139, "lon": -47.064014, "name": "Super Popular", "brand": "Super Popular"}, {"lat": -22.910066, "lon": -47.05351, "name": "Drogarias Farmáxima", "brand": "Drogarias Farmáxima"}, {"lat": -22.935518, "lon": -47.050877, "name": "Droga Raia", "brand": "Droga Raia"}, {"lat": -22.917288, "lon": -47.054977, "name": "Pague Menos", "brand": "Pague Menos"}, {"lat": -22.827699, "lon": -47.080017, "name": "Botica da Terra", "brand": "Botica da Terra"}, {"lat": -22.897124, "lon": -47.051915, "name": "Droga Raia", "brand": "Droga Raia"}, {"lat": -22.809011, "lon": -47.078456, "name": "Farma Barão", "brand": "Farma Barão"}, {"lat": -22.895211, "lon": -47.052315, "name": "Drogaria São Paulo", "brand": "Drogaria São Paulo"}, {"lat": -22.897418, "lon": -47.053001, "name": "A Homeopática", "brand": "A Homeopática"}, {"lat": -22.982585, "lon": -47.120693, "name": "Farmahorro", "brand": "Farmahorro"}, {"lat": -22.977801, "lon": -47.127949, "name": "Farmadic", "brand": "Farmadic"}, {"lat": -22.890891, "lon": -47.076115, "name": "Droga Raia", "brand": "Droga Raia"}, {"lat": -22.889458, "lon": -47.077685, "name": "Drogarias Farmáxima", "brand": "Drogarias Farmáxima"}, {"lat": -22.884623, "lon": -47.069698, "name": "Farmácia Carcajon", "brand": "Farmácia Carcajon"}, {"lat": -22.856099, "lon": -47.046454, "name": "Drogaria São Paulo", "brand": "Drogaria São Paulo"}, {"lat": -22.830548, "lon": -47.07855, "name": "Drogaria São Paulo", "brand": "Drogaria São Paulo"}, {"lat": -22.881895, "lon": -47.063992, "name": "Rede Drogão Popular", "brand": "Rede Drogão Popular"}, {"lat": -22.881994, "lon": -47.063895, "name": "Drogaria da Lagoa", "brand": "Drogaria da Lagoa"}, {"lat": -22.887212, "lon": -47.075537, "name": "Vet Fórmula - Manipulação Veterinária", "brand": "Vet Fórmula - Manipulação Veterinária"}, {"lat": -22.890414, "lon": -47.075297, "name": "Botica Erva Doce", "brand": "Botica Erva Doce"}, {"lat": -22.894306, "lon": -47.064586, "name": "Specialista Farmácia de Manipulação", "brand": "Specialista Farmácia de Manipulação"}, {"lat": -22.892129, "lon": -47.071823, "name": "Farmalu", "brand": "Farmalu"}, {"lat": -22.890936, "lon": -47.075564, "name": "Animalia Farma", "brand": "Animalia Farma"}, {"lat": -22.883456, "lon": -47.073317, "name": "Fármaco", "brand": "Fármaco"}, {"lat": -22.88973, "lon": -47.076358, "name": "Ultrafarma", "brand": "Ultrafarma"}, {"lat": -22.888699, "lon": -47.061397, "name": "Drogasil", "brand": "Drogasil"}, {"lat": -22.89535, "lon": -47.066178, "name": "Biosíntese", "brand": "Biosíntese"}, {"lat": -22.885446, "lon": -47.058424, "name": "Substrata", "brand": "Substrata"}, {"lat": -22.888758, "lon": -47.032773, "name": "Drogasil", "brand": "Drogasil"}, {"lat": -22.897663, "lon": -47.062531, "name": "Neofórmula Manipulação & Homeopatia", "brand": "Neofórmula Manipulação & Homeopatia"}, {"lat": -22.864905, "lon": -47.054054, "name": "Farmácia Drogal", "brand": "Farmácia Drogal"}, {"lat": -22.870224, "lon": -47.063701, "name": "Drogaria Tamavy", "brand": "Drogaria Tamavy"}, {"lat": -22.891386, "lon": -47.068537, "name": "Drogaria São Carlos", "brand": "Drogaria São Carlos"}, {"lat": -22.951261, "lon": -47.188144, "name": "Drogal", "brand": "Drogal"}, {"lat": -22.95101, "lon": -47.186156, "name": "Drogão Popular", "brand": "Drogão Popular"}, {"lat": -22.825833, "lon": -47.081252, "name": "MagisPharma Farmácia de Manipulação e Homeopatia", "brand": "MagisPharma Farmácia de Manipulação e Homeopatia"}]};
+
+// ─── COLOR HELPERS ───────────────────────────────────────────────────────────
+const OPP_COLORS = {
+  high:   '#ef4444',  // red → high opportunity
+  medium: '#f59e0b',  // amber
+  low:    '#22c55e'   // green → low (saturated / low demand)
+};
+const TIER_COLORS = {A:'#ff6b8a', B:'#f59e0b', C:'#6c8eff', D:'#22c55e', E:'#94a3b8'};
+
+function oppColor(score) {
+  if (score >= 45) return OPP_COLORS.high;
+  if (score >= 25) return OPP_COLORS.medium;
+  return OPP_COLORS.low;
+}
+
+function oppRadius(score, n_pdv) {
+  // Size based on PDV count + opportunity score hint
+  const base = Math.max(n_pdv * 1.5, 8);
+  return Math.min(base + score * 0.2, 35);
+}
+
+// ─── MAP ─────────────────────────────────────────────────────────────────────
+const map = L.map('map').setView([-22.9064, -47.0616], 12);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '© OpenStreetMap',
+  maxZoom: 18
+}).addTo(map);
+
+// Pharmacy dots (small, grey)
+const pharmLayer = L.layerGroup();
+DATA.pharmacies.forEach(p => {
+  L.circleMarker([p.lat, p.lon], {
+    radius: 4, color: '#fff', weight: 0.5, fillColor: '#6c8eff',
+    fillOpacity: 0.7
+  }).bindPopup(`<b>${p.name}</b><br><small>${p.brand || '—'}</small>`)
+  .addTo(pharmLayer);
+});
+pharmLayer.addTo(map);
+
+// Bairro circles
+const bairroMarkers = {};
+DATA.bairros.forEach(b => {
+  const color = oppColor(b.opportunity_score);
+  const r = oppRadius(b.opportunity_score, b.n_pdv);
+  const m = L.circleMarker([b.lat, b.lon], {
+    radius: r, color: '#fff', weight: 1.5,
+    fillColor: color, fillOpacity: 0.55
+  }).bindTooltip(`<b>${b.bairro}</b><br>Opp: ${b.opportunity_score} | PDVs: ${b.n_pdv}`,
+    {permanent: false, direction: 'top'});
+  m.on('click', () => showDetail(b.bairro));
+  m.addTo(map);
+  bairroMarkers[b.bairro] = m;
+});
+
+// Legend
+const legend = L.control({position: 'bottomright'});
+legend.onAdd = () => {
+  const d = L.DomUtil.create('div', 'map-legend');
+  d.innerHTML = `<b>Oportunidade</b>
+    <div class="leg-row"><div class="leg-circle" style="background:#ef4444"></div> Alta (≥45)</div>
+    <div class="leg-row"><div class="leg-circle" style="background:#f59e0b"></div> Média (25-44)</div>
+    <div class="leg-row"><div class="leg-circle" style="background:#22c55e"></div> Baixa (<25)</div>
+    <hr style="border-color:#3a4066;margin:6px 0">
+    <div class="leg-row"><div class="leg-circle" style="background:#6c8eff"></div> PDV mapeado</div>`;
+  return d;
+};
+legend.addTo(map);
+
+// ─── LIST ─────────────────────────────────────────────────────────────────────
+let activeFilter = 'all';
+let searchQ = '';
+let activeItem = null;
+
+function renderList() {
+  const list = document.getElementById('bairro-list');
+  const filtered = DATA.bairros.filter(b => {
+    const tierOk = activeFilter === 'all' || b.tier_socio === activeFilter;
+    const searchOk = !searchQ || b.bairro.toLowerCase().includes(searchQ.toLowerCase());
+    return tierOk && searchOk;
+  });
+  
+  list.innerHTML = filtered.map(b => {
+    const color = oppColor(b.opportunity_score);
+    const barW = Math.round(b.opportunity_score / 55 * 100);
+    const isActive = activeItem === b.bairro;
+    return `<div class="bairro-item${isActive?' active':''}" data-name="${b.bairro}" onclick="showDetail('${b.bairro.replace(/'/g,"\'")}')">
+      <div class="bi-row1">
+        <span class="bi-name">${b.bairro}</span>
+        <span class="bi-rank">#${b.rank}</span>
+      </div>
+      <div class="bi-row2">
+        <span class="bi-opp" style="color:${color}">${b.opportunity_score}</span>
+        <span class="bi-meta">Tier ${b.tier_socio} · ${b.n_pdv} PDVs · Sat ${b.saturation_score}%</span>
+      </div>
+      <div class="opp-bar" style="width:${barW}%;max-width:100%;background:${color}"></div>
+    </div>`;
+  }).join('');
+}
+
+// ─── DETAIL PANEL ─────────────────────────────────────────────────────────────
+function showDetail(bname) {
+  const b = DATA.bairros.find(x => x.bairro === bname);
+  if (!b) return;
+  activeItem = bname;
+  
+  const color = oppColor(b.opportunity_score);
+  const tierColor = TIER_COLORS[b.tier_socio];
+  
+  const chainTypes = [
+    {label:'Big Chain', pct: b.chain_ratio_pct - b.indep_ratio_pct, color:'#6c8eff'},
+    {label:'Popular', pct: Math.max(0, b.chain_ratio_pct - (b.big_chain_count/(b.n_pdv||1)*100)), color:'#f59e0b'},
+    {label:'Independente', pct: b.indep_ratio_pct, color:'#94a3b8'},
+  ];
+  
+  const html = `
+    <h3>${b.bairro}</h3>
+    <span class="tier-badge" style="background:${tierColor}20;color:${tierColor};border:1px solid ${tierColor}40">
+      Socioeconômico Tier ${b.tier_socio}
+    </span>
+    
+    <div class="metrics-grid">
+      <div class="metric-card">
+        <div class="mc-label">Oportunidade</div>
+        <div class="mc-value" style="color:${color}">${b.opportunity_score}</div>
+      </div>
+      <div class="metric-card">
+        <div class="mc-label">PDVs Mapeados</div>
+        <div class="mc-value">${b.n_pdv}</div>
+      </div>
+      <div class="metric-card">
+        <div class="mc-label">Saturação</div>
+        <div class="mc-value" style="color:${b.saturation_score>60?'#ef4444':b.saturation_score>35?'#f59e0b':'#22c55e'}">${b.saturation_score}</div>
+      </div>
+      <div class="metric-card">
+        <div class="mc-label">Renda Proxy</div>
+        <div class="mc-value" style="font-size:16px">R$${(b.renda_proxy/1000).toFixed(1)}k</div>
+      </div>
+    </div>
+    
+    <div class="section-title">Métricas de Mercado</div>
+    <div class="progress-row">
+      <div class="progress-label">Densid. PDV</div>
+      <div class="progress-bar"><div class="progress-fill" style="width:${Math.min(b.density_pdv_km2/8*100,100)}%;background:#6c8eff"></div></div>
+      <div class="progress-val">${b.density_pdv_km2}/km²</div>
+    </div>
+    <div class="progress-row">
+      <div class="progress-label">HHI Conc.</div>
+      <div class="progress-bar"><div class="progress-fill" style="width:${Math.min(b.market_hhi/10000*100,100)}%;background:#f59e0b"></div></div>
+      <div class="progress-val">${Math.round(b.market_hhi)}</div>
+    </div>
+    <div class="progress-row">
+      <div class="progress-label">Gap Redes</div>
+      <div class="progress-bar"><div class="progress-fill" style="width:${b.chain_entry_gap}%;background:#ef4444"></div></div>
+      <div class="progress-val">${b.chain_entry_gap}%</div>
+    </div>
+    
+    <div class="section-title">Mix de Canal</div>
+    <div class="progress-row">
+      <div class="progress-label">Big Chains</div>
+      <div class="progress-bar"><div class="progress-fill" style="width:${b.big_chain_count/(b.n_pdv||1)*100}%;background:#6c8eff"></div></div>
+      <div class="progress-val">${b.big_chain_count}</div>
+    </div>
+    <div class="progress-row">
+      <div class="progress-label">Popular</div>
+      <div class="progress-bar"><div class="progress-fill" style="width:${b.popular_chain_count/(b.n_pdv||1)*100}%;background:#f59e0b"></div></div>
+      <div class="progress-val">${b.popular_chain_count}</div>
+    </div>
+    <div class="progress-row">
+      <div class="progress-label">Independ.</div>
+      <div class="progress-bar"><div class="progress-fill" style="width:${b.independent_count/(b.n_pdv||1)*100}%;background:#94a3b8"></div></div>
+      <div class="progress-val">${b.independent_count}</div>
+    </div>
+    
+    ${b.top_brands && b.top_brands !== '—' ? `
+    <div class="section-title">Marcas presentes</div>
+    <ul class="brand-list">
+      ${b.top_brands.split(', ').map(br => `
+        <li><div class="brand-dot" style="background:${TIER_COLORS[b.tier_socio]}"></div>${br}</li>
+      `).join('')}
+    </ul>` : ''}
+    
+    <div class="section-title" style="margin-top:14px">Agent Scout 📡</div>
+    <div id="scout-container" style="background:var(--surface); border:1px solid var(--border); border-radius:6px; padding:10px; margin-bottom:14px;">
+      <p style="font-size:11px; color:var(--text2); margin-bottom:8px;">Busca web em tempo-real por lançamentos imobiliários e expansão no bairro.</p>
+      <button onclick="runScout('${b.bairro.replace(/'/g,"\\'").replace(/"/g,"&quot;")}')" style="background:var(--accent); color:#fff; border:none; padding:6px 12px; border-radius:4px; cursor:pointer; font-size:11px; font-weight:600;">
+        🔍 Rastrear Sinais de Crescimento Agora
+      </button>
+    </div>
+    
+    <div class="section-title" style="margin-top:14px">Interpretação Base</div>
+    <p style="font-size:12px;color:#c0c8e8;line-height:1.6">${interpretation(b)}</p>
+  `;
+  
+  document.getElementById('detail-content').innerHTML = html;
+  document.getElementById('detail-panel').classList.add('show');
+  document.getElementById('bairro-list').style.display = 'none';
+  
+  // Fly to on map
+  map.flyTo([b.lat, b.lon], 14, {duration: 0.8});
+  
+  renderList();
+}
+
+function interpretation(b) {
+  if (b.n_pdv === 0) {
+    if (b.tier_socio === 'D' || b.tier_socio === 'E')
+      return `Sem PDVs mapeados pelo OSM. Região popular com renda proxy de R$${b.renda_proxy.toLocaleString()}. Perfil para marcas populares acessíveis (Drogão Super, Drogal, Farmácias regionais). Verificar cobertura real com CNPJ/CNES.`;
+    return `Pouco mapeado no OSM. Tier ${b.tier_socio} com renda R$${b.renda_proxy.toLocaleString()} — potencial para rede premium. Validar com dados de campo.`;
+  }
+  const chains = ['Drogasil','Droga Raia','Drogaria São Paulo'].filter(c => b.top_brands.includes(c));
+  if (b.opportunity_score >= 45)
+    return `🔴 Alta Oportunidade. ${b.n_pdv} PDVs com saturação baixa (${b.saturation_score}%). Renda ${b.tier_socio} (R$${b.renda_proxy.toLocaleString()}). ${chains.length === 0 ? 'Ausência de grandes redes — janela para positivação de marcas.' : 'Mercado ainda abertocom redes presentes.'}`;
+  if (b.saturation_score >= 70)
+    return `🟢 Mercado saturado (${b.saturation_score}%). ${chains.length} grandes redes presentes: ${chains.join(', ') || '—'}. Foco: diferenciação por categorias específicas (dermocosméticos, manipulação, saúde animal).`;
+  return `🟡 Situação mista. ${b.n_pdv} PDVs, saturação ${b.saturation_score}%. ${b.independent_count} independentes — espaço para redes regionais e categorias diferenciadas.`;
+}
+
+function showList() {
+  document.getElementById('detail-panel').classList.remove('show');
+  document.getElementById('bairro-list').style.display = '';
+  activeItem = null;
+  renderList();
+  map.flyTo([-22.9064, -47.0616], 12, {duration: 0.8});
+}
+
+// ─── AGENT SCOUT ──────────────────────────────────────────────────────────────
+async function runScout(bairro) {
+  const container = document.getElementById('scout-container');
+  container.innerHTML = `<div style="text-align:center; padding:10px; color:var(--text2); font-size:11px;">
+    <div style="margin-bottom:6px">⏳ Agent Scout vasculhando a web (LLM+DDGS)...</div>
+    <div>Pode levar de 5 a 15 segundos.</div>
+  </div>`;
+  
+  try {
+    const res = await fetch(`http://localhost:8002/scout?bairro=${encodeURIComponent(bairro)}&cidade=Campinas,%20SP`);
+    const data = await res.json();
+    
+    if (!res.ok) throw new Error(data.detail || 'Erro na API');
+    
+    let color = data.growth_score >= 70 ? '#ef4444' : (data.growth_score >= 40 ? '#f59e0b' : '#22c55e');
+    
+    container.innerHTML = `
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+        <span style="font-weight:700; font-size:13px; color:${color}">${data.verdict}</span>
+        <span style="font-weight:700; font-size:13px; color:var(--text)">Score: ${data.growth_score}/100</span>
+      </div>
+      <p style="font-size:12px; color:#e8ecf4; line-height:1.4; margin-bottom:10px;">
+        ${data.analysis_markdown}
+      </p>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:6px;">
+        <div style="background:rgba(0,0,0,0.2); padding:6px; border-radius:4px;">
+          <div style="font-size:10px; color:var(--text2); margin-bottom:4px;">Lançamentos:</div>
+          <ul style="padding-left:14px; font-size:11px; margin:0;">
+            ${data.real_estate_launches && data.real_estate_launches.length > 0 ? data.real_estate_launches.map(l => `<li>${l}</li>`).join('') : '<li style="color:#999">Nenhum listado</li>'}
+          </ul>
+        </div>
+        <div style="background:rgba(0,0,0,0.2); padding:6px; border-radius:4px;">
+          <div style="font-size:10px; color:var(--text2); margin-bottom:4px;">Comercial:</div>
+          <ul style="padding-left:14px; font-size:11px; margin:0;">
+            ${data.commercial_growth && data.commercial_growth.length > 0 ? data.commercial_growth.map(l => `<li>${l}</li>`).join('') : '<li style="color:#999">Nenhum listado</li>'}
+          </ul>
+        </div>
+        <div style="grid-column: 1 / -1; background:rgba(0,0,0,0.2); padding:6px; border-radius:4px;">
+          <div style="font-size:10px; color:var(--text2); margin-bottom:4px;">Demografia / Terceira Idade:</div>
+          <ul style="padding-left:14px; font-size:11px; margin:0;">
+            ${data.senior_demographics && data.senior_demographics.length > 0 ? data.senior_demographics.map(l => `<li>${l}</li>`).join('') : '<li style="color:#999">Nenhum listado</li>'}
+          </ul>
+        </div>
+      </div>
+      <div style="font-size:9px; color:var(--border); text-align:right; margin-top:6px;">
+        Pesquisa rodada em ${data.scout_metadata.execution_time_s}s.
+      </div>
+    `;
+  } catch(e) {
+    container.innerHTML = `<div style="color:#ef4444; font-size:11px;">Erro ao executar Scout: ${e.message}</div>`;
+  }
+}
+
+// Filters
+document.querySelectorAll('.chip').forEach(chip => {
+  chip.addEventListener('click', () => {
+    document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+    chip.classList.add('active');
+    activeFilter = chip.dataset.filter;
+    renderList();
+  });
+});
+document.getElementById('search').addEventListener('input', e => {
+  searchQ = e.target.value;
+  renderList();
+});
+
+// ─── CHARTS ──────────────────────────────────────────────────────────────────
+const chartOpts = {
+  responsive: true, maintainAspectRatio: false,
+  plugins: {legend:{display:false}},
+  scales: {
+    x:{ticks:{color:'#9aa3c2',font:{size:9}}, grid:{color:'#2c3050'}},
+    y:{ticks:{color:'#9aa3c2',font:{size:9}}, grid:{color:'#2c3050'}}
+  }
+};
+
+// Scatter: opportunity vs saturation
+new Chart(document.getElementById('chart-scatter'), {
+  type: 'scatter',
+  data: {datasets:[{
+    data: DATA.bairros.map(b => ({x: b.saturation_score, y: b.opportunity_score, label: b.bairro})),
+    pointBackgroundColor: DATA.bairros.map(b => oppColor(b.opportunity_score)),
+    pointRadius: 5, pointHoverRadius: 7
+  }]},
+  options: {...chartOpts,
+    plugins:{
+      ...chartOpts.plugins,
+      tooltip:{callbacks:{label: ctx => `${ctx.raw.label}: opp=${ctx.raw.y} sat=${ctx.raw.x}`}}
+    },
+    scales:{
+      x:{...chartOpts.scales.x, title:{display:true,text:'Saturação',color:'#9aa3c2',font:{size:9}}},
+      y:{...chartOpts.scales.y, title:{display:true,text:'Oportunidade',color:'#9aa3c2',font:{size:9}}}
+    }
+  }
+});
+
+// Bar: PDV count top 12
+const top12 = [...DATA.bairros].filter(b=>b.n_pdv>0).sort((a,b)=>b.n_pdv-a.n_pdv).slice(0,12);
+new Chart(document.getElementById('chart-bar'), {
+  type: 'bar',
+  data: {
+    labels: top12.map(b => b.bairro.replace('Jardim ','J. ').replace('Mansões ','M. ')),
+    datasets:[{
+      data: top12.map(b => b.n_pdv),
+      backgroundColor: top12.map(b => TIER_COLORS[b.tier_socio]),
+      borderRadius: 3
+    }]
+  },
+  options: {...chartOpts, scales:{
+    x:{ticks:{color:'#9aa3c2',font:{size:8},maxRotation:30}, grid:{color:'#2c3050'}},
+    y:{ticks:{color:'#9aa3c2',font:{size:9}}, grid:{color:'#2c3050'}}
+  }}
+});
+
+// Stacked bar: mix canal
+const mixBairros = [...DATA.bairros].filter(b=>b.n_pdv>0).sort((a,b)=>b.n_pdv-a.n_pdv).slice(0,10);
+new Chart(document.getElementById('chart-mix'), {
+  type: 'bar',
+  data: {
+    labels: mixBairros.map(b => b.bairro.split(' ')[0]),
+    datasets:[
+      {label:'Big Chain', data: mixBairros.map(b=>b.big_chain_count), backgroundColor:'#6c8eff', borderRadius:2},
+      {label:'Popular',   data: mixBairros.map(b=>b.popular_chain_count), backgroundColor:'#f59e0b', borderRadius:2},
+      {label:'Independ.', data: mixBairros.map(b=>b.independent_count), backgroundColor:'#94a3b8', borderRadius:2},
+    ]
+  },
+  options: {...chartOpts,
+    plugins:{...chartOpts.plugins, legend:{display:true, labels:{color:'#9aa3c2',font:{size:9},boxWidth:10}}},
+    scales:{
+      x:{stacked:true, ticks:{color:'#9aa3c2',font:{size:8}}, grid:{color:'#2c3050'}},
+      y:{stacked:true, ticks:{color:'#9aa3c2',font:{size:9}}, grid:{color:'#2c3050'}}
+    }
+  }
+});
+
+// ─── INIT ─────────────────────────────────────────────────────────────────────
+renderList();
+</script>
+</body>
+</html>
