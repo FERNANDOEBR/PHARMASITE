@@ -48,10 +48,11 @@ ECONOMIA_SUB = {
     "cobertura_planos_pct": 0.15,
 }
 SAUDE_SUB = {
-    "farmacias":           0.55,
-    "consultorios_odonto": 0.20,
-    "laboratorios":        0.15,
-    "clinicas":            0.10,
+    "farmacias_por_10k":          0.40,
+    "medicos_por_10k":            0.25,
+    "odonto_por_10k":             0.15,
+    "laboratorios_por_10k":       0.10,
+    "ubs_upa_por_10k":            0.10,
 }
 
 # ── Municipality reference data with demographics ────────────────────────────
@@ -793,7 +794,11 @@ for c in cats:
     df[c] = pd.to_numeric(df.get(c, 0), errors="coerce").fillna(0).astype(int)
 
 pop_num = pd.to_numeric(df["populacao_total"], errors="coerce").replace(0, np.nan)
-df["farmacias_por_10k"] = (df["farmacias"] / pop_num * 10000).round(2)
+df["farmacias_por_10k"]    = (df["farmacias"]             / pop_num * 10000).round(2)
+df["medicos_por_10k"]      = (df["consultorios_medicos"]  / pop_num * 10000).round(2)
+df["odonto_por_10k"]       = (df["consultorios_odonto"]   / pop_num * 10000).round(2)
+df["laboratorios_por_10k"] = (df["laboratorios"]          / pop_num * 10000).round(2)
+df["ubs_upa_por_10k"]      = (df["ubs_upa"]               / pop_num * 10000).round(2)
 print(f"  CNES loaded | farmácias total: {df['farmacias'].sum()}")
 
 # ── Economic data ─────────────────────────────────────────────────────────────
@@ -811,8 +816,9 @@ print("\nCalculating scores...")
 numeric_cols = [
     "populacao_total","populacao_alvo","taxa_urbanizacao","indice_envelhecimento",
     "renda_per_capita","pib_per_capita","idh","cobertura_planos_pct",
-    "farmacias","consultorios_odonto","laboratorios","clinicas",
-    "farmacias_por_10k","latitude","longitude",
+    "farmacias","consultorios_medicos","consultorios_odonto","laboratorios","clinicas","ubs_upa",
+    "farmacias_por_10k","medicos_por_10k","odonto_por_10k","laboratorios_por_10k","ubs_upa_por_10k",
+    "latitude","longitude",
 ]
 for c in numeric_cols:
     if c in df.columns:
@@ -887,10 +893,11 @@ for code, name in EMPIRICAL_BOTTOM.items():
 COLS_OUTPUT = [
     "codigo_ibge","nome","mesorregiao","microrregiao",
     "score","tier","ranking",
-    "score_demografico","score_logistica","score_economico","score_saude", "score_competitividade",
-    "farmacias","consultorios_odonto","laboratorios","clinicas","hospitais",
+    "score_demografico","score_logistica","score_economico","score_saude","score_competitividade",
+    "farmacias","consultorios_medicos","consultorios_odonto","laboratorios","clinicas","hospitais","ubs_upa",
     "farmacias_por_10k",
     "populacao_total","populacao_alvo",
+    "taxa_urbanizacao","indice_envelhecimento",
     "renda_per_capita","pib_per_capita","idh",
     "cobertura_planos_pct",
     "distance_campinas_km",
