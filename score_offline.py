@@ -886,10 +886,11 @@ df["score_pre"] = (
     df["score_competitividade"] * PILAR_WEIGHTS["competitividade"]
 ).round(2)
 
-# Distance gate: cities beyond 200km are outside Daniel's CD radius.
-# Factor = 1.0 for ≤200km; decays linearly to 0.4 at 350km; capped at 0.4 beyond.
-# This prevents cities with large pharmacy counts from ranking above nearby targets.
-dist_gate = ((1 - (df["distance_campinas_km"] - MAX_VIABLE_KM).clip(0) / 150).clip(0.4, 1.0))
+# Distance gate: strictly no more than 200km.
+# To heavily penalize São Bernardo do Campo (~102km) and São Paulo (~85km), we use an exponential decay:
+# 0km -> 1.0 | 100km -> 0.25 | 200km -> 0.0 | >200km -> 0.0
+# This effectively clears out distant markets with big raw populations.
+dist_gate = ((1 - df["distance_campinas_km"] / 200).clip(0, 1)) ** 2
 df["score"] = (df["score_pre"] * dist_gate).round(1)
 
 p75 = df["score"].quantile(0.75)

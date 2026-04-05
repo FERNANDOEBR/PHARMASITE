@@ -694,3 +694,25 @@
 2026-04-04 15:05:07.663 | SUCCESS  | __main__:main:788 - Pipeline concluído em 2.4 minutos
 2026-04-04 15:05:07.666 | INFO     | __main__:main:789 - Output: C:\Users\ferna\Documents\antigravity\pharmasite2\municipios_sp_scored.csv
 2026-04-04 15:05:07.667 | INFO     | __main__:main:790 - ============================================================
+2026-04-04 20:31:30.189 | INFO     | __main__:main:766 - ============================================================
+2026-04-04 20:31:30.190 | INFO     | __main__:main:767 - PHARMASITE INTELLIGENCE — Pipeline Standalone
+2026-04-04 20:31:30.190 | INFO     | __main__:main:768 - Foco: 645 municípios do Estado de São Paulo
+2026-04-04 20:31:30.190 | INFO     | __main__:main:769 - Modelo: Scoring Aditivo v3 (4 Pilares / 370 pts)
+2026-04-04 20:31:30.190 | INFO     | __main__:main:770 - ============================================================
+2026-04-04 20:31:44.949 | INFO     | __main__:collect_municipios_sp:229 - ══════════════════════════════════════════════════
+2026-04-04 20:31:44.959 | INFO     | __main__:collect_municipios_sp:230 - ETAPA 1: Municípios SP
+2026-04-04 20:31:44.959 | INFO     | __main__:collect_municipios_sp:231 - ══════════════════════════════════════════════════
+2026-04-04 20:31:44.965 | DEBUG    | __main__:cached_json:79 - Cache hit: municipios_sp
+2026-04-04 20:31:44.991 | SUCCESS  | __main__:collect_municipios_sp:249 -   608 municípios SP carregados
+2026-04-04 20:31:44.992 | DEBUG    | __main__:cached_json:79 - Cache hit: coords_sp
+2026-04-04 20:31:45.006 | INFO     | __main__:collect_municipios_sp:256 -   Coordenadas: 608/608
+2026-04-04 20:31:45.008 | INFO     | __main__:collect_demograficos:266 - ══════════════════════════════════════════════════
+2026-04-04 20:31:45.015 | INFO     | __main__:collect_demograficos:267 - ETAPA 2: Demográficos IBGE
+2026-04-04 20:31:45.016 | INFO     | __main__:collect_demograficos:268 - ══════════════════════════════════════════════════
+2026-04-04 20:31:45.020 | INFO     | __main__:collect_demograficos:273 -   Pop. total...
+2026-04-04 20:31:45.430 | DEBUG    | __main__:fetch_ibge_var:159 -   IBGE Ag.6579/Var.9324: 0 municípios
+2026-04-04 20:31:47.071 | DEBUG    | __main__:fetch_ibge_var:159 -   IBGE Ag.9514/Var.93: 5570 municípios
+2026-04-04 20:31:47.093 | INFO     | __main__:collect_demograficos:278 -     OK: 570/608
+2026-04-04 20:31:48.095 | INFO     | __main__:collect_demograficos:282 -   Pop. urbana...
+2026-04-04 20:32:05.400 | DEBUG    | __main__:fetch_ibge_var:159 -   IBGE Ag.1378/Var.93: 5565 municípios
+2026-04-04 20:32:06.474 | INFO     | __main__:collect_demograficos:291 -   Renda per capita...

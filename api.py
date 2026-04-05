@@ -141,6 +141,7 @@ def get_municipio(codigo_ibge: str):
             "populacao_total": m.get("populacao_total"),
             "taxa_urbanizacao": m.get("taxa_urbanizacao"),
             "indice_envelhecimento": m.get("indice_envelhecimento"),
+            "elderly_pct": m.get("elderly_pct"),
             "populacao_alvo": m.get("populacao_alvo"),
             "pct_populacao_alvo": safe_pct(m.get("populacao_alvo"), m.get("populacao_total"))
         },

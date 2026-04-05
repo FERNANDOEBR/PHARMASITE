@@ -90,7 +90,8 @@ def list_municipios(
 
 @router.get("/municipios/{codigo_ibge}", response_model=MunicipioDetail)
 def get_municipio(codigo_ibge: str, db: Connection = Depends(get_db)):
-    cache_key = f"municipio:detail:{codigo_ibge}"
+    # Bumping cache key to v2 to bust Production Redis cache for new elderly_pct field
+    cache_key = f"municipio:detail:v2:{codigo_ibge}"
     cached = cache_get(cache_key)
     if cached:
         return MunicipioDetail(**cached)
