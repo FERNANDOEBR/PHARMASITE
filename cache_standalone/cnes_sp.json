@@ -1,0 +1,5492 @@
+{
+  "3500105": {
+    "farmacias": 6,
+    "consultorios_medicos": 9,
+    "consultorios_odonto": 6,
+    "laboratorios": 1,
+    "clinicas": 1,
+    "hospitais": 1,
+    "ubs_upa": 6
+  },
+  "3500204": {
+    "farmacias": 0,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3500303": {
+    "farmacias": 1,
+    "consultorios_medicos": 7,
+    "consultorios_odonto": 4,
+    "laboratorios": 7,
+    "clinicas": 1,
+    "hospitais": 1,
+    "ubs_upa": 3
+  },
+  "3500402": {
+    "farmacias": 1,
+    "consultorios_medicos": 3,
+    "consultorios_odonto": 0,
+    "laboratorios": 1,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 2
+  },
+  "3500501": {
+    "farmacias": 2,
+    "consultorios_medicos": 2,
+    "consultorios_odonto": 4,
+    "laboratorios": 2,
+    "clinicas": 0,
+    "hospitais": 1,
+    "ubs_upa": 1
+  },
+  "3500600": {
+    "farmacias": 1,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 1,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3500709": {
+    "farmacias": 1,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 0,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 2
+  },
+  "3500808": {
+    "farmacias": 7,
+    "consultorios_medicos": 9,
+    "consultorios_odonto": 3,
+    "laboratorios": 2,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3500907": {
+    "farmacias": 0,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3501004": {
+    "farmacias": 0,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3501103": {
+    "farmacias": 1,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 2,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3501202": {
+    "farmacias": 4,
+    "consultorios_medicos": 3,
+    "consultorios_odonto": 1,
+    "laboratorios": 1,
+    "clinicas": 2,
+    "hospitais": 1,
+    "ubs_upa": 1
+  },
+  "3501301": {
+    "farmacias": 1,
+    "consultorios_medicos": 2,
+    "consultorios_odonto": 1,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3501400": {
+    "farmacias": 1,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 1,
+    "laboratorios": 1,
+    "clinicas": 2,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3501509": {
+    "farmacias": 1,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 1,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 1,
+    "ubs_upa": 1
+  },
+  "3501608": {
+    "farmacias": 125,
+    "consultorios_medicos": 470,
+    "consultorios_odonto": 220,
+    "laboratorios": 58,
+    "clinicas": 82,
+    "hospitais": 5,
+    "ubs_upa": 26
+  },
+  "3501707": {
+    "farmacias": 0,
+    "consultorios_medicos": 3,
+    "consultorios_odonto": 0,
+    "laboratorios": 1,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3501806": {
+    "farmacias": 0,
+    "consultorios_medicos": 3,
+    "consultorios_odonto": 1,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3501905": {
+    "farmacias": 33,
+    "consultorios_medicos": 28,
+    "consultorios_odonto": 29,
+    "laboratorios": 19,
+    "clinicas": 5,
+    "hospitais": 5,
+    "ubs_upa": 20
+  },
+  "3502002": {
+    "farmacias": 5,
+    "consultorios_medicos": 4,
+    "consultorios_odonto": 12,
+    "laboratorios": 6,
+    "clinicas": 3,
+    "hospitais": 0,
+    "ubs_upa": 7
+  },
+  "3502101": {
+    "farmacias": 36,
+    "consultorios_medicos": 100,
+    "consultorios_odonto": 48,
+    "laboratorios": 12,
+    "clinicas": 14,
+    "hospitais": 2,
+    "ubs_upa": 7
+  },
+  "3502200": {
+    "farmacias": 11,
+    "consultorios_medicos": 19,
+    "consultorios_odonto": 11,
+    "laboratorios": 4,
+    "clinicas": 1,
+    "hospitais": 2,
+    "ubs_upa": 13
+  },
+  "3502309": {
+    "farmacias": 1,
+    "consultorios_medicos": 2,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3502408": {
+    "farmacias": 2,
+    "consultorios_medicos": 11,
+    "consultorios_odonto": 9,
+    "laboratorios": 3,
+    "clinicas": 2,
+    "hospitais": 0,
+    "ubs_upa": 2
+  },
+  "3502507": {
+    "farmacias": 6,
+    "consultorios_medicos": 4,
+    "consultorios_odonto": 1,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 1,
+    "ubs_upa": 4
+  },
+  "3502606": {
+    "farmacias": 0,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 1,
+    "laboratorios": 2,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3502705": {
+    "farmacias": 0,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 1,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3502804": {
+    "farmacias": 4,
+    "consultorios_medicos": 11,
+    "consultorios_odonto": 4,
+    "laboratorios": 2,
+    "clinicas": 3,
+    "hospitais": 0,
+    "ubs_upa": 3
+  },
+  "3502903": {
+    "farmacias": 0,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 1,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3503000": {
+    "farmacias": 3,
+    "consultorios_medicos": 7,
+    "consultorios_odonto": 4,
+    "laboratorios": 2,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 2
+  },
+  "3503109": {
+    "farmacias": 4,
+    "consultorios_medicos": 2,
+    "consultorios_odonto": 5,
+    "laboratorios": 2,
+    "clinicas": 0,
+    "hospitais": 1,
+    "ubs_upa": 1
+  },
+  "3503208": {
+    "farmacias": 24,
+    "consultorios_medicos": 48,
+    "consultorios_odonto": 30,
+    "laboratorios": 17,
+    "clinicas": 9,
+    "hospitais": 7,
+    "ubs_upa": 19
+  },
+  "3503307": {
+    "farmacias": 4,
+    "consultorios_medicos": 8,
+    "consultorios_odonto": 1,
+    "laboratorios": 3,
+    "clinicas": 2,
+    "hospitais": 0,
+    "ubs_upa": 3
+  },
+  "3503406": {
+    "farmacias": 0,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 2,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3503505": {
+    "farmacias": 2,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 1,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 2
+  },
+  "3503604": {
+    "farmacias": 2,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 1,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3503703": {
+    "farmacias": 44,
+    "consultorios_medicos": 59,
+    "consultorios_odonto": 45,
+    "laboratorios": 19,
+    "clinicas": 10,
+    "hospitais": 2,
+    "ubs_upa": 21
+  },
+  "3503802": {
+    "farmacias": 21,
+    "consultorios_medicos": 32,
+    "consultorios_odonto": 21,
+    "laboratorios": 8,
+    "clinicas": 9,
+    "hospitais": 0,
+    "ubs_upa": 15
+  },
+  "3503901": {
+    "farmacias": 0,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3504008": {
+    "farmacias": 1,
+    "consultorios_medicos": 2,
+    "consultorios_odonto": 2,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3504107": {
+    "farmacias": 1,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3504206": {
+    "farmacias": 1,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 2,
+    "laboratorios": 2,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3504305": {
+    "farmacias": 1,
+    "consultorios_medicos": 4,
+    "consultorios_odonto": 1,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3504404": {
+    "farmacias": 8,
+    "consultorios_medicos": 12,
+    "consultorios_odonto": 6,
+    "laboratorios": 3,
+    "clinicas": 2,
+    "hospitais": 1,
+    "ubs_upa": 5
+  },
+  "3504503": {
+    "farmacias": 14,
+    "consultorios_medicos": 21,
+    "consultorios_odonto": 13,
+    "laboratorios": 5,
+    "clinicas": 3,
+    "hospitais": 2,
+    "ubs_upa": 6
+  },
+  "3504602": {
+    "farmacias": 1,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3504701": {
+    "farmacias": 8,
+    "consultorios_medicos": 16,
+    "consultorios_odonto": 15,
+    "laboratorios": 11,
+    "clinicas": 7,
+    "hospitais": 1,
+    "ubs_upa": 9
+  },
+  "3504800": {
+    "farmacias": 22,
+    "consultorios_medicos": 34,
+    "consultorios_odonto": 22,
+    "laboratorios": 9,
+    "clinicas": 6,
+    "hospitais": 2,
+    "ubs_upa": 13
+  },
+  "3504909": {
+    "farmacias": 2,
+    "consultorios_medicos": 2,
+    "consultorios_odonto": 4,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 2
+  },
+  "3505005": {
+    "farmacias": 0,
+    "consultorios_medicos": 2,
+    "consultorios_odonto": 0,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3505104": {
+    "farmacias": 2,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 5,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3505203": {
+    "farmacias": 11,
+    "consultorios_medicos": 17,
+    "consultorios_odonto": 10,
+    "laboratorios": 8,
+    "clinicas": 8,
+    "hospitais": 3,
+    "ubs_upa": 11
+  },
+  "3505302": {
+    "farmacias": 6,
+    "consultorios_medicos": 3,
+    "consultorios_odonto": 4,
+    "laboratorios": 2,
+    "clinicas": 2,
+    "hospitais": 1,
+    "ubs_upa": 4
+  },
+  "3505401": {
+    "farmacias": 1,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 3,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3505500": {
+    "farmacias": 1,
+    "consultorios_medicos": 2,
+    "consultorios_odonto": 0,
+    "laboratorios": 1,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3505609": {
+    "farmacias": 0,
+    "consultorios_medicos": 2,
+    "consultorios_odonto": 1,
+    "laboratorios": 1,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3505708": {
+    "farmacias": 0,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3505807": {
+    "farmacias": 1,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 0,
+    "laboratorios": 3,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3505906": {
+    "farmacias": 4,
+    "consultorios_medicos": 6,
+    "consultorios_odonto": 4,
+    "laboratorios": 0,
+    "clinicas": 1,
+    "hospitais": 1,
+    "ubs_upa": 3
+  },
+  "3506003": {
+    "farmacias": 3,
+    "consultorios_medicos": 5,
+    "consultorios_odonto": 6,
+    "laboratorios": 0,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 3
+  },
+  "3506102": {
+    "farmacias": 0,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 1,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3506201": {
+    "farmacias": 1,
+    "consultorios_medicos": 2,
+    "consultorios_odonto": 0,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3506300": {
+    "farmacias": 14,
+    "consultorios_medicos": 22,
+    "consultorios_odonto": 18,
+    "laboratorios": 5,
+    "clinicas": 7,
+    "hospitais": 2,
+    "ubs_upa": 18
+  },
+  "3506409": {
+    "farmacias": 6,
+    "consultorios_medicos": 4,
+    "consultorios_odonto": 7,
+    "laboratorios": 3,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3506508": {
+    "farmacias": 50,
+    "consultorios_medicos": 44,
+    "consultorios_odonto": 45,
+    "laboratorios": 23,
+    "clinicas": 12,
+    "hospitais": 4,
+    "ubs_upa": 36
+  },
+  "3506607": {
+    "farmacias": 7,
+    "consultorios_medicos": 6,
+    "consultorios_odonto": 4,
+    "laboratorios": 4,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3506706": {
+    "farmacias": 8,
+    "consultorios_medicos": 20,
+    "consultorios_odonto": 10,
+    "laboratorios": 2,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 2
+  },
+  "3506805": {
+    "farmacias": 0,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 2,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3506904": {
+    "farmacias": 3,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 2,
+    "laboratorios": 3,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3507001": {
+    "farmacias": 0,
+    "consultorios_medicos": 2,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3507100": {
+    "farmacias": 25,
+    "consultorios_medicos": 24,
+    "consultorios_odonto": 25,
+    "laboratorios": 15,
+    "clinicas": 6,
+    "hospitais": 1,
+    "ubs_upa": 23
+  },
+  "3507209": {
+    "farmacias": 0,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3507308": {
+    "farmacias": 1,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 1,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3507407": {
+    "farmacias": 0,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 2,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3507506": {
+    "farmacias": 6,
+    "consultorios_medicos": 4,
+    "consultorios_odonto": 3,
+    "laboratorios": 0,
+    "clinicas": 2,
+    "hospitais": 1,
+    "ubs_upa": 5
+  },
+  "3507605": {
+    "farmacias": 7,
+    "consultorios_medicos": 2,
+    "consultorios_odonto": 3,
+    "laboratorios": 1,
+    "clinicas": 2,
+    "hospitais": 0,
+    "ubs_upa": 4
+  },
+  "3507704": {
+    "farmacias": 1,
+    "consultorios_medicos": 7,
+    "consultorios_odonto": 4,
+    "laboratorios": 4,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 2
+  },
+  "3507803": {
+    "farmacias": 2,
+    "consultorios_medicos": 4,
+    "consultorios_odonto": 3,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 1,
+    "ubs_upa": 1
+  },
+  "3507902": {
+    "farmacias": 1,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 0,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 2
+  },
+  "3508009": {
+    "farmacias": 2,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 1,
+    "laboratorios": 0,
+    "clinicas": 2,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3508108": {
+    "farmacias": 12,
+    "consultorios_medicos": 5,
+    "consultorios_odonto": 12,
+    "laboratorios": 11,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 7
+  },
+  "3508207": {
+    "farmacias": 9,
+    "consultorios_medicos": 15,
+    "consultorios_odonto": 10,
+    "laboratorios": 9,
+    "clinicas": 8,
+    "hospitais": 1,
+    "ubs_upa": 9
+  },
+  "3508306": {
+    "farmacias": 3,
+    "consultorios_medicos": 7,
+    "consultorios_odonto": 4,
+    "laboratorios": 3,
+    "clinicas": 5,
+    "hospitais": 2,
+    "ubs_upa": 1
+  },
+  "3508405": {
+    "farmacias": 1,
+    "consultorios_medicos": 3,
+    "consultorios_odonto": 6,
+    "laboratorios": 5,
+    "clinicas": 3,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3508504": {
+    "farmacias": 2,
+    "consultorios_medicos": 7,
+    "consultorios_odonto": 5,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 1,
+    "ubs_upa": 1
+  },
+  "3508603": {
+    "farmacias": 1,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3508702": {
+    "farmacias": 10,
+    "consultorios_medicos": 19,
+    "consultorios_odonto": 15,
+    "laboratorios": 3,
+    "clinicas": 5,
+    "hospitais": 2,
+    "ubs_upa": 12
+  },
+  "3508801": {
+    "farmacias": 2,
+    "consultorios_medicos": 2,
+    "consultorios_odonto": 3,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3508900": {
+    "farmacias": 11,
+    "consultorios_medicos": 10,
+    "consultorios_odonto": 6,
+    "laboratorios": 5,
+    "clinicas": 4,
+    "hospitais": 5,
+    "ubs_upa": 4
+  },
+  "3509007": {
+    "farmacias": 4,
+    "consultorios_medicos": 3,
+    "consultorios_odonto": 6,
+    "laboratorios": 1,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 3
+  },
+  "3509106": {
+    "farmacias": 2,
+    "consultorios_medicos": 4,
+    "consultorios_odonto": 2,
+    "laboratorios": 1,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3509205": {
+    "farmacias": 8,
+    "consultorios_medicos": 5,
+    "consultorios_odonto": 8,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3509304": {
+    "farmacias": 1,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 1,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3509403": {
+    "farmacias": 14,
+    "consultorios_medicos": 38,
+    "consultorios_odonto": 17,
+    "laboratorios": 5,
+    "clinicas": 3,
+    "hospitais": 1,
+    "ubs_upa": 3
+  },
+  "3509502": {
+    "farmacias": 890,
+    "consultorios_medicos": 4200,
+    "consultorios_odonto": 1200,
+    "laboratorios": 280,
+    "clinicas": 650,
+    "hospitais": 38,
+    "ubs_upa": 136
+  },
+  "3509601": {
+    "farmacias": 11,
+    "consultorios_medicos": 8,
+    "consultorios_odonto": 6,
+    "laboratorios": 6,
+    "clinicas": 4,
+    "hospitais": 1,
+    "ubs_upa": 8
+  },
+  "3509700": {
+    "farmacias": 8,
+    "consultorios_medicos": 8,
+    "consultorios_odonto": 3,
+    "laboratorios": 3,
+    "clinicas": 4,
+    "hospitais": 2,
+    "ubs_upa": 5
+  },
+  "3509809": {
+    "farmacias": 2,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 1,
+    "laboratorios": 0,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3509908": {
+    "farmacias": 5,
+    "consultorios_medicos": 4,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 2
+  },
+  "3510005": {
+    "farmacias": 0,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 1,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3510104": {
+    "farmacias": 8,
+    "consultorios_medicos": 7,
+    "consultorios_odonto": 3,
+    "laboratorios": 2,
+    "clinicas": 5,
+    "hospitais": 0,
+    "ubs_upa": 2
+  },
+  "3510203": {
+    "farmacias": 0,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 3,
+    "laboratorios": 0,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3510302": {
+    "farmacias": 1,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 0,
+    "laboratorios": 3,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3510401": {
+    "farmacias": 14,
+    "consultorios_medicos": 4,
+    "consultorios_odonto": 7,
+    "laboratorios": 6,
+    "clinicas": 7,
+    "hospitais": 2,
+    "ubs_upa": 4
+  },
+  "3510500": {
+    "farmacias": 4,
+    "consultorios_medicos": 3,
+    "consultorios_odonto": 4,
+    "laboratorios": 1,
+    "clinicas": 2,
+    "hospitais": 0,
+    "ubs_upa": 3
+  },
+  "3510609": {
+    "farmacias": 13,
+    "consultorios_medicos": 15,
+    "consultorios_odonto": 9,
+    "laboratorios": 1,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 8
+  },
+  "3510708": {
+    "farmacias": 19,
+    "consultorios_medicos": 26,
+    "consultorios_odonto": 23,
+    "laboratorios": 6,
+    "clinicas": 6,
+    "hospitais": 1,
+    "ubs_upa": 10
+  },
+  "3510807": {
+    "farmacias": 64,
+    "consultorios_medicos": 78,
+    "consultorios_odonto": 72,
+    "laboratorios": 34,
+    "clinicas": 15,
+    "hospitais": 7,
+    "ubs_upa": 43
+  },
+  "3510906": {
+    "farmacias": 7,
+    "consultorios_medicos": 4,
+    "consultorios_odonto": 5,
+    "laboratorios": 4,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3511003": {
+    "farmacias": 5,
+    "consultorios_medicos": 5,
+    "consultorios_odonto": 3,
+    "laboratorios": 5,
+    "clinicas": 4,
+    "hospitais": 2,
+    "ubs_upa": 6
+  },
+  "3511102": {
+    "farmacias": 0,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 2
+  },
+  "3511201": {
+    "farmacias": 2,
+    "consultorios_medicos": 6,
+    "consultorios_odonto": 2,
+    "laboratorios": 2,
+    "clinicas": 2,
+    "hospitais": 1,
+    "ubs_upa": 2
+  },
+  "3511300": {
+    "farmacias": 18,
+    "consultorios_medicos": 24,
+    "consultorios_odonto": 16,
+    "laboratorios": 10,
+    "clinicas": 4,
+    "hospitais": 0,
+    "ubs_upa": 21
+  },
+  "3511409": {
+    "farmacias": 2,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3511508": {
+    "farmacias": 1,
+    "consultorios_medicos": 3,
+    "consultorios_odonto": 1,
+    "laboratorios": 1,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3511607": {
+    "farmacias": 6,
+    "consultorios_medicos": 5,
+    "consultorios_odonto": 2,
+    "laboratorios": 1,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3511706": {
+    "farmacias": 8,
+    "consultorios_medicos": 4,
+    "consultorios_odonto": 7,
+    "laboratorios": 2,
+    "clinicas": 2,
+    "hospitais": 1,
+    "ubs_upa": 4
+  },
+  "3511805": {
+    "farmacias": 1,
+    "consultorios_medicos": 5,
+    "consultorios_odonto": 3,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 4
+  },
+  "3511904": {
+    "farmacias": 2,
+    "consultorios_medicos": 2,
+    "consultorios_odonto": 0,
+    "laboratorios": 1,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3512001": {
+    "farmacias": 2,
+    "consultorios_medicos": 2,
+    "consultorios_odonto": 1,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3512100": {
+    "farmacias": 4,
+    "consultorios_medicos": 6,
+    "consultorios_odonto": 6,
+    "laboratorios": 2,
+    "clinicas": 0,
+    "hospitais": 1,
+    "ubs_upa": 1
+  },
+  "3512209": {
+    "farmacias": 0,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 1,
+    "laboratorios": 0,
+    "clinicas": 3,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3512308": {
+    "farmacias": 5,
+    "consultorios_medicos": 4,
+    "consultorios_odonto": 4,
+    "laboratorios": 0,
+    "clinicas": 1,
+    "hospitais": 1,
+    "ubs_upa": 1
+  },
+  "3512407": {
+    "farmacias": 3,
+    "consultorios_medicos": 3,
+    "consultorios_odonto": 6,
+    "laboratorios": 2,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 2
+  },
+  "3512506": {
+    "farmacias": 8,
+    "consultorios_medicos": 3,
+    "consultorios_odonto": 1,
+    "laboratorios": 2,
+    "clinicas": 1,
+    "hospitais": 1,
+    "ubs_upa": 2
+  },
+  "3512605": {
+    "farmacias": 0,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 2,
+    "laboratorios": 1,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 3
+  },
+  "3512704": {
+    "farmacias": 1,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3512803": {
+    "farmacias": 0,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 1,
+    "laboratorios": 2,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3512902": {
+    "farmacias": 12,
+    "consultorios_medicos": 8,
+    "consultorios_odonto": 9,
+    "laboratorios": 3,
+    "clinicas": 3,
+    "hospitais": 0,
+    "ubs_upa": 6
+  },
+  "3513009": {
+    "farmacias": 0,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 2,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3513108": {
+    "farmacias": 58,
+    "consultorios_medicos": 43,
+    "consultorios_odonto": 34,
+    "laboratorios": 18,
+    "clinicas": 15,
+    "hospitais": 8,
+    "ubs_upa": 30
+  },
+  "3513207": {
+    "farmacias": 5,
+    "consultorios_medicos": 7,
+    "consultorios_odonto": 4,
+    "laboratorios": 7,
+    "clinicas": 2,
+    "hospitais": 1,
+    "ubs_upa": 4
+  },
+  "3513306": {
+    "farmacias": 1,
+    "consultorios_medicos": 3,
+    "consultorios_odonto": 2,
+    "laboratorios": 0,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3513405": {
+    "farmacias": 2,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 1,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3513504": {
+    "farmacias": 17,
+    "consultorios_medicos": 19,
+    "consultorios_odonto": 10,
+    "laboratorios": 8,
+    "clinicas": 4,
+    "hospitais": 1,
+    "ubs_upa": 6
+  },
+  "3513603": {
+    "farmacias": 14,
+    "consultorios_medicos": 19,
+    "consultorios_odonto": 14,
+    "laboratorios": 16,
+    "clinicas": 6,
+    "hospitais": 1,
+    "ubs_upa": 15
+  },
+  "3513702": {
+    "farmacias": 5,
+    "consultorios_medicos": 4,
+    "consultorios_odonto": 2,
+    "laboratorios": 1,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 3
+  },
+  "3513801": {
+    "farmacias": 6,
+    "consultorios_medicos": 5,
+    "consultorios_odonto": 1,
+    "laboratorios": 3,
+    "clinicas": 0,
+    "hospitais": 1,
+    "ubs_upa": 5
+  },
+  "3513900": {
+    "farmacias": 59,
+    "consultorios_medicos": 65,
+    "consultorios_odonto": 47,
+    "laboratorios": 35,
+    "clinicas": 26,
+    "hospitais": 5,
+    "ubs_upa": 56
+  },
+  "3514007": {
+    "farmacias": 0,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3514106": {
+    "farmacias": 3,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 1,
+    "ubs_upa": 1
+  },
+  "3514205": {
+    "farmacias": 0,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 1,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3514304": {
+    "farmacias": 4,
+    "consultorios_medicos": 6,
+    "consultorios_odonto": 6,
+    "laboratorios": 1,
+    "clinicas": 4,
+    "hospitais": 1,
+    "ubs_upa": 1
+  },
+  "3514403": {
+    "farmacias": 0,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 1,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3514502": {
+    "farmacias": 0,
+    "consultorios_medicos": 3,
+    "consultorios_odonto": 0,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3514601": {
+    "farmacias": 8,
+    "consultorios_medicos": 6,
+    "consultorios_odonto": 8,
+    "laboratorios": 3,
+    "clinicas": 0,
+    "hospitais": 1,
+    "ubs_upa": 5
+  },
+  "3514700": {
+    "farmacias": 2,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 1,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 1,
+    "ubs_upa": 2
+  },
+  "3514809": {
+    "farmacias": 1,
+    "consultorios_medicos": 2,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 2
+  },
+  "3514908": {
+    "farmacias": 1,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 2,
+    "laboratorios": 0,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3515004": {
+    "farmacias": 3,
+    "consultorios_medicos": 3,
+    "consultorios_odonto": 3,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 2
+  },
+  "3515103": {
+    "farmacias": 4,
+    "consultorios_medicos": 6,
+    "consultorios_odonto": 2,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3515202": {
+    "farmacias": 0,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3515301": {
+    "farmacias": 0,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 1,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3515400": {
+    "farmacias": 35,
+    "consultorios_medicos": 41,
+    "consultorios_odonto": 29,
+    "laboratorios": 20,
+    "clinicas": 8,
+    "hospitais": 5,
+    "ubs_upa": 29
+  },
+  "3515509": {
+    "farmacias": 10,
+    "consultorios_medicos": 13,
+    "consultorios_odonto": 15,
+    "laboratorios": 6,
+    "clinicas": 4,
+    "hospitais": 2,
+    "ubs_upa": 6
+  },
+  "3515608": {
+    "farmacias": 0,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3515707": {
+    "farmacias": 2,
+    "consultorios_medicos": 2,
+    "consultorios_odonto": 1,
+    "laboratorios": 3,
+    "clinicas": 3,
+    "hospitais": 2,
+    "ubs_upa": 1
+  },
+  "3515806": {
+    "farmacias": 0,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3515905": {
+    "farmacias": 2,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 0,
+    "laboratorios": 1,
+    "clinicas": 1,
+    "hospitais": 1,
+    "ubs_upa": 1
+  },
+  "3516002": {
+    "farmacias": 1,
+    "consultorios_medicos": 2,
+    "consultorios_odonto": 1,
+    "laboratorios": 0,
+    "clinicas": 1,
+    "hospitais": 1,
+    "ubs_upa": 1
+  },
+  "3516101": {
+    "farmacias": 1,
+    "consultorios_medicos": 3,
+    "consultorios_odonto": 2,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 1,
+    "ubs_upa": 1
+  },
+  "3516200": {
+    "farmacias": 185,
+    "consultorios_medicos": 620,
+    "consultorios_odonto": 290,
+    "laboratorios": 82,
+    "clinicas": 125,
+    "hospitais": 9,
+    "ubs_upa": 36
+  },
+  "3516309": {
+    "farmacias": 0,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 1,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3516408": {
+    "farmacias": 2,
+    "consultorios_medicos": 2,
+    "consultorios_odonto": 1,
+    "laboratorios": 0,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 2
+  },
+  "3516507": {
+    "farmacias": 1,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3516606": {
+    "farmacias": 48,
+    "consultorios_medicos": 74,
+    "consultorios_odonto": 52,
+    "laboratorios": 30,
+    "clinicas": 17,
+    "hospitais": 6,
+    "ubs_upa": 32
+  },
+  "3516705": {
+    "farmacias": 16,
+    "consultorios_medicos": 33,
+    "consultorios_odonto": 23,
+    "laboratorios": 17,
+    "clinicas": 5,
+    "hospitais": 7,
+    "ubs_upa": 17
+  },
+  "3516804": {
+    "farmacias": 32,
+    "consultorios_medicos": 25,
+    "consultorios_odonto": 31,
+    "laboratorios": 11,
+    "clinicas": 5,
+    "hospitais": 5,
+    "ubs_upa": 18
+  },
+  "3516903": {
+    "farmacias": 1,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 1,
+    "laboratorios": 0,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3517000": {
+    "farmacias": 1,
+    "consultorios_medicos": 2,
+    "consultorios_odonto": 0,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3517109": {
+    "farmacias": 8,
+    "consultorios_medicos": 12,
+    "consultorios_odonto": 10,
+    "laboratorios": 2,
+    "clinicas": 4,
+    "hospitais": 0,
+    "ubs_upa": 5
+  },
+  "3517208": {
+    "farmacias": 0,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3517307": {
+    "farmacias": 0,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 2,
+    "laboratorios": 0,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3517406": {
+    "farmacias": 1,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 1,
+    "laboratorios": 2,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3517505": {
+    "farmacias": 0,
+    "consultorios_medicos": 2,
+    "consultorios_odonto": 4,
+    "laboratorios": 1,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3517604": {
+    "farmacias": 1,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 1,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3517703": {
+    "farmacias": 2,
+    "consultorios_medicos": 4,
+    "consultorios_odonto": 0,
+    "laboratorios": 3,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 2
+  },
+  "3517802": {
+    "farmacias": 1,
+    "consultorios_medicos": 2,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3517901": {
+    "farmacias": 9,
+    "consultorios_medicos": 7,
+    "consultorios_odonto": 3,
+    "laboratorios": 5,
+    "clinicas": 2,
+    "hospitais": 2,
+    "ubs_upa": 1
+  },
+  "3518008": {
+    "farmacias": 2,
+    "consultorios_medicos": 5,
+    "consultorios_odonto": 2,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 1,
+    "ubs_upa": 2
+  },
+  "3518107": {
+    "farmacias": 3,
+    "consultorios_medicos": 2,
+    "consultorios_odonto": 3,
+    "laboratorios": 1,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 2
+  },
+  "3518206": {
+    "farmacias": 2,
+    "consultorios_medicos": 5,
+    "consultorios_odonto": 6,
+    "laboratorios": 0,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 4
+  },
+  "3518305": {
+    "farmacias": 1,
+    "consultorios_medicos": 3,
+    "consultorios_odonto": 2,
+    "laboratorios": 1,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3518404": {
+    "farmacias": 1,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 0,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3518503": {
+    "farmacias": 0,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 1,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3518602": {
+    "farmacias": 0,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 1,
+    "laboratorios": 0,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3518701": {
+    "farmacias": 4,
+    "consultorios_medicos": 14,
+    "consultorios_odonto": 4,
+    "laboratorios": 4,
+    "clinicas": 2,
+    "hospitais": 1,
+    "ubs_upa": 4
+  },
+  "3518800": {
+    "farmacias": 600,
+    "consultorios_medicos": 2500,
+    "consultorios_odonto": 1100,
+    "laboratorios": 200,
+    "clinicas": 280,
+    "hospitais": 18,
+    "ubs_upa": 80
+  },
+  "3518909": {
+    "farmacias": 1,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 3,
+    "laboratorios": 2,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3519006": {
+    "farmacias": 6,
+    "consultorios_medicos": 6,
+    "consultorios_odonto": 11,
+    "laboratorios": 3,
+    "clinicas": 2,
+    "hospitais": 1,
+    "ubs_upa": 6
+  },
+  "3519105": {
+    "farmacias": 55,
+    "consultorios_medicos": 72,
+    "consultorios_odonto": 56,
+    "laboratorios": 38,
+    "clinicas": 21,
+    "hospitais": 6,
+    "ubs_upa": 37
+  },
+  "3519204": {
+    "farmacias": 3,
+    "consultorios_medicos": 15,
+    "consultorios_odonto": 10,
+    "laboratorios": 2,
+    "clinicas": 3,
+    "hospitais": 0,
+    "ubs_upa": 8
+  },
+  "3519303": {
+    "farmacias": 2,
+    "consultorios_medicos": 2,
+    "consultorios_odonto": 1,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3519402": {
+    "farmacias": 1,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 0,
+    "laboratorios": 3,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3519501": {
+    "farmacias": 0,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3519600": {
+    "farmacias": 2,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 3,
+    "laboratorios": 2,
+    "clinicas": 1,
+    "hospitais": 1,
+    "ubs_upa": 1
+  },
+  "3519709": {
+    "farmacias": 33,
+    "consultorios_medicos": 41,
+    "consultorios_odonto": 31,
+    "laboratorios": 23,
+    "clinicas": 15,
+    "hospitais": 6,
+    "ubs_upa": 22
+  },
+  "3519808": {
+    "farmacias": 1,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 3,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3519907": {
+    "farmacias": 3,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 1,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3520004": {
+    "farmacias": 0,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3520103": {
+    "farmacias": 9,
+    "consultorios_medicos": 9,
+    "consultorios_odonto": 5,
+    "laboratorios": 4,
+    "clinicas": 3,
+    "hospitais": 0,
+    "ubs_upa": 3
+  },
+  "3520202": {
+    "farmacias": 1,
+    "consultorios_medicos": 4,
+    "consultorios_odonto": 0,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 1,
+    "ubs_upa": 2
+  },
+  "3520301": {
+    "farmacias": 0,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 2,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3520400": {
+    "farmacias": 5,
+    "consultorios_medicos": 9,
+    "consultorios_odonto": 8,
+    "laboratorios": 4,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 4
+  },
+  "3520509": {
+    "farmacias": 15,
+    "consultorios_medicos": 19,
+    "consultorios_odonto": 17,
+    "laboratorios": 7,
+    "clinicas": 7,
+    "hospitais": 2,
+    "ubs_upa": 15
+  },
+  "3520608": {
+    "farmacias": 0,
+    "consultorios_medicos": 2,
+    "consultorios_odonto": 1,
+    "laboratorios": 3,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3520707": {
+    "farmacias": 3,
+    "consultorios_medicos": 2,
+    "consultorios_odonto": 1,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3520806": {
+    "farmacias": 3,
+    "consultorios_medicos": 3,
+    "consultorios_odonto": 6,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 2,
+    "ubs_upa": 2
+  },
+  "3520905": {
+    "farmacias": 7,
+    "consultorios_medicos": 6,
+    "consultorios_odonto": 8,
+    "laboratorios": 1,
+    "clinicas": 2,
+    "hospitais": 1,
+    "ubs_upa": 2
+  },
+  "3521002": {
+    "farmacias": 3,
+    "consultorios_medicos": 2,
+    "consultorios_odonto": 1,
+    "laboratorios": 0,
+    "clinicas": 2,
+    "hospitais": 1,
+    "ubs_upa": 1
+  },
+  "3521101": {
+    "farmacias": 5,
+    "consultorios_medicos": 10,
+    "consultorios_odonto": 7,
+    "laboratorios": 1,
+    "clinicas": 2,
+    "hospitais": 1,
+    "ubs_upa": 1
+  },
+  "3521200": {
+    "farmacias": 1,
+    "consultorios_medicos": 4,
+    "consultorios_odonto": 3,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 1,
+    "ubs_upa": 1
+  },
+  "3521309": {
+    "farmacias": 2,
+    "consultorios_medicos": 2,
+    "consultorios_odonto": 3,
+    "laboratorios": 1,
+    "clinicas": 1,
+    "hospitais": 1,
+    "ubs_upa": 4
+  },
+  "3521408": {
+    "farmacias": 40,
+    "consultorios_medicos": 59,
+    "consultorios_odonto": 42,
+    "laboratorios": 23,
+    "clinicas": 11,
+    "hospitais": 5,
+    "ubs_upa": 31
+  },
+  "3521507": {
+    "farmacias": 0,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 1,
+    "laboratorios": 0,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3521606": {
+    "farmacias": 0,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 2,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3521705": {
+    "farmacias": 0,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 1,
+    "laboratorios": 0,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3521804": {
+    "farmacias": 4,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 5,
+    "laboratorios": 2,
+    "clinicas": 0,
+    "hospitais": 1,
+    "ubs_upa": 1
+  },
+  "3521903": {
+    "farmacias": 6,
+    "consultorios_medicos": 3,
+    "consultorios_odonto": 6,
+    "laboratorios": 3,
+    "clinicas": 2,
+    "hospitais": 0,
+    "ubs_upa": 2
+  },
+  "3522000": {
+    "farmacias": 0,
+    "consultorios_medicos": 4,
+    "consultorios_odonto": 0,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3522109": {
+    "farmacias": 1,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 0,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3522208": {
+    "farmacias": 0,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 0,
+    "laboratorios": 3,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3522307": {
+    "farmacias": 0,
+    "consultorios_medicos": 5,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3522406": {
+    "farmacias": 2,
+    "consultorios_medicos": 6,
+    "consultorios_odonto": 1,
+    "laboratorios": 3,
+    "clinicas": 2,
+    "hospitais": 0,
+    "ubs_upa": 4
+  },
+  "3522505": {
+    "farmacias": 0,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 1,
+    "laboratorios": 1,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3522604": {
+    "farmacias": 5,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 2,
+    "laboratorios": 2,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3522703": {
+    "farmacias": 3,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 4,
+    "laboratorios": 2,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3522802": {
+    "farmacias": 3,
+    "consultorios_medicos": 7,
+    "consultorios_odonto": 8,
+    "laboratorios": 3,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3522901": {
+    "farmacias": 4,
+    "consultorios_medicos": 2,
+    "consultorios_odonto": 4,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 1,
+    "ubs_upa": 1
+  },
+  "3523008": {
+    "farmacias": 0,
+    "consultorios_medicos": 3,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3523107": {
+    "farmacias": 18,
+    "consultorios_medicos": 11,
+    "consultorios_odonto": 18,
+    "laboratorios": 8,
+    "clinicas": 7,
+    "hospitais": 3,
+    "ubs_upa": 15
+  },
+  "3523206": {
+    "farmacias": 22,
+    "consultorios_medicos": 32,
+    "consultorios_odonto": 25,
+    "laboratorios": 15,
+    "clinicas": 9,
+    "hospitais": 4,
+    "ubs_upa": 21
+  },
+  "3523305": {
+    "farmacias": 21,
+    "consultorios_medicos": 28,
+    "consultorios_odonto": 27,
+    "laboratorios": 8,
+    "clinicas": 6,
+    "hospitais": 1,
+    "ubs_upa": 10
+  },
+  "3523404": {
+    "farmacias": 16,
+    "consultorios_medicos": 27,
+    "consultorios_odonto": 10,
+    "laboratorios": 10,
+    "clinicas": 6,
+    "hospitais": 4,
+    "ubs_upa": 10
+  },
+  "3523503": {
+    "farmacias": 33,
+    "consultorios_medicos": 42,
+    "consultorios_odonto": 42,
+    "laboratorios": 20,
+    "clinicas": 8,
+    "hospitais": 5,
+    "ubs_upa": 27
+  },
+  "3523602": {
+    "farmacias": 18,
+    "consultorios_medicos": 20,
+    "consultorios_odonto": 18,
+    "laboratorios": 3,
+    "clinicas": 5,
+    "hospitais": 0,
+    "ubs_upa": 10
+  },
+  "3523701": {
+    "farmacias": 1,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3523800": {
+    "farmacias": 12,
+    "consultorios_medicos": 7,
+    "consultorios_odonto": 3,
+    "laboratorios": 4,
+    "clinicas": 1,
+    "hospitais": 2,
+    "ubs_upa": 3
+  },
+  "3523909": {
+    "farmacias": 3,
+    "consultorios_medicos": 4,
+    "consultorios_odonto": 3,
+    "laboratorios": 1,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 2
+  },
+  "3524006": {
+    "farmacias": 52,
+    "consultorios_medicos": 72,
+    "consultorios_odonto": 59,
+    "laboratorios": 22,
+    "clinicas": 19,
+    "hospitais": 9,
+    "ubs_upa": 33
+  },
+  "3524105": {
+    "farmacias": 8,
+    "consultorios_medicos": 13,
+    "consultorios_odonto": 10,
+    "laboratorios": 5,
+    "clinicas": 6,
+    "hospitais": 0,
+    "ubs_upa": 7
+  },
+  "3524204": {
+    "farmacias": 3,
+    "consultorios_medicos": 5,
+    "consultorios_odonto": 1,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 3
+  },
+  "3524303": {
+    "farmacias": 14,
+    "consultorios_medicos": 22,
+    "consultorios_odonto": 25,
+    "laboratorios": 9,
+    "clinicas": 3,
+    "hospitais": 3,
+    "ubs_upa": 14
+  },
+  "3524402": {
+    "farmacias": 4,
+    "consultorios_medicos": 4,
+    "consultorios_odonto": 4,
+    "laboratorios": 1,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3524501": {
+    "farmacias": 4,
+    "consultorios_medicos": 2,
+    "consultorios_odonto": 3,
+    "laboratorios": 2,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 2
+  },
+  "3524600": {
+    "farmacias": 1,
+    "consultorios_medicos": 2,
+    "consultorios_odonto": 2,
+    "laboratorios": 1,
+    "clinicas": 2,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3524709": {
+    "farmacias": 2,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 0,
+    "laboratorios": 1,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3524808": {
+    "farmacias": 24,
+    "consultorios_medicos": 43,
+    "consultorios_odonto": 26,
+    "laboratorios": 9,
+    "clinicas": 8,
+    "hospitais": 7,
+    "ubs_upa": 18
+  },
+  "3524907": {
+    "farmacias": 13,
+    "consultorios_medicos": 18,
+    "consultorios_odonto": 2,
+    "laboratorios": 5,
+    "clinicas": 6,
+    "hospitais": 2,
+    "ubs_upa": 6
+  },
+  "3525003": {
+    "farmacias": 1,
+    "consultorios_medicos": 14,
+    "consultorios_odonto": 7,
+    "laboratorios": 8,
+    "clinicas": 2,
+    "hospitais": 0,
+    "ubs_upa": 4
+  },
+  "3525102": {
+    "farmacias": 2,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 2,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3525201": {
+    "farmacias": 14,
+    "consultorios_medicos": 7,
+    "consultorios_odonto": 18,
+    "laboratorios": 3,
+    "clinicas": 3,
+    "hospitais": 2,
+    "ubs_upa": 7
+  },
+  "3525300": {
+    "farmacias": 25,
+    "consultorios_medicos": 46,
+    "consultorios_odonto": 37,
+    "laboratorios": 10,
+    "clinicas": 7,
+    "hospitais": 8,
+    "ubs_upa": 17
+  },
+  "3525409": {
+    "farmacias": 1,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 1,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3525508": {
+    "farmacias": 4,
+    "consultorios_medicos": 3,
+    "consultorios_odonto": 3,
+    "laboratorios": 2,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3525607": {
+    "farmacias": 5,
+    "consultorios_medicos": 12,
+    "consultorios_odonto": 10,
+    "laboratorios": 5,
+    "clinicas": 3,
+    "hospitais": 2,
+    "ubs_upa": 9
+  },
+  "3525706": {
+    "farmacias": 17,
+    "consultorios_medicos": 9,
+    "consultorios_odonto": 10,
+    "laboratorios": 3,
+    "clinicas": 3,
+    "hospitais": 0,
+    "ubs_upa": 4
+  },
+  "3525805": {
+    "farmacias": 2,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3525904": {
+    "farmacias": 320,
+    "consultorios_medicos": 1500,
+    "consultorios_odonto": 65,
+    "laboratorios": 33,
+    "clinicas": 18,
+    "hospitais": 12,
+    "ubs_upa": 42
+  },
+  "3526001": {
+    "farmacias": 2,
+    "consultorios_medicos": 8,
+    "consultorios_odonto": 6,
+    "laboratorios": 4,
+    "clinicas": 1,
+    "hospitais": 1,
+    "ubs_upa": 5
+  },
+  "3526100": {
+    "farmacias": 1,
+    "consultorios_medicos": 6,
+    "consultorios_odonto": 6,
+    "laboratorios": 0,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3526209": {
+    "farmacias": 29,
+    "consultorios_medicos": 31,
+    "consultorios_odonto": 24,
+    "laboratorios": 13,
+    "clinicas": 5,
+    "hospitais": 3,
+    "ubs_upa": 14
+  },
+  "3526308": {
+    "farmacias": 0,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 1,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3526407": {
+    "farmacias": 0,
+    "consultorios_medicos": 3,
+    "consultorios_odonto": 2,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3526506": {
+    "farmacias": 1,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3526605": {
+    "farmacias": 6,
+    "consultorios_medicos": 6,
+    "consultorios_odonto": 7,
+    "laboratorios": 2,
+    "clinicas": 4,
+    "hospitais": 1,
+    "ubs_upa": 2
+  },
+  "3526704": {
+    "farmacias": 2,
+    "consultorios_medicos": 2,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3526803": {
+    "farmacias": 1,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 2,
+    "ubs_upa": 1
+  },
+  "3526902": {
+    "farmacias": 188,
+    "consultorios_medicos": 522,
+    "consultorios_odonto": 232,
+    "laboratorios": 72,
+    "clinicas": 44,
+    "hospitais": 9,
+    "ubs_upa": 35
+  },
+  "3527009": {
+    "farmacias": 5,
+    "consultorios_medicos": 4,
+    "consultorios_odonto": 1,
+    "laboratorios": 2,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3527108": {
+    "farmacias": 3,
+    "consultorios_medicos": 4,
+    "consultorios_odonto": 2,
+    "laboratorios": 2,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 2
+  },
+  "3527207": {
+    "farmacias": 3,
+    "consultorios_medicos": 9,
+    "consultorios_odonto": 6,
+    "laboratorios": 4,
+    "clinicas": 3,
+    "hospitais": 1,
+    "ubs_upa": 2
+  },
+  "3527306": {
+    "farmacias": 1,
+    "consultorios_medicos": 3,
+    "consultorios_odonto": 1,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3527405": {
+    "farmacias": 4,
+    "consultorios_medicos": 8,
+    "consultorios_odonto": 6,
+    "laboratorios": 3,
+    "clinicas": 1,
+    "hospitais": 1,
+    "ubs_upa": 3
+  },
+  "3527504": {
+    "farmacias": 1,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3527603": {
+    "farmacias": 1,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3527702": {
+    "farmacias": 12,
+    "consultorios_medicos": 20,
+    "consultorios_odonto": 14,
+    "laboratorios": 10,
+    "clinicas": 6,
+    "hospitais": 2,
+    "ubs_upa": 8
+  },
+  "3527801": {
+    "farmacias": 8,
+    "consultorios_medicos": 8,
+    "consultorios_odonto": 11,
+    "laboratorios": 7,
+    "clinicas": 3,
+    "hospitais": 0,
+    "ubs_upa": 9
+  },
+  "3527900": {
+    "farmacias": 3,
+    "consultorios_medicos": 7,
+    "consultorios_odonto": 3,
+    "laboratorios": 1,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3528007": {
+    "farmacias": 1,
+    "consultorios_medicos": 3,
+    "consultorios_odonto": 0,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3528106": {
+    "farmacias": 11,
+    "consultorios_medicos": 10,
+    "consultorios_odonto": 5,
+    "laboratorios": 9,
+    "clinicas": 2,
+    "hospitais": 1,
+    "ubs_upa": 2
+  },
+  "3528205": {
+    "farmacias": 6,
+    "consultorios_medicos": 18,
+    "consultorios_odonto": 12,
+    "laboratorios": 11,
+    "clinicas": 4,
+    "hospitais": 2,
+    "ubs_upa": 8
+  },
+  "3528304": {
+    "farmacias": 1,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 0,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3528403": {
+    "farmacias": 5,
+    "consultorios_medicos": 3,
+    "consultorios_odonto": 7,
+    "laboratorios": 5,
+    "clinicas": 3,
+    "hospitais": 0,
+    "ubs_upa": 5
+  },
+  "3528502": {
+    "farmacias": 3,
+    "consultorios_medicos": 3,
+    "consultorios_odonto": 1,
+    "laboratorios": 1,
+    "clinicas": 1,
+    "hospitais": 1,
+    "ubs_upa": 1
+  },
+  "3528601": {
+    "farmacias": 0,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 1,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3528700": {
+    "farmacias": 1,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 1,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 2
+  },
+  "3528809": {
+    "farmacias": 1,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 0,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3528908": {
+    "farmacias": 0,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 1,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3529005": {
+    "farmacias": 0,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3529104": {
+    "farmacias": 3,
+    "consultorios_medicos": 2,
+    "consultorios_odonto": 3,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3529203": {
+    "farmacias": 1,
+    "consultorios_medicos": 3,
+    "consultorios_odonto": 2,
+    "laboratorios": 2,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3529302": {
+    "farmacias": 0,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 0,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3529401": {
+    "farmacias": 58,
+    "consultorios_medicos": 98,
+    "consultorios_odonto": 75,
+    "laboratorios": 57,
+    "clinicas": 28,
+    "hospitais": 9,
+    "ubs_upa": 46
+  },
+  "3529500": {
+    "farmacias": 0,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 1,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3529609": {
+    "farmacias": 8,
+    "consultorios_medicos": 9,
+    "consultorios_odonto": 9,
+    "laboratorios": 3,
+    "clinicas": 4,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3529708": {
+    "farmacias": 18,
+    "consultorios_medicos": 20,
+    "consultorios_odonto": 19,
+    "laboratorios": 4,
+    "clinicas": 1,
+    "hospitais": 4,
+    "ubs_upa": 12
+  },
+  "3529807": {
+    "farmacias": 1,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 1,
+    "laboratorios": 0,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3529906": {
+    "farmacias": 0,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3530003": {
+    "farmacias": 1,
+    "consultorios_medicos": 4,
+    "consultorios_odonto": 3,
+    "laboratorios": 2,
+    "clinicas": 2,
+    "hospitais": 0,
+    "ubs_upa": 3
+  },
+  "3530102": {
+    "farmacias": 1,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3530201": {
+    "farmacias": 0,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 1,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3530300": {
+    "farmacias": 36,
+    "consultorios_medicos": 54,
+    "consultorios_odonto": 37,
+    "laboratorios": 26,
+    "clinicas": 11,
+    "hospitais": 3,
+    "ubs_upa": 33
+  },
+  "3530409": {
+    "farmacias": 2,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3530508": {
+    "farmacias": 3,
+    "consultorios_medicos": 3,
+    "consultorios_odonto": 3,
+    "laboratorios": 4,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 3
+  },
+  "3530607": {
+    "farmacias": 11,
+    "consultorios_medicos": 15,
+    "consultorios_odonto": 9,
+    "laboratorios": 6,
+    "clinicas": 5,
+    "hospitais": 1,
+    "ubs_upa": 11
+  },
+  "3530706": {
+    "farmacias": 98,
+    "consultorios_medicos": 270,
+    "consultorios_odonto": 120,
+    "laboratorios": 38,
+    "clinicas": 22,
+    "hospitais": 4,
+    "ubs_upa": 18
+  },
+  "3530805": {
+    "farmacias": 0,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 2,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3530904": {
+    "farmacias": 1,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3531001": {
+    "farmacias": 0,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 1,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3531100": {
+    "farmacias": 5,
+    "consultorios_medicos": 2,
+    "consultorios_odonto": 3,
+    "laboratorios": 3,
+    "clinicas": 3,
+    "hospitais": 1,
+    "ubs_upa": 4
+  },
+  "3531209": {
+    "farmacias": 3,
+    "consultorios_medicos": 2,
+    "consultorios_odonto": 1,
+    "laboratorios": 0,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 2
+  },
+  "3531308": {
+    "farmacias": 0,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3531407": {
+    "farmacias": 2,
+    "consultorios_medicos": 3,
+    "consultorios_odonto": 7,
+    "laboratorios": 0,
+    "clinicas": 2,
+    "hospitais": 0,
+    "ubs_upa": 3
+  },
+  "3531506": {
+    "farmacias": 7,
+    "consultorios_medicos": 5,
+    "consultorios_odonto": 3,
+    "laboratorios": 2,
+    "clinicas": 2,
+    "hospitais": 1,
+    "ubs_upa": 3
+  },
+  "3531605": {
+    "farmacias": 3,
+    "consultorios_medicos": 2,
+    "consultorios_odonto": 2,
+    "laboratorios": 0,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 2
+  },
+  "3531704": {
+    "farmacias": 6,
+    "consultorios_medicos": 9,
+    "consultorios_odonto": 9,
+    "laboratorios": 7,
+    "clinicas": 4,
+    "hospitais": 1,
+    "ubs_upa": 3
+  },
+  "3531803": {
+    "farmacias": 2,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 0,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3531902": {
+    "farmacias": 13,
+    "consultorios_medicos": 17,
+    "consultorios_odonto": 13,
+    "laboratorios": 5,
+    "clinicas": 5,
+    "hospitais": 3,
+    "ubs_upa": 10
+  },
+  "3532009": {
+    "farmacias": 72,
+    "consultorios_medicos": 99,
+    "consultorios_odonto": 59,
+    "laboratorios": 50,
+    "clinicas": 22,
+    "hospitais": 11,
+    "ubs_upa": 38
+  },
+  "3532108": {
+    "farmacias": 30,
+    "consultorios_medicos": 38,
+    "consultorios_odonto": 30,
+    "laboratorios": 11,
+    "clinicas": 14,
+    "hospitais": 1,
+    "ubs_upa": 21
+  },
+  "3532207": {
+    "farmacias": 10,
+    "consultorios_medicos": 16,
+    "consultorios_odonto": 10,
+    "laboratorios": 8,
+    "clinicas": 4,
+    "hospitais": 2,
+    "ubs_upa": 8
+  },
+  "3532306": {
+    "farmacias": 0,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 0,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3532405": {
+    "farmacias": 1,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3532504": {
+    "farmacias": 7,
+    "consultorios_medicos": 7,
+    "consultorios_odonto": 4,
+    "laboratorios": 3,
+    "clinicas": 0,
+    "hospitais": 2,
+    "ubs_upa": 7
+  },
+  "3532603": {
+    "farmacias": 0,
+    "consultorios_medicos": 2,
+    "consultorios_odonto": 2,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3532702": {
+    "farmacias": 7,
+    "consultorios_medicos": 8,
+    "consultorios_odonto": 7,
+    "laboratorios": 4,
+    "clinicas": 3,
+    "hospitais": 1,
+    "ubs_upa": 6
+  },
+  "3532801": {
+    "farmacias": 1,
+    "consultorios_medicos": 3,
+    "consultorios_odonto": 2,
+    "laboratorios": 2,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 2
+  },
+  "3532900": {
+    "farmacias": 10,
+    "consultorios_medicos": 2,
+    "consultorios_odonto": 3,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3533007": {
+    "farmacias": 1,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3533106": {
+    "farmacias": 0,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 2,
+    "laboratorios": 0,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3533205": {
+    "farmacias": 1,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3533304": {
+    "farmacias": 10,
+    "consultorios_medicos": 7,
+    "consultorios_odonto": 12,
+    "laboratorios": 3,
+    "clinicas": 2,
+    "hospitais": 2,
+    "ubs_upa": 6
+  },
+  "3533403": {
+    "farmacias": 3,
+    "consultorios_medicos": 10,
+    "consultorios_odonto": 2,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 5
+  },
+  "3533502": {
+    "farmacias": 3,
+    "consultorios_medicos": 4,
+    "consultorios_odonto": 1,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 1,
+    "ubs_upa": 1
+  },
+  "3533601": {
+    "farmacias": 2,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 0,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3533700": {
+    "farmacias": 1,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 0,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3533809": {
+    "farmacias": 0,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 1,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3533908": {
+    "farmacias": 1,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 0,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3534005": {
+    "farmacias": 2,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 2,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3534104": {
+    "farmacias": 4,
+    "consultorios_medicos": 3,
+    "consultorios_odonto": 4,
+    "laboratorios": 4,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 2
+  },
+  "3534203": {
+    "farmacias": 1,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 2
+  },
+  "3534302": {
+    "farmacias": 3,
+    "consultorios_medicos": 2,
+    "consultorios_odonto": 2,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3534401": {
+    "farmacias": 0,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 0,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3534500": {
+    "farmacias": 0,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3534609": {
+    "farmacias": 0,
+    "consultorios_medicos": 3,
+    "consultorios_odonto": 2,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3534708": {
+    "farmacias": 1,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 0,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3534807": {
+    "farmacias": 3,
+    "consultorios_medicos": 3,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3534906": {
+    "farmacias": 2,
+    "consultorios_medicos": 3,
+    "consultorios_odonto": 0,
+    "laboratorios": 3,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3535002": {
+    "farmacias": 1,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 0,
+    "laboratorios": 1,
+    "clinicas": 1,
+    "hospitais": 1,
+    "ubs_upa": 1
+  },
+  "3535101": {
+    "farmacias": 0,
+    "consultorios_medicos": 2,
+    "consultorios_odonto": 2,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3535200": {
+    "farmacias": 1,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 1,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3535309": {
+    "farmacias": 0,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 2
+  },
+  "3535408": {
+    "farmacias": 8,
+    "consultorios_medicos": 11,
+    "consultorios_odonto": 7,
+    "laboratorios": 6,
+    "clinicas": 3,
+    "hospitais": 2,
+    "ubs_upa": 5
+  },
+  "3535507": {
+    "farmacias": 6,
+    "consultorios_medicos": 6,
+    "consultorios_odonto": 4,
+    "laboratorios": 2,
+    "clinicas": 4,
+    "hospitais": 1,
+    "ubs_upa": 1
+  },
+  "3535606": {
+    "farmacias": 1,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3535705": {
+    "farmacias": 0,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 1,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3535804": {
+    "farmacias": 0,
+    "consultorios_medicos": 2,
+    "consultorios_odonto": 1,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 1,
+    "ubs_upa": 1
+  },
+  "3535903": {
+    "farmacias": 9,
+    "consultorios_medicos": 7,
+    "consultorios_odonto": 5,
+    "laboratorios": 2,
+    "clinicas": 7,
+    "hospitais": 1,
+    "ubs_upa": 3
+  },
+  "3536000": {
+    "farmacias": 0,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 1,
+    "laboratorios": 0,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 2
+  },
+  "3536109": {
+    "farmacias": 0,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 0,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3536208": {
+    "farmacias": 2,
+    "consultorios_medicos": 2,
+    "consultorios_odonto": 2,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3536307": {
+    "farmacias": 7,
+    "consultorios_medicos": 10,
+    "consultorios_odonto": 4,
+    "laboratorios": 4,
+    "clinicas": 0,
+    "hospitais": 1,
+    "ubs_upa": 5
+  },
+  "3536406": {
+    "farmacias": 4,
+    "consultorios_medicos": 19,
+    "consultorios_odonto": 13,
+    "laboratorios": 3,
+    "clinicas": 4,
+    "hospitais": 0,
+    "ubs_upa": 10
+  },
+  "3536505": {
+    "farmacias": 95,
+    "consultorios_medicos": 480,
+    "consultorios_odonto": 14,
+    "laboratorios": 11,
+    "clinicas": 8,
+    "hospitais": 4,
+    "ubs_upa": 9
+  },
+  "3536604": {
+    "farmacias": 0,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3536703": {
+    "farmacias": 4,
+    "consultorios_medicos": 4,
+    "consultorios_odonto": 3,
+    "laboratorios": 1,
+    "clinicas": 3,
+    "hospitais": 1,
+    "ubs_upa": 2
+  },
+  "3536802": {
+    "farmacias": 16,
+    "consultorios_medicos": 19,
+    "consultorios_odonto": 10,
+    "laboratorios": 7,
+    "clinicas": 6,
+    "hospitais": 1,
+    "ubs_upa": 11
+  },
+  "3536901": {
+    "farmacias": 1,
+    "consultorios_medicos": 3,
+    "consultorios_odonto": 0,
+    "laboratorios": 1,
+    "clinicas": 2,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3537008": {
+    "farmacias": 0,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 1,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 1,
+    "ubs_upa": 1
+  },
+  "3537107": {
+    "farmacias": 5,
+    "consultorios_medicos": 6,
+    "consultorios_odonto": 3,
+    "laboratorios": 3,
+    "clinicas": 2,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3537206": {
+    "farmacias": 4,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 0,
+    "laboratorios": 2,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3537305": {
+    "farmacias": 3,
+    "consultorios_medicos": 2,
+    "consultorios_odonto": 1,
+    "laboratorios": 1,
+    "clinicas": 1,
+    "hospitais": 1,
+    "ubs_upa": 1
+  },
+  "3537404": {
+    "farmacias": 1,
+    "consultorios_medicos": 3,
+    "consultorios_odonto": 4,
+    "laboratorios": 1,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3537503": {
+    "farmacias": 1,
+    "consultorios_medicos": 3,
+    "consultorios_odonto": 4,
+    "laboratorios": 2,
+    "clinicas": 1,
+    "hospitais": 1,
+    "ubs_upa": 3
+  },
+  "3537602": {
+    "farmacias": 2,
+    "consultorios_medicos": 5,
+    "consultorios_odonto": 1,
+    "laboratorios": 1,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3537701": {
+    "farmacias": 5,
+    "consultorios_medicos": 8,
+    "consultorios_odonto": 9,
+    "laboratorios": 2,
+    "clinicas": 4,
+    "hospitais": 0,
+    "ubs_upa": 5
+  },
+  "3537800": {
+    "farmacias": 2,
+    "consultorios_medicos": 3,
+    "consultorios_odonto": 3,
+    "laboratorios": 1,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 4
+  },
+  "3537909": {
+    "farmacias": 0,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 2
+  },
+  "3538006": {
+    "farmacias": 5,
+    "consultorios_medicos": 2,
+    "consultorios_odonto": 2,
+    "laboratorios": 1,
+    "clinicas": 2,
+    "hospitais": 0,
+    "ubs_upa": 3
+  },
+  "3538105": {
+    "farmacias": 0,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 1,
+    "laboratorios": 0,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3538204": {
+    "farmacias": 4,
+    "consultorios_medicos": 2,
+    "consultorios_odonto": 1,
+    "laboratorios": 1,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 2
+  },
+  "3538303": {
+    "farmacias": 1,
+    "consultorios_medicos": 2,
+    "consultorios_odonto": 1,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3538402": {
+    "farmacias": 2,
+    "consultorios_medicos": 2,
+    "consultorios_odonto": 2,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 3
+  },
+  "3538501": {
+    "farmacias": 0,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3538600": {
+    "farmacias": 0,
+    "consultorios_medicos": 6,
+    "consultorios_odonto": 2,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 1,
+    "ubs_upa": 1
+  },
+  "3538709": {
+    "farmacias": 205,
+    "consultorios_medicos": 780,
+    "consultorios_odonto": 365,
+    "laboratorios": 95,
+    "clinicas": 135,
+    "hospitais": 9,
+    "ubs_upa": 39
+  },
+  "3538808": {
+    "farmacias": 23,
+    "consultorios_medicos": 63,
+    "consultorios_odonto": 28,
+    "laboratorios": 9,
+    "clinicas": 5,
+    "hospitais": 1,
+    "ubs_upa": 4
+  },
+  "3538907": {
+    "farmacias": 0,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 0,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3539004": {
+    "farmacias": 1,
+    "consultorios_medicos": 2,
+    "consultorios_odonto": 1,
+    "laboratorios": 2,
+    "clinicas": 0,
+    "hospitais": 1,
+    "ubs_upa": 1
+  },
+  "3539103": {
+    "farmacias": 9,
+    "consultorios_medicos": 9,
+    "consultorios_odonto": 3,
+    "laboratorios": 5,
+    "clinicas": 2,
+    "hospitais": 0,
+    "ubs_upa": 3
+  },
+  "3539202": {
+    "farmacias": 0,
+    "consultorios_medicos": 2,
+    "consultorios_odonto": 2,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3539301": {
+    "farmacias": 0,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 2
+  },
+  "3539400": {
+    "farmacias": 0,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 5,
+    "laboratorios": 0,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3539509": {
+    "farmacias": 9,
+    "consultorios_medicos": 6,
+    "consultorios_odonto": 5,
+    "laboratorios": 7,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 9
+  },
+  "3539608": {
+    "farmacias": 1,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 0,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3539707": {
+    "farmacias": 1,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 0,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 1,
+    "ubs_upa": 1
+  },
+  "3539806": {
+    "farmacias": 6,
+    "consultorios_medicos": 15,
+    "consultorios_odonto": 7,
+    "laboratorios": 5,
+    "clinicas": 3,
+    "hospitais": 0,
+    "ubs_upa": 8
+  },
+  "3539905": {
+    "farmacias": 5,
+    "consultorios_medicos": 6,
+    "consultorios_odonto": 2,
+    "laboratorios": 0,
+    "clinicas": 2,
+    "hospitais": 0,
+    "ubs_upa": 3
+  },
+  "3540002": {
+    "farmacias": 0,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 2,
+    "laboratorios": 2,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3540101": {
+    "farmacias": 15,
+    "consultorios_medicos": 13,
+    "consultorios_odonto": 12,
+    "laboratorios": 6,
+    "clinicas": 4,
+    "hospitais": 2,
+    "ubs_upa": 5
+  },
+  "3540200": {
+    "farmacias": 1,
+    "consultorios_medicos": 3,
+    "consultorios_odonto": 1,
+    "laboratorios": 0,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 2
+  },
+  "3540309": {
+    "farmacias": 7,
+    "consultorios_medicos": 20,
+    "consultorios_odonto": 14,
+    "laboratorios": 6,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 6
+  },
+  "3540408": {
+    "farmacias": 2,
+    "consultorios_medicos": 7,
+    "consultorios_odonto": 4,
+    "laboratorios": 2,
+    "clinicas": 4,
+    "hospitais": 0,
+    "ubs_upa": 6
+  },
+  "3540507": {
+    "farmacias": 27,
+    "consultorios_medicos": 42,
+    "consultorios_odonto": 22,
+    "laboratorios": 20,
+    "clinicas": 9,
+    "hospitais": 4,
+    "ubs_upa": 17
+  },
+  "3540606": {
+    "farmacias": 3,
+    "consultorios_medicos": 3,
+    "consultorios_odonto": 1,
+    "laboratorios": 1,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3540705": {
+    "farmacias": 4,
+    "consultorios_medicos": 4,
+    "consultorios_odonto": 1,
+    "laboratorios": 2,
+    "clinicas": 2,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3540804": {
+    "farmacias": 3,
+    "consultorios_medicos": 5,
+    "consultorios_odonto": 1,
+    "laboratorios": 1,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 3
+  },
+  "3540903": {
+    "farmacias": 14,
+    "consultorios_medicos": 9,
+    "consultorios_odonto": 9,
+    "laboratorios": 6,
+    "clinicas": 4,
+    "hospitais": 1,
+    "ubs_upa": 6
+  },
+  "3541000": {
+    "farmacias": 8,
+    "consultorios_medicos": 5,
+    "consultorios_odonto": 9,
+    "laboratorios": 3,
+    "clinicas": 4,
+    "hospitais": 1,
+    "ubs_upa": 3
+  },
+  "3541109": {
+    "farmacias": 2,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 2,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3541208": {
+    "farmacias": 4,
+    "consultorios_medicos": 5,
+    "consultorios_odonto": 5,
+    "laboratorios": 2,
+    "clinicas": 1,
+    "hospitais": 1,
+    "ubs_upa": 2
+  },
+  "3541307": {
+    "farmacias": 1,
+    "consultorios_medicos": 3,
+    "consultorios_odonto": 1,
+    "laboratorios": 2,
+    "clinicas": 3,
+    "hospitais": 1,
+    "ubs_upa": 3
+  },
+  "3541406": {
+    "farmacias": 12,
+    "consultorios_medicos": 13,
+    "consultorios_odonto": 11,
+    "laboratorios": 8,
+    "clinicas": 4,
+    "hospitais": 0,
+    "ubs_upa": 5
+  },
+  "3541505": {
+    "farmacias": 3,
+    "consultorios_medicos": 2,
+    "consultorios_odonto": 5,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 1,
+    "ubs_upa": 2
+  },
+  "3541604": {
+    "farmacias": 7,
+    "consultorios_medicos": 10,
+    "consultorios_odonto": 12,
+    "laboratorios": 4,
+    "clinicas": 2,
+    "hospitais": 0,
+    "ubs_upa": 3
+  },
+  "3541703": {
+    "farmacias": 0,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3541802": {
+    "farmacias": 2,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 1,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3541901": {
+    "farmacias": 1,
+    "consultorios_medicos": 2,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3542008": {
+    "farmacias": 4,
+    "consultorios_medicos": 4,
+    "consultorios_odonto": 7,
+    "laboratorios": 2,
+    "clinicas": 0,
+    "hospitais": 1,
+    "ubs_upa": 2
+  },
+  "3542107": {
+    "farmacias": 3,
+    "consultorios_medicos": 2,
+    "consultorios_odonto": 2,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3542206": {
+    "farmacias": 7,
+    "consultorios_medicos": 5,
+    "consultorios_odonto": 7,
+    "laboratorios": 2,
+    "clinicas": 5,
+    "hospitais": 1,
+    "ubs_upa": 2
+  },
+  "3542305": {
+    "farmacias": 0,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 2
+  },
+  "3542404": {
+    "farmacias": 1,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3542503": {
+    "farmacias": 0,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 0,
+    "laboratorios": 1,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3542602": {
+    "farmacias": 1,
+    "consultorios_medicos": 2,
+    "consultorios_odonto": 3,
+    "laboratorios": 2,
+    "clinicas": 0,
+    "hospitais": 3,
+    "ubs_upa": 1
+  },
+  "3542701": {
+    "farmacias": 14,
+    "consultorios_medicos": 12,
+    "consultorios_odonto": 2,
+    "laboratorios": 2,
+    "clinicas": 3,
+    "hospitais": 1,
+    "ubs_upa": 9
+  },
+  "3542800": {
+    "farmacias": 13,
+    "consultorios_medicos": 8,
+    "consultorios_odonto": 11,
+    "laboratorios": 4,
+    "clinicas": 3,
+    "hospitais": 1,
+    "ubs_upa": 8
+  },
+  "3542909": {
+    "farmacias": 6,
+    "consultorios_medicos": 3,
+    "consultorios_odonto": 5,
+    "laboratorios": 2,
+    "clinicas": 1,
+    "hospitais": 1,
+    "ubs_upa": 2
+  },
+  "3543006": {
+    "farmacias": 1,
+    "consultorios_medicos": 3,
+    "consultorios_odonto": 1,
+    "laboratorios": 2,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 3
+  },
+  "3543105": {
+    "farmacias": 0,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 1,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3543204": {
+    "farmacias": 5,
+    "consultorios_medicos": 4,
+    "consultorios_odonto": 4,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 2
+  },
+  "3543303": {
+    "farmacias": 53,
+    "consultorios_medicos": 76,
+    "consultorios_odonto": 49,
+    "laboratorios": 34,
+    "clinicas": 18,
+    "hospitais": 9,
+    "ubs_upa": 37
+  },
+  "3543402": {
+    "farmacias": 520,
+    "consultorios_medicos": 2500,
+    "consultorios_odonto": 110,
+    "laboratorios": 70,
+    "clinicas": 27,
+    "hospitais": 22,
+    "ubs_upa": 73
+  },
+  "3543501": {
+    "farmacias": 0,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3543600": {
+    "farmacias": 2,
+    "consultorios_medicos": 7,
+    "consultorios_odonto": 1,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 1,
+    "ubs_upa": 3
+  },
+  "3543709": {
+    "farmacias": 7,
+    "consultorios_medicos": 8,
+    "consultorios_odonto": 7,
+    "laboratorios": 3,
+    "clinicas": 1,
+    "hospitais": 1,
+    "ubs_upa": 6
+  },
+  "3543808": {
+    "farmacias": 30,
+    "consultorios_medicos": 36,
+    "consultorios_odonto": 38,
+    "laboratorios": 16,
+    "clinicas": 13,
+    "hospitais": 5,
+    "ubs_upa": 24
+  },
+  "3543907": {
+    "farmacias": 6,
+    "consultorios_medicos": 8,
+    "consultorios_odonto": 7,
+    "laboratorios": 7,
+    "clinicas": 4,
+    "hospitais": 0,
+    "ubs_upa": 2
+  },
+  "3544004": {
+    "farmacias": 10,
+    "consultorios_medicos": 8,
+    "consultorios_odonto": 2,
+    "laboratorios": 5,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 5
+  },
+  "3544103": {
+    "farmacias": 0,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3544202": {
+    "farmacias": 4,
+    "consultorios_medicos": 2,
+    "consultorios_odonto": 0,
+    "laboratorios": 2,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 2
+  },
+  "3544301": {
+    "farmacias": 1,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 1,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3544400": {
+    "farmacias": 1,
+    "consultorios_medicos": 5,
+    "consultorios_odonto": 0,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3544509": {
+    "farmacias": 1,
+    "consultorios_medicos": 2,
+    "consultorios_odonto": 2,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3544608": {
+    "farmacias": 1,
+    "consultorios_medicos": 4,
+    "consultorios_odonto": 2,
+    "laboratorios": 4,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3544707": {
+    "farmacias": 1,
+    "consultorios_medicos": 6,
+    "consultorios_odonto": 8,
+    "laboratorios": 3,
+    "clinicas": 1,
+    "hospitais": 1,
+    "ubs_upa": 2
+  },
+  "3544806": {
+    "farmacias": 0,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 1,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3544905": {
+    "farmacias": 3,
+    "consultorios_medicos": 3,
+    "consultorios_odonto": 4,
+    "laboratorios": 1,
+    "clinicas": 2,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3545001": {
+    "farmacias": 0,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 1,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3545100": {
+    "farmacias": 11,
+    "consultorios_medicos": 7,
+    "consultorios_odonto": 9,
+    "laboratorios": 0,
+    "clinicas": 3,
+    "hospitais": 1,
+    "ubs_upa": 8
+  },
+  "3545209": {
+    "farmacias": 0,
+    "consultorios_medicos": 2,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 2,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3545308": {
+    "farmacias": 0,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 1,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3545407": {
+    "farmacias": 1,
+    "consultorios_medicos": 3,
+    "consultorios_odonto": 4,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 2
+  },
+  "3545506": {
+    "farmacias": 4,
+    "consultorios_medicos": 4,
+    "consultorios_odonto": 4,
+    "laboratorios": 2,
+    "clinicas": 1,
+    "hospitais": 1,
+    "ubs_upa": 2
+  },
+  "3545605": {
+    "farmacias": 1,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 0,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3545704": {
+    "farmacias": 1,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 1,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3545803": {
+    "farmacias": 2,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 0,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3545902": {
+    "farmacias": 1,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 1,
+    "laboratorios": 0,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3546009": {
+    "farmacias": 15,
+    "consultorios_medicos": 30,
+    "consultorios_odonto": 20,
+    "laboratorios": 7,
+    "clinicas": 3,
+    "hospitais": 2,
+    "ubs_upa": 23
+  },
+  "3546108": {
+    "farmacias": 0,
+    "consultorios_medicos": 2,
+    "consultorios_odonto": 0,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3546207": {
+    "farmacias": 2,
+    "consultorios_medicos": 5,
+    "consultorios_odonto": 2,
+    "laboratorios": 2,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 2
+  },
+  "3546306": {
+    "farmacias": 0,
+    "consultorios_medicos": 4,
+    "consultorios_odonto": 1,
+    "laboratorios": 0,
+    "clinicas": 1,
+    "hospitais": 1,
+    "ubs_upa": 1
+  },
+  "3546405": {
+    "farmacias": 32,
+    "consultorios_medicos": 42,
+    "consultorios_odonto": 34,
+    "laboratorios": 7,
+    "clinicas": 8,
+    "hospitais": 5,
+    "ubs_upa": 20
+  },
+  "3546504": {
+    "farmacias": 4,
+    "consultorios_medicos": 7,
+    "consultorios_odonto": 7,
+    "laboratorios": 3,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 3
+  },
+  "3546603": {
+    "farmacias": 5,
+    "consultorios_medicos": 7,
+    "consultorios_odonto": 4,
+    "laboratorios": 3,
+    "clinicas": 4,
+    "hospitais": 0,
+    "ubs_upa": 4
+  },
+  "3546702": {
+    "farmacias": 0,
+    "consultorios_medicos": 3,
+    "consultorios_odonto": 2,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3546801": {
+    "farmacias": 2,
+    "consultorios_medicos": 2,
+    "consultorios_odonto": 0,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3546900": {
+    "farmacias": 1,
+    "consultorios_medicos": 3,
+    "consultorios_odonto": 5,
+    "laboratorios": 2,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 3
+  },
+  "3547007": {
+    "farmacias": 6,
+    "consultorios_medicos": 2,
+    "consultorios_odonto": 1,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3547106": {
+    "farmacias": 0,
+    "consultorios_medicos": 3,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3547205": {
+    "farmacias": 0,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3547304": {
+    "farmacias": 1,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 2
+  },
+  "3547403": {
+    "farmacias": 1,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3547502": {
+    "farmacias": 0,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3547601": {
+    "farmacias": 3,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 4,
+    "laboratorios": 3,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3547700": {
+    "farmacias": 2,
+    "consultorios_medicos": 5,
+    "consultorios_odonto": 0,
+    "laboratorios": 2,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 2
+  },
+  "3547809": {
+    "farmacias": 305,
+    "consultorios_medicos": 1120,
+    "consultorios_odonto": 510,
+    "laboratorios": 145,
+    "clinicas": 165,
+    "hospitais": 11,
+    "ubs_upa": 56
+  },
+  "3547908": {
+    "farmacias": 0,
+    "consultorios_medicos": 2,
+    "consultorios_odonto": 1,
+    "laboratorios": 1,
+    "clinicas": 2,
+    "hospitais": 1,
+    "ubs_upa": 1
+  },
+  "3548005": {
+    "farmacias": 16,
+    "consultorios_medicos": 18,
+    "consultorios_odonto": 18,
+    "laboratorios": 8,
+    "clinicas": 12,
+    "hospitais": 2,
+    "ubs_upa": 7
+  },
+  "3548104": {
+    "farmacias": 5,
+    "consultorios_medicos": 6,
+    "consultorios_odonto": 9,
+    "laboratorios": 4,
+    "clinicas": 2,
+    "hospitais": 0,
+    "ubs_upa": 7
+  },
+  "3548203": {
+    "farmacias": 2,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 1,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3548302": {
+    "farmacias": 0,
+    "consultorios_medicos": 3,
+    "consultorios_odonto": 1,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3548401": {
+    "farmacias": 1,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 2,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3548500": {
+    "farmacias": 60,
+    "consultorios_medicos": 95,
+    "consultorios_odonto": 83,
+    "laboratorios": 34,
+    "clinicas": 20,
+    "hospitais": 11,
+    "ubs_upa": 47
+  },
+  "3548609": {
+    "farmacias": 2,
+    "consultorios_medicos": 9,
+    "consultorios_odonto": 4,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 1,
+    "ubs_upa": 4
+  },
+  "3548708": {
+    "farmacias": 620,
+    "consultorios_medicos": 2800,
+    "consultorios_odonto": 118,
+    "laboratorios": 74,
+    "clinicas": 30,
+    "hospitais": 22,
+    "ubs_upa": 99
+  },
+  "3548807": {
+    "farmacias": 9,
+    "consultorios_medicos": 8,
+    "consultorios_odonto": 5,
+    "laboratorios": 3,
+    "clinicas": 5,
+    "hospitais": 2,
+    "ubs_upa": 2
+  },
+  "3548906": {
+    "farmacias": 4,
+    "consultorios_medicos": 9,
+    "consultorios_odonto": 3,
+    "laboratorios": 2,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3549003": {
+    "farmacias": 10,
+    "consultorios_medicos": 14,
+    "consultorios_odonto": 8,
+    "laboratorios": 3,
+    "clinicas": 3,
+    "hospitais": 0,
+    "ubs_upa": 4
+  },
+  "3549102": {
+    "farmacias": 0,
+    "consultorios_medicos": 3,
+    "consultorios_odonto": 8,
+    "laboratorios": 0,
+    "clinicas": 1,
+    "hospitais": 1,
+    "ubs_upa": 1
+  },
+  "3549201": {
+    "farmacias": 0,
+    "consultorios_medicos": 2,
+    "consultorios_odonto": 3,
+    "laboratorios": 0,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3549300": {
+    "farmacias": 1,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3549409": {
+    "farmacias": 1,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 2,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3549508": {
+    "farmacias": 18,
+    "consultorios_medicos": 33,
+    "consultorios_odonto": 17,
+    "laboratorios": 7,
+    "clinicas": 7,
+    "hospitais": 0,
+    "ubs_upa": 19
+  },
+  "3549607": {
+    "farmacias": 0,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 1,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3549706": {
+    "farmacias": 2,
+    "consultorios_medicos": 7,
+    "consultorios_odonto": 6,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 7
+  },
+  "3549805": {
+    "farmacias": 6,
+    "consultorios_medicos": 7,
+    "consultorios_odonto": 6,
+    "laboratorios": 2,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 3
+  },
+  "3549904": {
+    "farmacias": 530,
+    "consultorios_medicos": 2400,
+    "consultorios_odonto": 105,
+    "laboratorios": 76,
+    "clinicas": 31,
+    "hospitais": 18,
+    "ubs_upa": 75
+  },
+  "3550001": {
+    "farmacias": 1,
+    "consultorios_medicos": 2,
+    "consultorios_odonto": 0,
+    "laboratorios": 2,
+    "clinicas": 2,
+    "hospitais": 0,
+    "ubs_upa": 4
+  },
+  "3550100": {
+    "farmacias": 109,
+    "consultorios_medicos": 137,
+    "consultorios_odonto": 101,
+    "laboratorios": 63,
+    "clinicas": 43,
+    "hospitais": 11,
+    "ubs_upa": 67
+  },
+  "3550209": {
+    "farmacias": 0,
+    "consultorios_medicos": 2,
+    "consultorios_odonto": 2,
+    "laboratorios": 0,
+    "clinicas": 2,
+    "hospitais": 0,
+    "ubs_upa": 2
+  },
+  "3550308": {
+    "farmacias": 6800,
+    "consultorios_medicos": 32000,
+    "consultorios_odonto": 9500,
+    "laboratorios": 2200,
+    "clinicas": 4800,
+    "hospitais": 280,
+    "ubs_upa": 1301
+  },
+  "3550407": {
+    "farmacias": 8,
+    "consultorios_medicos": 4,
+    "consultorios_odonto": 1,
+    "laboratorios": 1,
+    "clinicas": 2,
+    "hospitais": 0,
+    "ubs_upa": 2
+  },
+  "3550506": {
+    "farmacias": 1,
+    "consultorios_medicos": 2,
+    "consultorios_odonto": 3,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 1,
+    "ubs_upa": 1
+  },
+  "3550605": {
+    "farmacias": 1,
+    "consultorios_medicos": 3,
+    "consultorios_odonto": 0,
+    "laboratorios": 3,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3550704": {
+    "farmacias": 0,
+    "consultorios_medicos": 2,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3550803": {
+    "farmacias": 1,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 2,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3550902": {
+    "farmacias": 0,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 2,
+    "laboratorios": 3,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3551009": {
+    "farmacias": 231,
+    "consultorios_medicos": 639,
+    "consultorios_odonto": 284,
+    "laboratorios": 89,
+    "clinicas": 53,
+    "hospitais": 11,
+    "ubs_upa": 43
+  },
+  "3551108": {
+    "farmacias": 0,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 1,
+    "laboratorios": 1,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 2
+  },
+  "3551207": {
+    "farmacias": 37,
+    "consultorios_medicos": 50,
+    "consultorios_odonto": 38,
+    "laboratorios": 24,
+    "clinicas": 16,
+    "hospitais": 4,
+    "ubs_upa": 22
+  },
+  "3551306": {
+    "farmacias": 0,
+    "consultorios_medicos": 2,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3551405": {
+    "farmacias": 0,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3551504": {
+    "farmacias": 1,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3551603": {
+    "farmacias": 1,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 0,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3551702": {
+    "farmacias": 3,
+    "consultorios_medicos": 14,
+    "consultorios_odonto": 8,
+    "laboratorios": 3,
+    "clinicas": 2,
+    "hospitais": 1,
+    "ubs_upa": 3
+  },
+  "3551801": {
+    "farmacias": 1,
+    "consultorios_medicos": 2,
+    "consultorios_odonto": 2,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3551900": {
+    "farmacias": 1,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3552007": {
+    "farmacias": 12,
+    "consultorios_medicos": 14,
+    "consultorios_odonto": 6,
+    "laboratorios": 4,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 4
+  },
+  "3552106": {
+    "farmacias": 71,
+    "consultorios_medicos": 101,
+    "consultorios_odonto": 67,
+    "laboratorios": 45,
+    "clinicas": 24,
+    "hospitais": 10,
+    "ubs_upa": 43
+  },
+  "3552205": {
+    "farmacias": 490,
+    "consultorios_medicos": 2100,
+    "consultorios_odonto": 104,
+    "laboratorios": 43,
+    "clinicas": 38,
+    "hospitais": 16,
+    "ubs_upa": 76
+  },
+  "3552304": {
+    "farmacias": 9,
+    "consultorios_medicos": 25,
+    "consultorios_odonto": 11,
+    "laboratorios": 4,
+    "clinicas": 2,
+    "hospitais": 0,
+    "ubs_upa": 2
+  },
+  "3552403": {
+    "farmacias": 1,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 1,
+    "laboratorios": 3,
+    "clinicas": 0,
+    "hospitais": 1,
+    "ubs_upa": 3
+  },
+  "3552502": {
+    "farmacias": 0,
+    "consultorios_medicos": 4,
+    "consultorios_odonto": 2,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 2
+  },
+  "3552601": {
+    "farmacias": 7,
+    "consultorios_medicos": 8,
+    "consultorios_odonto": 7,
+    "laboratorios": 2,
+    "clinicas": 2,
+    "hospitais": 1,
+    "ubs_upa": 6
+  },
+  "3552700": {
+    "farmacias": 2,
+    "consultorios_medicos": 12,
+    "consultorios_odonto": 11,
+    "laboratorios": 3,
+    "clinicas": 3,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3552809": {
+    "farmacias": 182,
+    "consultorios_medicos": 504,
+    "consultorios_odonto": 224,
+    "laboratorios": 70,
+    "clinicas": 42,
+    "hospitais": 8,
+    "ubs_upa": 34
+  },
+  "3552908": {
+    "farmacias": 0,
+    "consultorios_medicos": 4,
+    "consultorios_odonto": 7,
+    "laboratorios": 4,
+    "clinicas": 0,
+    "hospitais": 2,
+    "ubs_upa": 1
+  },
+  "3553005": {
+    "farmacias": 1,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 2,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 1,
+    "ubs_upa": 1
+  },
+  "3553104": {
+    "farmacias": 10,
+    "consultorios_medicos": 17,
+    "consultorios_odonto": 12,
+    "laboratorios": 10,
+    "clinicas": 9,
+    "hospitais": 2,
+    "ubs_upa": 10
+  },
+  "3553203": {
+    "farmacias": 11,
+    "consultorios_medicos": 15,
+    "consultorios_odonto": 12,
+    "laboratorios": 7,
+    "clinicas": 3,
+    "hospitais": 1,
+    "ubs_upa": 11
+  },
+  "3553302": {
+    "farmacias": 4,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 8,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 2
+  },
+  "3553401": {
+    "farmacias": 1,
+    "consultorios_medicos": 2,
+    "consultorios_odonto": 3,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 2,
+    "ubs_upa": 1
+  },
+  "3553500": {
+    "farmacias": 39,
+    "consultorios_medicos": 58,
+    "consultorios_odonto": 62,
+    "laboratorios": 32,
+    "clinicas": 20,
+    "hospitais": 3,
+    "ubs_upa": 36
+  },
+  "3553609": {
+    "farmacias": 1,
+    "consultorios_medicos": 3,
+    "consultorios_odonto": 2,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3553708": {
+    "farmacias": 0,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 0,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 1,
+    "ubs_upa": 2
+  },
+  "3553807": {
+    "farmacias": 0,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 1,
+    "ubs_upa": 1
+  },
+  "3553906": {
+    "farmacias": 1,
+    "consultorios_medicos": 3,
+    "consultorios_odonto": 2,
+    "laboratorios": 2,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3554003": {
+    "farmacias": 4,
+    "consultorios_medicos": 7,
+    "consultorios_odonto": 5,
+    "laboratorios": 4,
+    "clinicas": 2,
+    "hospitais": 0,
+    "ubs_upa": 5
+  },
+  "3554102": {
+    "farmacias": 1,
+    "consultorios_medicos": 5,
+    "consultorios_odonto": 6,
+    "laboratorios": 4,
+    "clinicas": 2,
+    "hospitais": 1,
+    "ubs_upa": 2
+  },
+  "3554201": {
+    "farmacias": 23,
+    "consultorios_medicos": 31,
+    "consultorios_odonto": 16,
+    "laboratorios": 8,
+    "clinicas": 6,
+    "hospitais": 4,
+    "ubs_upa": 20
+  },
+  "3554300": {
+    "farmacias": 0,
+    "consultorios_medicos": 3,
+    "consultorios_odonto": 4,
+    "laboratorios": 1,
+    "clinicas": 1,
+    "hospitais": 1,
+    "ubs_upa": 2
+  },
+  "3554409": {
+    "farmacias": 1,
+    "consultorios_medicos": 2,
+    "consultorios_odonto": 2,
+    "laboratorios": 2,
+    "clinicas": 0,
+    "hospitais": 1,
+    "ubs_upa": 1
+  },
+  "3554508": {
+    "farmacias": 2,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 1,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3554607": {
+    "farmacias": 5,
+    "consultorios_medicos": 2,
+    "consultorios_odonto": 4,
+    "laboratorios": 1,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 4
+  },
+  "3554706": {
+    "farmacias": 6,
+    "consultorios_medicos": 18,
+    "consultorios_odonto": 8,
+    "laboratorios": 2,
+    "clinicas": 2,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3554805": {
+    "farmacias": 36,
+    "consultorios_medicos": 99,
+    "consultorios_odonto": 44,
+    "laboratorios": 14,
+    "clinicas": 8,
+    "hospitais": 2,
+    "ubs_upa": 7
+  },
+  "3554904": {
+    "farmacias": 2,
+    "consultorios_medicos": 4,
+    "consultorios_odonto": 2,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3555000": {
+    "farmacias": 50,
+    "consultorios_medicos": 58,
+    "consultorios_odonto": 45,
+    "laboratorios": 31,
+    "clinicas": 10,
+    "hospitais": 8,
+    "ubs_upa": 29
+  },
+  "3555109": {
+    "farmacias": 0,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 2
+  },
+  "3555208": {
+    "farmacias": 2,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 2,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3555307": {
+    "farmacias": 2,
+    "consultorios_medicos": 3,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 2
+  },
+  "3555406": {
+    "farmacias": 55,
+    "consultorios_medicos": 54,
+    "consultorios_odonto": 48,
+    "laboratorios": 28,
+    "clinicas": 20,
+    "hospitais": 4,
+    "ubs_upa": 32
+  },
+  "3555505": {
+    "farmacias": 1,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 2,
+    "laboratorios": 2,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3555604": {
+    "farmacias": 2,
+    "consultorios_medicos": 2,
+    "consultorios_odonto": 1,
+    "laboratorios": 2,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 4
+  },
+  "3555703": {
+    "farmacias": 1,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 2,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 2
+  },
+  "3555802": {
+    "farmacias": 1,
+    "consultorios_medicos": 2,
+    "consultorios_odonto": 3,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3555901": {
+    "farmacias": 0,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3556008": {
+    "farmacias": 7,
+    "consultorios_medicos": 5,
+    "consultorios_odonto": 3,
+    "laboratorios": 2,
+    "clinicas": 2,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3556107": {
+    "farmacias": 1,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 2,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3556206": {
+    "farmacias": 110,
+    "consultorios_medicos": 550,
+    "consultorios_odonto": 14,
+    "laboratorios": 10,
+    "clinicas": 5,
+    "hospitais": 3,
+    "ubs_upa": 12
+  },
+  "3556305": {
+    "farmacias": 0,
+    "consultorios_medicos": 3,
+    "consultorios_odonto": 0,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3556404": {
+    "farmacias": 0,
+    "consultorios_medicos": 2,
+    "consultorios_odonto": 0,
+    "laboratorios": 1,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 2
+  },
+  "3556503": {
+    "farmacias": 10,
+    "consultorios_medicos": 16,
+    "consultorios_odonto": 10,
+    "laboratorios": 9,
+    "clinicas": 5,
+    "hospitais": 2,
+    "ubs_upa": 6
+  },
+  "3556602": {
+    "farmacias": 4,
+    "consultorios_medicos": 6,
+    "consultorios_odonto": 2,
+    "laboratorios": 1,
+    "clinicas": 3,
+    "hospitais": 1,
+    "ubs_upa": 1
+  },
+  "3556701": {
+    "farmacias": 72,
+    "consultorios_medicos": 380,
+    "consultorios_odonto": 12,
+    "laboratorios": 2,
+    "clinicas": 3,
+    "hospitais": 2,
+    "ubs_upa": 11
+  },
+  "3556800": {
+    "farmacias": 2,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 2
+  },
+  "3556909": {
+    "farmacias": 1,
+    "consultorios_medicos": 2,
+    "consultorios_odonto": 1,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3557006": {
+    "farmacias": 14,
+    "consultorios_medicos": 27,
+    "consultorios_odonto": 14,
+    "laboratorios": 17,
+    "clinicas": 7,
+    "hospitais": 0,
+    "ubs_upa": 17
+  },
+  "3557105": {
+    "farmacias": 56,
+    "consultorios_medicos": 59,
+    "consultorios_odonto": 37,
+    "laboratorios": 29,
+    "clinicas": 9,
+    "hospitais": 8,
+    "ubs_upa": 29
+  },
+  "3557204": {
+    "farmacias": 0,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3557303": {
+    "farmacias": 2,
+    "consultorios_medicos": 5,
+    "consultorios_odonto": 3,
+    "laboratorios": 2,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3557402": {
+    "farmacias": 0,
+    "consultorios_medicos": 4,
+    "consultorios_odonto": 6,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 2
+  },
+  "3557501": {
+    "farmacias": 8,
+    "consultorios_medicos": 8,
+    "consultorios_odonto": 3,
+    "laboratorios": 2,
+    "clinicas": 1,
+    "hospitais": 2,
+    "ubs_upa": 2
+  },
+  "3557600": {
+    "farmacias": 0,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3557659": {
+    "farmacias": 0,
+    "consultorios_medicos": 3,
+    "consultorios_odonto": 0,
+    "laboratorios": 2,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3557709": {
+    "farmacias": 5,
+    "consultorios_medicos": 3,
+    "consultorios_odonto": 3,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 2
+  },
+  "3557808": {
+    "farmacias": 0,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 0,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3557907": {
+    "farmacias": 5,
+    "consultorios_medicos": 7,
+    "consultorios_odonto": 7,
+    "laboratorios": 4,
+    "clinicas": 2,
+    "hospitais": 0,
+    "ubs_upa": 8
+  },
+  "3558004": {
+    "farmacias": 0,
+    "consultorios_medicos": 2,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3558103": {
+    "farmacias": 2,
+    "consultorios_medicos": 2,
+    "consultorios_odonto": 1,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3558202": {
+    "farmacias": 9,
+    "consultorios_medicos": 10,
+    "consultorios_odonto": 9,
+    "laboratorios": 5,
+    "clinicas": 5,
+    "hospitais": 1,
+    "ubs_upa": 12
+  },
+  "3558301": {
+    "farmacias": 2,
+    "consultorios_medicos": 4,
+    "consultorios_odonto": 0,
+    "laboratorios": 4,
+    "clinicas": 1,
+    "hospitais": 1,
+    "ubs_upa": 1
+  },
+  "3558400": {
+    "farmacias": 0,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3558509": {
+    "farmacias": 1,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3558608": {
+    "farmacias": 1,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 3,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 1,
+    "ubs_upa": 1
+  },
+  "3558707": {
+    "farmacias": 11,
+    "consultorios_medicos": 29,
+    "consultorios_odonto": 16,
+    "laboratorios": 4,
+    "clinicas": 6,
+    "hospitais": 1,
+    "ubs_upa": 12
+  },
+  "3558806": {
+    "farmacias": 1,
+    "consultorios_medicos": 2,
+    "consultorios_odonto": 1,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3558905": {
+    "farmacias": 2,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 1,
+    "laboratorios": 0,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 2
+  },
+  "3559002": {
+    "farmacias": 0,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3559101": {
+    "farmacias": 2,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 2,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3559200": {
+    "farmacias": 0,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3559309": {
+    "farmacias": 2,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 0,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 2
+  },
+  "3559408": {
+    "farmacias": 2,
+    "consultorios_medicos": 2,
+    "consultorios_odonto": 1,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 2
+  },
+  "3559507": {
+    "farmacias": 19,
+    "consultorios_medicos": 25,
+    "consultorios_odonto": 21,
+    "laboratorios": 11,
+    "clinicas": 6,
+    "hospitais": 6,
+    "ubs_upa": 15
+  },
+  "3559606": {
+    "farmacias": 3,
+    "consultorios_medicos": 10,
+    "consultorios_odonto": 3,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 3
+  },
+  "3559705": {
+    "farmacias": 0,
+    "consultorios_medicos": 3,
+    "consultorios_odonto": 0,
+    "laboratorios": 1,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3559804": {
+    "farmacias": 3,
+    "consultorios_medicos": 13,
+    "consultorios_odonto": 8,
+    "laboratorios": 6,
+    "clinicas": 3,
+    "hospitais": 0,
+    "ubs_upa": 2
+  },
+  "3559903": {
+    "farmacias": 5,
+    "consultorios_medicos": 5,
+    "consultorios_odonto": 6,
+    "laboratorios": 3,
+    "clinicas": 3,
+    "hospitais": 0,
+    "ubs_upa": 9
+  },
+  "3560000": {
+    "farmacias": 1,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 1,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 1,
+    "ubs_upa": 2
+  },
+  "3560109": {
+    "farmacias": 14,
+    "consultorios_medicos": 22,
+    "consultorios_odonto": 18,
+    "laboratorios": 6,
+    "clinicas": 6,
+    "hospitais": 1,
+    "ubs_upa": 10
+  },
+  "3560208": {
+    "farmacias": 6,
+    "consultorios_medicos": 2,
+    "consultorios_odonto": 5,
+    "laboratorios": 0,
+    "clinicas": 1,
+    "hospitais": 1,
+    "ubs_upa": 3
+  },
+  "3560307": {
+    "farmacias": 0,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 0,
+    "laboratorios": 3,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3560406": {
+    "farmacias": 0,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3560505": {
+    "farmacias": 25,
+    "consultorios_medicos": 28,
+    "consultorios_odonto": 20,
+    "laboratorios": 11,
+    "clinicas": 4,
+    "hospitais": 1,
+    "ubs_upa": 13
+  },
+  "3560604": {
+    "farmacias": 14,
+    "consultorios_medicos": 20,
+    "consultorios_odonto": 22,
+    "laboratorios": 9,
+    "clinicas": 6,
+    "hospitais": 2,
+    "ubs_upa": 9
+  },
+  "3560703": {
+    "farmacias": 0,
+    "consultorios_medicos": 0,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 1,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3532868": {
+    "farmacias": 0,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  },
+  "3516853": {
+    "farmacias": 0,
+    "consultorios_medicos": 1,
+    "consultorios_odonto": 0,
+    "laboratorios": 0,
+    "clinicas": 0,
+    "hospitais": 0,
+    "ubs_upa": 1
+  }
+}
