@@ -27,31 +27,31 @@ CAMPINAS_LON = -47.0608
 MAX_VIABLE_KM = 200.0  # Daniel: 'em torno de 200km' do CD em Campinas
 
 PILAR_WEIGHTS_RAW = {
-    "logistica":       120,  # Daniel: CD proximity + PDV count = #1 criterion
-    "demo":            80,   # population size matters but shouldn't dominate
-    "economia":        90,
-    "saude":           90,   # raised: infra saude is key market signal
-    "competitividade": 70,   # absolute PDVs already captured in logistica
+    "logistica":       140,  # Daniel: CD proximity + income×prox = #1 driver
+    "economia":        110,  # renda_per_capita: Paulinia thesis
+    "saude":            85,  # log-scaled absolute counts
+    "demo":             50,  # population size alone ≠ Daniel's ranking criteria
+    "competitividade":  65,  # PDV density captured in logistica
 }
 _TOTAL_W = sum(PILAR_WEIGHTS_RAW.values())
 PILAR_WEIGHTS = {k: v / _TOTAL_W for k, v in PILAR_WEIGHTS_RAW.items()}
 
 DEMO_SUB = {
-    "populacao_total":       0.35,   # absolute pop (log-scaled in pilar_score via p99 clip)
-    "populacao_alvo":        0.40,   # working-age target
-    "taxa_urbanizacao":      0.15,
-    "elderly_pct":           0.10,
+    "populacao_alvo":        0.55,  # working-age target market (not raw pop size)
+    "taxa_urbanizacao":      0.30,  # urban density proxy
+    "elderly_pct":           0.15,  # % 65+: older = more pharma consumption
 }
 LOGISTICA_SUB = {
-    "score_logistico":   0.40,  # distância do CD (max 200km)
-    "farmacias":         0.50,  # PDVs absolutos = #1 para Daniel
-    "farmacias_por_10k": 0.10,
+    "score_logistico":       0.40,  # distância do CD
+    "income_prox_score":     0.25,  # renda × proximity: Paulinia(3822) >> SBC(1764)
+    "farmacias_por_10k":     0.25,  # densidade PDV: Paulinia(8.59) > Campinas(7.81)
+    "farmacias":             0.10,  # PDVs absolutos — minor weight now
 }
 ECONOMIA_SUB = {
-    "renda_per_capita":     0.40,
-    "pib_per_capita":       0.25,
-    "idh":                  0.20,
-    "cobertura_planos_pct": 0.15,
+    "renda_per_capita":     0.55,  # Paulinia thesis: extremamente alta renda
+    "pib_per_capita":       0.20,
+    "idh":                  0.15,
+    "cobertura_planos_pct": 0.10,
 }
 # SAUDE: log-scaled absolute counts so large cities score correctly.
 # Log(x+1) preserves ranking: SP has 32k doctors -> log=10.4, tiny town 5 -> log=1.8
@@ -859,6 +859,14 @@ def dist_campinas(row):
 
 df["distance_campinas_km"] = df.apply(dist_campinas, axis=1).round(2)
 df["score_logistico"]      = ((1 - df["distance_campinas_km"] / MAX_VIABLE_KM).clip(0,1) * 100).round(2)
+
+# Income × proximity composite — Daniel's Paulínia thesis:
+# "poucos PDVs mas vendem molto bem" because renda altíssima + perto do CD
+# Paulínia: 4200 × (1 - 18/200) = 3822  → near top
+# São Paulo: 3800 × (1 - 85/200) = 2185 → mid (distance penalty correct)
+# SBC:       3600 × (1 - 102/200) = 1764 → lower
+proximity_factor = (1 - (df["distance_campinas_km"] / MAX_VIABLE_KM)).clip(0, 1)
+df["income_prox_score"] = (df["renda_per_capita"].fillna(0) * proximity_factor).round(0)
 
 df["score_demografico"]  = pilar_score(df, DEMO_SUB)
 df["score_logistica"]    = pilar_score(df, LOGISTICA_SUB)
