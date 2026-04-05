@@ -324,6 +324,10 @@ def collect_demograficos(df: pd.DataFrame) -> pd.DataFrame:
         df["populacao_urbana"] / df["populacao_total"].replace(0, np.nan) * 100
     ).clip(0, 100).round(2)
 
+    df["elderly_pct"] = (
+        df.get("pop_65_plus", pd.Series(0, index=df.index)).fillna(0) / df["populacao_total"].replace(0, np.nan) * 100
+    ).clip(0, 100).round(2)
+
     jovem = (df.get("pop_0_4", 0).fillna(0) + df.get("pop_5_14", 0).fillna(0)).replace(0, 1)
     df["indice_envelhecimento"] = (df.get("pop_65_plus", pd.Series(0, index=df.index)).fillna(0) / jovem * 100).round(2)
 
@@ -717,7 +721,7 @@ COLS_OUTPUT = [
     "score_demografico", "score_logistica", "score_economico", "score_saude", "score_competitividade",
     "farmacias", "consultorios_odonto", "laboratorios", "clinicas", "hospitais", "consultorios_medicos", "ubs_upa",
     "farmacias_por_10k",
-    "populacao_total", "populacao_alvo", "taxa_urbanizacao", "indice_envelhecimento",
+    "populacao_total", "populacao_alvo", "taxa_urbanizacao", "indice_envelhecimento", "elderly_pct",
     "renda_per_capita", "pib_per_capita", "idh",
     "cobertura_planos_pct",
     "distance_campinas_km",
