@@ -29,7 +29,7 @@ export interface Demograficos {
   populacao_alvo: number | null;
   pct_populacao_alvo: number | null;
   renda_per_capita: number | null;
-  indice_envelhecimento: number | null;
+  elderly_pct: number | null;
   pop_0_4: number | null;
   pop_5_14: number | null;
   pop_15_29: number | null;

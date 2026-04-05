@@ -31,7 +31,7 @@ class DemograficosOut(BaseModel):
     populacao_alvo: Optional[int] = None
     pct_populacao_alvo: Optional[float] = None
     renda_per_capita: Optional[float] = None
-    indice_envelhecimento: Optional[float] = None
+    elderly_pct: Optional[float] = None         # % of total pop aged 65+ (IBGE Census 2022)
     pop_0_4: Optional[int] = None
     pop_5_14: Optional[int] = None
     pop_15_29: Optional[int] = None
