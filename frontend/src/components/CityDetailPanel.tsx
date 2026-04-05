@@ -244,7 +244,7 @@ export default function CityDetailPanel({ detail, onClose, onTradeAreaLoaded }: 
             icon={Users}
             label="Pop. Idosa (65+)"
             value={d?.elderly_pct !== null && d?.elderly_pct !== undefined ? `${d.elderly_pct.toFixed(1)}%` : '—'}
-            sub="do total da população"
+            sub={d?.indice_envelhecimento ? `Índ. Env: ${d.indice_envelhecimento.toFixed(1)}` : `do total da população`}
           />
           <StatCard
             icon={DollarSign}

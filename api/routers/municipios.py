@@ -91,7 +91,7 @@ def list_municipios(
 @router.get("/municipios/{codigo_ibge}", response_model=MunicipioDetail)
 def get_municipio(codigo_ibge: str, db: Connection = Depends(get_db)):
     # Bumping cache key to v2 to bust Production Redis cache for new elderly_pct field
-    cache_key = f"municipio:detail:v3:{codigo_ibge}"
+    cache_key = f"municipio:detail:v4:{codigo_ibge}"
     cached = cache_get(cache_key)
     if cached:
         return MunicipioDetail(**cached)
@@ -107,7 +107,7 @@ def get_municipio(codigo_ibge: str, db: Connection = Depends(get_db)):
 
     demo = db.execute(text("""
         SELECT populacao_total, populacao_urbana, populacao_rural, taxa_urbanizacao,
-               populacao_alvo, pct_populacao_alvo, renda_per_capita,
+               populacao_alvo, pct_populacao_alvo, renda_per_capita, indice_envelhecimento,
                CASE WHEN pop_65_plus IS NOT NULL AND populacao_total IS NOT NULL AND populacao_total > 0
                     THEN ROUND(CAST(pop_65_plus AS numeric) / CAST(populacao_total AS numeric) * 100, 1)
                     WHEN indice_envelhecimento IS NOT NULL AND indice_envelhecimento > 0
