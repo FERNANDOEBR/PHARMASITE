@@ -26,20 +26,26 @@ CAMPINAS_LAT = -22.9056
 CAMPINAS_LON = -47.0608
 MAX_VIABLE_KM = 200.0  # Daniel: 'em torno de 200km' do CD em Campinas
 
-PILAR_WEIGHTS_RAW = {"demo": 100, "logistica": 100, "economia": 90, "saude": 80, "competitividade": 80}
+PILAR_WEIGHTS_RAW = {
+    "logistica":       120,  # Daniel: CD proximity + PDV count = #1 criterion
+    "demo":            80,   # population size matters but shouldn't dominate
+    "economia":        90,
+    "saude":           90,   # raised: infra saude is key market signal
+    "competitividade": 70,   # absolute PDVs already captured in logistica
+}
 _TOTAL_W = sum(PILAR_WEIGHTS_RAW.values())
 PILAR_WEIGHTS = {k: v / _TOTAL_W for k, v in PILAR_WEIGHTS_RAW.items()}
 
 DEMO_SUB = {
-    "populacao_total":       0.40,
-    "populacao_alvo":        0.35,
+    "populacao_total":       0.35,   # absolute pop (log-scaled in pilar_score via p99 clip)
+    "populacao_alvo":        0.40,   # working-age target
     "taxa_urbanizacao":      0.15,
-    "elderly_pct":           0.10,   # % of total pop aged 65+ (IBGE Census 2022)
+    "elderly_pct":           0.10,
 }
 LOGISTICA_SUB = {
-    "score_logistico":   0.35,  # distância do CD (max 200km - Daniel)
-    "farmacias":         0.55,  # PDVs absolutos = #1 para Daniel ('qtd de PDVs')
-    "farmacias_por_10k": 0.10,  # densidade secundária
+    "score_logistico":   0.40,  # distância do CD (max 200km)
+    "farmacias":         0.50,  # PDVs absolutos = #1 para Daniel
+    "farmacias_por_10k": 0.10,
 }
 ECONOMIA_SUB = {
     "renda_per_capita":     0.40,
@@ -47,11 +53,14 @@ ECONOMIA_SUB = {
     "idh":                  0.20,
     "cobertura_planos_pct": 0.15,
 }
+# SAUDE: log-scaled absolute counts so large cities score correctly.
+# Log(x+1) preserves ranking: SP has 32k doctors -> log=10.4, tiny town 5 -> log=1.8
+# pilar_score then MinMaxScales across all 645 cities -> SP scores near 1.0
 SAUDE_SUB = {
-    "medicos_por_10k":            0.40,  # physician prescribers per capita
-    "farmacias_por_10k":          0.30,  # pharmacy access density
-    "laboratorios_por_10k":       0.15,  # referral chain density
-    "ubs_upa_por_10k":            0.15,  # public health infrastructure
+    "log_medicos":       0.45,  # log(consultorios_medicos+1) — prescriber volume
+    "log_farmacias":     0.30,  # log(farmacias+1) — PDV absolute market
+    "log_laboratorios":  0.15,  # log(laboratorios+1) — referral partners
+    "log_ubs_upa":       0.10,  # log(ubs_upa+1) — public health network
 }
 
 # ── Municipality reference data with demographics ────────────────────────────
@@ -805,6 +814,14 @@ df["medicos_por_10k"]      = (df["consultorios_medicos"]  / pop_num * 10000).rou
 df["odonto_por_10k"]       = (df["consultorios_odonto"]   / pop_num * 10000).round(2)
 df["laboratorios_por_10k"] = (df["laboratorios"]          / pop_num * 10000).round(2)
 df["ubs_upa_por_10k"]      = (df["ubs_upa"]               / pop_num * 10000).round(2)
+
+# Log-scaled absolute counts for SAUDE_SUB — fixes inverted scoring where tiny cities
+# with 5 farmacias score higher than SP with 6800 on per-10k metrics.
+# log1p(x) = log(x+1): preserves 0→0, grows slowly so SP(32k)>>tiny(5) but not 6400x more.
+df["log_medicos"]      = np.log1p(df["consultorios_medicos"].fillna(0)).round(4)
+df["log_farmacias"]    = np.log1p(df["farmacias"].fillna(0)).round(4)
+df["log_laboratorios"] = np.log1p(df["laboratorios"].fillna(0)).round(4)
+df["log_ubs_upa"]      = np.log1p(df["ubs_upa"].fillna(0)).round(4)
 print(f"  CNES loaded | farmácias total: {df['farmacias'].sum()}")
 
 # ── Economic data ─────────────────────────────────────────────────────────────
@@ -853,13 +870,19 @@ df["score_saude"]        = pilar_score(df, SAUDE_SUB)
 abs_farm = df["farmacias"].fillna(0)
 df["score_competitividade"] = (abs_farm.rank(pct=True, method='average') * 100).round(2)
 
-df["score"] = (
+df["score_pre"] = (
     df["score_demografico"] * PILAR_WEIGHTS["demo"]      +
     df["score_logistica"]   * PILAR_WEIGHTS["logistica"] +
     df["score_economico"]   * PILAR_WEIGHTS["economia"]  +
     df["score_saude"]       * PILAR_WEIGHTS["saude"]     +
     df["score_competitividade"] * PILAR_WEIGHTS["competitividade"]
-).round(1)
+).round(2)
+
+# Distance gate: cities beyond 200km are outside Daniel's CD radius.
+# Factor = 1.0 for ≤200km; decays linearly to 0.4 at 350km; capped at 0.4 beyond.
+# This prevents cities with large pharmacy counts from ranking above nearby targets.
+dist_gate = ((1 - (df["distance_campinas_km"] - MAX_VIABLE_KM).clip(0) / 150).clip(0.4, 1.0))
+df["score"] = (df["score_pre"] * dist_gate).round(1)
 
 p75 = df["score"].quantile(0.75)
 p50 = df["score"].quantile(0.50)

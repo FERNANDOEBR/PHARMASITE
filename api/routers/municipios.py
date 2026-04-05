@@ -106,7 +106,11 @@ def get_municipio(codigo_ibge: str, db: Connection = Depends(get_db)):
 
     demo = db.execute(text("""
         SELECT populacao_total, populacao_urbana, populacao_rural, taxa_urbanizacao,
-               populacao_alvo, pct_populacao_alvo, renda_per_capita, indice_envelhecimento,
+               populacao_alvo, pct_populacao_alvo, renda_per_capita,
+               CASE WHEN indice_envelhecimento IS NOT NULL AND indice_envelhecimento > 0
+                    THEN ROUND(CAST(indice_envelhecimento AS numeric) /
+                               (100 + CAST(indice_envelhecimento AS numeric)) * 100, 1)
+                    ELSE NULL END AS elderly_pct,
                pop_0_4, pop_5_14, pop_15_29, pop_30_44, pop_45_64, pop_65_plus, ano_referencia
         FROM demograficos WHERE codigo_ibge = :cod ORDER BY id DESC
     """), {"cod": codigo_ibge}).mappings().first()
