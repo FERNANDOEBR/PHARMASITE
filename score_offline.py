@@ -48,11 +48,10 @@ ECONOMIA_SUB = {
     "cobertura_planos_pct": 0.15,
 }
 SAUDE_SUB = {
-    "farmacias_por_10k":          0.40,
-    "medicos_por_10k":            0.25,
-    "odonto_por_10k":             0.15,
-    "laboratorios_por_10k":       0.10,
-    "ubs_upa_por_10k":            0.10,
+    "medicos_por_10k":            0.40,  # physician prescribers per capita
+    "farmacias_por_10k":          0.30,  # pharmacy access density
+    "laboratorios_por_10k":       0.15,  # referral chain density
+    "ubs_upa_por_10k":            0.15,  # public health infrastructure
 }
 
 # ── Municipality reference data with demographics ────────────────────────────
@@ -695,7 +694,11 @@ def pilar_score(df: pd.DataFrame, sub_weights: dict) -> pd.Series:
     total_w = sum(available.values())
     cols = list(available.keys())
     X = df[cols].copy().astype(float)
-    X_imp  = SimpleImputer(strategy="median").fit_transform(X)
+    X_imp = SimpleImputer(strategy="median").fit_transform(X)
+    # Clip at p99 to prevent extreme outliers (e.g. tiny cities with 1 pharmacy / 500 people
+    # → 200/10k) from compressing all large cities toward zero after MinMaxScaler.
+    p99 = np.nanpercentile(X_imp, 99, axis=0)
+    X_imp = np.clip(X_imp, 0, p99)
     X_norm = MinMaxScaler().fit_transform(X_imp)
     w = np.array([available[c] / total_w for c in cols])
     return pd.Series((X_norm * w).sum(axis=1) * 100, index=df.index).round(2)
