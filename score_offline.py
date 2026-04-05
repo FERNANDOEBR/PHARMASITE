@@ -34,7 +34,7 @@ DEMO_SUB = {
     "populacao_total":       0.40,
     "populacao_alvo":        0.35,
     "taxa_urbanizacao":      0.15,
-    "indice_envelhecimento": 0.10,
+    "elderly_share":         0.10,   # = indice_envelhecimento / (100 + indice_envelhecimento)
 }
 LOGISTICA_SUB = {
     "score_logistico":   0.35,  # distância do CD (max 200km - Daniel)
@@ -68,7 +68,7 @@ DEMO_DATA = {
     3500402: (7774, 80.5, 1800, 0.41, 95),
     3500501: (17024, 88.3, 2200, 0.42, 92),
     3500600: (6241, 72.0, 1450, 0.41, 75),
-    3500709: (2987, 95.5, 3500, 0.40, 135),
+    3500709: (37680, 85.0, 1900, 0.42, 115),  # Agudos - IBGE Census 2022: pop=37680, area=966km2, IDHM=0.745
     3500808: (36682, 88.4, 2000, 0.42, 88),
     3500907: (4768, 75.0, 1350, 0.40, 72),
     3501004: (3883, 70.5, 1200, 0.40, 70),
@@ -827,6 +827,13 @@ for c in numeric_cols:
     if c in df.columns:
         df[c] = pd.to_numeric(df[c], errors="coerce")
 
+# Convert aging index (65+/0-14 × 100, unbounded ratio) → elderly_share (bounded proportion)
+# Formula: elderly_share = I / (100 + I)  →  range ≈ [0.32, 0.54] for typical SP cities
+# Preserves ranking direction (higher I → more elderly → higher share) but removes ratio-scale bias
+df["elderly_share"] = (df["indice_envelhecimento"] / (100 + df["indice_envelhecimento"])).round(4)
+print(f"  Elderly share: min={df['elderly_share'].min():.3f} | "
+      f"median={df['elderly_share'].median():.3f} | max={df['elderly_share'].max():.3f}")
+
 def dist_campinas(row):
     if pd.notna(row.get("latitude")) and pd.notna(row.get("longitude")):
         return haversine_km(row["latitude"], row["longitude"], CAMPINAS_LAT, CAMPINAS_LON)
@@ -890,12 +897,12 @@ for code, name in EMPIRICAL_TOP.items():
     if code in check.index:
         r = check.loc[code]
         pct = r['ranking'] / total * 100
-        print(f"  ✓ {name:20s} → score {r['score']:5.1f} | rank {int(r['ranking']):4d}/{total} | Tier {r['tier']} (top {pct:.1f}%)")
+        print(f"  [OK] {name:20s} -> score {r['score']:5.1f} | rank {int(r['ranking']):4d}/{total} | Tier {r['tier']} (top {pct:.1f}%)")
 for code, name in EMPIRICAL_BOTTOM.items():
     if code in check.index:
         r = check.loc[code]
         pct = r['ranking'] / total * 100
-        print(f"  ▼ {name:20s} → score {r['score']:5.1f} | rank {int(r['ranking']):4d}/{total} | Tier {r['tier']} (top {pct:.1f}%)")
+        print(f"  [BAD] {name:20s} -> score {r['score']:5.1f} | rank {int(r['ranking']):4d}/{total} | Tier {r['tier']} (top {pct:.1f}%)")
 
 # ── Save output ───────────────────────────────────────────────────────────────
 COLS_OUTPUT = [
@@ -905,7 +912,7 @@ COLS_OUTPUT = [
     "farmacias","consultorios_medicos","consultorios_odonto","laboratorios","clinicas","hospitais","ubs_upa",
     "farmacias_por_10k",
     "populacao_total","populacao_alvo",
-    "taxa_urbanizacao","indice_envelhecimento",
+    "taxa_urbanizacao","indice_envelhecimento","elderly_share",
     "renda_per_capita","pib_per_capita","idh",
     "cobertura_planos_pct",
     "distance_campinas_km",
@@ -920,8 +927,8 @@ df_out[float_cols] = df_out[float_cols].round(2)
 df_out.to_csv(OUTPUT_CSV, index=False, encoding="utf-8-sig")
 
 print(f"\n{'='*70}")
-print(f"✓ Saved: {OUTPUT_CSV}  ({len(df_out)} municípios, {len(cols)} colunas)")
-print(f"\nTOP 10 MUNICÍPIOS SP — Potencial Pharmasite Intelligence")
+print(f"[SALVO] {OUTPUT_CSV}  ({len(df_out)} municipios, {len(cols)} colunas)")
+print(f"\nTOP 10 MUNICIPIOS SP - Potencial Pharmasite Intelligence")
 print(f"{'='*70}")
 top_cols = [c for c in ["nome","score","tier","farmacias","populacao_total",
                          "renda_per_capita","distance_campinas_km"] if c in df_out.columns]
