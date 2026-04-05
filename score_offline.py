@@ -838,8 +838,9 @@ df["score_logistica"]    = pilar_score(df, LOGISTICA_SUB)
 df["score_economico"]    = pilar_score(df, ECONOMIA_SUB)
 df["score_saude"]        = pilar_score(df, SAUDE_SUB)
 
+# For a DISTRIBUTOR: more pharmacies = more clients = HIGHER competitividade
 densidade = df["farmacias_por_10k"].fillna(df["farmacias_por_10k"].median())
-df["score_competitividade"] = ((1.0 - densidade.rank(pct=True, method='average')) * 100).round(2)
+df["score_competitividade"] = (densidade.rank(pct=True, method='average') * 100).round(2)
 
 df["score"] = (
     df["score_demografico"] * PILAR_WEIGHTS["demo"]      +
