@@ -895,11 +895,16 @@ df["score_pre"] = (
 dist_gate = ((1 - df["distance_campinas_km"] / 200).clip(0, 1)) ** 2
 df["score"] = (df["score_pre"] * dist_gate).round(1)
 
-p75 = df["score"].quantile(0.75)
-p50 = df["score"].quantile(0.50)
-p25 = df["score"].quantile(0.25)
+viable_scores = df[df["score"] > 0]["score"]
+if viable_scores.empty:
+    p75, p50, p25 = 75, 50, 25
+else:
+    p75 = viable_scores.quantile(0.75)
+    p50 = viable_scores.quantile(0.50)
+    p25 = viable_scores.quantile(0.25)
 
 def tier(s):
+    if s == 0: return "D"
     if s >= p75: return "A"
     if s >= p50: return "B"
     if s >= p25: return "C"
