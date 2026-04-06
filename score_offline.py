@@ -37,7 +37,7 @@ _TOTAL_W = sum(PILAR_WEIGHTS_RAW.values())
 PILAR_WEIGHTS = {k: v / _TOTAL_W for k, v in PILAR_WEIGHTS_RAW.items()}
 
 DEMO_SUB = {
-    "populacao_alvo":        0.55,  # working-age target market (not raw pop size)
+    "log_populacao_alvo":    0.55,  # working-age target market (log scale)
     "taxa_urbanizacao":      0.30,  # urban density proxy
     "elderly_pct":           0.15,  # % 65+: older = more pharma consumption
 }
@@ -45,7 +45,7 @@ LOGISTICA_SUB = {
     "score_logistico":       0.40,  # distância do CD
     "income_prox_score":     0.25,  # renda × proximity: Paulinia(3822) >> SBC(1764)
     "farmacias_por_10k":     0.25,  # densidade PDV: Paulinia(8.59) > Campinas(7.81)
-    "farmacias":             0.10,  # PDVs absolutos — minor weight now
+    "log_farmacias":         0.10,  # PDVs absolutos (log scale)
 }
 ECONOMIA_SUB = {
     "renda_per_capita":     0.55,  # Paulinia thesis: extremamente alta renda
@@ -822,6 +822,7 @@ df["log_medicos"]      = np.log1p(df["consultorios_medicos"].fillna(0)).round(4)
 df["log_farmacias"]    = np.log1p(df["farmacias"].fillna(0)).round(4)
 df["log_laboratorios"] = np.log1p(df["laboratorios"].fillna(0)).round(4)
 df["log_ubs_upa"]      = np.log1p(df["ubs_upa"].fillna(0)).round(4)
+df["log_populacao_alvo"] = np.log1p(pd.to_numeric(df["populacao_alvo"], errors='coerce').fillna(0)).round(4)
 print(f"  CNES loaded | farmácias total: {df['farmacias'].sum()}")
 
 # ── Economic data ─────────────────────────────────────────────────────────────
@@ -873,10 +874,10 @@ df["score_logistica"]    = pilar_score(df, LOGISTICA_SUB)
 df["score_economico"]    = pilar_score(df, ECONOMIA_SUB)
 df["score_saude"]        = pilar_score(df, SAUDE_SUB)
 
-# Competitividade = índice de positivação proxy (Daniel: 'qtd de PDVs é o #1')
-# Mais PDVs absolutos = mais clientes = maior positivação possível
-abs_farm = df["farmacias"].fillna(0)
-df["score_competitividade"] = (abs_farm.rank(pct=True, method='average') * 100).round(2)
+# Competitividade = densidade de concorrência / dispersão de caixa
+# Farmacias_por_10k rankeado em percentil evita vantagem cega de escala absoluta
+density_farm = df["farmacias_por_10k"].fillna(0)
+df["score_competitividade"] = (density_farm.rank(pct=True, method='average') * 100).round(2)
 
 df["score_pre"] = (
     df["score_demografico"] * PILAR_WEIGHTS["demo"]      +
