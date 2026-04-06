@@ -183,7 +183,7 @@
     {
       "bairro": "Nova Campinas",
       "is_estimated": true,
-      "fallback_evidence": "Fallback error: Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-3-5-sonnet-20241022'}, 'request_id': 'req_011CZc8XFagStfNzuLayWJNw'}",
+      "fallback_evidence": "The search results do not contain any information about specific pharmacies located in or near the Nova Campinas neighborhood in Campinas. The results are focused on the Droga Raia pharmacy chain, but do not provide any details about the locations of their stores. Therefore, based on the available information, I cannot definitively determine the number of pharmacies in the specified area. | (Forced to 1 to prevent pipeline crash)",
       "lat": -22.896,
       "lon": -47.107,
       "tier_socio": "B",
@@ -289,7 +289,7 @@
     {
       "bairro": "Bonfim",
       "is_estimated": true,
-      "fallback_evidence": "Fallback error: Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-3-5-sonnet-20241022'}, 'request_id': 'req_011CZc8XxNMnv6YuiwkKNXhi'}",
+      "fallback_evidence": "The search results do not contain any information about pharmacies physically located in or near the Bonfim neighborhood in Campinas. The results do not provide any evidence of the existence of pharmacies in this specific area. | (Forced to 1 to prevent pipeline crash)",
       "lat": -22.9012,
       "lon": -47.0751,
       "tier_socio": "C",
@@ -388,7 +388,7 @@
     {
       "bairro": "Novo Mundo",
       "is_estimated": true,
-      "fallback_evidence": "Fallback error: Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-3-5-sonnet-20241022'}, 'request_id': 'req_011CZc8YfdKNiSrVNpfGGT1G'}",
+      "fallback_evidence": "The search results do not contain any information about pharmacies physically located in or near the Novo Mundo neighborhood in Campinas. The results do not provide any evidence of the existence of pharmacies in this specific area. | (Forced to 1 to prevent pipeline crash)",
       "lat": -22.9154,
       "lon": -47.08,
       "tier_socio": "D",
@@ -416,7 +416,7 @@
     {
       "bairro": "DIC I / II / III",
       "is_estimated": true,
-      "fallback_evidence": "Fallback error: Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-3-5-sonnet-20241022'}, 'request_id': 'req_011CZc8ZN1C6aCLVzuS5HcXY'}",
+      "fallback_evidence": "The search results do not contain any information about pharmacies located in or near the 'DIC I / II / III' neighborhood in Campinas. The results do not provide any definitive evidence of the existence of pharmacies in this specific area. | (Forced to 1 to prevent pipeline crash)",
       "lat": -22.87,
       "lon": -47.11,
       "tier_socio": "E",
@@ -444,7 +444,7 @@
     {
       "bairro": "Ouro Verde",
       "is_estimated": true,
-      "fallback_evidence": "Fallback error: Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-3-5-sonnet-20241022'}, 'request_id': 'req_011CZc8a41VjqvJ5vjDNRatX'}",
+      "fallback_evidence": "The search results do not contain any information about pharmacies located in or near the Ouro Verde neighborhood in Campinas. The results are focused on the Droga Raia pharmacy chain, but do not provide any specific information about the locations of their pharmacies. | (Forced to 1 to prevent pipeline crash)",
       "lat": -22.855,
       "lon": -47.12,
       "tier_socio": "E",
@@ -1453,7 +1453,7 @@
     {
       "bairro": "Jardim Florence",
       "is_estimated": true,
-      "fallback_evidence": "Fallback error: Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-3-5-sonnet-20241022'}, 'request_id': 'req_011CZc8akLPjm9pFdet2d3HS'}",
+      "fallback_evidence": "The search results do not contain any information about pharmacies physically located in or near the Jardim Florence neighborhood in Campinas. The results do not provide any definitive evidence of the existence of pharmacies in this specific area. | (Forced to 1 to prevent pipeline crash)",
       "lat": -22.845,
       "lon": -47.075,
       "tier_socio": "E",

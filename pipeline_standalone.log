@@ -716,3 +716,84 @@
 2026-04-04 20:31:48.095 | INFO     | __main__:collect_demograficos:282 -   Pop. urbana...
 2026-04-04 20:32:05.400 | DEBUG    | __main__:fetch_ibge_var:159 -   IBGE Ag.1378/Var.93: 5565 municípios
 2026-04-04 20:32:06.474 | INFO     | __main__:collect_demograficos:291 -   Renda per capita...
+2026-04-05 17:37:23.565 | INFO     | __main__:main:769 - ============================================================
+2026-04-05 17:37:23.566 | INFO     | __main__:main:770 - PHARMASITE INTELLIGENCE — Pipeline Standalone
+2026-04-05 17:37:23.567 | INFO     | __main__:main:771 - Foco: 645 municípios do Estado de São Paulo
+2026-04-05 17:37:23.567 | INFO     | __main__:main:772 - Modelo: Scoring Aditivo v3 (4 Pilares / 370 pts)
+2026-04-05 17:37:23.567 | INFO     | __main__:main:773 - ============================================================
+2026-04-05 17:37:35.626 | INFO     | __main__:collect_municipios_sp:229 - ══════════════════════════════════════════════════
+2026-04-05 17:37:35.632 | INFO     | __main__:collect_municipios_sp:230 - ETAPA 1: Municípios SP
+2026-04-05 17:37:35.633 | INFO     | __main__:collect_municipios_sp:231 - ══════════════════════════════════════════════════
+2026-04-05 17:37:35.635 | DEBUG    | __main__:cached_json:79 - Cache hit: municipios_sp
+2026-04-05 17:37:35.650 | SUCCESS  | __main__:collect_municipios_sp:249 -   645 municípios SP carregados
+2026-04-05 17:37:35.652 | DEBUG    | __main__:cached_json:79 - Cache hit: coords_sp
+2026-04-05 17:37:35.656 | INFO     | __main__:collect_municipios_sp:256 -   Coordenadas: 570/645
+2026-04-05 17:37:35.658 | INFO     | __main__:collect_demograficos:266 - ══════════════════════════════════════════════════
+2026-04-05 17:37:35.659 | INFO     | __main__:collect_demograficos:267 - ETAPA 2: Demográficos IBGE
+2026-04-05 17:37:35.659 | INFO     | __main__:collect_demograficos:268 - ══════════════════════════════════════════════════
+2026-04-05 17:37:35.661 | INFO     | __main__:collect_demograficos:273 -   Pop. total...
+2026-04-05 17:37:35.962 | DEBUG    | __main__:fetch_ibge_var:159 -   IBGE Ag.6579/Var.9324: 0 municípios
+2026-04-05 17:37:36.126 | DEBUG    | __main__:fetch_ibge_var:159 -   IBGE Ag.9514/Var.93: 5570 municípios
+2026-04-05 17:37:36.134 | INFO     | __main__:collect_demograficos:278 -     OK: 645/645
+2026-04-05 17:37:37.135 | INFO     | __main__:collect_demograficos:282 -   Pop. urbana...
+2026-04-05 17:37:55.699 | DEBUG    | __main__:fetch_ibge_var:159 -   IBGE Ag.1378/Var.93: 5565 municípios
+2026-04-05 17:37:56.714 | INFO     | __main__:collect_demograficos:291 -   Renda per capita...
+2026-04-05 17:38:12.720 | WARNING  | __main__:fetch_ibge_var:162 -   IBGE Ag.6691/Var.10605 falhou: RetryError[<Future at 0x188cc25e9c0 state=finished raised HTTPError>]
+2026-04-05 17:38:29.071 | WARNING  | __main__:fetch_ibge_var:162 -   IBGE Ag.9605/Var.10605 falhou: RetryError[<Future at 0x188cc293020 state=finished raised HTTPError>]
+2026-04-05 17:38:29.076 | INFO     | __main__:collect_demograficos:296 -     OK: 0/645
+2026-04-05 17:38:30.076 | INFO     | __main__:collect_demograficos:300 -   Faixas etárias...
+2026-04-05 17:38:37.122 | DEBUG    | __main__:fetch_ibge_var:159 -   IBGE Ag.1378/Var.93: 5565 municípios
+2026-04-05 17:38:45.630 | DEBUG    | __main__:fetch_ibge_var:159 -   IBGE Ag.1378/Var.93: 5565 municípios
+2026-04-05 17:38:56.984 | DEBUG    | __main__:fetch_ibge_var:159 -   IBGE Ag.1378/Var.93: 5565 municípios
+2026-04-05 17:39:09.359 | DEBUG    | __main__:fetch_ibge_var:159 -   IBGE Ag.1378/Var.93: 5565 municípios
+2026-04-05 17:39:22.307 | DEBUG    | __main__:fetch_ibge_var:159 -   IBGE Ag.1378/Var.93: 5565 municípios
+2026-04-05 17:39:32.406 | DEBUG    | __main__:fetch_ibge_var:159 -   IBGE Ag.1378/Var.93: 5565 municípios
+2026-04-05 17:39:32.935 | SUCCESS  | __main__:collect_demograficos:335 -   Demográficos: pop_total=645/645 | alvo=645
+2026-04-05 17:39:32.936 | INFO     | __main__:collect_cnes:429 - ══════════════════════════════════════════════════
+2026-04-05 17:39:32.939 | INFO     | __main__:collect_cnes:430 - ETAPA 3: CNES DataSUS
+2026-04-05 17:39:32.940 | INFO     | __main__:collect_cnes:431 - ══════════════════════════════════════════════════
+2026-04-05 17:39:32.948 | DEBUG    | __main__:collect_cnes:437 - Cache CNES hit
+2026-04-05 17:39:32.970 | SUCCESS  | __main__:collect_cnes:473 -   CNES: 16050 farmácias mapeadas | 446 municípios com ≥1
+2026-04-05 17:39:32.972 | INFO     | __main__:collect_economicos:526 - ══════════════════════════════════════════════════
+2026-04-05 17:39:32.975 | INFO     | __main__:collect_economicos:527 - ETAPA 4: Indicadores Econômicos (IPEADATA + ANS)
+2026-04-05 17:39:32.976 | INFO     | __main__:collect_economicos:528 - ══════════════════════════════════════════════════
+2026-04-05 17:39:32.978 | INFO     | __main__:collect_economicos:531 -   PIB per capita (IPEADATA)...
+2026-04-05 17:39:32.979 | DEBUG    | __main__:cached_df:92 - Cache DF hit: ipeadata_pib
+2026-04-05 17:39:33.992 | INFO     | __main__:collect_economicos:541 -   IDH (IPEADATA)...
+2026-04-05 17:39:33.993 | DEBUG    | __main__:cached_df:92 - Cache DF hit: ipeadata_idh
+2026-04-05 17:39:35.013 | INFO     | __main__:collect_economicos:551 -   ANS beneficiários...
+2026-04-05 17:39:35.014 | DEBUG    | __main__:cached_json:79 - Cache hit: ans_beneficiarios
+2026-04-05 17:39:35.036 | SUCCESS  | __main__:collect_economicos:571 -   Econômicos: PIB=570 | IDH=570 | ANS=570/645
+2026-04-05 17:39:35.037 | INFO     | __main__:calculate_scores:616 - ══════════════════════════════════════════════════
+2026-04-05 17:39:35.041 | INFO     | __main__:calculate_scores:617 - ETAPA 5: Scoring (modelo aditivo v3 — 4 pilares)
+2026-04-05 17:39:35.042 | INFO     | __main__:calculate_scores:618 - ══════════════════════════════════════════════════
+2026-04-05 17:39:35.095 | INFO     | __main__:calculate_scores:640 -   Distância mediana: 264 km | dentro de 300km: 451
+2026-04-05 17:39:39.694 | INFO     | __main__:calculate_scores:676 -   Tiers → A:163 B:160 C:161 D:161
+2026-04-05 17:39:39.700 | INFO     | __main__:calculate_scores:678 -   Score: min=6.5 | mediana=35.9 | max=83.8
+2026-04-05 17:39:39.700 | INFO     | __main__:calculate_scores:679 -   Cortes de tier: A≥45.0 | B≥35.9 | C≥27.0 | D<27.0
+2026-04-05 17:39:39.704 | INFO     | __main__:_validate_empirical:688 -   ── Validação empírica (ranking declarado pelo cliente) ──
+2026-04-05 17:39:39.712 | INFO     | __main__:_validate_empirical:695 -   ✓ Campinas           → score  75.1 | rank    2/645 | Tier A
+2026-04-05 17:39:39.717 | INFO     | __main__:_validate_empirical:695 -   ✓ Paulínia           → score  62.1 | rank   15/645 | Tier A
+2026-04-05 17:39:39.720 | INFO     | __main__:_validate_empirical:695 -   ✓ São Paulo          → score  83.8 | rank    1/645 | Tier A
+2026-04-05 17:39:39.725 | INFO     | __main__:_validate_empirical:695 -   ✓ Jundiaí            → score  67.7 | rank    7/645 | Tier A
+2026-04-05 17:39:39.729 | INFO     | __main__:_validate_empirical:695 -   ✓ Valinhos           → score  63.2 | rank   13/645 | Tier A
+2026-04-05 17:39:39.732 | INFO     | __main__:_validate_empirical:695 -   ✓ Vinhedo            → score  60.8 | rank   17/645 | Tier A
+2026-04-05 17:39:39.737 | INFO     | __main__:_validate_empirical:702 -   ▼ Borá               → score  37.9 | rank  286/645 | Tier B
+2026-04-05 17:39:39.742 | INFO     | __main__:_validate_empirical:702 -   ▼ Nova Castilho      → score  26.3 | rank  491/645 | Tier D
+2026-04-05 17:39:39.747 | INFO     | __main__:_validate_empirical:702 -   ▼ Flora Rica         → score  52.5 | rank   74/645 | Tier A
+2026-04-05 17:39:39.753 | INFO     | __main__:_validate_empirical:702 -   ▼ Uru                → score  32.5 | rank  364/645 | Tier C
+2026-04-05 17:39:39.759 | SUCCESS  | __main__:_validate_empirical:709 -   ✅ Campinas rank 2/645 (top 0.3%) — OK
+2026-04-05 17:39:39.765 | INFO     | __main__:save_output:733 - ══════════════════════════════════════════════════
+2026-04-05 17:39:39.769 | INFO     | __main__:save_output:734 - ETAPA 6: Salvando CSV
+2026-04-05 17:39:39.769 | INFO     | __main__:save_output:735 - ══════════════════════════════════════════════════
+2026-04-05 17:39:39.850 | SUCCESS  | __main__:save_output:748 -   ✓ Salvo: municipios_sp_scored.csv  (645 municípios, 32 colunas)
+2026-04-05 17:39:39.858 | INFO     | __main__:save_output:751 - 
+══════════════════════════════════════════════════════════════════════
+2026-04-05 17:39:39.864 | INFO     | __main__:save_output:752 - TOP 10 MUNICÍPIOS SP — Potencial para Correlatos Farmacêuticos
+2026-04-05 17:39:39.865 | INFO     | __main__:save_output:753 - ══════════════════════════════════════════════════════════════════════
+2026-04-05 17:39:39.900 | INFO     | __main__:save_output:759 - 
+📊 Distribuição por Tier:
+2026-04-05 17:39:39.912 | INFO     | __main__:main:791 - ============================================================
+2026-04-05 17:39:39.915 | SUCCESS  | __main__:main:792 - Pipeline concluído em 2.3 minutos
+2026-04-05 17:39:39.917 | INFO     | __main__:main:793 - Output: C:\Users\ferna\Documents\antigravity\pharmasite2\municipios_sp_scored.csv
+2026-04-05 17:39:39.917 | INFO     | __main__:main:794 - ============================================================
