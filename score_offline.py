@@ -774,7 +774,7 @@ def get_demo(ibge_id):
     return pop, pop * 0.75, 75.0, pop * 0.41, 10.0, 1500
 
 for col in ["populacao_total","populacao_urbana","taxa_urbanizacao",
-            "populacao_alvo","elderly_pct","renda_per_capita"]:
+            "populacao_alvo","elderly_pct","indice_envelhecimento","renda_per_capita"]:
     df[col] = None
 
 for i, row in df.iterrows():
@@ -785,6 +785,7 @@ for i, row in df.iterrows():
     df.at[i, "taxa_urbanizacao"] = urb
     df.at[i, "populacao_alvo"]   = alvo
     df.at[i, "elderly_pct"]      = elderly_pct
+    df.at[i, "indice_envelhecimento"] = elderly_pct
     df.at[i, "renda_per_capita"] = renda
 
 print(f"  Demographics injected | pop median: {df['populacao_total'].median():.0f}")
@@ -946,7 +947,7 @@ COLS_OUTPUT = [
     "farmacias","consultorios_medicos","consultorios_odonto","laboratorios","clinicas","hospitais","ubs_upa",
     "farmacias_por_10k",
     "populacao_total","populacao_alvo",
-    "taxa_urbanizacao","elderly_pct",
+    "taxa_urbanizacao","elderly_pct","indice_envelhecimento",
     "renda_per_capita","pib_per_capita","idh",
     "cobertura_planos_pct",
     "distance_campinas_km",
