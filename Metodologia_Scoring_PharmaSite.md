@@ -1,15 +1,10 @@
 # PharmaSite Intelligence: Metodologia e Scoring Engine
+
 Documento de Referência Técnico-Metodológica
 
 ***
 
-Este documento detalha o funcionamento do **Motor de Scoring do PharmaSite**, abordando as fontes de dados, técnicas de tratamento de outliers, hacks de estimação e as fórmulas matemáticas aplicadas para compor o rankeamento definitivo dos municípios do estado de São Paulo para a operação B2B.
-
-> [!IMPORTANT]
-> **Próximas Evoluções (Calibração de Vendas):** 
-> Atualmente, os pesos das variáveis são governados pela validação empírica da liderança comercial (Daniel). O modelo aguarda a ingestão da métrica absoluta de **Sales Number / Gross Revenue** (Histórico de Vendas) por município. Uma vez injetados, esses números reais permitirão o uso de regressão estatística para calibrar perfeitamente o peso específico de cada pilar da equação atual (e.g., quanto Exatamente a distância impacta nas vendas reais contra o PIB per Capita).
-
----
+Este documento detalha o funcionamento do **Motor de Scoring do PharmaSite**, abordando as fontes de dados, o gerenciador de cenários e as fórmulas testadas estatisticamente aplicadas para compor o rankeamento definitivo dos municípios do estado de São Paulo para a operação B2B.
 
 ## 1. Tratamento e Normalização Estrutural de Dados
 
@@ -17,9 +12,15 @@ O abismo populacional no Estado de São Paulo (onde a capital possui 11,4 milhõ
 
 Para garantir que o motor seja sensível aos municípios de médio porte do interior, todas as variáveis absolutas são tratadas usando o seguinte framework matemático:
 
-1. **Preenchimento de Zeros Seguros (Imputação de Fallback):** Em divisões sensíveis, populações nulas (0) são convertidas para `NaN` para evitar colapsos matemáticos (`ZeroDivisionError`).
-2. **Transformação Logarítmica (`Z-Flattening`):** Aplicamos `log1p(X)` nas massas absolutas. A fórmula $Y = ln(X + 1)$ reduz a curvatura hiperbólica para uma curva achatada (Ex: A pop. de Campinas não oblitera a relevância de Vinhedo e Valinhos).
-3. **Escalonamento Min-Max (0 a 1):** Aplicando a fórmula $Z = \frac{\ln(X+1) - \min(\ln(X+1))}{\max(\ln(X+1)) - \min(\ln(X+1))}$, projetamos todo o ranking municipal entre pontuações normalizadas perfeitamente controladas, as quais alimentam a atribuição percentual final.
+1. **Preenchimento de Zeros Seguros (Imputação de Fallback):** Em divisões sensíveis, populações nulas (0) são convertidas para `NaN` para evitar colapsos matemáticos.
+2. **Transformação Logarítmica (`Z-Flattening`):** Aplicamos `log1p(X)` nas massas absolutas. A fórmula $Y = ln(X + 1)$ reduz a curvatura hiperbólica.
+3. **Escalonamento Min-Max (0 a 1):** Os dados são normalizados num range fixo para análise.
+
+### 1.1 Calibração Estatística Baseada em Vendas (BRB)
+
+Pesos que anteriormente eram calibrados por validação heurística (pilares estáticos) agora são submetidos a uma função de regressão de Mínimos Quadrados Não Negativos (NNLS) ou Regressão Ridge usando os dados absolutos de **Total de Venda (Receita Bruta)** por município, extraídos dos relatórios reais de faturamento da matriz BRB.
+A regressão entende as variáveis demográficas, econômicas e logísticas (X) e descobre estaticamente as correlações com as Vendas Absolutas (y).
+Ao final do treinamento da camada offline, o motor grava e gerencia "Estados de Calibração" (What-If Scenarios) para que possamos testar pesos engessados contra os calibrados no laboratório.
 
 ---
 
@@ -40,14 +41,14 @@ Para garantir que o motor seja sensível aos municípios de médio porte do inte
 
 O motor utiliza heurísticas de derivação para converter dados atômicos brutos para inteligência competitiva comercial (KPIs).
 
-### 3.1. Índices e Proporções 
+### 3.1. Índices e Proporções re
 
-*   **Percentual População Alvo (Hacking Econômico Ativo):** 
-    $$Pop_{Alvo} = Pop_{(30\ a\ 44)} + Pop_{(45\ a\ 64)}$$ 
+* **Percentual População Alvo (Hacking Econômico Ativo):**
+    $$Pop_{Alvo} = Pop_{(30\ a\ 44)} + Pop_{(45\ a\ 64)}$$
     *O racional por trás desse hack:* O consumo corriqueiro de medicamentos, correlatos e cosméticos possui a curva mais acentuada de *ticket-médio* na faixa trintária até a porta da terceira idade.
-*   **Percentual de Envelhecimento Clínico:**
+* **Percentual de Envelhecimento Clínico:**
     $$Elderly\% = \left( \frac{Pop_{(65+)}}{Pop_{Total}} \right) \times 100$$
-*   **Índice de Envelhecimento Bruto (O.M.S.):**
+* **Índice de Envelhecimento Bruto (O.M.S.):**
     Estima a proporção de idosos para as gerações de reposição jovem.
     $$Indice = \left( \frac{Pop_{(65+)}}{Pop_{(0\ a\ 4)} + Pop_{(5\ a\ 14)}} \right) \times 100$$
 
@@ -55,14 +56,15 @@ O motor utiliza heurísticas de derivação para converter dados atômicos bruto
 
 A prioridade comercial é o acesso aos insumos pelo eixo dinâmico Campinas-SP.
 
-*   **Cálculo da Distância da Sede:** Fórmula esférica de `Haversine` usando o centróide das malhas municipais contra a L/L de Campinas $(-22.9056, -47.0608)$.
-*   **Decaimento Lógico (Score Logístico O-100):** O score logístico morre e converge para rigoroso 0 à medida que atinge os 300km intransponíveis (*Target Radius Limit*).
+* **Cálculo da Distância da Sede:** Fórmula esférica de `Haversine` usando o centróide das malhas municipais contra a L/L de Campinas $(-22.9056, -47.0608)$.
+* **Decaimento Lógico (Score Logístico O-100):** O score logístico morre e converge para rigoroso 0 à medida que atinge os 300km intransponíveis (*Target Radius Limit*).
     $$Score_{Logistico} = Max \left(0,\ 1 - \frac{Dist_{Km}}{300_{Km}}\right) \times 100$$
 
 ### 3.3. Densidade de Competição Dinâmica
 
 Ao invés de tratar grande competitividade como "Risco de Saturação" , tratamos ela de forma proxyétrica para o setor logístico e de distribuição: Onde existem muitas farmácias competindo `(farmacias_por_10k)`, significa demanda brutal ou fragmentação agressiva de PDVs que obriga a pulverização de compras.
-*   **Hack via Ranqueamento por Percentil:** O atributo da competência é jogado de modo flutuante na curva normal sem escalas de peso: 
+
+* **Hack via Ranqueamento por Percentil:** O atributo da competência é jogado de modo flutuante na curva normal sem escalas de peso:
     $Score = PercentileRank(farmacias/10k) \times 100$
 
 ---

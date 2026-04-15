@@ -16,6 +16,9 @@ import pandas as pd
 from pathlib import Path
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.impute import SimpleImputer
+from scipy.optimize import nnls
+import unicodedata
+import scenario_manager
 
 np.random.seed(42)
 CACHE_DIR  = Path("cache_standalone")
@@ -875,18 +878,74 @@ df["score_logistica"]    = pilar_score(df, LOGISTICA_SUB)
 df["score_economico"]    = pilar_score(df, ECONOMIA_SUB)
 df["score_saude"]        = pilar_score(df, SAUDE_SUB)
 
-# Competitividade = densidade de concorrência / dispersão de caixa
-# Farmacias_por_10k rankeado em percentil evita vantagem cega de escala absoluta
 density_farm = df["farmacias_por_10k"].fillna(0)
 df["score_competitividade"] = (density_farm.rank(pct=True, method='average') * 100).round(2)
 
+# --- INGEST BRB SALES DATA FOR CALIBRATION ---
+print("  Loading BRB Sales Data for Statistical Calibration...")
+def normalize_city(c):
+    if not isinstance(c, str): return ""
+    c = c.split('/')[0].strip().upper()
+    return ''.join(x for x in unicodedata.normalize('NFKD', c) if not unicodedata.combining(x))
+
+sales_file = r"C:\Users\ferna\Downloads\relatorio de vendas BRB.xlsx"
+df["nome_norm"] = df["nome"].apply(normalize_city)
+
+try:
+    df_brb = pd.read_excel(sales_file, sheet_name="Plan1")
+    df_brb["cidade_norm"] = df_brb["cidade"].apply(normalize_city)
+    sales_city = df_brb.groupby("cidade_norm")["Total Venda"].sum().reset_index()
+    df = df.merge(sales_city, left_on="nome_norm", right_on="cidade_norm", how="left")
+    df["Total_Venda"] = df["Total Venda"].fillna(0)
+except Exception as e:
+    print(f"  [WARN] Failed to load BRB sales data: {e}")
+    df["Total_Venda"] = 0
+
+# Extract the pillar scores and target 
+features = ["score_demografico", "score_logistica", "score_economico", "score_saude", "score_competitividade"]
+X = df[features].values
+y = df["Total_Venda"].values
+
+# Check scenario manager for user overrides
+active_weights = scenario_manager.load_active_scenario()
+
+if active_weights:
+    print("  [SCENARIO] Active Scenario loaded! Overriding statistical calibration.")
+    w_demo = active_weights.get("demo", PILAR_WEIGHTS["demo"])
+    w_log  = active_weights.get("logistica", PILAR_WEIGHTS["logistica"])
+    w_eco  = active_weights.get("economia", PILAR_WEIGHTS["economia"])
+    w_sau  = active_weights.get("saude", PILAR_WEIGHTS["saude"])
+    w_comp = active_weights.get("competitividade", PILAR_WEIGHTS["competitividade"])
+else:
+    # Perform Non-Negative Least Squares (NNLS) to find optimal weights mapping pillars -> sales
+    if y.sum() > 0.0:
+        coefs, residual = nnls(X, y)
+        sum_coef = coefs.sum()
+        if sum_coef > 0:
+            w_demo, w_log, w_eco, w_sau, w_comp = coefs / sum_coef
+        else:
+            w_demo, w_log, w_eco, w_sau, w_comp = PILAR_WEIGHTS["demo"], PILAR_WEIGHTS["logistica"], PILAR_WEIGHTS["economia"], PILAR_WEIGHTS["saude"], PILAR_WEIGHTS["competitividade"]
+        
+        calibrated_dict = {
+            "demo": float(w_demo), "logistica": float(w_log),
+            "economia": float(w_eco), "saude": float(w_sau), "competitividade": float(w_comp)
+        }
+        print(f"  [NNLS] Finished Calibration on BRB Sales. Residual: {residual:.2f}")
+        for k, v in calibrated_dict.items():
+            print(f"     -> Weight {k:15s}: {v*100:.2f}%")
+        scenario_manager.save_calibration_state(calibrated_dict, metadata={"residual": residual})
+    else:
+        print("  [WARN] Target sales sum to zero. Falling back to empirical weights.")
+        w_demo, w_log, w_eco, w_sau, w_comp = PILAR_WEIGHTS["demo"], PILAR_WEIGHTS["logistica"], PILAR_WEIGHTS["economia"], PILAR_WEIGHTS["saude"], PILAR_WEIGHTS["competitividade"]
+
 df["score_pre"] = (
-    df["score_demografico"] * PILAR_WEIGHTS["demo"]      +
-    df["score_logistica"]   * PILAR_WEIGHTS["logistica"] +
-    df["score_economico"]   * PILAR_WEIGHTS["economia"]  +
-    df["score_saude"]       * PILAR_WEIGHTS["saude"]     +
-    df["score_competitividade"] * PILAR_WEIGHTS["competitividade"]
+    df["score_demografico"] * w_demo +
+    df["score_logistica"]   * w_log  +
+    df["score_economico"]   * w_eco  +
+    df["score_saude"]       * w_sau  +
+    df["score_competitividade"] * w_comp
 ).round(2)
+
 
 # Distance gate: strictly no more than 200km.
 # To heavily penalize São Bernardo do Campo (~102km) and São Paulo (~85km), we use an exponential decay:

@@ -1,0 +1,14 @@
+{
+    "calibrated_at": "20260415_191454",
+    "base_model": "BRB_Gross_Revenue_NNLS",
+    "weights": {
+        "demo": 0.0,
+        "logistica": 0.36300076406774306,
+        "economia": 0.0,
+        "saude": 0.6369992359322569,
+        "competitividade": 0.0
+    },
+    "metadata": {
+        "residual": 171103.96445950167
+    }
+}
