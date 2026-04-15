@@ -9,7 +9,7 @@ import type { PickingInfo } from '@deck.gl/core';
 import type { FeatureCollection } from 'geojson';
 import 'maplibre-gl/dist/maplibre-gl.css';
 
-import type { Municipio, TradeAreaItem } from '@/lib/types';
+import type { Municipio, TradeAreaItem, MicrobairroItem } from '@/lib/types';
 import { scoreToColor } from '@/lib/colors';
 
 // ── Local types ────────────────────────────────────────────────────────────────
@@ -31,6 +31,7 @@ interface Props {
   selectedId: string | null;
   uf: string;
   tradeAreaData: { center: [number, number]; items: TradeAreaItem[] } | null;
+  microbairros: MicrobairroItem[] | null;
   onCityClick: (codigoIbge: string) => void;
 }
 
@@ -83,7 +84,7 @@ function fitViewState(
 }
 
 // ── Component ──────────────────────────────────────────────────────────────────
-export default function PharmaSiteMap({ municipalities, selectedId, uf, tradeAreaData, onCityClick }: Props) {
+export default function PharmaSiteMap({ municipalities, selectedId, uf, tradeAreaData, microbairros, onCityClick }: Props) {
   const containerRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef(null);
   const brazilCache = useRef<GeoFC | null>(null);
@@ -190,7 +191,7 @@ export default function PharmaSiteMap({ municipalities, selectedId, uf, tradeAre
         const m = cod ? scoreMap.get(cod) : undefined;
         if (!m) return [10, 25, 65, 55];                   // no API data: dark navy
         if (m.score_total === null) return [100, 116, 139, 150]; // no score: slate-grey
-        return scoreToColor(m.score_total, 200);
+        return scoreToColor(m.score_total, m.score_total === 0 ? 40 : 200);
       },
       getLineColor: (f: unknown) =>
         (f as GeoFeature).properties?.codarea === selectedId
@@ -274,9 +275,34 @@ export default function PharmaSiteMap({ municipalities, selectedId, uf, tradeAre
     radiusMinPixels: 2,
   });
 
+  const microbairrosLayer = new ScatterplotLayer<MicrobairroItem>({
+    id: 'l2-microbairros',
+    data: microbairros ?? [],
+    getPosition: d => [d.Longitude, d.Latitude],
+    getRadius: 250,
+    getFillColor: d => {
+        if (d.Mapped_Pharmacies === 0 && d.Opportunity_Score > 80) return [139, 0, 0, 200]; // darkred
+        if (d.Opportunity_Score >= 90) return [255, 0, 0, 200]; // red
+        if (d.Opportunity_Score >= 75) return [255, 165, 0, 200]; // orange
+        return [0, 0, 255, 200]; // blue
+    },
+    getLineColor: [255, 255, 255, 200],
+    getLineWidth: 1,
+    lineWidthMinPixels: 1,
+    radiusMinPixels: 4,
+    radiusMaxPixels: 12,
+    pickable: true,
+    onHover: (info: PickingInfo<MicrobairroItem>) => {
+        if (info.object) {
+             setHoverInfo({ x: info.x, y: info.y, object: { nome: `${info.object.Microbairro} (Gap L2)`, uf: `PDVs: ${info.object.Mapped_Pharmacies}`, score_total: info.object.Opportunity_Score } as any });
+        }
+    }
+  });
+
   const layers = [
     ...(geoLayer ? [geoLayer] : scatterFallback ? [scatterFallback] : []),
     ...(tradeAreaData ? [tradeScatterLayer, arcLayer] : []),
+    ...(microbairros && microbairros.length > 0 ? [microbairrosLayer] : []),
   ];
 
   const handleViewStateChange = useCallback(
@@ -338,6 +364,19 @@ export default function PharmaSiteMap({ municipalities, selectedId, uf, tradeAre
           <div className="flex items-center gap-2 text-[var(--text-dim)] mt-1">
             <div className="w-3 h-3 rounded-full bg-amber-400" />
             Atração proporcional
+          </div>
+        </div>
+      )}
+
+      {/* L2 Microbairros legend */}
+      {microbairros && microbairros.length > 0 && !tradeAreaData && (
+        <div className="absolute bottom-16 right-4 glass p-3 text-xs w-48 bg-opacity-90">
+          <div className="font-semibold mb-2 text-rose-400">Oportunidades L2 (Gaps)</div>
+          <div className="space-y-1.5">
+            <div className="flex items-center gap-2 text-[var(--text-dim)]"><div className="w-3 h-3 rounded-full bg-[rgb(139,0,0)] border border-white" /> Gap Ouro (0 PDVs)</div>
+            <div className="flex items-center gap-2 text-[var(--text-dim)]"><div className="w-3 h-3 rounded-full bg-red-600 border border-white" /> Oportunidade Extrema (&gt;90)</div>
+            <div className="flex items-center gap-2 text-[var(--text-dim)]"><div className="w-3 h-3 rounded-full bg-amber-500 border border-white" /> Oportunidade Elevada (&gt;75)</div>
+            <div className="flex items-center gap-2 text-[var(--text-dim)]"><div className="w-3 h-3 rounded-full bg-blue-600 border border-white" /> Saturado / Estável</div>
           </div>
         </div>
       )}

@@ -858,10 +858,7 @@ for c in numeric_cols:
     if c in df.columns:
         df[c] = pd.to_numeric(df[c], errors="coerce")
 
-# Filter by MIN_POPULATION
-if MIN_POPULATION > 0:
-    print(f"  Filtering exactly: Keeping only cities with Populacao > {MIN_POPULATION}")
-    df = df[df["populacao_total"].fillna(0) >= MIN_POPULATION].copy()
+# population filtering is now handled at the very end via pop_gate.
 
 # elderly_pct = % of total population aged 65+ (IBGE Census 2022, stored in DEMO_DATA field 5)
 # Already a clean bounded metric: range ~6.5%-25% across SP municipalities
@@ -960,12 +957,14 @@ df["score_pre"] = (
 ).round(2)
 
 
-# Distance gate: strictly no more than 200km.
+# Distance gate: strictly no more than MAX_VIABLE_KM (defaults to 200).
 # To heavily penalize São Bernardo do Campo (~102km) and São Paulo (~85km), we use an exponential decay:
 # 0km -> 1.0 | 100km -> 0.25 | 200km -> 0.0 | >200km -> 0.0
 # This effectively clears out distant markets with big raw populations.
-dist_gate = ((1 - df["distance_campinas_km"] / 200).clip(0, 1)) ** 2
-df["score"] = (df["score_pre"] * dist_gate).round(1)
+dist_gate = ((1 - df["distance_campinas_km"] / float(MAX_VIABLE_KM)).clip(0, 1)) ** 2
+pop_gate  = (df["populacao_total"].fillna(0) >= MIN_POPULATION).astype(int)
+
+df["score"] = (df["score_pre"] * dist_gate * pop_gate).round(1)
 
 viable_scores = df[df["score"] > 0]["score"]
 if viable_scores.empty:
