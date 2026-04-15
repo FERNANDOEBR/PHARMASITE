@@ -20,7 +20,7 @@ def load_active_scenario():
         try:
             with open(filepath, "r", encoding="utf-8") as f:
                 data = json.load(f)
-                return data.get("weights", None)
+                return data  # Return full config instead of just weights
         except Exception as e:
             print(f"Error reading active_scenario.json: {e}")
     return None

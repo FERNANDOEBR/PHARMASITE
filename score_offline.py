@@ -27,7 +27,13 @@ OUTPUT_CSV = Path("municipios_sp_scored.csv")
 # ── Config (same as run_standalone.py) ───────────────────────────────────────
 CAMPINAS_LAT = -22.9056
 CAMPINAS_LON = -47.0608
-MAX_VIABLE_KM = 200.0  # Daniel: 'em torno de 200km' do CD em Campinas
+
+# Load scenario config globally since some config values are needed in multiple places
+import scenario_manager
+SCENARIO_CONFIG = scenario_manager.load_active_scenario() or {}
+
+MAX_VIABLE_KM = float(SCENARIO_CONFIG.get("max_viable_km", 200.0))
+MIN_POPULATION = int(SCENARIO_CONFIG.get("min_population", 0))
 
 PILAR_WEIGHTS_RAW = {
     "logistica":       140,  # Daniel: CD proximity + income×prox = #1 driver
@@ -852,6 +858,11 @@ for c in numeric_cols:
     if c in df.columns:
         df[c] = pd.to_numeric(df[c], errors="coerce")
 
+# Filter by MIN_POPULATION
+if MIN_POPULATION > 0:
+    print(f"  Filtering exactly: Keeping only cities with Populacao > {MIN_POPULATION}")
+    df = df[df["populacao_total"].fillna(0) >= MIN_POPULATION].copy()
+
 # elderly_pct = % of total population aged 65+ (IBGE Census 2022, stored in DEMO_DATA field 5)
 # Already a clean bounded metric: range ~6.5%-25% across SP municipalities
 print(f"  Elderly pct: min={df['elderly_pct'].min():.1f}% | "
@@ -888,15 +899,18 @@ def normalize_city(c):
     c = c.split('/')[0].strip().upper()
     return ''.join(x for x in unicodedata.normalize('NFKD', c) if not unicodedata.combining(x))
 
-sales_file = r"C:\Users\ferna\Downloads\relatorio de vendas BRB.xlsx"
+sales_file = SCENARIO_CONFIG.get("sales_data_path", r"C:\Users\ferna\Downloads\relatorio de vendas BRB.xlsx")
 df["nome_norm"] = df["nome"].apply(normalize_city)
 
 try:
-    df_brb = pd.read_excel(sales_file, sheet_name="Plan1")
-    df_brb["cidade_norm"] = df_brb["cidade"].apply(normalize_city)
-    sales_city = df_brb.groupby("cidade_norm")["Total Venda"].sum().reset_index()
-    df = df.merge(sales_city, left_on="nome_norm", right_on="cidade_norm", how="left")
-    df["Total_Venda"] = df["Total Venda"].fillna(0)
+    if sales_file and Path(sales_file).exists():
+        df_brb = pd.read_excel(sales_file, sheet_name="Plan1")
+        df_brb["cidade_norm"] = df_brb["cidade"].apply(normalize_city)
+        sales_city = df_brb.groupby("cidade_norm")["Total Venda"].sum().reset_index()
+        df = df.merge(sales_city, left_on="nome_norm", right_on="cidade_norm", how="left")
+        df["Total_Venda"] = df["Total Venda"].fillna(0)
+    else:
+        df["Total_Venda"] = 0
 except Exception as e:
     print(f"  [WARN] Failed to load BRB sales data: {e}")
     df["Total_Venda"] = 0
@@ -906,16 +920,15 @@ features = ["score_demografico", "score_logistica", "score_economico", "score_sa
 X = df[features].values
 y = df["Total_Venda"].values
 
-# Check scenario manager for user overrides
-active_weights = scenario_manager.load_active_scenario()
+use_custom = SCENARIO_CONFIG.get("use_custom_weights", False)
 
-if active_weights:
-    print("  [SCENARIO] Active Scenario loaded! Overriding statistical calibration.")
-    w_demo = active_weights.get("demo", PILAR_WEIGHTS["demo"])
-    w_log  = active_weights.get("logistica", PILAR_WEIGHTS["logistica"])
-    w_eco  = active_weights.get("economia", PILAR_WEIGHTS["economia"])
-    w_sau  = active_weights.get("saude", PILAR_WEIGHTS["saude"])
-    w_comp = active_weights.get("competitividade", PILAR_WEIGHTS["competitividade"])
+if use_custom and "weights" in SCENARIO_CONFIG:
+    print("  [SCENARIO] User activated manual Custom Weights override.")
+    w_demo = float(SCENARIO_CONFIG["weights"].get("demo", PILAR_WEIGHTS["demo"]))
+    w_log  = float(SCENARIO_CONFIG["weights"].get("logistica", PILAR_WEIGHTS["logistica"]))
+    w_eco  = float(SCENARIO_CONFIG["weights"].get("economia", PILAR_WEIGHTS["economia"]))
+    w_sau  = float(SCENARIO_CONFIG["weights"].get("saude", PILAR_WEIGHTS["saude"]))
+    w_comp = float(SCENARIO_CONFIG["weights"].get("competitividade", PILAR_WEIGHTS["competitividade"]))
 else:
     # Perform Non-Negative Least Squares (NNLS) to find optimal weights mapping pillars -> sales
     if y.sum() > 0.0:

@@ -212,10 +212,24 @@ export interface MicrobairrosInsightsRequest {
   items: MicrobairroItem[];
 }
 
-export interface ScenarioWeights {
+export interface ScenarioWeights2 {
   demo: number;
   logistica: number;
   economia: number;
   saude: number;
   competitividade: number;
+}
+
+export interface ScenarioConfig {
+  sales_data_path: string;
+  max_viable_km: number;
+  min_population: number;
+  use_custom_weights: boolean;
+  weights: {
+    demo: number;
+    logistica: number;
+    economia: number;
+    saude: number;
+    competitividade: number;
+  }
 }

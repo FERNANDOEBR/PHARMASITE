@@ -84,11 +84,11 @@ export const api = {
     return postJson(`/insights/microbairros/${codigoIbge}`, payload);
   },
 
-  getActiveScenario(): Promise<{ weights: import('./types').ScenarioWeights | null }> {
+  getActiveScenario(): Promise<{ weights?: any, config?: import('./types').ScenarioConfig }> {
     return get('/scenarios/active');
   },
 
-  saveScenario(weights: import('./types').ScenarioWeights | null): Promise<{ status: string }> {
-    return postJson('/scenarios', { weights });
+  saveScenario(config: import('./types').ScenarioConfig): Promise<{ status: string }> {
+    return postJson('/scenarios', config);
   },
 };

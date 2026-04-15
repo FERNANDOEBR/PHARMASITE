@@ -36,7 +36,11 @@ from datetime import datetime
 import scenario_manager
 
 class ScenarioPayload(BaseModel):
-    weights: dict | None
+    sales_data_path: str = ""
+    max_viable_km: float = 200.0
+    min_population: int = 0
+    use_custom_weights: bool = False
+    weights: dict | None = None
 
 load_dotenv()
 
@@ -601,16 +605,14 @@ def save_active_scenario(payload: ScenarioPayload):
         os.makedirs(scenarios_dir)
         
     active_path = scenarios_dir / "active_scenario.json"
-    data = {"weights": payload.weights} if payload.weights else {}
     
     with open(active_path, "w", encoding="utf-8") as f:
-        json.dump(data, f, indent=4)
+        json.dump(payload.model_dump(), f, indent=4)
         
     # Trigger offline recalculation synchronously
     global _df_cache, _csv_mtime
     try:
         print("  [API] Triggering score_offline.py recalculation...")
-        # Since API is inside pharmasite2, we just run python
         subprocess.run(["python", "score_offline.py"], check=True)
         # Invalidate buffer
         _df_cache = None
