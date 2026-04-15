@@ -31,12 +31,18 @@ from pydantic import BaseModel
 from dotenv import load_dotenv
 import anthropic
 import math
+import subprocess
 from datetime import datetime
+import scenario_manager
+
+class ScenarioPayload(BaseModel):
+    weights: dict | None
 
 load_dotenv()
 
 # ─── Config ──────────────────────────────────────────────────────────────────
 CSV_PATH = Path(os.getenv("CSV_PATH", "municipios_sp_scored.csv"))
+L2_CSV_PATH = Path(os.getenv("L2_CSV_PATH", "l2_regional_master.csv"))
 API_KEY  = os.getenv("ANTHROPIC_API_KEY", "")
 
 app = FastAPI(
@@ -73,6 +79,19 @@ def load_csv() -> pd.DataFrame:
         _csv_mtime = mtime
     return _df_cache
 
+_l2_csv_mtime: float = 0.0
+_df_l2_cache = None
+
+def load_l2_csv() -> pd.DataFrame:
+    global _l2_csv_mtime, _df_l2_cache
+    if not L2_CSV_PATH.exists():
+        return pd.DataFrame()
+    mtime = L2_CSV_PATH.stat().st_mtime
+    if _df_l2_cache is None or mtime != _l2_csv_mtime:
+        _df_l2_cache = pd.read_csv(L2_CSV_PATH)
+        _l2_csv_mtime = mtime
+    return _df_l2_cache
+
 
 # ═══════════════════════════════════════════════════════════════════════════
 # ENDPOINTS
@@ -84,9 +103,10 @@ def root():
         "api": "Pharmasite Intelligence",
         "version": "2.0.0",
         "endpoints": {
-            "municipios": "GET /municipios",
-            "analise":    "POST /analise/{codigo_ibge}",
-            "busca":      "GET /busca?q=Campinas",
+            "municipios":   "GET /municipios",
+            "analise":      "POST /analise/{codigo_ibge}",
+            "busca":        "GET /busca?q=Campinas",
+            "microbairros": "GET /municipios/{codigo_ibge}/microbairros",
         }
     }
 
@@ -404,13 +424,118 @@ def get_tradearea(lat: float, lon: float, raio_km: float = 200.0):
             "estimated_customers": est_customers
         })
         
-    return {
-        "center_lat": lat,
-        "center_lon": lon,
-        "radius_km": raio_km,
-        "total_estimated_customers": total_customers,
-        "results": results
-    }
+    return {"results": results, "total_estimated_customers": total_customers}
+
+@app.get("/municipios/{codigo_ibge}/microbairros")
+def get_municipio_microbairros(codigo_ibge: str):
+    df = load_csv()
+    match = df[df["codigo_ibge"] == codigo_ibge]
+    if match.empty:
+        raise HTTPException(status_code=404, detail="Município não encontrado")
+    record = match.iloc[0]
+    city_name = record["nome"]
+    city_tier = record.get("tier", "Z")
+    renda_proxy = record.get("renda_per_capita", 0)
+    base_demand = record.get("score_economico", 0)
+
+    df_l2 = load_l2_csv()
+    if not df_l2.empty:
+        # Check cache exact match
+        cache_match = df_l2[df_l2["City"].str.upper() == city_name.upper()]
+        if not cache_match.empty:
+            return {"source": "cache", "microbairros": cache_match.to_dict(orient="records")}
+            
+    # Trigger live OSM
+    from l2_regional_engine import get_city_bairros, get_city_pharmacies, haversine
+    print(f"Triggering Live OSM search for {city_name} (L2 Cache Miss)")
+    
+    bairros = get_city_bairros(city_name)
+    pharmacies = get_city_pharmacies(city_name)
+    
+    if not bairros:
+        return {"source": "live", "microbairros": []}
+        
+    bairro_pdv_map = {b['bairro']: {'total': 0, 'big_chains': 0, 'independents': 0, 'lat': b['lat'], 'lon': b['lon']} for b in bairros}
+    MAX_DIST_KM = 2.0
+    for p in pharmacies:
+        closest_bairro = None
+        min_dist = float('inf')
+        for b in bairros:
+            d = haversine(p['lon'], p['lat'], b['lon'], b['lat'])
+            if d < min_dist and d <= MAX_DIST_KM:
+                min_dist = d
+                closest_bairro = b['bairro']
+        if closest_bairro:
+            bairro_pdv_map[closest_bairro]['total'] += 1
+            if p['chain_type'] == "Big Chain":
+                bairro_pdv_map[closest_bairro]['big_chains'] += 1
+            else:
+                bairro_pdv_map[closest_bairro]['independents'] += 1
+                
+    master_bairro_data = []
+    for name, data in bairro_pdv_map.items():
+        saturation_penalty = (data['big_chains'] * 15) + (data['independents'] * 5)
+        demand = base_demand
+        name_lower = name.lower()
+        if "centro" in name_lower or "jardim" in name_lower or "morumbi" in name_lower:
+            demand *= 1.15
+        
+        opportunity = demand - saturation_penalty
+        if opportunity < 0: opportunity = 0
+        opportunity = min(opportunity, 100)
+        
+        if opportunity > 40 or data['total'] == 0:
+            master_bairro_data.append({
+                "City_Tier": city_tier,
+                "City": city_name,
+                "Microbairro": name,
+                "Latitude": data['lat'],
+                "Longitude": data['lon'],
+                "City_Income_Proxy": renda_proxy,
+                "Mapped_Pharmacies": data['total'],
+                "Big_Chains_Mapped": data['big_chains'],
+                "Opportunity_Score": round(opportunity, 1)
+            })
+            
+    master_bairro_data = sorted(master_bairro_data, key=lambda x: x["Opportunity_Score"], reverse=True)
+    return {"source": "live", "microbairros": master_bairro_data}
+
+@app.post("/insights/microbairros/{codigo_ibge}")
+def post_microbairros_insights(codigo_ibge: str, payload: dict):
+    if not API_KEY:
+        raise HTTPException(status_code=500, detail="ANTHROPIC_API_KEY não configurada")
+    
+    city_name = payload.get("city")
+    items = payload.get("items", [])
+    if not items:
+        return {"narrative": "Não há regiões gap suficientes mapeadas via OpenStreetMap L2 para formular um pitch."}
+        
+    prompt = (
+        f"You are an expert Real Estate and Pharmaceutical Market Analyst acting on behalf of PharmaSite.\n"
+        f"Your task is to draft a concise, executive pitch for pharmaceutical chain expansion teams based on our proprietary L2 Microbairro Opportunity data.\n\n"
+        f"We have identified {len(items)} structural gaps (microbairros) in {city_name} where demand is high but formal pharmacy presence is abnormally low/non-existent.\n\n"
+        f"DATA:\n"
+    )
+    for row in items[:15]:
+        prompt += f"- {row['Microbairro']} | Score: {row['Opportunity_Score']} | Renda Base: R${row['City_Income_Proxy']} | PDVs Físicos: {row['Mapped_Pharmacies']} (Redes: {row['Big_Chains_Mapped']})\n"
+        
+    prompt += (
+        f"\nDraft a highly persuasive, 3-paragraph executive summary recommending a land-grab strategy in these specific neighborhoods.\n"
+        f"Explain why gaps in {city_name} represent uncontested blue oceans based on these metrics. Keep it short, actionable, and formatted in Markdown."
+    )
+    
+    try:
+        client = anthropic.Anthropic(api_key=API_KEY)
+        resp = client.messages.create(
+            model="claude-3-7-sonnet-20250219",
+            max_tokens=600,
+            system="Responda em português com tom executivo e persuasivo.",
+            messages=[{"role": "user", "content": prompt}]
+        )
+        return {"narrative": resp.content[0].text}
+    except Exception as e:
+        print("Anthropic Error:", e)
+        raise HTTPException(status_code=500, detail=str(e))
 
 @app.get("/scout")
 def agent_scout_endpoint(bairro: str, cidade: str = "Campinas, SP"):
@@ -460,6 +585,40 @@ def get_stats():
         "csv_path": str(CSV_PATH.resolve()),
     }
 
+
+@app.get("/scenarios/active")
+def get_active_scenario():
+    """Retrieve custom override scenarios."""
+    weights = scenario_manager.load_active_scenario()
+    return {"weights": weights}
+
+@app.post("/scenarios")
+def save_active_scenario(payload: ScenarioPayload):
+    """Save custom overrides and regenerate the model weights instantly."""
+    import os
+    scenarios_dir = Path("scenarios")
+    if not scenarios_dir.exists():
+        os.makedirs(scenarios_dir)
+        
+    active_path = scenarios_dir / "active_scenario.json"
+    data = {"weights": payload.weights} if payload.weights else {}
+    
+    with open(active_path, "w", encoding="utf-8") as f:
+        json.dump(data, f, indent=4)
+        
+    # Trigger offline recalculation synchronously
+    global _df_cache, _csv_mtime
+    try:
+        print("  [API] Triggering score_offline.py recalculation...")
+        # Since API is inside pharmasite2, we just run python
+        subprocess.run(["python", "score_offline.py"], check=True)
+        # Invalidate buffer
+        _df_cache = None
+        _csv_mtime = 0.0
+        return {"status": "success", "message": "Motor recalculado com novo cenário"}
+    except Exception as e:
+        print(f"Error running score_offline.py: {e}")
+        raise HTTPException(status_code=500, detail="Erro no recálculo do motor.")
 
 # ─── Run direto ──────────────────────────────────────────────────────────────
 if __name__ == "__main__":

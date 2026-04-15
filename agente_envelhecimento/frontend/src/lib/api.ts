@@ -6,6 +6,8 @@ import type {
   InsightsResponse,
   TradeAreaInsightsRequest,
   TradeAreaInsightsResponse,
+  MicrobairrosResponse,
+  MicrobairrosInsightsRequest,
 } from './types';
 
 const BASE = process.env.NEXT_PUBLIC_API_URL ?? 'http://127.0.0.1:8000';
@@ -72,5 +74,21 @@ export const api = {
 
   postTradeAreaInsights(payload: TradeAreaInsightsRequest): Promise<TradeAreaInsightsResponse> {
     return postJson('/insights/tradearea', payload);
+  },
+
+  getMicrobairros(codigoIbge: string): Promise<MicrobairrosResponse> {
+    return get(`/municipios/${codigoIbge}/microbairros`);
+  },
+
+  postMicrobairrosInsights(codigoIbge: string, payload: MicrobairrosInsightsRequest): Promise<{ narrative: string }> {
+    return postJson(`/insights/microbairros/${codigoIbge}`, payload);
+  },
+
+  getActiveScenario(): Promise<{ weights: import('./types').ScenarioWeights | null }> {
+    return get('/scenarios/active');
+  },
+
+  saveScenario(weights: import('./types').ScenarioWeights | null): Promise<{ status: string }> {
+    return postJson('/scenarios', { weights });
   },
 };

@@ -6,8 +6,9 @@ import { Activity, Database } from 'lucide-react';
 
 import RankingSidebar from '@/components/RankingSidebar';
 import CityDetailPanel from '@/components/CityDetailPanel';
+import SettingsModal from '@/components/SettingsModal';
 import { api } from '@/lib/api';
-import type { Municipio, MunicipioDetail, TradeAreaItem } from '@/lib/types';
+import type { Municipio, MunicipioDetail, TradeAreaItem, MicrobairroItem } from '@/lib/types';
 
 // Map must be client-only (no SSR — WebGL requires browser)
 const PharmaSiteMap = dynamic(() => import('@/components/Map'), { ssr: false });
@@ -19,23 +20,36 @@ export default function Dashboard() {
   const [cityDetail, setCityDetail] = useState<MunicipioDetail | null>(null);
   const [loadingDetail, setLoadingDetail] = useState(false);
   const [tradeArea, setTradeArea] = useState<{ center: [number, number]; items: TradeAreaItem[] } | null>(null);
+  const [microbairros, setMicrobairros] = useState<MicrobairroItem[] | null>(null);
+  const [showSettings, setShowSettings] = useState(false);
 
-  // Fetch municipalities for the map on mount
-  useEffect(() => {
+  const fetchMunicipalities = useCallback(() => {
     api.getMunicipios({ limit: 6000 })
       .then(res => setMunicipalities(res.results))
       .catch(console.error);
   }, []);
 
+  // Fetch municipalities for the map on mount
+  useEffect(() => {
+    fetchMunicipalities();
+  }, [fetchMunicipalities]);
+
   // Fetch city detail whenever selectedId changes
   useEffect(() => {
-    if (!selectedId) { setCityDetail(null); setTradeArea(null); return; }
+    if (!selectedId) { setCityDetail(null); setTradeArea(null); setMicrobairros(null); return; }
     setLoadingDetail(true);
     setTradeArea(null);
+    setMicrobairros(null);
+    
     api.getMunicipio(selectedId)
       .then(setCityDetail)
       .catch(console.error)
       .finally(() => setLoadingDetail(false));
+      
+    // Fetch microbairros async (does not block detail view)
+    api.getMicrobairros(selectedId)
+      .then(res => setMicrobairros(res.microbairros))
+      .catch(console.error);
   }, [selectedId]);
 
   const handleCitySelect = useCallback((id: string) => {
@@ -46,6 +60,7 @@ export default function Dashboard() {
     setSelectedId(null);
     setCityDetail(null);
     setTradeArea(null);
+    setMicrobairros(null);
   }, []);
 
   const handleTradeAreaLoaded = useCallback(
@@ -91,15 +106,24 @@ export default function Dashboard() {
           </div>
 
           <div className="flex items-center gap-3 text-[11px] text-[var(--muted)]">
-            <div className="flex items-center gap-1.5">
+            <div className="flex items-center gap-1.5 mr-2">
               <Database size={11} />
               {municipalities.length.toLocaleString()} municípios
             </div>
             {coordCount > 0 && (
-              <div className="glass px-2 py-1 text-[10px]">
+              <div className="glass px-2 py-1 text-[10px] mr-2">
                 {coordCount} com coordenadas
               </div>
             )}
+            
+            <button 
+              onClick={() => setShowSettings(true)}
+              className="px-2 py-1 flex items-center gap-1.5 glass rounded cursor-pointer hover:bg-white/10 transition-colors mr-2"
+            >
+              <Activity size={12} className="text-[var(--primary)]" />
+              <span className="font-bold">Cenários</span>
+            </button>
+
             <div
               className="w-2 h-2 rounded-full animate-pulse"
               style={{ background: '#22c55e' }}
@@ -115,6 +139,7 @@ export default function Dashboard() {
             selectedId={selectedId}
             uf={uf}
             tradeAreaData={tradeArea}
+            microbairros={microbairros}
             onCityClick={handleCitySelect}
           />
         </div>
@@ -140,11 +165,21 @@ export default function Dashboard() {
         {cityDetail && !loadingDetail && (
           <CityDetailPanel
             detail={cityDetail}
+            microbairros={microbairros}
             onClose={handleClose}
             onTradeAreaLoaded={handleTradeAreaLoaded}
           />
         )}
       </div>
+
+      {showSettings && (
+        <SettingsModal 
+          onClose={() => setShowSettings(false)}
+          onSaveConfig={() => {
+            fetchMunicipalities(); // Immediately fetch the newly processed JSON
+          }}
+        />
+      )}
     </div>
   );
 }

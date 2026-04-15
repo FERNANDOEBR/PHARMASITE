@@ -124,20 +124,7 @@ export interface RankingResponse {
   results: RankingItem[];
 }
 
-// ── Trade area (from GET /tradearea/{lat}/{lon}) ───────────────────────────────
-export interface TradeAreaItem {
-  codigo_ibge: string;
-  nome: string;
-  uf: string;
-  latitude: number | null;
-  longitude: number | null;
-  distance_km: number;
-  attractiveness: number;
-  probability: number;
-  estimated_customers: number | null;
-}
-
-export interface TradeAreaResponse {
+// ── Trade area (from GET /tradearea/{lat}/{lon}) ───────────────────────────�export interface TradeAreaResponse {
   center_lat: number;
   center_lon: number;
   radius_km: number;
@@ -165,7 +152,33 @@ export interface TradeAreaInsightsRequest {
   radius_km: number;
   total_estimated_customers: number | null;
   items: TradeAreaItem[];
+  indice_envelhecimento: number | null;
+  pop_0_4: number | null;
+  pop_5_14: number | null;
+  pop_15_29: number | null;
+  pop_30_59: number | null;
+  pop_60_mais: number | null;
+}ponse {
+  center_lat: number;
+  center_lon: number;
+  radius_km: number;
+  total_estimated_customers: number | null;
+  results: TradeAreaItem[];
 }
+
+// ── AI Insights (from POST /insights/{id}) ────────────────────────────────────
+export interface InsightsResponse {
+  codigo_ibge: string;
+  nome: string;
+  uf: string;
+  tier: string | null;
+  score_total: number | null;
+  narrative: string;
+  model_used: string;
+  generated_at: string;
+}
+
+
 
 export interface TradeAreaInsightsResponse {
   codigo_ibge: string;
@@ -174,4 +187,35 @@ export interface TradeAreaInsightsResponse {
   narrative: string;
   model_used: string;
   generated_at: string;
+}
+
+// ── Microbairros L2 ───────────────────────────────────────────────────────────
+export interface MicrobairroItem {
+  City_Tier: string;
+  City: string;
+  Microbairro: string;
+  Latitude: number;
+  Longitude: number;
+  City_Income_Proxy: number;
+  Mapped_Pharmacies: number;
+  Big_Chains_Mapped: number;
+  Opportunity_Score: number;
+}
+
+export interface MicrobairrosResponse {
+  source: string;
+  microbairros: MicrobairroItem[];
+}
+
+export interface MicrobairrosInsightsRequest {
+  city: string;
+  items: MicrobairroItem[];
+}
+
+export interface ScenarioWeights {
+  demo: number;
+  logistica: number;
+  economia: number;
+  saude: number;
+  competitividade: number;
 }
