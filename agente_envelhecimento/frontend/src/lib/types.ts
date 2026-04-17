@@ -1,4 +1,12 @@
-// ── Municipio list item (from GET /municipios) ───────────────────────────────
+// ============================================================================
+//  PharmaSite / Agente Envelhecimento â€” API types
+//  Restored 2026-04-17 after GLM-induced corruption. Merges:
+//    - base types from commit c88e516 (latest clean snapshot)
+//    - Trade Area types from commit e1f77b9 (before deletion)
+//    - new fields for aging demographics preserved from working tree
+// ============================================================================
+
+// -- Municipio list item (from GET /municipios) ------------------------------
 export interface Municipio {
   codigo_ibge: string;
   nome: string;
@@ -20,7 +28,7 @@ export interface MunicipioListResponse {
   results: Municipio[];
 }
 
-// ── Full municipality detail (from GET /municipios/{id}) ──────────────────────
+// -- Full municipality detail (from GET /municipios/{id}) --------------------
 export interface Demograficos {
   populacao_total: number | null;
   populacao_urbana: number | null;
@@ -30,7 +38,6 @@ export interface Demograficos {
   pct_populacao_alvo: number | null;
   renda_per_capita: number | null;
   elderly_pct: number | null;
-  indice_envelhecimento: number | null;
   indice_envelhecimento: number | null;
   pop_0_4: number | null;
   pop_5_14: number | null;
@@ -103,7 +110,7 @@ export interface MunicipioDetail {
   score: ScoreBreakdown | null;
 }
 
-// ── Ranking (from GET /ranking) ───────────────────────────────────────────────
+// -- Ranking (from GET /ranking) ---------------------------------------------
 export interface RankingItem {
   ranking_nacional: number | null;
   codigo_ibge: string;
@@ -124,7 +131,20 @@ export interface RankingResponse {
   results: RankingItem[];
 }
 
-// ── Trade area (from GET /tradearea/{lat}/{lon}) ───────────────────────────�export interface TradeAreaResponse {
+// -- Trade area (from GET /tradearea/{lat}/{lon}) ----------------------------
+export interface TradeAreaItem {
+  codigo_ibge: string;
+  nome: string;
+  uf: string;
+  latitude: number | null;
+  longitude: number | null;
+  distance_km: number;
+  attractiveness: number;
+  probability: number;
+  estimated_customers: number | null;
+}
+
+export interface TradeAreaResponse {
   center_lat: number;
   center_lon: number;
   radius_km: number;
@@ -132,7 +152,7 @@ export interface RankingResponse {
   results: TradeAreaItem[];
 }
 
-// ── AI Insights (from POST /insights/{id}) ────────────────────────────────────
+// -- AI Insights (from POST /insights/{id}) ----------------------------------
 export interface InsightsResponse {
   codigo_ibge: string;
   nome: string;
@@ -144,7 +164,7 @@ export interface InsightsResponse {
   generated_at: string;
 }
 
-// ── Trade Area Insights (from POST /insights/tradearea) ───────────────────────
+// -- Trade Area Insights (from POST /insights/tradearea) ---------------------
 export interface TradeAreaInsightsRequest {
   codigo_ibge: string;
   center_lat: number;
@@ -158,27 +178,7 @@ export interface TradeAreaInsightsRequest {
   pop_15_29: number | null;
   pop_30_59: number | null;
   pop_60_mais: number | null;
-}ponse {
-  center_lat: number;
-  center_lon: number;
-  radius_km: number;
-  total_estimated_customers: number | null;
-  results: TradeAreaItem[];
 }
-
-// ── AI Insights (from POST /insights/{id}) ────────────────────────────────────
-export interface InsightsResponse {
-  codigo_ibge: string;
-  nome: string;
-  uf: string;
-  tier: string | null;
-  score_total: number | null;
-  narrative: string;
-  model_used: string;
-  generated_at: string;
-}
-
-
 
 export interface TradeAreaInsightsResponse {
   codigo_ibge: string;
@@ -189,7 +189,7 @@ export interface TradeAreaInsightsResponse {
   generated_at: string;
 }
 
-// ── Microbairros L2 ───────────────────────────────────────────────────────────
+// -- Microbairros L2 ---------------------------------------------------------
 export interface MicrobairroItem {
   City_Tier: string;
   City: string;
@@ -212,6 +212,22 @@ export interface MicrobairrosInsightsRequest {
   items: MicrobairroItem[];
 }
 
+export interface MicrobairrosInsightsResponse {
+  city: string;
+  narrative: string;
+  model_used: string;
+  generated_at: string;
+}
+
+// -- Scenario weights (What-If sliders) --------------------------------------
+export interface ScenarioWeights {
+  demo: number;
+  logistica: number;
+  economia: number;
+  saude: number;
+  competitividade: number;
+}
+
 export interface ScenarioWeights2 {
   demo: number;
   logistica: number;
@@ -225,11 +241,5 @@ export interface ScenarioConfig {
   max_viable_km: number;
   min_population: number;
   use_custom_weights: boolean;
-  weights: {
-    demo: number;
-    logistica: number;
-    economia: number;
-    saude: number;
-    competitividade: number;
-  }
+  weights: ScenarioWeights;
 }

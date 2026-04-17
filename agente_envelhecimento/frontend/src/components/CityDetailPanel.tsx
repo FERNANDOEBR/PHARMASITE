@@ -180,8 +180,8 @@ export default function CityDetailPanel({ detail, microbairros, onClose, onTrade
         pop_0_4: detail.demograficos?.pop_0_4 ?? null,
         pop_5_14: detail.demograficos?.pop_5_14 ?? null,
         pop_15_29: detail.demograficos?.pop_15_29 ?? null,
-        pop_30_59: detail.demograficos?.pop_30_59 ?? null,
-        pop_60_mais: detail.demograficos?.pop_60_mais ?? null,
+        pop_30_59: (detail.demograficos?.pop_30_44 ?? 0) + (detail.demograficos?.pop_45_64 ?? 0) || null,
+        pop_60_mais: detail.demograficos?.pop_65_plus ?? null,
       };
       const res = await api.postTradeAreaInsights(payload);
       setTradeAreaNarrative(res.narrative);
