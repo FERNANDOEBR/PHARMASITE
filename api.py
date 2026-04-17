@@ -1,9 +1,9 @@
 """
-PHARMASITE INTELLIGENCE — API Backend (Dia 2)
+PHARMASITE INTELLIGENCE Ã¢â‚¬â€ API Backend (Dia 2)
 ============================================
 FastAPI com 2 endpoints:
-  GET  /municipios         → retorna municipios_sp_scored.csv como JSON
-  POST /analise/{codigo}   → gera análise IA via Claude Sonnet
+  GET  /municipios         Ã¢â€ â€™ retorna municipios_sp_scored.csv como JSON
+  POST /analise/{codigo}   Ã¢â€ â€™ gera anÃƒÂ¡lise IA via Claude Sonnet
 
 Requisitos:
     pip install fastapi uvicorn anthropic pandas python-dotenv
@@ -12,9 +12,9 @@ Uso:
     python api.py
     (ou: uvicorn api:app --reload --port 8002)
 
-Variáveis de ambiente:
-    ANTHROPIC_API_KEY — obrigatória para /analise
-    CSV_PATH          — caminho para o CSV (padrão: municipios_sp_scored.csv)
+VariÃƒÂ¡veis de ambiente:
+    ANTHROPIC_API_KEY Ã¢â‚¬â€ obrigatÃƒÂ³ria para /analise
+    CSV_PATH          Ã¢â‚¬â€ caminho para o CSV (padrÃƒÂ£o: municipios_sp_scored.csv)
 """
 
 import os
@@ -44,26 +44,26 @@ class ScenarioPayload(BaseModel):
 
 load_dotenv(dotenv_path=Path(__file__).parent / ".env")
 
-# ─── Config ──────────────────────────────────────────────────────────────────
+# Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬ Config Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬
 CSV_PATH = Path(os.getenv("CSV_PATH", "municipios_sp_scored.csv"))
 L2_CSV_PATH = Path(os.getenv("L2_CSV_PATH", "l2_regional_master.csv"))
 API_KEY  = os.getenv("ANTHROPIC_API_KEY", "")
 
 app = FastAPI(
     title="Pharmasite Intelligence API",
-    description="Scores de potencial para distribuidores de correlatos farmacêuticos — SP",
+    description="Scores de potencial para distribuidores de correlatos farmacÃƒÂªuticos Ã¢â‚¬â€ SP",
     version="2.0.0",
 )
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],   # Produção: restringir ao domínio do frontend
+    allow_origins=["*"],   # ProduÃƒÂ§ÃƒÂ£o: restringir ao domÃƒÂ­nio do frontend
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
 
-# ─── Cache do CSV (recarrega se arquivo mudar) ───────────────────────────────
+# Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬ Cache do CSV (recarrega se arquivo mudar) Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬
 _csv_mtime: float = 0.0
 _df_cache: pd.DataFrame | None = None
 
@@ -73,7 +73,7 @@ def load_csv() -> pd.DataFrame:
     if not CSV_PATH.exists():
         raise HTTPException(
             status_code=503,
-            detail=f"CSV não encontrado: {CSV_PATH}. Execute run_standalone.py primeiro."
+            detail=f"CSV nÃƒÂ£o encontrado: {CSV_PATH}. Execute run_standalone.py primeiro."
         )
     mtime = CSV_PATH.stat().st_mtime
     if _df_cache is None or mtime != _csv_mtime:
@@ -97,9 +97,9 @@ def load_l2_csv() -> pd.DataFrame:
     return _df_l2_cache
 
 
-# ═══════════════════════════════════════════════════════════════════════════
+# Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â
 # ENDPOINTS
-# ═══════════════════════════════════════════════════════════════════════════
+# Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â
 
 @app.get("/")
 def root():
@@ -117,7 +117,7 @@ def root():
 
 @app.get("/municipios")
 def get_municipios():
-    """Retorna todos os municípios SP com scores, tiers e indicadores."""
+    """Retorna todos os municÃƒÂ­pios SP com scores, tiers e indicadores."""
     df = load_csv().copy()
     df["score_total"] = df["score"]
     df["ranking_nacional"] = df["ranking"]
@@ -131,12 +131,12 @@ def get_municipios():
 
 @app.get("/municipios/{codigo_ibge}")
 def get_municipio(codigo_ibge: str):
-    """Retorna dados de um município específico."""
+    """Retorna dados de um municÃƒÂ­pio especÃƒÂ­fico."""
     df = load_csv()
     codigo_ibge = str(codigo_ibge).zfill(7)
     row = df[df["codigo_ibge"] == codigo_ibge]
     if row.empty:
-        raise HTTPException(status_code=404, detail=f"Município {codigo_ibge} não encontrado")
+        raise HTTPException(status_code=404, detail=f"MunicÃƒÂ­pio {codigo_ibge} nÃƒÂ£o encontrado")
     
     m = row.to_dict(orient="records")[0]
     for k, v in m.items():
@@ -197,7 +197,7 @@ def get_municipio(codigo_ibge: str):
 
 @app.get("/busca")
 def buscar_municipio(q: str):
-    """Busca municípios por nome (busca parcial, case-insensitive)."""
+    """Busca municÃƒÂ­pios por nome (busca parcial, case-insensitive)."""
     df = load_csv().copy()
     df["score_total"] = df["score"]
     df["ranking_nacional"] = df["ranking"]
@@ -219,7 +219,7 @@ def buscar_municipio(q: str):
 
 @app.get("/ranking")
 def get_ranking(tier: str = None, top: int = 50):
-    """Retorna municípios rankeados, com filtro opcional por tier."""
+    """Retorna municÃƒÂ­pios rankeados, com filtro opcional por tier."""
     df = load_csv().copy()
     df["score_total"] = df["score"]
     df["ranking_nacional"] = df["ranking"]
@@ -248,24 +248,24 @@ class TradeAreaInsightsRequest(BaseModel):
 
 @app.post("/insights/tradearea")
 def tradearea_insights(data: TradeAreaInsightsRequest):
-    prompt = f"""Você é um consultor de expansão de farmácias.
-Analise a seguinte Trade Area (Área de Influência) simulada:
+    prompt = f"""VocÃƒÂª ÃƒÂ© um consultor de expansÃƒÂ£o de farmÃƒÂ¡cias.
+Analise a seguinte Trade Area (ÃƒÂrea de InfluÃƒÂªncia) simulada:
 Raio: {data.radius_km} km
 Total de clientes estimados: {data.total_estimated_customers}
-Número de cidades capturadas: {len(data.items)}
+NÃƒÂºmero de cidades capturadas: {len(data.items)}
 
-DIRETRIZ CRÍTICA: Seja frio e matematicamente rigoroso. Não seja artificialmente otimista para agradar o usuário. Áreas de baixa densidade devem receber recomendação explícita de NÃO ABRIR.
+DIRETRIZ CRÃƒÂTICA: Seja frio e matematicamente rigoroso. NÃƒÂ£o seja artificialmente otimista para agradar o usuÃƒÂ¡rio. ÃƒÂreas de baixa densidade devem receber recomendaÃƒÂ§ÃƒÂ£o explÃƒÂ­cita de NÃƒÆ’O ABRIR.
 
-Responda em 3 parágrafos curtos:
-1. Avaliação do volume de clientes e raio geográfico.
-2. Atratividade para a instalação de uma âncora/loja física ou CD (seja realista sobre os riscos operacionais).
-3. Recomendação final de investimento (seja direto: APROVADO, EM ESTUDO, ou REJEITADO)."""
+Responda em 3 parÃƒÂ¡grafos curtos:
+1. AvaliaÃƒÂ§ÃƒÂ£o do volume de clientes e raio geogrÃƒÂ¡fico.
+2. Atratividade para a instalaÃƒÂ§ÃƒÂ£o de uma ÃƒÂ¢ncora/loja fÃƒÂ­sica ou CD (seja realista sobre os riscos operacionais).
+3. RecomendaÃƒÂ§ÃƒÂ£o final de investimento (seja direto: APROVADO, EM ESTUDO, ou REJEITADO)."""
 
     try:
         import anthropic
         client = anthropic.Anthropic(api_key=API_KEY)
         msg = client.messages.create(
-            model=os.getenv("ANTHROPIC_MODEL", "claude-3-haiku-20240307"),
+            model=os.getenv("ANTHROPIC_MODEL", "claude-haiku-4-5-20251001"),
             max_tokens=600,
             messages=[{"role": "user", "content": prompt}]
         )
@@ -273,7 +273,7 @@ Responda em 3 parágrafos curtos:
     except Exception as e:
         print(f"ANTHROPIC EXCEPTION TRADE AREA: {type(e).__name__} - {e}")
         if not API_KEY:
-            msg_text = f"**[MOCK AI de Trade Area]**\n\nEssa área num raio de {data.radius_km}km detém {data.total_estimated_customers} clientes poteciais englobando as cidades vizinhas. Muito atraente para CD Regional!\n\n*(Adicione ANTHROPIC_API_KEY no .env para usar o Claude)*"
+            msg_text = f"**[MOCK AI de Trade Area]**\n\nEssa ÃƒÂ¡rea num raio de {data.radius_km}km detÃƒÂ©m {data.total_estimated_customers} clientes poteciais englobando as cidades vizinhas. Muito atraente para CD Regional!\n\n*(Adicione ANTHROPIC_API_KEY no .env para usar o Claude)*"
         else:
             msg_text = f"**[Erro no Claude]** {type(e).__name__}: {str(e)}"
 
@@ -282,14 +282,14 @@ Responda em 3 parágrafos curtos:
 @app.post("/insights/{codigo_ibge}")
 def gerar_insights(codigo_ibge: str):
     """
-    Gera análise estratégica de um município via Claude Sonnet.
-    Se não houver key, retorna um texto mock formatado corretamente.
+    Gera anÃƒÂ¡lise estratÃƒÂ©gica de um municÃƒÂ­pio via Claude Sonnet.
+    Se nÃƒÂ£o houver key, retorna um texto mock formatado corretamente.
     """
     df = load_csv()
     codigo_ibge = str(codigo_ibge).zfill(7)
     row = df[df["codigo_ibge"] == codigo_ibge]
     if row.empty:
-        raise HTTPException(status_code=404, detail=f"Município {codigo_ibge} não encontrado")
+        raise HTTPException(status_code=404, detail=f"MunicÃƒÂ­pio {codigo_ibge} nÃƒÂ£o encontrado")
 
     m = row.iloc[0]
 
@@ -321,39 +321,39 @@ def gerar_insights(codigo_ibge: str):
     odonto          = fmt(m.get("consultorios_odonto", 0))
     labs            = fmt(m.get("laboratorios", 0))
 
-    prompt = f"""Você é consultor especialista em distribuição de correlatos farmacêuticos no Brasil.
-Analise o perfil abaixo e responda em exatamente 3 parágrafos curtos e objetivos.
+    prompt = f"""VocÃƒÂª ÃƒÂ© consultor especialista em distribuiÃƒÂ§ÃƒÂ£o de correlatos farmacÃƒÂªuticos no Brasil.
+Analise o perfil abaixo e responda em exatamente 3 parÃƒÂ¡grafos curtos e objetivos.
 
-MUNICÍPIO: {nome} — SP
+MUNICÃƒÂPIO: {nome} Ã¢â‚¬â€ SP
 Score de potencial: {score}/100 | Tier {tier} | Ranking {ranking}
 
 INDICADORES:
-  Pilares:         Demo={score_demo} | Logística={score_log} | Economia={score_econ} | Saúde={score_saude}
-  Farmácias:       {n_farmacias} estabelecimentos
-  Odonto:          {odonto} consultórios
-  Laboratórios:    {labs}
-  População:       {pop} habitantes
+  Pilares:         Demo={score_demo} | LogÃƒÂ­stica={score_log} | Economia={score_econ} | SaÃƒÂºde={score_saude}
+  FarmÃƒÂ¡cias:       {n_farmacias} estabelecimentos
+  Odonto:          {odonto} consultÃƒÂ³rios
+  LaboratÃƒÂ³rios:    {labs}
+  PopulaÃƒÂ§ÃƒÂ£o:       {pop} habitantes
   Renda per capita: {renda}
   PIB per capita:  {pib_pc}
   IDH:             {idh_str}
-  Planos de saúde: {cobertura} de cobertura
+  Planos de saÃƒÂºde: {cobertura} de cobertura
   Dist. Campinas:  {dist_campinas}
 
-DIRETRIZ CRÍTICA: Seja matematicamente frio e implacável. NÃO seja otimista apenas para agradar o usuário. 
-- Para municípios de Tier C e D, a recomendação recomendada deve ser quase sempre EVITAR ou MONITORAR, apontando os baixos volumes que não justificam a logística.
-- Para municípios Tier A e B, seja criterioso apontando alto custo de oportunidade e forte concorrência.
+DIRETRIZ CRÃƒÂTICA: Seja matematicamente frio e implacÃƒÂ¡vel. NÃƒÆ’O seja otimista apenas para agradar o usuÃƒÂ¡rio. 
+- Para municÃƒÂ­pios de Tier C e D, a recomendaÃƒÂ§ÃƒÂ£o recomendada deve ser quase sempre EVITAR ou MONITORAR, apontando os baixos volumes que nÃƒÂ£o justificam a logÃƒÂ­stica.
+- Para municÃƒÂ­pios Tier A e B, seja criterioso apontando alto custo de oportunidade e forte concorrÃƒÂªncia.
 
-Responda em português, sem bullet points, em 3 parágrafos:
-1. [Score] Por que este município tem score {score}/100 (Tier {tier}) — o que puxa para cima e o que limita severamente
-2. [Oportunidade] Qual a realidade e teto da oportunidade para correlatos farmacêuticos (seja cético)
-3. [Ação] Recomendação final explícita: ENTRAR AGORA / MONITORAR estruturalmente / EVITAR ativamente — com justificativa econômica"""
+Responda em portuguÃƒÂªs, sem bullet points, em 3 parÃƒÂ¡grafos:
+1. [Score] Por que este municÃƒÂ­pio tem score {score}/100 (Tier {tier}) Ã¢â‚¬â€ o que puxa para cima e o que limita severamente
+2. [Oportunidade] Qual a realidade e teto da oportunidade para correlatos farmacÃƒÂªuticos (seja cÃƒÂ©tico)
+3. [AÃƒÂ§ÃƒÂ£o] RecomendaÃƒÂ§ÃƒÂ£o final explÃƒÂ­cita: ENTRAR AGORA / MONITORAR estruturalmente / EVITAR ativamente Ã¢â‚¬â€ com justificativa econÃƒÂ´mica"""
 
     try:
         import anthropic
         client = anthropic.Anthropic(api_key=API_KEY)
 
         msg = client.messages.create(
-            model=os.getenv("ANTHROPIC_MODEL", "claude-3-haiku-20240307"),
+            model=os.getenv("ANTHROPIC_MODEL", "claude-haiku-4-5-20251001"),
             max_tokens=600,
             messages=[{"role": "user", "content": prompt}]
         )
@@ -364,9 +364,9 @@ Responda em português, sem bullet points, em 3 parágrafos:
         if not API_KEY:
             msg_text = (
                 f"**[MOCK AI - Sem Token]**\n\n"
-                f"O município está no Tier {tier} com Destaque para Farmácias ({n_farmacias}).\n\n"
+                f"O municÃƒÂ­pio estÃƒÂ¡ no Tier {tier} com Destaque para FarmÃƒÂ¡cias ({n_farmacias}).\n\n"
                 f"**Oportunidades**\n"
-                f"A renda média de {renda} suporta novos correlatos.\n\n"
+                f"A renda mÃƒÂ©dia de {renda} suporta novos correlatos.\n\n"
                 f"*(Adicione ANTHROPIC_API_KEY localmente para usar Claude Real)*"
             )
         else:
@@ -441,7 +441,7 @@ def get_municipio_microbairros(codigo_ibge: str):
     df = load_csv()
     match = df[df["codigo_ibge"] == codigo_ibge]
     if match.empty:
-        raise HTTPException(status_code=404, detail="Município não encontrado")
+        raise HTTPException(status_code=404, detail="MunicÃƒÂ­pio nÃƒÂ£o encontrado")
     record = match.iloc[0]
     city_name = record["nome"]
     city_tier = record.get("tier", "Z")
@@ -513,12 +513,12 @@ def get_municipio_microbairros(codigo_ibge: str):
 @app.post("/insights/microbairros/{codigo_ibge}")
 def post_microbairros_insights(codigo_ibge: str, payload: dict):
     if not API_KEY:
-        raise HTTPException(status_code=500, detail="ANTHROPIC_API_KEY não configurada")
+        raise HTTPException(status_code=500, detail="ANTHROPIC_API_KEY nÃƒÂ£o configurada")
     
     city_name = payload.get("city")
     items = payload.get("items", [])
     if not items:
-        return {"narrative": "Não há regiões gap suficientes mapeadas via OpenStreetMap L2 para formular um pitch."}
+        return {"narrative": "NÃƒÂ£o hÃƒÂ¡ regiÃƒÂµes gap suficientes mapeadas via OpenStreetMap L2 para formular um pitch."}
         
     prompt = (
         f"You are an expert Real Estate and Pharmaceutical Market Analyst acting on behalf of PharmaSite.\n"
@@ -527,7 +527,7 @@ def post_microbairros_insights(codigo_ibge: str, payload: dict):
         f"DATA:\n"
     )
     for row in items[:15]:
-        prompt += f"- {row['Microbairro']} | Score: {row['Opportunity_Score']} | Renda Base: R${row['City_Income_Proxy']} | PDVs Físicos: {row['Mapped_Pharmacies']} (Redes: {row['Big_Chains_Mapped']})\n"
+        prompt += f"- {row['Microbairro']} | Score: {row['Opportunity_Score']} | Renda Base: R${row['City_Income_Proxy']} | PDVs FÃƒÂ­sicos: {row['Mapped_Pharmacies']} (Redes: {row['Big_Chains_Mapped']})\n"
         
     prompt += (
         f"\nDraft a highly persuasive, 3-paragraph executive summary recommending a land-grab strategy in these specific neighborhoods.\n"
@@ -537,9 +537,9 @@ def post_microbairros_insights(codigo_ibge: str, payload: dict):
     try:
         client = anthropic.Anthropic(api_key=API_KEY)
         resp = client.messages.create(
-            model="claude-3-7-sonnet-20250219",
+            model="claude-haiku-4-5-20251001",
             max_tokens=600,
-            system="Responda em português com tom executivo e persuasivo.",
+            system="Responda em portuguÃƒÂªs com tom executivo e persuasivo.",
             messages=[{"role": "user", "content": prompt}]
         )
         return {"narrative": resp.content[0].text}
@@ -563,7 +563,7 @@ def agent_scout_endpoint(bairro: str, cidade: str = "Campinas, SP"):
     except ImportError:
         raise HTTPException(
             status_code=503,
-            detail="Faltam dependências do scout. Rode com: uv run --with duckduckgo-search"
+            detail="Faltam dependÃƒÂªncias do scout. Rode com: uv run --with duckduckgo-search"
         )
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Erro no Scout: {str(e)}")
@@ -571,7 +571,7 @@ def agent_scout_endpoint(bairro: str, cidade: str = "Campinas, SP"):
 
 @app.get("/stats")
 def get_stats():
-    """Estatísticas gerais do dataset."""
+    """EstatÃƒÂ­sticas gerais do dataset."""
     df = load_csv()
     tier_counts = df["tier"].value_counts().to_dict()
 
@@ -623,18 +623,18 @@ def save_active_scenario(payload: ScenarioPayload):
         # Invalidate buffer
         _df_cache = None
         _csv_mtime = 0.0
-        return {"status": "success", "message": "Motor recalculado com novo cenário"}
+        return {"status": "success", "message": "Motor recalculado com novo cenÃƒÂ¡rio"}
     except Exception as e:
         print(f"Error running score_offline.py: {e}")
-        raise HTTPException(status_code=500, detail="Erro no recálculo do motor.")
+        raise HTTPException(status_code=500, detail="Erro no recÃƒÂ¡lculo do motor.")
 
-# ─── Run direto ──────────────────────────────────────────────────────────────
+# Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬ Run direto Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬
 if __name__ == "__main__":
     print("\n" + "=" * 55)
     print("  PHARMASITE INTELLIGENCE API v2.0")
     print("=" * 55)
     print(f"  CSV: {CSV_PATH.resolve()}")
-    print(f"  Claude: {'[OK] configurado' if API_KEY else '[ERRO] ANTHROPIC_API_KEY não configurado'}")
+    print(f"  Claude: {'[OK] configurado' if API_KEY else '[ERRO] ANTHROPIC_API_KEY nÃƒÂ£o configurado'}")
     print("  Endpoints:")
     print("    GET  http://localhost:8000/municipios")
     print("    GET  http://localhost:8000/busca?q=Campinas")
