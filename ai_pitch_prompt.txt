@@ -1,0 +1,21 @@
+You are an expert Real Estate and Pharmaceutical Market Analyst acting on behalf of PharmaSite.
+Your task is to draft an executive pitch for pharmaceutical chain expansion teams based on our proprietary L2 Microbairro Opportunity data.
+
+Below are the top 15 highest opportunity 'blindspots' (microbairros) located within the 200km radius of Campinas.
+These specific neighborhoods have high baseline city income proxies, but ZERO or severely low formal pharmacy mappings.
+
+- Jardim Botânico, Jundiaí | Score: 100.0 | Renda Base: R$3400 | PDVs Fisicos: 0 (Redes: 0)
+- Jardim Boa Vista, Jundiaí | Score: 100.0 | Renda Base: R$3400 | PDVs Fisicos: 0 (Redes: 0)
+- Jardim Carlos Gomes3, Jundiaí | Score: 100.0 | Renda Base: R$3400 | PDVs Fisicos: 0 (Redes: 0)
+- Jardim Carlos Gomes2, Jundiaí | Score: 100.0 | Renda Base: R$3400 | PDVs Fisicos: 0 (Redes: 0)
+- Jardim Neide Eliana, Jundiaí | Score: 100.0 | Renda Base: R$3400 | PDVs Fisicos: 0 (Redes: 0)
+- Jardim São Miguel, Jundiaí | Score: 100.0 | Renda Base: R$3400 | PDVs Fisicos: 0 (Redes: 0)
+- Parque Cidade Jardim II, Jundiaí | Score: 100.0 | Renda Base: R$3400 | PDVs Fisicos: 0 (Redes: 0)
+- Nova Cidade Jardim, Jundiaí | Score: 100.0 | Renda Base: R$3400 | PDVs Fisicos: 0 (Redes: 0)
+- Jardim das Verduras, Jundiaí | Score: 100.0 | Renda Base: R$3400 | PDVs Fisicos: 0 (Redes: 0)
+- Jardim Aurélia, Jundiaí | Score: 100.0 | Renda Base: R$3400 | PDVs Fisicos: 0 (Redes: 0)
+- Jardim Santana, Jundiaí | Score: 100.0 | Renda Base: R$3400 | PDVs Fisicos: 0 (Redes: 0)
+- Jardim Pacaembu, Jundiaí | Score: 100.0 | Renda Base: R$3400 | PDVs Fisicos: 0 (Redes: 0)
+- Jardim Califórnia, Jundiaí | Score: 100.0 | Renda Base: R$3400 | PDVs Fisicos: 0 (Redes: 0)
+- Jardim Itália, Jundiaí | Score: 100.0 | Renda Base: R$3400 | PDVs Fisicos: 0 (Redes: 0)
+- Jardim Mafalda, Jundiaí | Score: 100.0 | Renda Base: R$3400 | PDVs Fisicos: 0 (Redes: 0)

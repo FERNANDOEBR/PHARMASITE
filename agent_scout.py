@@ -6,8 +6,9 @@ from typing import Dict, Any
 
 from anthropic import Anthropic
 from duckduckgo_search import DDGS
-if os.path.exists('.env'):
-    with open('.env', 'r', encoding='utf-8') as f:
+env_file = os.path.join(os.path.dirname(__file__), '.env')
+if os.path.exists(env_file):
+    with open(env_file, 'r', encoding='utf-8') as f:
         for line in f:
             if '=' in line and not line.startswith('#'):
                 k, v = line.strip().split('=', 1)
@@ -42,7 +43,7 @@ def fetch_web_context(bairro: str, cidade: str) -> str:
                 # Top 4 para cobrir as 3 queries sem estourar tempo
                 results = list(ddgs.text(q, max_results=4, region="br-pt", safesearch="off", timelimit="y"))
                 for r in results:
-                    combined_results.append(f"Fonte: {r['title']} | Snippet: {r['body']}")
+                    combined_results.append(f"Fonte: {r['title']} | URL: {r['href']} | Snippet: {r['body']}")
             except Exception as e:
                 logger.error(f"Erro na busca do DDGS para '{q}': {e}")
                 
@@ -66,22 +67,24 @@ Bairro em análise: {bairro}, {cidade}
 === RESULTADOS DE BUSCA NA WEB RECENTES SOBRE O BAIRRO ===
 {context}
 ==========================================================
+""" + """
 
 Com base UNICAMENTE nos snippets da web fornecidos acima, faça as seguintes extrações.
 
 Responda ESTRITAMENTE em formato JSON com a seguinte estrutura:
-{{
-  "growth_score": 0 a 100 (Força da tese imobiliária/comercial nos dados atuais. 50 = estabilidade, 80+ = Boom, 20 = declínio),
-  "verdict": "Em Expansão", "Estável" ou "Estagnado/Sem Dados",
-  "real_estate_launches": ["Lista sucinta de projetos imobiliários, alvarás ou condomínios em desenvolvimento"],
-  "commercial_growth": ["Lista sucinta de projetos industriais, logísticos ou centros comerciais abrindo"],
-  "senior_demographics": ["Lista sucinta evidenciando envelhecimento (ex: casas de repouso mapeadas, clínicas geriátricas, foco terceira idade)"],
-  "analysis_markdown": "Um parágrafo de 3 a 5 linhas em Markdown pronto para ser lido pelo executivo. Aborde de forma crua a projeção de crescimento do local e como a infraestrutura de saúde geriátrica atende à demanda atual baseada nas buscas."
-}}
+{
+  "growth_score": 0 a 100,
+  "verdict": "Em Expansão" ou "Estável" ou "Estagnado",
+  "real_estate_launches": ["Lista sucinta"],
+  "commercial_growth": ["Lista sucinta"],
+  "senior_demographics": ["Lista evidenciando envelhecimento"],
+  "analysis_markdown": "Um parágrafo de 3 a 5 linhas em Markdown",
+  "sources": [{"title": "Nome da fonte original", "url": "https://..."}]
+}
 
 IMPORTANTE E REGRAS ESTRITAS: 
 - NÃO INVENTE DADOS ("DO NOT CHEAT"). NÃO USE "HARD CODE" DE NÚMEROS ARBITRÁRIOS E NÃO ALUCINE.
-- Sua análise e conclusões devem ser baseadas ESTRITAMENTE e UNICAMENTE nas evidências dos trechos da web acima.
+- Sua análise e as listas de projetos DEVEM FAZER CITAÇÃO DIRETA das URLs fornecidas. Mapeie rigorosamente as `sources` para provar que a análise é real! Se não houver fontes reais que embasam o fato, não cite!
 - Para "Envelhecimento", assuma os dados base do IBGE, mas CRUZE-OS ativamente com indicadores reais encontrados nas buscas (ex: inauguração de clínicas geriátricas, casas de repouso). Se não encontrar evidências da web para sustentar, não chute, deixe a lista vazia.
 - Retorne APENAS o JSON válido.
 - Extraia os nomes exatos de condomínios, empresas ou asilos se confirmados nos snippets."""
@@ -116,7 +119,8 @@ IMPORTANTE E REGRAS ESTRITAS:
             "real_estate_launches": [],
             "commercial_growth": [],
             "senior_demographics": [],
-            "analysis_markdown": "Não foi possível gerar a análise devido a um erro de comunicação com a IA."
+            "analysis_markdown": "Não foi possível gerar a análise devido a um erro de comunicação com a IA.",
+            "sources": []
         }
 
 

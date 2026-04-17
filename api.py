@@ -42,7 +42,7 @@ class ScenarioPayload(BaseModel):
     use_custom_weights: bool = False
     weights: dict | None = None
 
-load_dotenv()
+load_dotenv(dotenv_path=Path(__file__).parent / ".env")
 
 # ─── Config ──────────────────────────────────────────────────────────────────
 CSV_PATH = Path(os.getenv("CSV_PATH", "municipios_sp_scored.csv"))
@@ -272,7 +272,10 @@ Responda em 3 parágrafos curtos:
         msg_text = msg.content[0].text
     except Exception as e:
         print(f"ANTHROPIC EXCEPTION TRADE AREA: {type(e).__name__} - {e}")
-        msg_text = f"**[MOCK AI de Trade Area]**\n\nEssa área num raio de {data.radius_km}km detém {data.total_estimated_customers} clientes poteciais englobando as cidades vizinhas. Muito atraente para CD Regional!"
+        if not API_KEY:
+            msg_text = f"**[MOCK AI de Trade Area]**\n\nEssa área num raio de {data.radius_km}km detém {data.total_estimated_customers} clientes poteciais englobando as cidades vizinhas. Muito atraente para CD Regional!\n\n*(Adicione ANTHROPIC_API_KEY no .env para usar o Claude)*"
+        else:
+            msg_text = f"**[Erro no Claude]** {type(e).__name__}: {str(e)}"
 
     return {"narrative": msg_text}
 
@@ -358,13 +361,16 @@ Responda em português, sem bullet points, em 3 parágrafos:
 
     except Exception as e:
         print(f"ANTHROPIC EXCEPTION: {type(e).__name__} - {e}")
-        msg_text = (
-            f"**[MOCK AI - Sem Token]**\n\n"
-            f"O município está no Tier {tier} com Destaque para Farmácias ({n_farmacias}).\n\n"
-            f"**Oportunidades**\n"
-            f"A renda média de {renda} suporta novos correlatos.\n\n"
-            f"*(Adicione ANTHROPIC_API_KEY localmente para usar Claude Real)*"
-        )
+        if not API_KEY:
+            msg_text = (
+                f"**[MOCK AI - Sem Token]**\n\n"
+                f"O município está no Tier {tier} com Destaque para Farmácias ({n_farmacias}).\n\n"
+                f"**Oportunidades**\n"
+                f"A renda média de {renda} suporta novos correlatos.\n\n"
+                f"*(Adicione ANTHROPIC_API_KEY localmente para usar Claude Real)*"
+            )
+        else:
+            msg_text = f"**[Erro no Claude]** Falha ao comunicar com a IA: {type(e).__name__} - {str(e)}"
 
     return {
         "codigo_ibge": codigo_ibge,

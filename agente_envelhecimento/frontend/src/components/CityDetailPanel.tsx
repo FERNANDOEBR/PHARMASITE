@@ -6,11 +6,12 @@ import {
   Brain, MapPin, Loader2, ChevronDown, ChevronUp, Zap,
 } from 'lucide-react';
 import { api } from '@/lib/api';
-import type { MunicipioDetail, TradeAreaItem, TradeAreaInsightsRequest } from '@/lib/types';
+import type { MunicipioDetail, TradeAreaItem, TradeAreaInsightsRequest, MicrobairroItem } from '@/lib/types';
 import { tierColor, scoreToColor } from '@/lib/colors';
 
 interface Props {
   detail: MunicipioDetail;
+  microbairros: MicrobairroItem[] | null;
   onClose: () => void;
   onTradeAreaLoaded: (center: [number, number], items: TradeAreaItem[]) => void;
 }
@@ -104,7 +105,7 @@ function ScoreRow({ label, value }: { label: string; value: number | null }) {
 }
 
 // ── Main component ────────────────────────────────────────────────────────────
-export default function CityDetailPanel({ detail, onClose, onTradeAreaLoaded }: Props) {
+export default function CityDetailPanel({ detail, microbairros, onClose, onTradeAreaLoaded }: Props) {
   const [loadingInsights, setLoadingInsights] = useState(false);
   const [insights, setInsights] = useState<string | null>(null);
   const [insightsOpen, setInsightsOpen] = useState(false);
@@ -114,6 +115,13 @@ export default function CityDetailPanel({ detail, onClose, onTradeAreaLoaded }: 
   const [tradeAreaNarrative, setTradeAreaNarrative] = useState<string | null>(null);
   const [loadingTradeAreaInsights, setLoadingTradeAreaInsights] = useState(false);
   const [tradeAreaInsightsOpen, setTradeAreaInsightsOpen] = useState(false);
+  
+  const [loadingL2Insights, setLoadingL2Insights] = useState(false);
+  const [l2Narrative, setL2Narrative] = useState<string | null>(null);
+  const [l2InsightsOpen, setL2InsightsOpen] = useState(false);
+  
+  const [loadingScouter, setLoadingScouter] = useState(false);
+  const [scouterResult, setScouterResult] = useState<any>(null);
 
   const tierC = tierColor(detail.tier);
   const d = detail.demograficos;
@@ -163,11 +171,17 @@ export default function CityDetailPanel({ detail, onClose, onTradeAreaLoaded }: 
     try {
       const payload: TradeAreaInsightsRequest = {
         codigo_ibge: detail.codigo_ibge,
-        center_lat: detail.latitude!,
-        center_lon: detail.longitude!,
-        radius_km: 200,
+        center_lat: tradeAreaItems[0].latitude!,
+        center_lon: tradeAreaItems[0].longitude!,
+        radius_km: 30, // Default query was 30km
         total_estimated_customers: tradeAreaTotal,
-        items: tradeAreaItems,
+        items: tradeAreaItems.slice(0, 8), // send top 8 to save tokens
+        indice_envelhecimento: detail.demograficos?.indice_envelhecimento ?? null,
+        pop_0_4: detail.demograficos?.pop_0_4 ?? null,
+        pop_5_14: detail.demograficos?.pop_5_14 ?? null,
+        pop_15_29: detail.demograficos?.pop_15_29 ?? null,
+        pop_30_59: detail.demograficos?.pop_30_59 ?? null,
+        pop_60_mais: detail.demograficos?.pop_60_mais ?? null,
       };
       const res = await api.postTradeAreaInsights(payload);
       setTradeAreaNarrative(res.narrative);
@@ -177,6 +191,42 @@ export default function CityDetailPanel({ detail, onClose, onTradeAreaLoaded }: 
       setTradeAreaInsightsOpen(true);
     } finally {
       setLoadingTradeAreaInsights(false);
+    }
+  };
+
+  const handleL2Insights = async () => {
+    if (l2Narrative) { setL2InsightsOpen(o => !o); return; }
+    if (!microbairros || microbairros.length === 0) return;
+    setLoadingL2Insights(true);
+    try {
+      const payload = {
+        city: detail.nome,
+        items: microbairros,
+      };
+      const res = await api.postMicrobairrosInsights(detail.codigo_ibge, payload);
+      setL2Narrative(res.narrative);
+      setL2InsightsOpen(true);
+    } catch {
+      setL2Narrative('Erro ao gerar AI Pitch L2.');
+      setL2InsightsOpen(true);
+    } finally {
+      setLoadingL2Insights(false);
+    }
+  };
+
+  const handleRunScouter = async () => {
+    setLoadingScouter(true);
+    try {
+      // Direct call to /scout fallback in api.py
+      const url = `${process.env.NEXT_PUBLIC_API_URL ?? 'http://127.0.0.1:8000'}/scout?cidade=${detail.nome}, ${detail.uf}&bairro=Geral`;
+      const res = await fetch(url);
+      if(!res.ok) throw new Error("Scout Failed");
+      const data = await res.json();
+      setScouterResult(data);
+    } catch (e) {
+      setScouterResult({ score: 0, justificativa: "Falha ao executar o agente scouter." });
+    } finally {
+      setLoadingScouter(false);
     }
   };
 
@@ -304,6 +354,94 @@ export default function CityDetailPanel({ detail, onClose, onTradeAreaLoaded }: 
             <ScoreRow label="Score Total" value={detail.score_total ?? null} />
           </div>
         </div>
+
+        {/* L2 Microbairros Analysis */}
+        {microbairros && microbairros.length > 0 ? (
+          <div className="glass p-3">
+            <div className="flex items-center gap-1.5 text-rose-400 text-[10px] mb-2">
+              <MapPin size={11} /> Gaps L2 Microbairros — Top 5 Oportunidades
+            </div>
+            <div className="space-y-2">
+              {microbairros.slice(0, 5).map(m => (
+                <div key={m.Microbairro} className="flex items-center gap-2 text-xs">
+                  <div className="flex-1 truncate font-semibold text-white">
+                    {m.Microbairro} <span className="text-[10px] text-[var(--text-dim)] font-normal ml-1">R${m.City_Income_Proxy}</span>
+                  </div>
+                  <div className="text-right">
+                    <div className="font-mono text-rose-400 text-xs">
+                      {m.Opportunity_Score.toFixed(1)}
+                    </div>
+                    <div className="text-[9px] text-[var(--muted)]">{m.Mapped_Pharmacies} PDVs ({m.Big_Chains_Mapped} Redes)</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+            
+            <button
+               onClick={handleL2Insights}
+               disabled={loadingL2Insights}
+               className="w-full mt-3 flex items-center justify-center gap-2 py-2.0 rounded-lg text-xs font-semibold transition-all border"
+               style={{
+                 background: 'rgba(244, 63, 94, 0.15)',
+                 color: '#fb7185',
+                 borderColor: 'rgba(244, 63, 94, 0.4)',
+               }}
+            >
+              {loadingL2Insights ? <><Loader2 size={12} className="animate-spin" /> Gerando Pitch...</> : <><Brain size={12} /> Gerar Pitch de Negócios L2 (IA)</>}
+            </button>
+
+            {/* AI Pitch Narrative View */}
+            {l2Narrative && l2InsightsOpen && (
+              <div className="mt-2 text-xs text-[var(--text-dim)] leading-relaxed max-h-60 overflow-y-auto border-t border-[rgba(244,63,94,0.3)] pt-2">
+                <MarkdownBlock text={l2Narrative} />
+              </div>
+            )}
+          </div>
+        ) : microbairros && microbairros.length === 0 ? (
+          <div className="glass p-3 border-dashed" style={{ borderColor: 'var(--border)' }}>
+            <div className="flex items-center gap-1.5 text-[var(--muted)] text-[10px] mb-2">
+              <MapPin size={11} /> OpenStreetMap (L2) Edge Case
+            </div>
+            <div className="text-xs text-[var(--text-dim)] mb-2">
+              Não foram encontrados polígonos mapeados para os microbairros de <strong>{detail.nome}</strong> no OSM. Este é um blindspot clássico de mapeamento ativo.
+            </div>
+            {scouterResult ? (
+               <div className="mt-2 p-3 rounded text-xs glass bg-opacity-30 border border-[rgba(56,189,248,0.3)]">
+                 <div className="flex items-center justify-between mb-2">
+                   <div className="text-[var(--primary)] font-bold">Resumo AI Scouter</div>
+                   <div className="glass px-2 py-0.5 rounded text-white font-mono">{scouterResult.growth_score}/100</div>
+                 </div>
+                 
+                 <div className="text-[var(--text-dim)] mb-2 mt-1 italic">"{scouterResult.verdict}"</div>
+                 <MarkdownBlock text={scouterResult.analysis_markdown || scouterResult.justificativa} />
+                 
+                 {scouterResult.sources && scouterResult.sources.length > 0 && (
+                   <div className="mt-3 pt-2 border-t border-[rgba(255,255,255,0.1)]">
+                     <div className="text-[10px] text-gray-400 font-semibold mb-1 uppercase tracking-wider">Fontes (DDGS)</div>
+                     <ul className="list-disc list-inside space-y-1">
+                       {scouterResult.sources.map((s: any, i: number) => (
+                         <li key={i} className="text-[10px] truncate max-w-full">
+                           <a href={s.url} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">
+                             {s.title}
+                           </a>
+                         </li>
+                       ))}
+                     </ul>
+                   </div>
+                 )}
+               </div>
+            ) : (
+              <button
+                 onClick={handleRunScouter}
+                 disabled={loadingScouter}
+                 className="w-full py-2 rounded-lg text-xs font-semibold transition-all flex items-center justify-center gap-2"
+                 style={{ background: 'var(--navy)', color: 'var(--primary)', border: '1px solid rgba(56,189,248,0.4)' }}
+              >
+                {loadingScouter ? <><Loader2 size={12} className="animate-spin" /> Agente Coletando Informações...</> : <><Brain size={12}/> Run Agent Scouter (Web Research)</>}
+              </button>
+            )}
+          </div>
+        ) : null}
 
         {/* Trade Area results */}
         {tradeAreaItems && tradeAreaItems.length > 0 && (

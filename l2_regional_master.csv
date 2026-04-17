@@ -1,0 +1,1025 @@
+City_Tier,City,Microbairro,Latitude,Longitude,City_Income_Proxy,Mapped_Pharmacies,Big_Chains_Mapped,Opportunity_Score
+A,Jundiaí,Jardim Botânico,-23.16634,-46.9046367,3400,0,0,100.0
+A,Jundiaí,Jardim Boa Vista,-23.1830262,-46.8682042,3400,0,0,100.0
+A,Jundiaí,Jardim Carlos Gomes3,-23.1737592,-46.8769693,3400,0,0,100.0
+A,Jundiaí,Jardim Carlos Gomes2,-23.1732167,-46.8770176,3400,0,0,100.0
+A,Jundiaí,Jardim Neide Eliana,-23.1854907,-46.8523652,3400,0,0,100.0
+A,Jundiaí,Jardim São Miguel,-23.1852906,-46.869903,3400,0,0,100.0
+A,Jundiaí,Parque Cidade Jardim II,-23.2246919,-46.8599815,3400,0,0,100.0
+A,Jundiaí,Nova Cidade Jardim,-23.2263055,-46.8549939,3400,0,0,100.0
+A,Jundiaí,Jardim das Verduras,-23.1828647,-46.8464771,3400,0,0,100.0
+A,Jundiaí,Jardim Aurélia,-23.2190113,-46.8549621,3400,0,0,100.0
+A,Jundiaí,Jardim Santana,-23.186657,-46.8683175,3400,0,0,100.0
+A,Jundiaí,Jardim Pacaembu,-23.186683,-46.8631219,3400,0,0,100.0
+A,Jundiaí,Jardim Califórnia,-23.15842,-46.8704025,3400,0,0,100.0
+A,Jundiaí,Jardim Itália,-23.1802332,-46.8443808,3400,0,0,100.0
+A,Jundiaí,Jardim Mafalda,-23.2122514,-46.8736632,3400,0,0,100.0
+A,Jundiaí,Jardim Santa Júlia,-23.2131092,-46.8753104,3400,0,0,100.0
+A,Jundiaí,Jardim das Carpas,-23.1808578,-46.846745,3400,0,0,100.0
+A,Jundiaí,Jardim Adélia,-23.1850043,-46.8570628,3400,0,0,100.0
+A,Jundiaí,Jardim Marajoara,-23.181685,-46.7925925,3400,0,0,100.0
+A,Jundiaí,Jardim Vila Rica,-23.1744369,-46.8739802,3400,0,0,100.0
+A,Jundiaí,Jardim da Fonte,-23.1762329,-46.8729326,3400,0,0,100.0
+A,Jundiaí,Jardim Merci,-23.2089913,-46.8725279,3400,0,0,100.0
+A,Jundiaí,Jardim Carlos Gomes,-23.1740205,-46.8776609,3400,0,0,100.0
+A,Jundiaí,Jardim Santa Adelaide,-23.1981949,-46.8986741,3400,0,0,100.0
+A,Jundiaí,Jardim Sagrado Coração de Jesus,-23.1822633,-46.8498878,3400,0,0,100.0
+A,Jundiaí,Jardim Paulista,-23.2007655,-46.8964665,3400,0,0,100.0
+A,Jundiaí,Jardim Santa Rita de Cássia,-23.1889782,-46.8539366,3400,0,0,100.0
+A,Jundiaí,Jardim Anhanguera,-23.2056084,-46.8980399,3400,0,0,100.0
+A,Jundiaí,Jardim Morumbi,-23.1789716,-46.9007556,3400,0,0,100.0
+A,Vinhedo,Jardim Belo Horizonte,-23.0808855,-46.9849139,4500,0,0,100.0
+A,Jundiaí,Jardim Messina,-23.2045378,-46.8904364,3400,0,0,100.0
+A,Vinhedo,Jardim Flamengo,-23.0240035,-46.9718501,4500,0,0,100.0
+A,Vinhedo,Jardim Nova Canudos,-23.0259586,-46.9741455,4500,1,0,100.0
+A,Jundiaí,Jardim Santa Fé,-23.0861084,-46.8727896,3400,0,0,100.0
+A,Jundiaí,Jardim São Judas Tadeu,-23.1876769,-46.8523369,3400,0,0,100.0
+A,Jundiaí,Jardim Cristina,-23.2063842,-46.8893026,3400,0,0,100.0
+A,Jundiaí,Jardim Bonfiglioli,-23.207902,-46.8875032,3400,0,0,100.0
+A,Jundiaí,Loteamento Jardim Solar,-23.1212292,-46.8536273,3400,0,0,100.0
+A,Jundiaí,Jardim Rosaura,-23.1597558,-46.8449163,3400,0,0,100.0
+A,Jundiaí,Jardim Colonial,-23.178229,-46.8538517,3400,0,0,100.0
+A,Jundiaí,Jardim do Lírio,-23.1731545,-46.8528403,3400,0,0,100.0
+A,Jundiaí,Jardim Danúbio,-23.172693,-46.8833803,3400,0,0,100.0
+A,Jundiaí,Jardim Liberdade,-23.1699078,-46.8885617,3400,0,0,100.0
+A,Jundiaí,Jardim Marco Leite,-23.1690228,-46.8876132,3400,0,0,100.0
+A,Jundiaí,Jardim Caxambu,-23.1558581,-46.8503872,3400,0,0,100.0
+A,Jundiaí,Jardim Esplanada,-23.2133256,-46.8705522,3400,0,0,100.0
+A,Jundiaí,Jardim Rio Branco,-23.1711844,-46.888225,3400,0,0,100.0
+A,Jundiaí,Jardim Nações Unidas,-23.209146,-46.8616788,3400,0,0,100.0
+A,Jundiaí,Jardim Vera Cruz,-23.1524537,-46.8377813,3400,0,0,100.0
+A,Jundiaí,Jardim Itamarati,-23.2099182,-46.8901406,3400,0,0,100.0
+A,Jundiaí,Jardim Campos Elíseos,-23.1872681,-46.9030973,3400,0,0,100.0
+A,Jundiaí,Jardim Angela,-23.1798045,-46.8656084,3400,0,0,100.0
+A,Jundiaí,Jardim Estádio,-23.2140051,-46.8655239,3400,0,0,100.0
+A,Jundiaí,Jardim Dona Donata de Jesus,-23.1822194,-46.8586767,3400,0,0,100.0
+A,Jundiaí,Jardim Tarumã,-23.1664328,-46.8701012,3400,0,0,100.0
+A,Jundiaí,Jardim São Camilo Novo,-23.1743068,-46.8668876,3400,0,0,100.0
+A,Jundiaí,Jardim Pitangueiras,-23.2084333,-46.8831466,3400,0,0,100.0
+A,Jundiaí,Jardim Dom Bosco,-23.1808058,-46.8510486,3400,0,0,100.0
+A,Jundiaí,Jardim São Marcus,-23.17363,-46.8644385,3400,0,0,100.0
+A,Jundiaí,Jardim Santa Gertrudes,-23.2467873,-46.8544198,3400,0,0,100.0
+A,Jundiaí,Jardim São Camilo,-23.178116,-46.8641608,3400,0,0,100.0
+A,Jundiaí,Jardim do Lago,-23.2183997,-46.8622087,3400,0,0,100.0
+A,Jundiaí,Jardim Tiradentes,-23.1718435,-46.8945385,3400,0,0,100.0
+A,Jundiaí,Bom Jardim,-23.1391466,-47.0168813,3400,0,0,100.0
+A,Jundiaí,Jardim Fepasa,-23.1718981,-46.8975068,3400,0,0,100.0
+A,Jundiaí,Jardim das Bandeiras,-23.1557867,-46.8710082,3400,0,0,100.0
+A,Jundiaí,Jardim Roma,-23.1796296,-46.8581954,3400,0,0,100.0
+A,Jundiaí,Jardim Dupré,-23.2011109,-46.8766749,3400,0,0,100.0
+A,Jundiaí,Jardim Flora,-23.1858728,-46.9997808,3400,0,0,100.0
+A,Jundiaí,Jardim Caçula,-23.1737911,-46.8561734,3400,0,0,100.0
+A,Jundiaí,Jardim Florestal,-23.1647193,-46.8994768,3400,0,0,100.0
+A,Jundiaí,Jardim Pacaembú,-23.1864728,-46.8621033,3400,0,0,100.0
+A,Jundiaí,Jardim Tamoio,-23.1905918,-46.85153,3400,0,0,100.0
+A,Jundiaí,Jardim Shangai,-23.17304,-46.9133472,3400,0,0,100.0
+A,Jundiaí,Cidade Jardim,-23.1725616,-46.9106314,3400,0,0,100.0
+A,Jundiaí,Jardim Eldorado,-23.1731297,-46.9091028,3400,0,0,100.0
+A,Jundiaí,Jardim Hortulania,-23.1699902,-46.9087613,3400,0,0,100.0
+A,Jundiaí,Jardim Celeste,-23.1202228,-46.9321277,3400,0,0,100.0
+A,Jundiaí,Jardim Corrupira,-23.1258442,-46.9342234,3400,0,0,100.0
+A,Jundiaí,Loteamento Jardim Ritoni,-23.1496813,-46.9686378,3400,0,0,100.0
+A,Jundiaí,Jardim das Tulipas,-23.1525325,-46.9641173,3400,0,0,100.0
+A,Jundiaí,Jardim Tannus,-23.1832269,-46.9584508,3400,0,0,100.0
+A,Jundiaí,Jardim Ermida I,-23.187183,-46.9678934,3400,0,0,100.0
+A,Jundiaí,Jardim Martins,-23.2296959,-46.8813697,3400,0,0,100.0
+A,Jundiaí,Jardim Ermida II,-23.1892781,-46.963165,3400,0,0,100.0
+A,Jundiaí,Jardim São Paulo,-23.1879706,-46.9862654,3400,0,0,100.0
+A,Jundiaí,Jardim Tereza Cristina,-23.1780835,-47.0007588,3400,0,0,100.0
+A,Jundiaí,Jardim Vale Verde,-23.2477274,-46.8595452,3400,0,0,100.0
+A,Jundiaí,Jardim Ipanema,-23.232928,-46.8861899,3400,0,0,100.0
+A,Jundiaí,Jardim Copacabana,-23.2311534,-46.8877992,3400,0,0,100.0
+A,Jundiaí,Jardim Novo Mundo,-23.1959446,-46.915593,3400,0,0,100.0
+A,Jundiaí,Jardim Nogueira,-23.2270031,-46.8816367,3400,0,0,100.0
+A,Jundiaí,Jardim Palermo,-23.2239167,-46.8861899,3400,0,0,100.0
+A,Jundiaí,Jardim Sevilha,-23.2170106,-46.8806606,3400,0,0,100.0
+A,Jundiaí,Jardim Cidapel,-23.2189231,-46.877985,3400,0,0,100.0
+A,Jundiaí,Jardim Itatiaia,-23.2063093,-46.9043286,3400,0,0,100.0
+A,Jundiaí,Jardim Athenas,-23.2020969,-46.9090543,3400,0,0,100.0
+A,Jundiaí,Jardim Europa,-23.1985161,-46.9169609,3400,0,0,100.0
+A,Jundiaí,Jardim Samambaia,-23.1939396,-46.91457,3400,0,0,100.0
+A,Jundiaí,Jardim Santa Teresa,-23.1913228,-46.9118218,3400,0,0,100.0
+A,Jundiaí,Jardim Gramadão II,-23.1922472,-46.9215487,3400,0,0,100.0
+A,Jundiaí,Jardim Gramadão I,-23.191156,-46.9193697,3400,0,0,100.0
+A,Jundiaí,Jardim América,-23.1883842,-46.9134575,3400,0,0,100.0
+A,Jundiaí,Jardim Guanabara,-23.1790326,-46.9283627,3400,0,0,100.0
+A,Jundiaí,Jardim São Pedro,-23.157153,-46.9241458,3400,0,0,100.0
+A,Jundiaí,Jardim Sales,-23.1548053,-46.9170648,3400,0,0,100.0
+A,Jundiaí,Jardim São Vicente,-23.1462072,-46.9162728,3400,0,0,100.0
+A,Jundiaí,Jardim Miramor,-23.1507241,-46.9220771,3400,0,0,100.0
+A,Jundiaí,Jardim Scala,-23.1482248,-46.9249934,3400,0,0,100.0
+A,Jundiaí,Jardim Paris,-23.1822155,-46.8998124,3400,0,0,100.0
+A,Jundiaí,Jardim Primavera,-23.1838748,-46.9023005,3400,0,0,100.0
+A,Jundiaí,Jardim Brasil,-23.1814232,-46.8962348,3400,0,0,100.0
+A,Jundiaí,Jardim Flórida,-23.1950303,-46.9032775,3400,0,0,100.0
+A,Jundiaí,Jardim Luciana,-23.1884191,-46.8988692,3400,0,0,100.0
+A,Jundiaí,Jardim da Serra,-23.1960574,-46.899601,3400,0,0,100.0
+A,Jundiaí,Jardim Planalto,-23.1878298,-46.9079911,3400,0,0,100.0
+A,Jundiaí,Jardim Trevo,-23.1867757,-46.9091519,3400,0,0,100.0
+A,Jundiaí,Jardim das Hortências,-23.1772374,-46.9095045,3400,0,0,100.0
+A,Jundiaí,Jardim das Orquídeas,-23.1785829,-46.9038453,3400,0,0,100.0
+A,Campinas,Jardim Alto da Cidade Universitária,-22.7867431,-47.0641038,3200,0,0,99.8
+A,Campinas,Jardim Santana,-22.8502289,-47.0364557,3200,0,0,99.8
+A,Campinas,Jardim das Paineiras,-22.8957588,-47.0309293,3200,0,0,99.8
+A,Campinas,Jardim Professora Tarcília,-22.8657444,-47.0450134,3200,0,0,99.8
+A,Campinas,Jardim Santa Monica,-22.8504125,-47.1105043,3200,0,0,99.8
+A,Campinas,Jardim Yeda,-22.9490021,-47.1126741,3200,0,0,99.8
+A,Campinas,Jardim Nova Europa,-22.9436706,-47.0596321,3200,0,0,99.8
+A,Campinas,Jardim das Bandeiras,-22.952691,-47.0909399,3200,0,0,99.8
+A,Campinas,Jardim Mirassol,-22.8416978,-47.1387166,3200,0,0,99.8
+A,Campinas,Jardim Novo Campos Elíseos,-22.9442298,-47.1083519,3200,0,0,99.8
+A,Campinas,Jardim Marisa,-23.037882,-47.112788,3200,1,0,94.8
+A,Campinas,Jardim Garcia,-22.9121159,-47.1134891,3200,1,0,94.8
+A,Campinas,Jardim Esplanada,-22.987168,-47.1547568,3200,1,0,94.8
+A,Vinhedo,Sitio Juazeiro,-23.0200982,-46.9694576,4500,0,0,94.5
+A,Paulínia,Distrito Industrial de Betel,-22.7991865,-47.1265634,4200,0,0,94.1
+A,Paulínia,Capim Fino - Saltinho,-22.7448889,-47.2029322,4200,0,0,94.1
+A,Paulínia,São José,-22.721161,-47.1744559,4200,0,0,94.1
+A,Paulínia,Alvorada Parque,-22.8008877,-47.1179685,4200,0,0,94.1
+A,Paulínia,Reserva São Fernando,-22.7419267,-47.2014609,4200,0,0,94.1
+A,Jundiaí,Toca,-23.1369499,-46.8276241,3400,0,0,91.6
+A,Jundiaí,Mato Dentro,-23.1246683,-46.8525887,3400,0,0,91.6
+A,Jundiaí,Champirra,-23.1009556,-46.8715487,3400,0,0,91.6
+A,Jundiaí,Rio Acima,-23.1246461,-46.8840624,3400,0,0,91.6
+A,Jundiaí,Cristais,-23.262573,-46.8365788,3400,0,0,91.6
+A,Jundiaí,Maringá,-23.2275113,-46.8797287,3400,0,0,91.6
+A,Jundiaí,São Camilo,-23.176542,-46.8665906,3400,0,0,91.6
+A,Jundiaí,Serra do Japi,-23.2216284,-47.0097591,3400,0,0,91.6
+A,Jundiaí,Alvorada,-23.1876167,-46.9163193,3400,0,0,91.6
+A,Jundiaí,Moisés,-23.2011469,-46.9067277,3400,0,0,91.6
+A,Jundiaí,Gramadão,-23.1902795,-46.926855,3400,0,0,91.6
+A,Jundiaí,Samambaia,-23.1949628,-46.9150373,3400,0,0,91.6
+A,Jundiaí,Medeiros,-23.183251,-46.9977699,3400,0,0,91.6
+A,Jundiaí,Malota,-23.209708,-46.912322,3400,0,0,91.6
+A,Jundiaí,São Domingos,-23.139306,-46.8413707,3400,0,0,91.6
+A,Jundiaí,Novo Horizonte,-23.1484768,-46.9926562,3400,0,0,91.6
+A,Jundiaí,São José da Pedra Santa,-23.1043831,-46.9075374,3400,0,0,91.6
+A,Jundiaí,Sítio Itália,-23.1580564,-46.818431,3400,0,0,91.6
+A,Jundiaí,Vila Rio Branco,-23.1726244,-46.8864952,3400,0,0,91.6
+A,Jundiaí,Loteamento Vivenda,-23.0883413,-46.8682481,3400,0,0,91.6
+A,Jundiaí,Parque Espelho D'Água,-23.1211707,-46.8564128,3400,0,0,91.6
+A,Jundiaí,Loteamento São Jorge,-23.11676,-46.8487256,3400,0,0,91.6
+A,Jundiaí,Chácaras Itamar,-23.122414,-46.8676566,3400,0,0,91.6
+A,Jundiaí,Loteamento Maltoni,-23.1291529,-46.8717443,3400,0,0,91.6
+A,Jundiaí,Parque Almerinda Pereira Chaves,-23.1449757,-46.9918293,3400,0,0,91.6
+A,Jundiaí,Parque Residencial Jundiaí I,-23.1471196,-47.0089523,3400,0,0,91.6
+A,Jundiaí,Parque Residencial Jundiaí II,-23.151959,-47.0065956,3400,0,0,91.6
+A,Jundiaí,Loteamento Santa Giovana (ZEIS),-23.1597665,-46.9601453,3400,0,0,91.6
+A,Jundiaí,Vila Jundiainópois,-23.216641,-46.8869762,3400,0,0,91.6
+A,Jundiaí,Parque Kneubil,-23.1519881,-46.8729507,3400,0,0,91.6
+A,Jundiaí,Parque São Luiz,-23.1486639,-46.8732778,3400,0,0,91.6
+A,Jundiaí,Pinheirinho,-23.1401565,-46.8983162,3400,0,0,91.6
+A,Jundiaí,Condomínio Residencial dos Metalúrgicos,-23.1850404,-46.9311501,3400,0,0,91.6
+A,Jundiaí,Recanto Florestal,-23.1093487,-46.8589059,3400,0,0,91.6
+A,Jundiaí,Loteamento São Judas Tadeu,-23.1262415,-46.8467394,3400,0,0,91.6
+A,Jundiaí,Condomínio Vale das Videiras I e II,-23.1228868,-46.8475977,3400,0,0,91.6
+A,Jundiaí,Condomínio Dona Irene,-23.1363841,-46.8648068,3400,0,0,91.6
+A,Jundiaí,Sítio Beija Flor,-23.1417511,-46.8687335,3400,0,0,91.6
+A,Jundiaí,Munhoz Park,-23.1451053,-46.853799,3400,0,0,91.6
+A,Jundiaí,Residencial Santa Esmeralda,-23.1596517,-46.8416744,3400,0,0,91.6
+A,Jundiaí,Vila Morais,-23.1515425,-46.8395367,3400,0,0,91.6
+A,Jundiaí,Nova Odessa,-23.1529663,-46.8231517,3400,0,0,91.6
+A,Jundiaí,Piemonte,-23.0987914,-46.8661043,3400,0,0,91.6
+A,Jundiaí,Parque Carolina,-23.1761809,-46.8611825,3400,0,0,91.6
+A,Jundiaí,Vila Rossi,-23.1772741,-46.8618761,3400,0,0,91.6
+A,Jundiaí,Vila Nossa Senhora Aparecida,-23.180892,-46.8686997,3400,0,0,91.6
+A,Jundiaí,Vila Leme,-23.1811002,-46.8704976,3400,0,0,91.6
+A,Jundiaí,Vila São João Batista,-23.1835988,-46.8660524,3400,0,0,91.6
+A,Jundiaí,Vila Joana,-23.1830392,-46.8730175,3400,0,0,91.6
+A,Jundiaí,Granja Jundiaí Mirim,-23.1562893,-46.8740181,3400,0,0,91.6
+A,Jundiaí,Ilha Verde,-23.1728622,-46.8747588,3400,0,0,91.6
+A,Jundiaí,Chácaras Alvorada,-23.1740725,-46.8719558,3400,0,0,91.6
+A,Jundiaí,Vila Caodaglio,-23.1775083,-46.8775194,3400,0,0,91.6
+A,Jundiaí,Vila Guilherme,-23.1786405,-46.8757073,3400,0,0,91.6
+A,Jundiaí,Vila Agostinho Zambon,-23.1799159,-46.8783688,3400,0,0,91.6
+A,Jundiaí,Vila Palma,-23.1711052,-46.8810161,3400,0,0,91.6
+A,Jundiaí,Vila Savieto,-23.1714045,-46.8821486,3400,0,0,91.6
+A,Jundiaí,Portal do Sol,-23.1688796,-46.8618903,3400,0,0,91.6
+A,Jundiaí,Canterucci,-23.1777939,-46.8885609,3400,0,0,91.6
+A,Jundiaí,Vila Galvão,-23.1680829,-46.8959899,3400,0,0,91.6
+A,Jundiaí,Residencial H,-23.1657342,-46.8972086,3400,0,0,91.6
+A,Jundiaí,Horto Florestal,-23.1657467,-46.8915451,3400,0,0,91.6
+A,Jundiaí,Vila Nambi,-23.1940532,-46.8634217,3400,0,0,91.6
+A,Jundiaí,Recanto Parrilo,-23.1915158,-46.8626997,3400,0,0,91.6
+A,Jundiaí,Parque Residencial República,-23.1958229,-46.860562,3400,0,0,91.6
+A,Jundiaí,Vila Ruy Barbosa,-23.1956928,-46.8566689,3400,0,0,91.6
+A,Jundiaí,Parque Residencial Sabiá,-23.1746891,-46.8536393,3400,0,0,91.6
+A,Jundiaí,Vila Joaquina,-23.1806886,-46.849548,3400,0,0,91.6
+A,Jundiaí,Loteamento Clorotilde Carvalho (Condomínio Nalini),-23.1711124,-46.8462589,3400,0,0,91.6
+A,Jundiaí,Recanto das Palmeiras,-23.171232,-46.8404209,3400,0,0,91.6
+A,Jundiaí,Condomínio Quinta das Paineiras,-23.166119,-46.8429903,3400,0,0,91.6
+A,Jundiaí,Recanto Bardi,-23.1647749,-46.8415743,3400,0,0,91.6
+A,Jundiaí,Nami Azém,-23.1670459,-46.838437,3400,0,0,91.6
+A,Jundiaí,Núcleo Residencial Nami Azem,-23.1674496,-46.8398843,3400,0,0,91.6
+A,Jundiaí,Vila Liberdade,-23.1760852,-46.8840217,3400,0,0,91.6
+A,Jundiaí,Recanto São Vicente II,-23.1841506,-46.799931,3400,0,0,91.6
+A,Jundiaí,Condomínio Recanto da Prata,-23.1810933,-46.7985362,3400,0,0,91.6
+A,Jundiaí,Parque dos Manacás,-23.1756094,-46.7957212,3400,0,0,91.6
+A,Jundiaí,Loteamento Romano,-23.189323,-46.8050258,3400,0,0,91.6
+A,Jundiaí,Estância Suiça,-23.184175,-46.8102615,3400,0,0,91.6
+A,Jundiaí,Estância Alpina,-23.1868575,-46.8070858,3400,0,0,91.6
+A,Jundiaí,Fazenda Santa Isabel,-23.1666384,-46.8052833,3400,0,0,91.6
+A,Jundiaí,Condomínio Terra de Santa Cruz,-23.1728327,-46.8076437,3400,0,0,91.6
+A,Jundiaí,Sítio Barbosa e Costa,-23.175693,-46.8120639,3400,0,0,91.6
+A,Jundiaí,Chácara Bom Jesus,-23.1730102,-46.8190806,3400,0,0,91.6
+A,Jundiaí,Terras de Santa Cruz,-23.1727538,-46.828522,3400,0,0,91.6
+A,Jundiaí,Loteamento Chácara São Vicente I,-23.1650405,-46.8248098,3400,0,0,91.6
+A,Jundiaí,Chácara São Vicente II,-23.1635412,-46.8238227,3400,0,0,91.6
+A,Jundiaí,Vale Verde,-23.1635017,-46.8180506,3400,0,0,91.6
+A,Jundiaí,Portal dos Imigrantes,-23.1732835,-46.8542764,3400,0,0,91.6
+A,Jundiaí,Fazenda Campo Verde,-23.1527693,-46.8013995,3400,0,0,91.6
+A,Jundiaí,Chácaras São Sebastião,-23.1409903,-46.8200247,3400,0,0,91.6
+A,Jundiaí,Loteamento Guilhen,-23.1385634,-46.8156045,3400,0,0,91.6
+A,Jundiaí,Loteamento das Roseiras,-23.1363337,-46.8135874,3400,0,0,91.6
+A,Jundiaí,Loteamento Fazendinha,-23.1336106,-46.8096607,3400,0,0,91.6
+A,Jundiaí,Residencial Primavera,-23.1320321,-46.8096178,3400,0,0,91.6
+A,Jundiaí,Chácara da Mata,-23.129526,-46.8117421,3400,0,0,91.6
+A,Jundiaí,Loteamento Santa Rosa II,-23.1312428,-46.81127,3400,0,0,91.6
+A,Jundiaí,Loteamento Adelina,-23.1203302,-46.807751,3400,0,0,91.6
+A,Jundiaí,Chácaras Bosque dos Pinheirinhos,-23.1323769,-46.8916323,3400,0,0,91.6
+A,Jundiaí,Chácara Betinha,-23.1123154,-46.8875216,3400,0,0,91.6
+A,Jundiaí,Chácaras Monterey,-23.1126904,-46.8918989,3400,0,0,91.6
+A,Jundiaí,Loteamento Ponderosa,-23.1121461,-46.8988491,3400,0,0,91.6
+A,Jundiaí,Sítio dos Companheiros,-23.1142554,-46.90236,3400,0,0,91.6
+A,Jundiaí,Vila Bandeirantes,-23.1692576,-46.9031184,3400,0,0,91.6
+A,Jundiaí,Fazenda Granja Marajoara,-23.1857681,-46.7939657,3400,0,0,91.6
+A,Jundiaí,Cidade Luiza,-23.1722476,-46.9043869,3400,0,0,91.6
+A,Jundiaí,Leitão,-23.1014136,-46.9397527,3400,0,0,91.6
+A,Jundiaí,Loteamento Esperança,-23.1267901,-46.932294,3400,0,0,91.6
+A,Jundiaí,Vila Argos Nova,-23.1905954,-46.8777461,3400,0,0,91.6
+A,Jundiaí,Vila Esperança,-23.2217221,-46.8557411,3400,0,0,91.6
+A,Jundiaí,Vila Suzana,-23.1691829,-46.9136887,3400,0,0,91.6
+A,Jundiaí,Cidade Santos Dumont,-23.1671048,-46.9103875,3400,0,0,91.6
+A,Jundiaí,Chácaras das Vivendas,-23.1123683,-46.9402601,3400,0,0,91.6
+A,Jundiaí,Residencial Vista Alegre,-23.1158614,-46.9387581,3400,0,0,91.6
+A,Jundiaí,Loteamento Portal dos Fernandes,-23.123321,-46.9454958,3400,0,0,91.6
+A,Jundiaí,Vila Franco,-23.213133,-46.8563917,3400,0,0,91.6
+A,Jundiaí,Condomínio Corrupira I,-23.1176376,-46.9268062,3400,0,0,91.6
+A,Jundiaí,Reserva da Mata,-23.1193791,-46.9188843,3400,0,0,91.6
+A,Jundiaí,Loteamento Bosques do Currupira,-23.1205977,-46.9225361,3400,0,0,91.6
+A,Jundiaí,Bella Vittá,-23.1235183,-46.9259264,3400,0,0,91.6
+A,Jundiaí,Vila São Sebastião,-23.2165875,-46.8688515,3400,0,0,91.6
+A,Jundiaí,Vista Alegre,-23.1310762,-46.9219996,3400,0,0,91.6
+A,Jundiaí,Loteamento Santa Rosa,-23.1271098,-46.9195749,3400,0,0,91.6
+A,Jundiaí,Loteamento Boliviano,-23.1154273,-46.9126012,3400,0,0,91.6
+A,Jundiaí,Loteamento Kaip (Chácara da Ponta),-23.1121386,-46.9167687,3400,0,0,91.6
+A,Jundiaí,Loteamento Kaip - Gleba B-2,-23.1103288,-46.9170518,3400,0,0,91.6
+A,Jundiaí,Loteamento Kaip (Associação de Moradores do Bairro Currupira),-23.1090599,-46.9187062,3400,0,0,91.6
+A,Jundiaí,Loteamento Kaip (Área A e B),-23.1086652,-46.9175582,3400,0,0,91.6
+A,Jundiaí,Loteamento Kaip B2 (Parque Romano),-23.1075501,-46.9188886,3400,0,0,91.6
+A,Jundiaí,Sítio Fernandes (Pedra Branca),-23.1259479,-46.9515674,3400,0,0,91.6
+A,Jundiaí,Vila Condini,-23.1185456,-46.9646374,3400,0,0,91.6
+A,Jundiaí,Loteamento Érica,-23.1266515,-46.9733538,3400,0,0,91.6
+A,Jundiaí,Chácara São Luiz I,-23.1361626,-46.9811269,3400,0,0,91.6
+A,Jundiaí,Loteamento Santa Maria,-23.1481183,-46.9691609,3400,0,0,91.6
+A,Jundiaí,Vila Manfredi,-23.2104845,-46.8789133,3400,0,0,91.6
+A,Jundiaí,Vila Iara,-23.2133727,-46.8766765,3400,0,0,91.6
+A,Jundiaí,Chácaras de Recreio Santa Camila,-23.1576164,-46.9618196,3400,0,0,91.6
+A,Jundiaí,Villaggio de San Gimignano,-23.1418006,-46.9514588,3400,0,0,91.6
+A,Jundiaí,Loteamento Residencial Água Doce (Avenida da Uva),-23.1370338,-46.950118,3400,0,0,91.6
+A,Jundiaí,"Condomínio Água Doce ""Loteamento Pilon""",-23.1384137,-46.9506843,3400,0,0,91.6
+A,Jundiaí,Núcleo Residencial Água Doce,-23.1397546,-46.9464514,3400,0,0,91.6
+A,Jundiaí,Água Doce 1-D,-23.1398457,-46.9488439,3400,0,0,91.6
+A,Jundiaí,Água Doce 1-C,-23.140835,-46.9465081,3400,0,0,91.6
+A,Jundiaí,Loteamento Água Doce 1 A,-23.141538,-46.9473716,3400,0,0,91.6
+A,Jundiaí,Residencial Serra Azul,-23.1402232,-46.9556675,3400,0,0,91.6
+A,Jundiaí,Residencial Água Viva,-23.1388303,-46.9566585,3400,0,0,91.6
+A,Jundiaí,Loteamento Pellizari I,-23.1442066,-46.9573238,3400,0,0,91.6
+A,Jundiaí,Chácara Santa Maria,-23.1451699,-46.9586263,3400,0,0,91.6
+A,Jundiaí,Loteamento Mangelini,-23.1476952,-46.9591925,3400,0,0,91.6
+A,Jundiaí,Conjunto Habitacional Jundiaí L,-23.1663379,-46.9689254,3400,0,0,91.6
+A,Jundiaí,Parque Residencial Eloy Chaves,-23.1850879,-46.9639153,3400,0,0,91.6
+A,Jundiaí,Vila Francisco Eber,-23.2073947,-46.8789258,3400,0,0,91.6
+A,Jundiaí,Vila Campos Sales,-23.2057122,-46.8781973,3400,0,0,91.6
+A,Jundiaí,Colina dos Cristais,-23.2292802,-46.8788514,3400,0,0,91.6
+A,Jundiaí,Vila Ivani,-23.205034,-46.881046,3400,0,0,91.6
+A,Jundiaí,Conjunto Dom Gabriel Paulino Bueno Couto,-23.227545,-46.8783793,3400,0,0,91.6
+A,Jundiaí,Vila Angélica,-23.2064418,-46.8808218,3400,0,0,91.6
+A,Jundiaí,Reserva da Ermida,-23.1957701,-46.9672684,3400,0,0,91.6
+A,Jundiaí,Multivias I,-23.190461,-46.9756493,3400,0,0,91.6
+A,Jundiaí,Multivias II,-23.1974097,-46.9742053,3400,0,0,91.6
+A,Jundiaí,Chácaras Três Corações,-23.1894391,-46.9961139,3400,0,0,91.6
+A,Jundiaí,Vila Isabel Eber,-23.2070256,-46.8751711,3400,0,0,91.6
+A,Jundiaí,Chácara das Palmeiras,-23.1825393,-46.9995694,3400,0,0,91.6
+A,Jundiaí,Vila Pires,-23.1900576,-46.9907121,3400,0,0,91.6
+A,Jundiaí,Vila Cacilda,-23.1965058,-46.8948688,3400,0,0,91.6
+A,Jundiaí,Chácara Nossa Senhora de Fátima,-23.1866352,-46.990853,3400,0,0,91.6
+A,Jundiaí,Vila Japi,-23.200123,-46.9014548,3400,0,0,91.6
+A,Jundiaí,Chácaras Segre,-23.1809856,-46.993284,3400,0,0,91.6
+A,Jundiaí,Condomínio Portal dos Medeiros,-23.2003098,-47.0091821,3400,0,0,91.6
+A,Jundiaí,Alice Toldi,-23.2118805,-46.8820003,3400,0,0,91.6
+A,Jundiaí,Vila Carolina,-23.2136772,-46.8813818,3400,0,0,91.6
+A,Jundiaí,Vila Aiello,-23.2142484,-46.8825666,3400,0,0,91.6
+A,Jundiaí,Loteamento Recanto Cambaiúva,-23.2035498,-47.0060393,3400,0,0,91.6
+A,Jundiaí,Vale dos Cebrantes,-23.2058528,-47.0032362,3400,0,0,91.6
+A,Jundiaí,Loteamento Barcaro,-23.2705834,-46.8406782,3400,0,0,91.6
+A,Jundiaí,Cristal Parque,-23.2634277,-46.8394765,3400,0,0,91.6
+A,Jundiaí,Viveiro dos Pássaros,-23.2601947,-46.8535313,3400,0,0,91.6
+A,Jundiaí,Condomínio Portal da Paineira,-23.2523879,-46.8472013,3400,0,0,91.6
+A,Jundiaí,Vila Ana,-23.2041437,-46.8961047,3400,0,0,91.6
+A,Jundiaí,Loteamento Bola Branca,-23.247124,-46.8738517,3400,0,0,91.6
+A,Jundiaí,Condomínio Santo Antônio I,-23.2534328,-46.8901381,3400,0,0,91.6
+A,Jundiaí,Condomínio Santo Antônio II,-23.2532751,-46.8920908,3400,0,0,91.6
+A,Jundiaí,Eloy Chaves,-23.1852276,-46.9618752,3400,0,0,91.6
+A,Jundiaí,Traviú,-23.1156982,-46.9647029,3400,0,0,91.6
+A,Jundiaí,Residencial Paracatu,-23.2298915,-46.8861255,3400,0,0,91.6
+A,Jundiaí,Vila Leda,-23.1992347,-46.8719572,3400,0,0,91.6
+A,Jundiaí,Quinta da Boa Vista,-23.1978704,-46.919586,3400,0,0,91.6
+A,Jundiaí,Vilage das Flores,-23.19855,-46.921829,3400,0,0,91.6
+A,Jundiaí,Vila Agrícola,-23.2026443,-46.865869,3400,0,0,91.6
+A,Jundiaí,Vila Maringá,-23.2256323,-46.8783149,3400,0,0,91.6
+A,Jundiaí,Vila Alati,-23.2248041,-46.8809757,3400,0,0,91.6
+A,Jundiaí,Vila Josefina,-23.2253759,-46.8842158,3400,0,0,91.6
+A,Jundiaí,Vila Comercial,-23.2222801,-46.8831644,3400,0,0,91.6
+A,Jundiaí,Vila Nova Jundiaí,-23.2195391,-46.8826708,3400,0,0,91.6
+A,Jundiaí,Parque Residencial das Flores I,-23.2205053,-46.8845055,3400,0,0,91.6
+A,Jundiaí,Vila Santana,-23.2042188,-46.8643901,3400,0,0,91.6
+A,Jundiaí,Vila Nova Jundiaínópolis,-23.2221815,-46.8850097,3400,0,0,91.6
+A,Jundiaí,Vila Pedra Bela,-23.2224181,-46.8878421,3400,0,0,91.6
+A,Jundiaí,Parque Residencial das Flores II,-23.2198349,-46.8839798,3400,0,0,91.6
+A,Jundiaí,Vila Maria Genoveva,-23.2063936,-46.8606066,3400,0,0,91.6
+A,Jundiaí,Vila Edith,-23.2116593,-46.8838973,3400,0,0,91.6
+A,Jundiaí,Recanto Petená,-23.1685074,-47.0087367,3400,0,0,91.6
+A,Jundiaí,Loteamento Mantuanelli,-23.1676058,-47.0069341,3400,0,0,91.6
+A,Jundiaí,Chácaras São José das Palmeiras,-23.1335045,-47.0081527,3400,0,0,91.6
+A,Jundiaí,Chácaras São Ponciano,-23.12787,-47.0020631,3400,0,0,91.6
+A,Jundiaí,Vila Salerno,-23.2157707,-46.8801458,3400,0,0,91.6
+A,Jundiaí,Vila Garcia,-23.2120406,-46.8798679,3400,0,0,91.6
+A,Jundiaí,Vila Santa Maria,-23.2060198,-46.8550854,3400,0,0,91.6
+A,Jundiaí,Vila Cristo Redentor,-23.2067447,-46.8506117,3400,0,0,91.6
+A,Jundiaí,Vila Guarani,-23.2164933,-46.8757225,3400,0,0,91.6
+A,Jundiaí,Chácaras de Recreio Fazenda Malota,-23.2116216,-46.9084326,3400,0,0,91.6
+A,Jundiaí,Parque Residencial Malota,-23.2092317,-46.9085682,3400,0,0,91.6
+A,Jundiaí,Loteamento Alto da Malota,-23.2075779,-46.9048093,3400,0,0,91.6
+A,Jundiaí,Vila Didi,-23.21029,-46.8551716,3400,0,0,91.6
+A,Jundiaí,Vila Rosemary,-23.206264,-46.9022089,3400,0,0,91.6
+A,Jundiaí,Conjunto do I.A.P.I.,-23.2092706,-46.8595097,3400,0,0,91.6
+A,Jundiaí,Vila de Vecchi,-23.2085683,-46.8676191,3400,0,0,91.6
+A,Jundiaí,Mirante de Jundiaí,-23.144541,-46.9318028,3400,0,0,91.6
+A,Jundiaí,CECAP,-23.1426664,-46.9203924,3400,0,0,91.6
+A,Jundiaí,Terras de Gênova,-23.1397765,-46.9348748,3400,0,0,91.6
+A,Jundiaí,Bosque dos Jatobás,-23.1503206,-46.9327513,3400,0,0,91.6
+A,Jundiaí,Quintas do Lago,-23.1956841,-46.9220385,3400,0,0,91.6
+A,Jundiaí,Quinta das Videiras,-23.194472,-46.9195244,3400,0,0,91.6
+A,Jundiaí,Vila São Paulo,-23.2127139,-46.8605697,3400,0,0,91.6
+A,Jundiaí,Casa Branca,-23.1766259,-46.9262999,3400,0,0,91.6
+A,Jundiaí,Loteamento Casa Branca,-23.1951404,-46.9329824,3400,0,0,91.6
+A,Jundiaí,Brisas da Mata,-23.1943548,-46.9262159,3400,0,0,91.6
+A,Jundiaí,Hortolândia,-23.167161,-46.9108625,3400,0,0,91.6
+A,Jundiaí,Torres de São José,-23.162894,-46.9168287,3400,0,0,91.6
+A,Jundiaí,Villaggio de San Marco,-23.1895118,-46.9187842,3400,0,0,91.6
+A,Jundiaí,Vila Arens,-23.1989846,-46.8774198,3400,0,0,91.6
+A,Jundiaí,Horto Santo Antônio,-23.1865544,-46.9180293,3400,0,0,91.6
+A,Jundiaí,Recanto IV Centenário,-23.1855524,-46.9204076,3400,0,0,91.6
+A,Jundiaí,Vila Padre Renato,-23.1358178,-46.920775,3400,0,0,91.6
+A,Jundiaí,Vivenda Centenário,-23.1370297,-46.9181132,3400,0,0,91.6
+A,Jundiaí,Chácaras Aeroporto,-23.1842121,-46.9346766,3400,0,0,91.6
+A,Jundiaí,Vila Progresso,-23.2052977,-46.8720963,3400,0,0,91.6
+A,Jundiaí,Vila Espéria,-23.17941,-46.9193165,3400,0,0,91.6
+A,Jundiaí,Parque Continental,-23.1575082,-46.9127303,3400,0,0,91.6
+A,Jundiaí,Residencial Casoni II,-23.15883,-46.9203478,3400,0,0,91.6
+A,Jundiaí,Agapeama,-23.2078249,-46.85905,3400,0,0,91.6
+A,Jundiaí,Vila Rami,-23.213797,-46.8800377,3400,0,0,91.6
+A,Jundiaí,Ponte São João,-23.1844748,-46.8755208,3400,0,0,91.6
+A,Jundiaí,Flores do Paraíso,-23.1486674,-46.9193873,3400,0,0,91.6
+A,Jundiaí,Aeroporto,-23.1785421,-46.9411477,3400,0,0,91.6
+A,Jundiaí,Parque dos Eucalíptos,-23.1534836,-46.9217656,3400,0,0,91.6
+A,Jundiaí,Loteamento Santa Isabel,-23.1526896,-46.9206048,3400,0,0,91.6
+A,Jundiaí,Vianelo,-23.1979198,-46.8830616,3400,0,0,91.6
+A,Jundiaí,Residencial dos Ipês,-23.1453871,-46.9259419,3400,0,0,91.6
+A,Jundiaí,Tijuco Preto,-23.2592764,-46.8415388,3400,0,0,91.6
+A,Jundiaí,Vila Nady,-23.2045926,-46.8707494,3400,0,0,91.6
+A,Jundiaí,Pracatú,-23.2294925,-46.8929718,3400,0,0,91.6
+A,Jundiaí,Vila Cunha,-23.1783258,-46.8951452,3400,0,0,91.6
+A,Jundiaí,Vila Inhamupe,-23.1778952,-46.8916327,3400,0,0,91.6
+A,Jundiaí,Vila Della Nina,-23.1795695,-46.8956656,3400,0,0,91.6
+A,Jundiaí,Vila Jundiaínópolis,-23.2127522,-46.8851431,3400,0,0,91.6
+A,Jundiaí,Morada Mediterrânea,-23.1378499,-46.9383574,3400,0,0,91.6
+A,Jundiaí,Scalla Convivium Club,-23.1382925,-46.9321142,3400,0,0,91.6
+A,Jundiaí,Chácaras Pai Jacó,-23.1387481,-46.9249934,3400,0,0,91.6
+A,Jundiaí,Loteamento Parque dos Ingás,-23.138644,-46.9232096,3400,0,0,91.6
+A,Jundiaí,Conjunto Residencial Terra da Uva,-23.1403102,-46.9202508,3400,0,0,91.6
+A,Jundiaí,Condomínio Bem-te-vi (Chácara das Flores),-23.132981,-46.9318452,3400,0,0,91.6
+A,Jundiaí,Loteamento Santo Antonio I,-23.1346344,-46.9353278,3400,0,0,91.6
+A,Jundiaí,Santo Antônio II (Associação dos Moradores Santo Antônio),-23.1336319,-46.9370408,3400,0,0,91.6
+A,Jundiaí,Chácara Bosque dos Marrecos (Chácaras São Francisco),-23.1327727,-46.914489,3400,0,0,91.6
+A,Jundiaí,Castanho,-23.2385443,-46.8545791,3400,0,0,91.6
+A,Jundiaí,Colônia,-23.1809923,-46.8533869,3400,0,0,91.6
+A,Jundiaí,Vila Iracema,-23.1945776,-46.8902016,3400,0,0,91.6
+A,Jundiaí,Vila Adolfo,-23.192201,-46.8892259,3400,0,0,91.6
+A,Jundiaí,Água Doce,-23.1409392,-46.9496509,3400,0,0,91.6
+A,Jundiaí,Vila Moutran,-23.1954595,-46.8871769,3400,0,0,91.6
+A,Jundiaí,Parque Brasília,-23.1805032,-46.9154942,3400,0,0,91.6
+A,Jundiaí,Tulipas,-23.1554258,-46.9591897,3400,0,0,91.6
+A,Jundiaí,Vila Alvorada,-23.1838229,-46.9111987,3400,0,0,91.6
+A,Jundiaí,Distrito Industrial,-23.1545379,-46.9408058,3400,0,0,91.6
+A,Jundiaí,Ermida,-23.1908844,-46.9801935,3400,0,0,91.6
+A,Jundiaí,Vila Vioto,-23.1798237,-46.9097159,3400,0,0,91.6
+A,Jundiaí,Vila Bela 1,-23.1803319,-46.9082523,3400,0,0,91.6
+A,Jundiaí,Retiro,-23.1778694,-46.9096353,3400,0,0,91.6
+A,Jundiaí,Vila Maria Luiza,-23.179435,-46.9026907,3400,0,0,91.6
+A,Jundiaí,Parque Centenário,-23.1371729,-46.916018,3400,0,0,91.6
+A,Jundiaí,Vila Pirapora,-23.2006072,-46.8885138,3400,0,0,91.6
+A,Jundiaí,Cecap,-23.141076,-46.9227251,3400,0,0,91.6
+A,Jundiaí,Vila Municipal,-23.1788672,-46.8934692,3400,0,0,91.6
+A,Jundiaí,Parque Residencial Nove de Julho,-23.2070525,-46.8922111,3400,0,0,91.6
+A,Jundiaí,Chácara Urbana,-23.1852514,-46.8946225,3400,0,0,91.6
+A,Jundiaí,Nambi,-23.1918723,-46.8649885,3400,0,0,91.6
+A,Jundiaí,Guido Bertoni,-23.2091706,-46.8873923,3400,0,0,91.6
+A,Jundiaí,Vila Operária,-23.180018,-46.8891121,3400,0,0,91.6
+A,Jundiaí,Vila Padre Nóbrega,-23.1818717,-46.8912912,3400,0,0,91.6
+A,Jundiaí,Parque do Colégio,-23.1835908,-46.8982187,3400,0,0,91.6
+A,Jundiaí,Vila Pacheco,-23.182933,-46.8840059,3400,0,0,91.6
+A,Jundiaí,Vila Virgínia,-23.1865506,-46.8962348,3400,0,0,91.6
+A,Jundiaí,Recanto Champirra,-23.0940094,-46.8492888,3400,0,0,91.6
+A,Jundiaí,Vila Wilma,-23.1888526,-46.9011133,3400,0,0,91.6
+A,Jundiaí,Anhangabaú,-23.1931207,-46.8937772,3400,0,0,91.6
+A,Jundiaí,Marco Leite,-23.1657961,-46.8840397,3400,0,0,91.6
+A,Jundiaí,Tarumã,-23.1685498,-46.8695017,3400,0,0,91.6
+A,Jundiaí,Caxambu,-23.1528322,-46.8488021,3400,0,0,91.6
+A,Jundiaí,Parque União,-23.2096463,-46.8859874,3400,0,0,91.6
+A,Jundiaí,Chácaras Tavares,-23.2054327,-46.8883413,3400,0,0,91.6
+A,Jundiaí,Vila São Pedro,-23.2075622,-46.8819204,3400,0,0,91.6
+A,Jundiaí,Vale Azul,-23.1564961,-46.8615837,3400,0,0,91.6
+A,Jundiaí,Vila Helena,-23.2092612,-46.8815876,3400,0,0,91.6
+A,Jundiaí,Vila Loureiro,-23.2109489,-46.8808482,3400,0,0,91.6
+A,Jundiaí,Jundiaí-Mirim,-23.1528727,-46.8723583,3400,0,0,91.6
+A,Jundiaí,Currupira,-23.1228264,-46.9240157,3400,0,0,91.6
+A,Jundiaí,Fernandes,-23.1285097,-46.9295893,3400,0,0,91.6
+A,Jundiaí,Engordadouro,-23.1529987,-46.9290274,3400,0,0,91.6
+A,Jundiaí,Ponte Alta,-23.1726789,-46.8316456,3400,0,0,91.6
+A,Jundiaí,Ivoturucaia,-23.1827568,-46.8087897,3400,0,0,91.6
+A,Jundiaí,Vila Santo Antonio,-23.1471314,-46.9359082,3400,0,0,91.6
+A,Jundiaí,Jardim Ana Maria,-23.191902,-46.9008532,3400,1,1,90.3
+A,Jundiaí,Jardim Petrópolis,-23.201638,-46.8901406,3400,1,1,90.3
+A,Jundiaí,Jardim Cica,-23.2039214,-46.8829448,3400,1,1,90.3
+A,Paulínia,Nova Paulínia,-22.7670022,-47.1509574,4200,1,0,89.1
+A,Campinas,Recanto Dos Dourados,-22.795293,-46.9949677,3200,0,0,86.8
+A,Campinas,Vila Palácios,-22.9513222,-47.1149261,3200,0,0,86.8
+A,Campinas,Reforma Agraria,-23.0144997,-47.0763025,3200,0,0,86.8
+A,Campinas,Swiss Park,-22.9650933,-47.0726667,3200,0,0,86.8
+A,Campinas,Real Parque,-22.8262395,-47.1021427,3200,0,0,86.8
+A,Campinas,Terras de Friburgo,-22.9752577,-47.1632355,3200,0,0,86.8
+A,Campinas,Vila Olímpia,-22.8343561,-47.1447692,3200,0,0,86.8
+A,Campinas,Vila Miguel Vicente Cury,-22.8604977,-47.061465,3200,0,0,86.8
+A,Campinas,Parque Dos Pomares,-22.8163588,-47.0112218,3200,0,0,86.8
+A,Campinas,Vila San Martin,-22.8402906,-47.1554487,3200,0,0,86.8
+A,Campinas,Vila Brandina,-22.8955034,-47.0262867,3200,0,0,86.8
+A,Campinas,Parque São Jorge,-22.8961315,-47.1561793,3200,0,0,86.8
+A,Campinas,Vila Virginia,-22.8698869,-47.0502935,3200,0,0,86.8
+A,Campinas,San Martin,-22.846981,-47.144088,3200,0,0,86.8
+A,Campinas,Vila Padre Anchieta,-22.8601501,-47.155299,3200,0,0,86.8
+A,Campinas,Parque Jambeiro,-22.9617287,-47.0504887,3200,0,0,86.8
+A,Campinas,Chácaras São Martinho,-22.966149,-47.0450154,3200,0,0,86.8
+A,Campinas,Residencial Barão do Café,-22.8014723,-47.0847644,3200,0,0,86.8
+A,Campinas,Chacara Santa Margarida,-22.7913778,-47.0710335,3200,0,0,86.8
+A,Campinas,Chácara Belvedere,-22.793855,-47.0762197,3200,0,0,86.8
+A,Campinas,Vila Santa Isabel,-22.8169314,-47.0929222,3200,0,0,86.8
+A,Jundiaí,Gran Village,-23.1983688,-46.9108974,3400,1,0,86.6
+A,Jundiaí,Chácaras Planalto,-23.1880396,-46.9853963,3400,1,0,86.6
+A,Jundiaí,Arraial dos Souzas,-23.1876155,-46.9838943,3400,1,0,86.6
+A,Jundiaí,Vila Nova Medeiros,-23.1829429,-46.9886902,3400,1,0,86.6
+A,Jundiaí,Parque da Represa,-23.1616709,-46.9115931,3400,1,0,86.6
+A,Jundiaí,Vila Loyola,-23.1984041,-46.8919091,3400,1,0,86.6
+A,Jundiaí,Vila Vianelo,-23.1976488,-46.8829257,3400,1,0,86.6
+A,Jundiaí,Jardim Bizarro,-23.2045039,-46.8872814,3400,2,1,85.3
+A,Amparo,Jardim Santa Cecília,-22.704231,-46.754396,3100,0,0,84.5
+A,Amparo,Jardim Sant'Ana,-22.7021893,-46.754911,3100,0,0,84.5
+A,Amparo,Jardim Natal,-22.7164385,-46.7794274,3100,0,0,84.5
+A,Amparo,Jardim das Orquideas,-22.7044564,-46.7799451,3100,0,0,84.5
+A,Iracemápolis,Centro,-22.5802813,-47.5182405,3100,0,0,83.5
+A,Campinas,Comunidade Parque Brasilia,-22.8788935,-47.0288873,3200,1,0,81.8
+A,Campinas,Vila Nova,-22.8756975,-47.0746113,3200,1,0,81.8
+A,Campinas,Parque Imperador,-22.8455076,-47.0247842,3200,1,0,81.8
+A,Campinas,Vila Costa e Silva,-22.8567607,-47.0694473,3200,1,0,81.8
+A,Jundiaí,Vila Maria Inês,-23.1863712,-46.8894373,3400,2,0,81.6
+A,Campinas,Cidade Satélite Iris,-22.9427307,-47.1416499,3200,2,0,76.8
+A,Jundiaí,Vila Boaventura,-23.1872382,-46.890413,3400,1,1,76.6
+A,Jundiaí,Vila Ponte de Campinas,-23.1766651,-46.8973144,3400,1,1,76.6
+A,Jundiaí,Santa Rosa,-23.1949867,-46.8754572,3400,1,1,76.6
+A,Jundiaí,Vila Margarida,-23.1718861,-46.8910816,3400,1,1,76.6
+A,Ibiúna,Jardim Jemima,-23.648413,-47.2038959,2800,0,0,75.2
+A,Ibiúna,CDHU do Jardim Jemima,-23.6452705,-47.2027034,2800,0,0,75.2
+A,Ibiúna,Centro,-23.6564636,-47.2165791,2800,0,0,75.2
+A,Ibiúna,Jardim Europa,-23.676306,-47.2093232,2800,0,0,75.2
+A,Ibiúna,Jardim Myrianópolis,-23.6482655,-47.1492067,2800,0,0,75.2
+A,Ibiúna,Jardim Disneylândia,-23.6607778,-47.231786,2800,0,0,75.2
+A,Ibiúna,Jardim Santa Lúcia,-23.6648913,-47.2305787,2800,0,0,75.2
+A,Ibiúna,Jardim Áurea,-23.6499959,-47.2178867,2800,0,0,75.2
+A,Ibiúna,Jardim Vergel II,-23.6657742,-47.2255474,2800,0,0,75.2
+A,Amparo,Jardim Alberto,-22.7100579,-46.7684116,3100,2,0,74.5
+A,Vinhedo,Chácara Santa Leonídia,-23.0288911,-46.9707531,4500,2,1,74.5
+A,Amparo,Centro,-22.70494,-46.7688639,3100,2,0,74.5
+A,Jambeiro,Centro,-23.2560688,-45.6929293,2700,0,0,74.2
+A,Jambeiro,Jardim Centenário,-23.2582733,-45.6947176,2700,0,0,74.2
+A,Amparo,Boa Vereda,-22.7478013,-46.7245508,3100,0,0,73.5
+A,Amparo,Pantaleão,-22.6363274,-46.8056152,3100,0,0,73.5
+A,Amparo,Bairro dos Pereiras,-22.735676,-46.7349294,3100,0,0,73.5
+A,Amparo,Sertãozinho,-22.7789992,-46.7292474,3100,0,0,73.5
+A,Amparo,Brumado,-22.5914241,-46.7969283,3100,0,0,73.5
+A,Amparo,Conjunto Habitacional Hermínio Gerbi,-22.7064594,-46.8147117,3100,0,0,73.5
+A,Amparo,Silvestre,-22.7077756,-46.7781053,3100,0,0,73.5
+A,Amparo,Loteamento Nardini,-22.7121723,-46.7851989,3100,0,0,73.5
+A,Amparo,Bosque dos Eucaliptos,-22.6787428,-46.7752856,3100,0,0,73.5
+A,Amparo,Córrego Fundo,-22.7666473,-46.7410729,3100,0,0,73.5
+A,Amparo,Fazenda Tambury,-22.727671,-46.7654407,3100,0,0,73.5
+A,Amparo,Parque CECAP,-22.7126586,-46.7872797,3100,0,0,73.5
+A,Amparo,Conjunto Habitacional Alberto Marques,-22.7064648,-46.8170966,3100,0,0,73.5
+A,Amparo,Bairro dos Rosas,-22.7735252,-46.7660414,3100,0,0,73.5
+A,Amparo,Taquari I,-22.7128131,-46.7748172,3100,0,0,73.5
+A,Campinas,Caminhos de San Conrado,-22.8613079,-46.9729881,3200,1,1,71.8
+A,Campinas,Ouro Verde,-22.9667274,-47.1319457,3200,3,0,71.8
+A,Jundiaí,Vila Santa Marina,-23.1799826,-46.9252623,3400,2,1,71.6
+A,Angatuba,Jardim Elisa Volpi,-23.4935678,-48.4022702,2500,0,0,70.9
+A,Angatuba,Jardim Bela Vista,-23.5005506,-48.4094307,2500,0,0,70.9
+A,Angatuba,Jardim Ana,-23.4959637,-48.4070217,2500,0,0,70.9
+A,Vinhedo,João XXIII,-23.0067683,-46.9838344,4500,3,1,69.5
+A,Cosmorama,Jardim das Palmeiras,-20.4799485,-49.7835643,2600,0,0,69.2
+A,Cosmorama,Jardim Itália,-20.4873763,-49.7870189,2600,0,0,69.2
+A,Cosmorama,Jardim dos Ipês,-20.4836587,-49.7780633,2600,0,0,69.2
+A,Cosmorama,Jardim das Jaboticabeiras,-20.4847533,-49.783068,2600,0,0,69.2
+A,Cosmorama,Jardim Progresso,-20.4841853,-49.7703266,2600,0,0,69.2
+A,Campinas,Bela Aliança Bairro & Parque,-22.9335004,-47.1377796,3200,2,1,66.8
+A,Campinas,Ponte Preta,-22.9151726,-47.0529305,3200,2,1,66.8
+A,Limeira,Jardim Nossa Senhora do Amparo,-22.5686177,-47.4187495,2400,0,0,65.9
+A,Angatuba,Centro,-23.4902124,-48.4142657,2500,1,0,65.9
+A,Limeira,Jardim Santa Cecília,-22.5715651,-47.4142541,2400,0,0,65.9
+A,Limeira,Centro,-22.565492,-47.4037983,2400,0,0,65.9
+A,Limeira,Jardim Nova Suiça,-22.5720608,-47.385828,2400,0,0,65.9
+A,Limeira,Jardim Orestes Veroni,-22.5660969,-47.3888908,2400,0,0,65.9
+A,Limeira,Jardim Ouro Verde,-22.5878737,-47.4216327,2400,0,0,65.9
+A,Limeira,Jardim Santa Lina,-22.5799067,-47.4017499,2400,0,0,65.9
+A,Limeira,Jardim Sonia,-22.579119,-47.3991532,2400,0,0,65.9
+A,Limeira,Jardim Cavinato,-22.5715923,-47.3916317,2400,0,0,65.9
+A,Limeira,Jardim Vista Alegre,-22.5810872,-47.3745947,2400,0,0,65.9
+A,Limeira,Jardim Nossa Senhora de Fátima,-22.5631324,-47.4200484,2400,0,0,65.9
+A,Limeira,Jardim Mercedes,-22.5701692,-47.4034094,2400,0,0,65.9
+A,Limeira,Jardim São Manoel,-22.5795553,-47.406221,2400,0,0,65.9
+A,Limeira,Jardim Marajoara,-22.6073751,-47.3900789,2400,0,0,65.9
+A,Ibiúna,Portal Vista Linda,-23.6524998,-47.204552,2800,0,0,65.4
+A,Ibiúna,Bairro Lavapés,-23.6646306,-47.2154577,2800,0,0,65.4
+A,Ibiúna,Loteamento Castanha I,-23.645811,-47.2377518,2800,0,0,65.4
+A,Ibiúna,Bairro do Olinto,-23.7378028,-47.0974071,2800,0,0,65.4
+A,Ibiúna,Portal das Águas,-23.7096057,-47.1066338,2800,0,0,65.4
+A,Ibiúna,Bairro dos Rodrigues,-23.75944,-47.0810438,2800,0,0,65.4
+A,Ibiúna,Bairro dos Paulo,-23.8084536,-47.1328393,2800,0,0,65.4
+A,Ibiúna,Bairro Tavares,-23.7134495,-47.2054556,2800,0,0,65.4
+A,Ibiúna,Paiol Grande,-23.7727497,-47.1822764,2800,0,0,65.4
+A,Ibiúna,Colinas Ibiúna II,-23.6440419,-47.1849123,2800,0,0,65.4
+A,Ibiúna,Bairro Cocais,-23.6805333,-47.3207259,2800,0,0,65.4
+A,Ibiúna,Bairro Regi,-23.6854339,-47.2114019,2800,0,0,65.4
+A,Ibiúna,Bairro Votorantim,-23.6396124,-47.156764,2800,0,0,65.4
+A,Ibiúna,Loteamento Alto da Cachoeira,-23.6278981,-47.2626116,2800,0,0,65.4
+A,Ibiúna,Condomínio Recanto Ferradura,-23.6393867,-47.2314261,2800,0,0,65.4
+A,Ibiúna,Condomínio Águas do Sorocabuçu,-23.7341527,-47.1673309,2800,0,0,65.4
+A,Ibiúna,Recanto Alto da Boa Vista,-23.6943109,-47.2519724,2800,0,0,65.4
+A,Ibiúna,Condomínio Central Park,-23.6301566,-47.2262976,2800,0,0,65.4
+A,Ibiúna,Condomínio Nascente do Paruru,-23.7009609,-47.3277716,2800,0,0,65.4
+A,Ibiúna,Center Cocais II,-23.6710867,-47.3363417,2800,0,0,65.4
+A,Ibiúna,Loteamento Antilhas,-23.6319098,-47.3480211,2800,0,0,65.4
+A,Ibiúna,Condomínio Mirante da Pedra Grande,-23.6867458,-47.3444661,2800,0,0,65.4
+A,Ibiúna,Condomínio Sítio dos Pessegueiros,-23.6839987,-47.3350097,2800,0,0,65.4
+A,Ibiúna,Porto Ibiúna,-23.6290014,-47.3248006,2800,0,0,65.4
+A,Ibiúna,Center Cocais I,-23.6706917,-47.329237,2800,0,0,65.4
+A,Ibiúna,Condomínio Chácara Sete Lagos,-23.7298314,-47.2234858,2800,0,0,65.4
+A,Ibiúna,Bairro dos Pintos,-23.6615499,-47.1515624,2800,0,0,65.4
+A,Ibiúna,Recanto Presidente,-23.6927654,-47.2761767,2800,0,0,65.4
+A,Ibiúna,Bairro Laranjeiras,-23.7920385,-47.061099,2800,0,0,65.4
+A,Ibiúna,Quintas do Imperial,-23.6767342,-47.1797401,2800,0,0,65.4
+A,Ibiúna,Condomínio Green Park,-23.674549,-47.1768165,2800,0,0,65.4
+A,Ibiúna,Condomínio Vila Real,-23.6723037,-47.1819373,2800,0,0,65.4
+A,Ibiúna,Condomínio Portal de Ibiúna,-23.6760484,-47.1735924,2800,0,0,65.4
+A,Ibiúna,Chácara dos Padres,-23.6705823,-47.2167303,2800,0,0,65.4
+A,Ibiúna,Vila Camargo,-23.6650878,-47.2266727,2800,0,0,65.4
+A,Ibiúna,Vila Lima,-23.6585859,-47.2292851,2800,0,0,65.4
+A,Ibiúna,Alto da Figueira,-23.6549994,-47.2387614,2800,0,0,65.4
+A,Ibiúna,Campo Verde,-23.6405336,-47.2842665,2800,0,0,65.4
+A,Ibiúna,Vila Laval II,-23.6615364,-47.2337848,2800,0,0,65.4
+A,Ibiúna,Chácara Estância Ortega,-23.6499854,-47.2386257,2800,0,0,65.4
+A,Ibiúna,Loteamento Castanhas II,-23.6417652,-47.2382582,2800,0,0,65.4
+A,Ibiúna,Chácara Recanto Suíço,-23.8061817,-47.111092,2800,0,0,65.4
+A,Ibiúna,Piratuba,-23.6475088,-47.3361159,2800,0,0,65.4
+A,Ibiúna,Bairro dos Paes,-23.6856278,-47.2394104,2800,0,0,65.4
+A,Ibiúna,Bairro do Curral,-23.6511038,-47.174604,2800,0,0,65.4
+A,Ibiúna,Bairro do Paiol Pequeno,-23.6288933,-47.1955767,2800,0,0,65.4
+A,Ibiúna,Bairro Campininha,-23.722198,-47.0637772,2800,0,0,65.4
+A,Ibiúna,Bairro dos Ribeiro,-23.7756238,-47.0686956,2800,0,0,65.4
+A,Ibiúna,Bairro Machados,-23.6663357,-47.2608379,2800,0,0,65.4
+A,Ibiúna,Loteamento São Lucas,-23.6533214,-47.2162777,2800,0,0,65.4
+A,Ibiúna,Recanto das Hortências,-23.6695006,-47.2187536,2800,0,0,65.4
+A,Ibiúna,Patrimônio do Jahú,-23.6600467,-47.181994,2800,0,0,65.4
+A,Ibiúna,Granja Santa Adélia,-23.6499721,-47.1803606,2800,0,0,65.4
+A,Ibiúna,Colinas Ibiúna I,-23.6471147,-47.1874679,2800,0,0,65.4
+A,Ibiúna,Loteamento Le Village,-23.6676456,-47.1622392,2800,0,0,65.4
+A,Ibiúna,Condomínio Ecológico Quinta da Mata,-23.6769907,-47.1480986,2800,0,0,65.4
+A,Ibiúna,Condomínio Recanto dos Pássaros,-23.6824861,-47.1417181,2800,0,0,65.4
+A,Ibiúna,Machado,-23.6721012,-47.2435768,2800,0,0,65.4
+A,Ibiúna,Condomínio Parque Alvorada,-23.6910639,-47.252968,2800,0,0,65.4
+A,Ibiúna,Loteamento Pintos,-23.6625525,-47.167817,2800,0,0,65.4
+A,Ibiúna,West Lake,-23.6537071,-47.1665992,2800,0,0,65.4
+A,Ibiúna,Granja Votorantim,-23.6518807,-47.1498537,2800,0,0,65.4
+A,Ibiúna,Residencial Greenfield Village,-23.6511608,-47.141483,2800,0,0,65.4
+A,Ibiúna,Residencial Terriaca,-23.6528325,-47.1377859,2800,0,0,65.4
+A,Ibiúna,Residencial Recreio II,-23.688528,-47.1284259,2800,0,0,65.4
+A,Ibiúna,Loteamento Vilassa,-23.6621683,-47.114757,2800,0,0,65.4
+A,Ibiúna,Residencial Recreio I,-23.6796863,-47.1225797,2800,0,0,65.4
+A,Ibiúna,Estância Bela Vista,-23.7197477,-47.1294746,2800,0,0,65.4
+A,Ibiúna,Fazenda Velha,-23.6756047,-47.1152509,2800,0,0,65.4
+A,Ibiúna,Condomínio West Village,-23.6811163,-47.0836033,2800,0,0,65.4
+A,Ibiúna,Loteamento Rincão,-23.7354042,-47.0904939,2800,0,0,65.4
+A,Ibiúna,Condomínio Residencial Cachoeira,-23.6442825,-47.2250515,2800,0,0,65.4
+A,Ibiúna,Condomínio Real Park Morumby,-23.6479569,-47.2263857,2800,0,0,65.4
+A,Ibiúna,Dois Córregos,-23.6170741,-47.2093612,2800,0,0,65.4
+A,Ibiúna,Capela de Santa Cruz,-23.7700367,-47.0334203,2800,0,0,65.4
+A,Ibiúna,Bairro Carmo Messsias,-23.7473928,-47.0512301,2800,0,0,65.4
+A,Ibiúna,Bairro do Feital,-23.7202102,-47.1949593,2800,0,0,65.4
+A,Ibiúna,Bairro do Cupim,-23.7186688,-47.2342362,2800,0,0,65.4
+A,Ibiúna,Capim Azedo,-23.6746169,-47.2045575,2800,0,0,65.4
+A,Ibiúna,Condominio Vale do Sol,-23.6900815,-47.2388533,2800,0,0,65.4
+A,Ibiúna,Bairro dos Grilos,-23.7738034,-47.0301403,2800,0,0,65.4
+A,Ibiúna,Ibiúna Garden,-23.671619,-47.2111074,2800,0,0,65.4
+A,Ibiúna,Bairro do Rosarial,-23.6668923,-47.2452676,2800,0,0,65.4
+A,Ibiúna,Piaí,-23.7586192,-47.2046486,2800,0,0,65.4
+A,Ibiúna,Murundu,-23.8033093,-47.2468848,2800,0,0,65.4
+A,Ibiúna,Condomínio Patrimõnio do Carmo,-23.6671666,-47.0890937,2800,0,0,65.4
+A,Ibiúna,Condomínio Paiol Grande,-23.7470738,-47.181704,2800,0,0,65.4
+A,Ibiúna,Aldeia Nova,-23.6912451,-47.3479723,2800,0,0,65.4
+A,Ibiúna,Bairro Matadouro,-23.6486502,-47.2188165,2800,0,0,65.4
+A,Ibiúna,CDHU Santa Lúcia,-23.6647142,-47.230378,2800,0,0,65.4
+A,Ibiúna,Condomínio Santa Isabel,-23.7741247,-47.0891746,2800,0,0,65.4
+A,Ibiúna,Bairro Paiolzinho,-23.7310165,-47.2035348,2800,0,0,65.4
+A,Ibiúna,Bairro do Salto,-23.7688686,-47.2915842,2800,0,0,65.4
+A,Ibiúna,San Marco I Residence,-23.676514,-47.250146,2800,0,0,65.4
+A,Ibiúna,Condomínio Mirim Açu,-23.6236306,-47.2366403,2800,0,0,65.4
+A,Ibiúna,Recanto Primavera,-23.6932361,-47.2190799,2800,0,0,65.4
+A,Ibiúna,Bairro Sorocamirim,-23.6837885,-47.1169966,2800,0,0,65.4
+A,Ibiúna,Bairro Cachoeira,-23.6311206,-47.2382882,2800,0,0,65.4
+A,Ibiúna,Bairro Sará Sará,-23.6929001,-47.1070574,2800,0,0,65.4
+A,Ibiúna,Bairro Morro Grande,-23.7035927,-47.131193,2800,0,0,65.4
+A,Ibiúna,Bairro Rio de Una,-23.6746515,-47.2407721,2800,0,0,65.4
+A,Ibiúna,Bairro Lageadinho,-23.6993424,-47.173781,2800,0,0,65.4
+A,Ibiúna,Loteamento Caucaia,-23.7485179,-47.0498888,2800,0,0,65.4
+A,Ibiúna,Bairro Rio de Una de Cima,-23.6951541,-47.245524,2800,0,0,65.4
+A,Ibiúna,Bairro Veravinha,-23.7410668,-47.142351,2800,0,0,65.4
+A,Ibiúna,Bairro dos Paulos,-23.9564585,-47.27132,2800,0,0,65.4
+A,Ibiúna,Patrimônio do Carmo - Setor C,-23.6520814,-47.0883685,2800,0,0,65.4
+A,Ibiúna,Condomínio Miyamoto,-23.6822079,-47.2282466,2800,0,0,65.4
+A,Ibiúna,Bairro Bananal,-23.6518601,-47.2395468,2800,0,0,65.4
+A,Ibiúna,Bairro Gabriel,-23.7247905,-47.1700163,2800,0,0,65.4
+A,Ibiúna,Pomar Yuri,-23.6844065,-47.170688,2800,0,0,65.4
+A,Ibiúna,Condomínio Harmonia,-23.6805324,-47.1776993,2800,0,0,65.4
+A,Ibiúna,Bairro dos Pedrosos,-23.733257,-47.0768621,2800,0,0,65.4
+A,Ibiúna,Bairro Rio Bonito,-23.9411759,-47.2276145,2800,0,0,65.4
+A,Ibiúna,Loteamento Chácara Primavera,-23.6908664,-47.2245548,2800,0,0,65.4
+A,Ibiúna,Condomínio dos Ipês,-23.7278427,-47.2355862,2800,0,0,65.4
+A,Ibiúna,Lagos Verdes de Ibiúna,-23.6498468,-47.2594451,2800,0,0,65.4
+A,Ibiúna,Portal dos Taquaras,-23.6416354,-47.2475597,2800,0,0,65.4
+A,Ibiúna,Recanto Verde,-23.6759819,-47.1400126,2800,0,0,65.4
+A,Ibiúna,Laval I,-23.6596623,-47.232494,2800,0,0,65.4
+A,Ibiúna,Loteamento São José,-23.6860613,-47.0949708,2800,0,0,65.4
+A,Ibiúna,Loteamento Vale das Araucárias,-23.7198209,-47.1138023,2800,0,0,65.4
+A,Ibiúna,Residencial Sorocamirim,-23.7094207,-47.1283793,2800,0,0,65.4
+A,Ibiúna,Loteamento Ibiporã,-23.6424763,-47.2355928,2800,0,0,65.4
+A,Ibiúna,Loteamento Pousada dos Sonhos,-23.7192608,-47.2070861,2800,0,0,65.4
+A,Ibiúna,Recanto Vale Verde,-23.6445009,-47.148918,2800,0,0,65.4
+A,Ibiúna,Recanto Village,-23.7386125,-47.1074104,2800,0,0,65.4
+A,Ibiúna,Bairro Agostinho,-23.8796205,-47.1655045,2800,0,0,65.4
+A,Ibiúna,Terra Boa,-23.8112835,-47.0880883,2800,0,0,65.4
+A,Ibiúna,Condomínio Veleiros,-23.637165,-47.3203447,2800,0,0,65.4
+A,Ibiúna,Condomínio Sítio Lagos de Ibiúna,-23.6675764,-47.307984,2800,0,0,65.4
+A,Ibiúna,Bairro de Rio de Una de CIma,-23.7154651,-47.2654501,2800,0,0,65.4
+A,Ibiúna,Bairro Marmelo,-23.7779474,-47.2881271,2800,0,0,65.4
+A,Ibiúna,Bairro Boava,-23.7643631,-47.13275,2800,0,0,65.4
+A,Ibiúna,Haras Santa Rosa,-23.6628267,-47.2929334,2800,0,0,65.4
+A,Ibiúna,Residencial Arapongas,-23.7781037,-47.195155,2800,0,0,65.4
+A,Ibiúna,San Marco II Residence,-23.6756818,-47.2576052,2800,0,0,65.4
+A,Ibiúna,Cachoeira,-23.7343518,-47.0484533,2800,0,0,65.4
+A,Ibiúna,Bairro da Fumaça,-24.0091122,-47.2809648,2800,0,0,65.4
+A,Ibiúna,Vila das Palmeiras,-23.6994246,-47.1334938,2800,0,0,65.4
+A,Ibiúna,Condomínio Pôr do Sol,-23.7166055,-47.1436694,2800,0,0,65.4
+A,Ibiúna,Bairro do Córrego,-23.7424101,-47.211369,2800,0,0,65.4
+A,Ibiúna,Parque Jurupará,-23.8856618,-47.3318474,2800,0,0,65.4
+A,Ibiúna,Bairro dos Vieirinhas,-23.7552237,-47.2316229,2800,0,0,65.4
+A,Ibiúna,Bairro São Sebastião,-23.8451776,-47.1963036,2800,0,0,65.4
+A,Ibiúna,Bairro do Lodo (Sítios),-23.896929,-47.366641,2800,0,0,65.4
+A,Ibiúna,Verava,-23.7792414,-47.1048314,2800,0,0,65.4
+A,Ibiúna,Bairro dos Pires,-23.753933,-47.053569,2800,0,0,65.4
+A,Ibiúna,Bairro dos Domingos,-23.7299849,-47.1170408,2800,0,0,65.4
+A,Jambeiro,Altos do Jambeiro,-23.2633171,-45.6947816,2700,0,0,64.5
+A,Jambeiro,Reserva Fazenda São Francisco,-23.3190389,-45.7223666,2700,0,0,64.5
+A,Amparo,São Judas,-22.6988327,-46.7703194,3100,2,0,63.5
+A,Panorama,Jardim Aeroporto,-21.3745228,-51.8633667,2400,0,0,61.9
+A,Panorama,Jardim São Francisco,-21.3645444,-51.8460136,2400,0,0,61.9
+A,Panorama,Residencial Jardim Imperial,-21.3702529,-51.8805433,2400,0,0,61.9
+A,Campinas,Parque Taquaral,-22.8674178,-47.057388,3200,3,1,61.8
+A,Campinas,Cidade Universitária,-22.8048472,-47.0697047,3200,3,1,61.8
+A,Nova Luzitânia,Centro,-20.8565862,-50.2618984,2300,0,0,61.7
+A,Angatuba,Bairro Aterradinho de Cima,-23.384746,-48.5732798,2500,0,0,61.6
+A,Angatuba,Bairro Limoeiro,-23.418703,-48.5303419,2500,0,0,61.6
+A,Angatuba,Bairro Fogaça,-23.4963935,-48.3389118,2500,0,0,61.6
+A,Angatuba,Conquista,-23.4221549,-48.3668013,2500,0,0,61.6
+A,Angatuba,Bairro do Matão,-23.4385849,-48.488665,2500,0,0,61.6
+A,Angatuba,Boa Vista,-23.5306575,-48.3464841,2500,0,0,61.6
+A,Angatuba,Serra da Boa Vista,-23.535007,-48.3701631,2500,0,0,61.6
+A,Angatuba,Campininha do Bom Retiro,-23.539636,-48.2951322,2500,0,0,61.6
+A,Angatuba,Bairro do Limão,-23.4045106,-48.540974,2500,0,0,61.6
+A,Angatuba,Barro Santo Inácio,-23.3155803,-48.5522934,2500,0,0,61.6
+A,Angatuba,Bairro Aterradinho de Baixo,-23.388032,-48.6003826,2500,0,0,61.6
+A,Angatuba,Bairro dos Neves,-23.447162,-48.5499654,2500,0,0,61.6
+A,Angatuba,Bairro do Cambuí,-23.4412428,-48.5147115,2500,0,0,61.6
+A,Angatuba,Batista,-23.4836893,-48.5169707,2500,0,0,61.6
+A,Angatuba,Campina dos Mineiros,-23.4147176,-48.419999,2500,0,0,61.6
+A,Angatuba,Guareí Velho,-23.4949848,-48.4984908,2500,0,0,61.6
+A,Angatuba,Coqueiros,-23.5239572,-48.4148234,2500,0,0,61.6
+A,Angatuba,Bairro da Figueira,-23.5185596,-48.3802855,2500,0,0,61.6
+A,Angatuba,Bairro dos Marianos,-23.4998157,-48.3817539,2500,0,0,61.6
+A,Angatuba,Bairro dos Nunes,-23.4488488,-48.3636417,2500,0,0,61.6
+A,Angatuba,Bairro da Covoada,-23.4687514,-48.3405084,2500,0,0,61.6
+A,Angatuba,Batalheira,-23.4845672,-48.3312582,2500,0,0,61.6
+A,Angatuba,Serraria,-23.5042484,-48.4726761,2500,0,0,61.6
+A,Angatuba,Bairro dos Ribeiros,-23.4641377,-48.4954031,2500,0,0,61.6
+A,Angatuba,Banco da Terra,-23.4660427,-48.5303795,2500,0,0,61.6
+A,Angatuba,Machadinho,-23.5498751,-48.4001837,2500,0,0,61.6
+A,Angatuba,Bairro dos Buenos,-23.4721722,-48.383284,2500,0,0,61.6
+A,Angatuba,Bairro da Aguinha,-23.472131,-48.347502,2500,0,0,61.6
+A,Angatuba,Palmital,-23.5650065,-48.3716978,2500,0,0,61.6
+A,Angatuba,São Miguel dos Barreiros,-23.5058865,-48.2751851,2500,0,0,61.6
+A,Angatuba,Bairro dos Leites,-23.454613,-48.3218543,2500,0,0,61.6
+A,Angatuba,Bairro dos Modestos,-23.4265893,-48.3147571,2500,0,0,61.6
+A,Angatuba,Cerrito,-23.4828942,-48.2247202,2500,0,0,61.6
+A,Angatuba,Faxinal,-23.5341686,-48.2702664,2500,0,0,61.6
+A,Angatuba,Lajeado,-23.5104205,-48.2742982,2500,0,0,61.6
+A,Angatuba,Ribeirão Grande,-23.4858997,-48.1952638,2500,0,0,61.6
+A,Angatuba,Portal Novo Horizonte,-23.4980693,-48.406356,2500,0,0,61.6
+A,Angatuba,Vila Nova Angatuba,-23.4972451,-48.4095488,2500,0,0,61.6
+A,Angatuba,Parque Simões,-23.504126,-48.4050164,2500,0,0,61.6
+A,Angatuba,Vila Ribeiro,-23.5105298,-48.4068842,2500,0,0,61.6
+A,Angatuba,Vila Catanduva,-23.4919923,-48.4103779,2500,0,0,61.6
+A,Angatuba,Vila Monteiro,-23.4939759,-48.4147619,2500,0,0,61.6
+A,Angatuba,Vila Progresso,-23.4977371,-48.4131791,2500,0,0,61.6
+A,Angatuba,Vila Nho Ribeiro,-23.4901162,-48.4200417,2500,0,0,61.6
+A,Cosmorama,Vale das Emas,-20.4805934,-49.7731576,2600,0,0,60.2
+A,Cosmorama,San Fernando,-20.485026,-49.7722548,2600,0,0,60.2
+A,Cosmorama,Boa Vista,-20.4871753,-49.7911978,2600,0,0,60.2
+A,Cosmorama,Roseira,-20.4675852,-49.8503164,2600,0,0,60.2
+A,Cosmorama,Vale do Jatobá,-20.4832959,-49.7840416,2600,0,0,60.2
+A,Cosmorama,Bairro da Estação,-20.4957137,-49.8027052,2600,0,0,60.2
+A,Cosmorama,Santo Antônio,-20.476774,-49.7729538,2600,0,0,60.2
+A,Cosmorama,São Marcos,-20.4781901,-49.7814922,2600,0,0,60.2
+A,Cosmorama,Vale dos Lírios,-20.4711907,-49.7764782,2600,0,0,60.2
+A,Cosmorama,Parque Industrial,-20.4863484,-49.7849644,2600,0,0,60.2
+A,Cosmorama,Vila Honório,-20.4762482,-49.7799707,2600,0,0,60.2
+A,Cosmorama,Vale das Águas,-20.4774531,-49.7830401,2600,0,0,60.2
+A,Cosmorama,Centro,-20.4784681,-49.7766652,2600,2,0,59.2
+A,Amparo,Parque Linear,-22.704209,-46.7727748,3100,1,1,58.5
+A,Limeira,Villa San Marino,-22.5728778,-47.4108262,2400,0,0,57.3
+A,Limeira,Vila Santa Josefa,-22.5668295,-47.4173762,2400,0,0,57.3
+A,Limeira,Parque Residencial Roland,-22.5375683,-47.4244955,2400,0,0,57.3
+A,Limeira,Park Green Ville,-22.5521865,-47.355198,2400,0,0,57.3
+A,Limeira,Bairro da Geada,-22.593858,-47.471016,2400,0,0,57.3
+A,Limeira,Vila Esteves,-22.5739428,-47.4087716,2400,0,0,57.3
+A,Limeira,Vila Cristovam,-22.5745619,-47.4043406,2400,0,0,57.3
+A,Limeira,Real Parque,-22.5672753,-47.4132936,2400,0,0,57.3
+A,Limeira,Vila Santa Lina,-22.5751276,-47.4010973,2400,0,0,57.3
+A,Limeira,Geada,-22.6015699,-47.4741059,2400,0,0,57.3
+A,Limeira,Tatu,-22.6510181,-47.3529499,2400,0,0,57.3
+A,Limeira,Pinhal,-22.538541,-47.2798692,2400,0,0,57.3
+A,Limeira,Vila Busch,-22.5795326,-47.3975868,2400,0,0,57.3
+A,Limeira,Parque das Nações,-22.5929089,-47.4045832,2400,0,0,57.3
+A,Limeira,Santa Eulália,-22.598821,-47.405668,2400,0,0,57.3
+A,Limeira,Ferrão,-22.5371214,-47.3585211,2400,0,0,57.3
+A,Limeira,Bairro dos Pires,-22.5544526,-47.3512069,2400,0,0,57.3
+A,Panorama,Centro,-21.3591903,-51.8562976,2400,1,0,56.9
+A,Campinas,Taquaral,-22.880833,-47.051667,3200,2,2,56.8
+A,Angatuba,Vila Nova,-23.4959025,-48.4122765,2500,1,0,56.6
+A,Pitangueiras,Jardim Macedo,-21.0208144,-48.2209844,2200,0,0,55.7
+A,Pitangueiras,Jardim Veneza,-21.0182405,-48.2336337,2200,0,0,55.7
+A,Pitangueiras,Jardim São Sebastião,-21.0169686,-48.2249862,2200,0,0,55.7
+A,Pitangueiras,Jardim Bela Vista,-21.0244697,-48.2288379,2200,0,0,55.7
+A,Pitangueiras,Jardim Gumercindo Hentz Soares,-21.0017224,-48.2219781,2200,0,0,55.7
+A,Pitangueiras,Jardim São Benedito,-21.0082803,-48.2066613,2200,0,0,55.7
+A,Pitangueiras,Jardim Alvorada,-21.0111697,-48.2269067,2200,0,0,55.7
+A,Pitangueiras,Jardim Santa Vitória,-21.0146377,-48.2280727,2200,0,0,55.7
+A,Pitangueiras,Jardim Deise Foresti,-21.0013893,-48.2282907,2200,0,0,55.7
+A,Pitangueiras,Jardim Paulista,-21.0102033,-48.2091719,2200,0,0,55.7
+A,Pitangueiras,Jardim Santo Antônio,-21.013904,-48.2125837,2200,0,0,55.7
+A,Pitangueiras,Jardim São Lourenço,-21.021931,-48.2241225,2200,0,0,55.7
+A,Pitangueiras,Jardim Brasília,-21.0154263,-48.2180232,2200,0,0,55.7
+A,Pitangueiras,Jardim Parque dos Ipês,-21.0265978,-48.2203567,2200,0,0,55.7
+A,Pitangueiras,Jardim São João,-21.0083954,-48.2090861,2200,0,0,55.7
+A,Pitangueiras,Jardim Santa Ana,-20.9997116,-48.216607,2200,0,0,55.7
+A,Pitangueiras,Jardim Canadá,-21.0120586,-48.2334834,2200,0,0,55.7
+A,Pitangueiras,Jardim Paraíso,-21.010714,-48.2286716,2200,0,0,55.7
+A,Pitangueiras,Jardim das Oliveiras,-21.0202585,-48.2235003,2200,0,0,55.7
+A,Pitangueiras,Jardim Santa Fé,-21.0040636,-48.2069028,2200,0,0,55.7
+A,Pitangueiras,Jardim Santa Felicidade,-21.0241643,-48.2250667,2200,0,0,55.7
+A,Pitangueiras,Jardim Bonsucesso 1,-21.0099729,-48.2363641,2200,0,0,55.7
+A,Pitangueiras,Jardim Nova Aliança,-21.0136085,-48.2359672,2200,0,0,55.7
+A,Pitangueiras,Jardim Nova Esperança,-21.0023258,-48.2084826,2200,0,0,55.7
+A,Pitangueiras,Jardim Gumercindo Hentz Soares 2,-21.0004929,-48.2187045,2200,0,0,55.7
+A,Pitangueiras,Jardim Santa Tereza,-21.0001273,-48.2119024,2200,0,0,55.7
+A,Pitangueiras,Jardim Leone,-21.0020103,-48.2115269,2200,0,0,55.7
+A,Pitangueiras,Jardim Bothânico,-21.0004478,-48.2151103,2200,0,0,55.7
+A,Pitangueiras,Jardim Bonsucesso 2,-21.0115253,-48.2358921,2200,0,0,55.7
+A,Mairinque,Jardim Europa,-23.5963175,-47.2268417,2500,0,0,55.6
+A,Mairinque,Jardim Arco-Íris,-23.546094,-47.2184818,2500,0,0,55.6
+A,Mairinque,Jardim dos Ipês,-23.5616254,-47.1977108,2500,0,0,55.6
+A,Mairinque,Jardim Cruzeiro Gleba B,-23.542119,-47.1929903,2500,0,0,55.6
+A,Mairinque,Jardim Cruzeiro - Gleba B,-23.5387649,-47.1908878,2500,0,0,55.6
+A,Mairinque,Jardim Cruzeiro CECAP - Gleba B,-23.5385733,-47.1926527,2500,0,0,55.6
+A,Mairinque,Jardim do Cruzeiro,-23.5477793,-47.1920138,2500,0,0,55.6
+A,Mairinque,Centro,-23.5504866,-47.1831645,2500,0,0,55.6
+A,Mairinque,Chácaras Jardim Brasília,-23.5305972,-47.1623882,2500,0,0,55.6
+A,Mairinque,Jardim Waldez,-23.5586987,-47.1970584,2500,0,0,55.6
+A,Mairinque,Parque Morumbi,-23.5917545,-47.2291934,2500,0,0,55.6
+A,Mairinque,Jardim Vitoria,-23.5533643,-47.2086456,2500,0,0,55.6
+A,Mairinque,Jardim Nova Esperança,-23.5327042,-47.1982772,2500,0,0,55.6
+A,Mairinque,Jardim Oriental,-23.5646317,-47.2376735,2500,0,0,55.6
+A,Mairinque,Jardim Flora,-23.5360083,-47.201144,2500,0,0,55.6
+A,Mairinque,Jardim D'Oeste,-23.5321894,-47.1668601,2500,0,0,55.6
+A,Mairinque,Jardim Três Lagoinhas,-23.5655286,-47.2026718,2500,0,0,55.6
+A,Cajuru,Jardim Monte Líbano,-21.2658659,-47.3040504,1600,0,0,54.3
+A,Cajuru,Jardim Três Marias I e II,-21.2801559,-47.2953438,1600,0,0,54.3
+A,Cajuru,Cidade Jardim,-21.2628959,-47.2967237,1600,0,0,54.3
+A,Cajuru,Residencial Jardim das Oliveiras,-21.2830061,-47.2945453,1600,0,0,54.3
+A,Cajuru,Centro,-21.2756281,-47.3040097,1600,0,0,54.3
+A,Cajuru,Jardim Nova Cajuru,-21.2666156,-47.3083602,1600,0,0,54.3
+A,Panorama,Derocy Alves Valença,-21.3726942,-51.8552214,2400,0,0,53.9
+A,Panorama,Estádio,-21.3600045,-51.8637274,2400,0,0,53.9
+A,Panorama,Paranoá II,-21.3616876,-51.8694618,2400,0,0,53.9
+A,Panorama,Residencial São Jorge,-21.3761614,-51.8876712,2400,0,0,53.9
+A,Panorama,Ginásio,-21.3697243,-51.8613975,2400,0,0,53.9
+A,Panorama,Residencial das Palmeiras,-21.3691879,-51.8791271,2400,0,0,53.9
+A,Panorama,Residencial Gama,-21.3407333,-51.8486452,2400,0,0,53.9
+A,Panorama,Quinta das Iaras,-21.3467954,-51.8526137,2400,0,0,53.9
+A,Panorama,Marrecas,-21.3545932,-51.8521757,2400,0,0,53.9
+A,Panorama,Nosso Teto,-21.3627353,-51.8497854,2400,0,0,53.9
+A,Panorama,Areia Branca,-21.3594832,-51.8450798,2400,0,0,53.9
+A,Panorama,Aldeia do Lago,-21.4587813,-51.9157749,2400,0,0,53.9
+A,Panorama,Paranoá I,-21.36476,-51.8674942,2400,0,0,53.9
+A,Panorama,Bela Vista I,-21.3677943,-51.8561752,2400,0,0,53.9
+A,Panorama,Pedro Milanez,-21.3700679,-51.8704877,2400,0,0,53.9
+A,Panorama,Hospital,-21.3630597,-51.858158,2400,0,0,53.9
+A,Panorama,Casa Branca,-21.3646851,-51.8419799,2400,0,0,53.9
+A,Panorama,Ponte Nova,-21.3536157,-51.8476253,2400,0,0,53.9
+A,Panorama,Residencial Bela Vista,-21.4104558,-51.8966264,2400,0,0,53.9
+A,Panorama,Vista do Lago,-21.375777,-51.8658325,2400,0,0,53.9
+A,Panorama,Vista do Lago III,-21.3771271,-51.8687279,2400,0,0,53.9
+A,Panorama,Potiguára,-21.3686199,-51.8676585,2400,0,0,53.9
+A,Panorama,Bela Vista II,-21.3660139,-51.8583494,2400,1,0,48.9
+A,Pitangueiras,Vila Caroni,-21.0045544,-48.2131416,2200,0,0,48.5
+A,Pitangueiras,Conjunto Habitacional Padre Plácido Horth,-21.012612,-48.2287198,2200,0,0,48.5
+A,Pitangueiras,Residencial Morada do Sol,-21.0194223,-48.2220036,2200,0,0,48.5
+A,Pitangueiras,Green Park,-21.010699,-48.2046014,2200,0,0,48.5
+A,Pitangueiras,Cohab 1,-21.0042539,-48.2100463,2200,0,0,48.5
+A,Pitangueiras,Condomínio Quinta dos Ventos,-20.9997967,-48.2298142,2200,0,0,48.5
+A,Pitangueiras,Cohab Pedro de Felício,-21.0070583,-48.2034373,2200,0,0,48.5
+A,Pitangueiras,Distrito Industrial,-21.002461,-48.2045102,2200,0,0,48.5
+A,Mairinque,Loteamento Sebandilha (embargado),-23.6052056,-47.2420101,2500,0,0,48.3
+A,Mairinque,Colinas Verdes I,-23.5014144,-47.2516457,2500,0,0,48.3
+A,Mairinque,Recanto dos Eucaliptos,-23.5253719,-47.1660274,2500,0,0,48.3
+A,Mairinque,Nova Granada,-23.5276363,-47.1742672,2500,0,0,48.3
+A,Mairinque,Sítio Dois Tanques,-23.5959871,-47.1950446,2500,0,0,48.3
+A,Mairinque,Trigal,-23.5537473,-47.194778,2500,0,0,48.3
+A,Mairinque,Moreiras,-23.4776021,-47.1953644,2500,0,0,48.3
+A,Mairinque,Pitangueiras,-23.4795604,-47.2326256,2500,0,0,48.3
+A,Mairinque,Lagoinha,-23.5685486,-47.2127311,2500,0,0,48.3
+A,Mairinque,Condomínio Altos do Catarina,-23.433424,-47.2700306,2500,0,0,48.3
+A,Mairinque,Madre Pérola,-23.6040647,-47.2266206,2500,0,0,48.3
+A,Mairinque,Condomínio Terra da Mata (embargado),-23.4739138,-47.2875379,2500,0,0,48.3
+A,Mairinque,Sebandilha,-23.6038209,-47.2408321,2500,0,0,48.3
+A,Mairinque,Recanto do Paraíso,-23.4497718,-47.2656771,2500,0,0,48.3
+A,Mairinque,Mansões de Mairinque III,-23.6045456,-47.245626,2500,0,0,48.3
+A,Mairinque,Chácaras Pouso Alegre,-23.5997379,-47.2158918,2500,0,0,48.3
+A,Mairinque,Aeródromo,-23.5820026,-47.2267494,2500,0,0,48.3
+A,Mairinque,Hypocampos,-23.5723268,-47.2095403,2500,0,0,48.3
+A,Mairinque,Loteamento do Coreano (embargado),-23.4212159,-47.2255467,2500,0,0,48.3
+A,Mairinque,Loteamento Nova Cristal (embargado),-23.4600233,-47.2876342,2500,0,0,48.3
+A,Mairinque,Condomínio Solar dos Cristais (embargado),-23.4606082,-47.2804805,2500,0,0,48.3
+A,Mairinque,Recanto do Descanso,-23.4400944,-47.2815909,2500,0,0,48.3
+A,Mairinque,Nossa Senhora Aparecida,-23.5819219,-47.2386777,2500,0,0,48.3
+A,Mairinque,Residencial Vale das Águas (embargado),-23.4998726,-47.2599219,2500,0,0,48.3
+A,Mairinque,Associação Agroclube Haras Pôr do Sol (embargado),-23.4702923,-47.2042403,2500,0,0,48.3
+A,Mairinque,Sítio Bethel (embargado),-23.41905,-47.2248837,2500,0,0,48.3
+A,Mairinque,Condomínio São Luiz (embargado),-23.4522836,-47.3093808,2500,0,0,48.3
+A,Mairinque,Balneário São Roque,-23.607014,-47.2634056,2500,0,0,48.3
+A,Mairinque,Lagoinha Gleba IV,-23.5798935,-47.2180698,2500,0,0,48.3
+A,Mairinque,Monjolinho,-23.5301546,-47.1766704,2500,0,0,48.3
+A,Mairinque,Haydeé,-23.527172,-47.1717008,2500,0,0,48.3
+A,Mairinque,Waldes,-23.5575028,-47.1952217,2500,0,0,48.3
+A,Mairinque,Sítio Kawazoe,-23.5642698,-47.2285755,2500,0,0,48.3
+A,Mairinque,Sítio Três lagos,-23.4334515,-47.2882096,2500,0,0,48.3
+A,Mairinque,Chácara Flora,-23.5337902,-47.2028434,2500,0,0,48.3
+A,Mairinque,Estação,-23.5449541,-47.1828921,2500,0,0,48.3
+A,Mairinque,Sítio São João,-23.4449192,-47.2857376,2500,0,0,48.3
+A,Mairinque,Solar do Brás,-23.434304,-47.2329689,2500,0,0,48.3
+A,Mairinque,Barão da Castelo,-23.4350915,-47.2191674,2500,0,0,48.3
+A,Mairinque,Recanto dos Pássaros,-23.4338315,-47.2770859,2500,0,0,48.3
+A,Mairinque,Residencial Parque Cristiane,-23.529588,-47.1876535,2500,0,0,48.3
+A,Mairinque,São Roque Country Club Gleba B,-23.529949,-47.1675521,2500,0,0,48.3
+A,Mairinque,Vista Verde,-23.437643,-47.2876259,2500,0,0,48.3
+A,Mairinque,Vale do Sol,-23.4572343,-47.2314583,2500,0,0,48.3
+A,Mairinque,Parque das Rosas,-23.5237982,-47.1844134,2500,0,0,48.3
+A,Mairinque,Chácaras Lane,-23.5298185,-47.1709801,2500,0,0,48.3
+A,Mairinque,Portal dos Pássaros,-23.5501435,-47.2038659,2500,0,0,48.3
+A,Mairinque,Capuava,-23.4478733,-47.287966,2500,0,0,48.3
+A,Mairinque,Sananduva,-23.4759049,-47.2938436,2500,0,0,48.3
+A,Mairinque,Cristal,-23.4618319,-47.2858828,2500,0,0,48.3
+A,Mairinque,Bairro Sinindu,-23.4714343,-47.2880749,2500,0,0,48.3
+A,Mairinque,Chácaras Três Lagoinhas,-23.5664553,-47.1969438,2500,0,0,48.3
+A,Mairinque,Cafezal I,-23.4549647,-47.305925,2500,0,0,48.3
+A,Mairinque,Cafezal II,-23.4576753,-47.3047577,2500,0,0,48.3
+A,Mairinque,Porta do Sol II,-23.4321364,-47.2037972,2500,0,0,48.3
+A,Mairinque,Clube de Campo São Marcos,-23.452384,-47.2601258,2500,0,0,48.3
+A,Mairinque,Chácaras Santa Marta,-23.52995,-47.2051437,2500,0,0,48.3
+A,Mairinque,Palmares,-23.4348061,-47.2251412,2500,0,0,48.3
+A,Mairinque,Paineiras,-23.4414918,-47.2208604,2500,0,0,48.3
+A,Mairinque,Príncipe de Gales,-23.4460512,-47.2331406,2500,0,0,48.3
+A,Mairinque,Cambarás,-23.4817017,-47.1976753,2500,0,0,48.3
+A,Mairinque,Vila Capuá,-23.4890089,-47.1983963,2500,0,0,48.3
+A,Mairinque,Sítio Maravilha,-23.4381214,-47.2275895,2500,0,0,48.3
+A,Mairinque,Castelo dos Bandeirantes,-23.4358072,-47.2042574,2500,0,0,48.3
+A,Mairinque,Sítio Alvorada,-23.4403835,-47.230394,2500,0,0,48.3
+A,Mairinque,Chácara das Flores,-23.430824,-47.2366079,2500,0,0,48.3
+A,Mairinque,Mansões de Mairinque (Sete Casas),-23.6104666,-47.234354,2500,0,0,48.3
+A,Mairinque,Bosque das Alamedas,-23.6125984,-47.2263943,2500,0,0,48.3
+A,Mairinque,Nova Mairinque,-23.5340095,-47.1921318,2500,0,0,48.3
+A,Mairinque,Chácaras Manão,-23.5530201,-47.1917837,2500,0,0,48.3
+A,Mairinque,Porta do Sol I,-23.4496793,-47.1853651,2500,0,0,48.3
+A,Mairinque,Santa Rosa de Lima,-23.4825519,-47.2070824,2500,0,0,48.3
+A,Mairinque,Residencial Bela Morada (embargado),-23.4678507,-47.2889777,2500,0,0,48.3
+A,Mairinque,Setúbal,-23.5875846,-47.2059494,2500,0,0,48.3
+A,Mairinque,Sítio São Camilo,-23.5435446,-47.1666261,2500,0,0,48.3
+A,Mairinque,Lagos de San José,-23.4423364,-47.2407967,2500,0,0,48.3
+A,Mairinque,Loteamento Antônio Alves (embargado),-23.4642241,-47.2926137,2500,0,0,48.3
+A,Mairinque,Paineiras III,-23.479683,-47.2028645,2500,0,0,48.3
+A,Mairinque,Setubal,-23.5766312,-47.2234309,2500,0,0,48.3
+A,Mairinque,Terras de São José,-23.5639972,-47.1955757,2500,0,0,48.3
+A,Mairinque,Santa Amélia,-23.5544028,-47.2170227,2500,0,0,48.3
+A,Mairinque,Vila Sorocabana,-23.5407444,-47.1824189,2500,0,0,48.3
+A,Mairinque,área Industrial,-23.5626088,-47.1812613,2500,0,0,48.3
+A,Mairinque,Clube Recreio Alpes de Mairinque,-23.6029051,-47.1975546,2500,0,0,48.3
+A,Mairinque,Veraneio São Roque,-23.6137609,-47.2446258,2500,0,0,48.3
+A,Mairinque,Alpes de São Roque,-23.611547,-47.2094642,2500,0,0,48.3
+A,Mairinque,Vale dos Pêssegos,-23.59152,-47.1906785,2500,0,0,48.3
+A,Mairinque,Residencial Parque Mairinque,-23.5372257,-47.1966355,2500,0,0,48.3
+A,Mairinque,Área Industrial,-23.5360466,-47.1656229,2500,0,0,48.3
+A,Mairinque,Marmeleiro,-23.5368739,-47.1598111,2500,0,0,48.3
+A,Mairinque,Chácaras Canguerinha,-23.5585423,-47.2017791,2500,0,0,48.3
+A,Mairinque,Sítio Novo Horizonte,-23.5613894,-47.2353046,2500,0,0,48.3
+A,Mairinque,São Roque Country Club Gleba A,-23.5319173,-47.1727372,2500,0,0,48.3
+A,Mairinque,Vale da Esperança,-23.4703327,-47.2107849,2500,0,0,48.3
+A,Mairinque,Residencial Castanheiras,-23.5516048,-47.1950559,2500,0,0,48.3
+A,Mairinque,Sítio Nagai,-23.5751573,-47.1808622,2500,0,0,48.3
+A,Mairinque,Benzenex,-23.4253209,-47.2425516,2500,0,0,48.3
+A,Mairinque,Loteamento Reneville,-23.5605245,-47.1912155,2500,0,0,48.3
+A,Mairinque,Vila Barreto,-23.5271716,-47.1675584,2500,0,0,48.3
+A,Mairinque,Cova da Lua,-23.5210044,-47.1924386,2500,0,0,48.3
+A,Mairinque,Ville de France,-23.4413563,-47.2657981,2500,0,0,48.3
+A,Mairinque,Chácaras Santa Catarina,-23.4301718,-47.2547689,2500,0,0,48.3
+A,Mairinque,Clube Recreio Altos do Saboó (embargado),-23.4753619,-47.1899597,2500,0,0,48.3
+A,Mairinque,Clube Recreio Recanto Paraíso (embargado),-23.4623217,-47.2653067,2500,0,0,48.3
+A,Mairinque,Residencial Altos do Cristal (embargado),-23.4669768,-47.2641169,2500,0,0,48.3
+A,Mairinque,Clube Recreio Morada do Sol (embargado),-23.472203,-47.2422081,2500,0,0,48.3
+A,Mairinque,Residencial Cristal Azul,-23.4756173,-47.2437745,2500,0,0,48.3
+A,Mairinque,Residencial Recanto dos Sonhos (embargado),-23.4911353,-47.2283566,2500,0,0,48.3
+A,Piraju,Residencial Parque Ecológico Monte Alegre do Paranapanema,-23.205664,-49.3449307,1800,0,0,48.0
+A,Piraju,Residencial Portal Ecológico do Salto do Paranapanema,-23.1658472,-49.3727048,1800,0,0,48.0
+A,Piraju,Enseada,-23.1280073,-49.4451587,1800,0,0,48.0
+A,Piraju,Cágado,-23.1805423,-49.5171181,1800,0,0,48.0
+A,Cajuru,Bairro Baldini,-21.2763566,-47.3231394,1600,0,0,47.2
+A,Cajuru,CDHU João Fonseca,-21.2847438,-47.3121522,1600,0,0,47.2
+A,Cajuru,COHAB Tereza S. Tincani,-21.2792496,-47.3133977,1600,0,0,47.2
+A,Cajuru,Valle do Sol,-21.2813924,-47.3110747,1600,0,0,47.2
+A,Cajuru,Residencial São Luiz,-21.2828168,-47.306122,1600,0,0,47.2
+A,Cajuru,Residencial Estoril,-21.2796678,-47.305479,1600,0,0,47.2
+A,Cajuru,Conj. Habitacional Antonio Honorato,-21.2814298,-47.3134063,1600,0,0,47.2
+A,Cajuru,Serafim Mesquita,-21.2794439,-47.3114667,1600,0,0,47.2
+A,Cajuru,Vila Real,-21.272998,-47.2916537,1600,0,0,47.2
+A,Cajuru,CECAP Ornélia Menta,-21.270465,-47.3095307,1600,0,0,47.2
+A,Cajuru,Brasilinha,-21.2609394,-47.2943773,1600,0,0,47.2
+A,Cajuru,Jd. Maria Tereza,-21.2651993,-47.3003584,1600,0,0,47.2
+A,Cajuru,Dom Bosco,-21.2733923,-47.2942746,1600,0,0,47.2
+A,Cajuru,Vila Maria das Graças,-21.2780117,-47.3160585,1600,0,0,47.2
+A,Cajuru,Vila Honorato,-21.2759405,-47.3136566,1600,0,0,47.2
+A,Cajuru,Boqueirão I e II,-21.278951,-47.319987,1600,0,0,47.2
+A,Cajuru,Residencial Boca da Mata,-21.2727095,-47.2860421,1600,0,0,47.2
+A,Cajuru,Bairro São Sebastião,-21.2875821,-47.2935978,1600,0,0,47.2
+A,Cajuru,Cruzeiro,-21.2810142,-47.3005725,1600,0,0,47.2
+A,Cajuru,Vila Zacharias,-21.2776923,-47.3002256,1600,0,0,47.2
+A,Cajuru,Residencial Três Marias,-21.2796876,-47.2921866,1600,0,0,47.2
+A,Cajuru,Residencial Alto do Cruzeiro,-21.2819155,-47.2974515,1600,0,0,47.2
+A,Cajuru,Residencial Big Valley,-21.2554933,-47.3099278,1600,0,0,47.2
+A,Cajuru,Vila Vieira,-21.2785027,-47.3085004,1600,0,0,47.2
+A,Cajuru,Vila Rica,-21.2710293,-47.305282,1600,0,0,47.2
+A,Cajuru,Jd. Santa Maria Goretti,-21.2739168,-47.3088196,1600,0,0,47.2
+A,Cajuru,Jd. Santa Clara,-21.2747384,-47.3159921,1600,0,0,47.2
+A,Cajuru,Santo Antônio,-21.2737737,-47.2993479,1600,0,0,47.2
+A,Cajuru,Rua Dona Aurora,-21.2714028,-47.2988195,1600,0,0,47.2
+A,Cajuru,Jd. Bela Vista,-21.2722601,-47.295976,1600,0,0,47.2
+A,Cajuru,Parque San Domingos,-21.2703469,-47.2932317,1600,0,0,47.2
+A,Cajuru,Residencial Quinta das Flores,-21.2766037,-47.2945525,1600,0,0,47.2
+A,Campinas,Jardim Paulicéia,-22.9214274,-47.1043182,3200,7,2,44.8
+A,Campinas,Chácara da Barra,-22.8860217,-47.0377564,3200,3,3,41.8
+A,Campinas,Chácara Primavera,-22.8603492,-47.0499266,3200,3,3,41.8
+A,Campinas,Botafogo,-22.900278,-47.070833,3200,3,3,41.8
